@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOJO 140W GaN Charger - Verico 專業電池與記憶體解決方案</title>
+    <meta name="description" content="MOJO 140W GaN Charger 產品規格與詳細信息">
+
+    <!-- 防止快取的 Meta 標籤 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                        'anton': ['Anton', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 產品規格頁面樣式 -->
+    <style>
+        .spec-card {
+            transition: all 0.3s ease;
+        }
+        
+        .spec-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .spec-table {
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .spec-table tr {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-table td {
+            padding: 12px 16px;
+        }
+        
+        .spec-table td:first-child {
+            font-weight: 600;
+            color: #374151;
+            width: 40%;
+        }
+        
+        .spec-table td:last-child {
+            color: #6b7280;
+        }
+        
+        /* 產品圖片輪播樣式 */
+        .product-carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        
+        .carousel-indicator {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-nav:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .carousel-nav.prev {
+            left: 16px;
+        }
+        
+        .carousel-nav.next {
+            right: 16px;
+        }
+        
+        /* 特色區塊樣式 */
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+    <!-- 強制刷新腳本 -->
+    <script>
+        // 檢查是否需要強制刷新
+        function checkForUpdates() {
+            // 添加時間戳參數來避免快取
+            const timestamp = new Date().getTime();
+            const currentUrl = window.location.href.split('?')[0];
+            const newUrl = currentUrl + '?v=' + timestamp;
+            
+            // 如果不是第一次載入，則強制刷新
+            if (window.location.search === '') {
+                window.location.href = newUrl;
+            }
+        }
+        
+        // 頁面載入時執行
+        window.addEventListener('load', function () {
+            // 延遲 100ms 執行，確保頁面完全載入
+            setTimeout(checkForUpdates, 100);
+        });
+        
+        // 每 30 秒檢查一次更新
+        setInterval(function () {
+            // 重新載入頁面以獲取最新內容
+            window.location.reload(true);
+        }, 30000);
+    </script>
+    
+    <!-- Dropdown menu script (desktop only, hidden on mobile) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only enable dropdown logic on desktop (md and up)
+            function isDesktop() {
+                return window.innerWidth >= 768;
+            }
+            const dropdown = document.getElementById('products-dropdown');
+            if (!dropdown) return;
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+            const submenuItems = dropdown.querySelectorAll('.submenu-item');
+            let hideTimeout;
+
+            function showDropdown() {
+                if (!isDesktop()) return;
+                clearTimeout(hideTimeout);
+                dropdownMenu.classList.add('opacity-100', 'pointer-events-auto');
+            }
+            function hideDropdown() {
+                if (!isDesktop()) return;
+                hideTimeout = setTimeout(() => {
+                    dropdownMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                    submenuItems.forEach(item => {
+                        const submenu = item.querySelector('.submenu');
+                        submenu.classList.remove('opacity-100', 'pointer-events-auto');
+                    });
+                }, 100);
+            }
+            dropdown.addEventListener('mouseenter', showDropdown);
+            dropdown.addEventListener('mouseleave', hideDropdown);
+            submenuItems.forEach(item => {
+                const submenu = item.querySelector('.submenu');
+                item.addEventListener('mouseenter', () => {
+                    if (!isDesktop()) return;
+                    clearTimeout(hideTimeout);
+                    submenu.classList.add('opacity-100', 'pointer-events-auto');
+                });
+                item.addEventListener('mouseleave', () => {
+                    if (!isDesktop()) return;
+                    submenu.classList.remove('opacity-100', 'pointer-events-auto');
+                });
+            });
+        });
+    </script>
+    
+    <!-- 產品圖片輪播腳本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.querySelector('.carousel-nav.prev');
+            const nextBtn = document.querySelector('.carousel-nav.next');
+            let currentSlide = 0;
+            const slideInterval = 4000; // 4秒切換一次
+            
+            function showSlide(index) {
+                // 隱藏所有幻燈片
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // 顯示當前幻燈片
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // 自動輪播
+            setInterval(nextSlide, slideInterval);
+            
+            // 點擊指示器切換幻燈片
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+            
+            // 點擊導航按鈕
+            if (prevBtn) {
+                prevBtn.addEventListener('click', prevSlide);
+            }
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', nextSlide);
+            }
+        });
+    </script>
+    
+    <!-- 下拉選單腳本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.getElementById('products-dropdown');
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+            const submenuItems = dropdown.querySelectorAll('.submenu-item');
+            
+            let hideTimeout;
+            
+            function showDropdown() {
+                clearTimeout(hideTimeout);
+                dropdownMenu.classList.add('opacity-100', 'pointer-events-auto');
+            }
+            
+            function hideDropdown() {
+                hideTimeout = setTimeout(() => {
+                    dropdownMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                    submenuItems.forEach(item => {
+                        const submenu = item.querySelector('.submenu');
+                        submenu.classList.remove('opacity-100', 'pointer-events-auto');
+                    });
+                }, 100);
+            }
+            
+            dropdown.addEventListener('mouseenter', showDropdown);
+            dropdown.addEventListener('mouseleave', hideDropdown);
+            
+            submenuItems.forEach(item => {
+                const submenu = item.querySelector('.submenu');
+                
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(hideTimeout);
+                    submenu.classList.add('opacity-100', 'pointer-events-auto');
+                });
+                
+                item.addEventListener('mouseleave', () => {
+                    submenu.classList.remove('opacity-100', 'pointer-events-auto');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="font-sans antialiased bg-slate-100">
+    <!-- Header: Floating Glassmorphism Nav Overlaying Hero -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex justify-center w-full">
+            <nav class="mt-8 mx-auto w-[92%] max-w-5xl rounded-2xl bg-white/60 backdrop-blur-xl shadow-lg border border-gray-200 flex items-center px-6 py-2 relative">
+                <a href="/" class="flex items-center mr-8">
+                    <img src="assets/images/verico-logo.svg" alt="Verico Logo" style="height: 44px;" class="block" />
+                </a>
+                <!-- Desktop Nav (hidden on mobile) -->
+                <div class="hidden md:flex flex-1 justify-center">
+                    <div class="flex gap-8">
+                        <a href="/" class="text-sm font-medium text-gray-700 hover:text-gray-900 transition">Home</a>
+                        <div class="relative group" id="products-dropdown">
+                            <a href="/products"
+                               class="text-sm font-medium text-gray-700 hover:text-gray-900 transition flex items-center gap-1">
+                                Products
+                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/>
+                                </svg>
+                            </a>
+                            <div class="relative">
+                                <div class="dropdown-menu absolute left-0 top-full mt-2 min-w-[180px] bg-white/80 border border-gray-200 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity z-40"
+                                     style="backdrop-filter: blur(12px);">
+                                    <ul class="py-2">
+                                        <li class="relative submenu-item">
+                                            <a href="/products/powerbank"
+                                               class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
+                                                Powerbank
+                                                <svg class="w-3 h-3 ml-1 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/>
+                                                </svg>
+                                            </a>
+                                            <ul class="submenu absolute left-full top-0 mt-0 min-w-[160px] bg-white/80 border border-gray-200 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity z-50"
+                                                style="backdrop-filter: blur(12px);">
+                                                <li>
+                                                    <a href="/products/powerbank/powerpro" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100">Power Pro</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/products/powerbank/powerpd" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100">Power PD</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="/products/loopenergy" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100">Loopenergy</a>
+                                        </li>
+                                        <li>
+                                            <a href="/products/gan-charger" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100">GaN Charger</a>
+                                        </li>
+                                        <li>
+                                            <a href="/products/flash-disk" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100">Flash Disk</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/contact"
+                           class="text-sm font-medium text-gray-700 hover:text-gray-900 transition">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-4 ml-8">
+                    <!-- Language Selector -->
+                    <select
+                        class="bg-transparent border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400 w-28"
+                        style="min-width: 112px;">
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden flex justify-center w-full">
+            <nav class="mt-4 mx-auto w-[92%] max-w-5xl rounded-2xl bg-white/60 backdrop-blur-xl shadow-lg border border-gray-200 flex items-center px-6 py-2 relative">
+                <!-- Hamburger (mobile) -->
+                <button id="mobile-menu-button" class="flex items-center justify-center mr-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300 bg-white/40 backdrop-blur-xl border border-gray-200" aria-label="Open main menu">
+                    <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/>
+                    </svg>
+                </button>
+                <a href="/" class="flex items-center">
+                    <img src="assets/images/verico-logo.svg" alt="Verico Logo" style="height: 44px;" class="block" />
+                </a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-nav-drawer" class="fixed top-0 left-0 h-full w-full bg-white/30 backdrop-blur-xl border-none shadow-lg z-[60] transform -translate-x-full transition-transform duration-200 ease-in-out md:hidden">
+                    <div class="flex flex-col h-full w-64 bg-white/30 backdrop-blur-xl border-r border-gray-200 shadow-lg">
+                        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+                            <a href="/" class="flex items-center">
+                                <img src="assets/images/verico-logo.svg" alt="Verico Logo" style="height: 36px;" class="block" />
+                            </a>
+                            <button id="mobile-nav-close" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300" aria-label="Close menu">
+                                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <nav class="flex-1 flex flex-col gap-2 px-6 py-6">
+                            <a href="/" class="block text-base font-medium text-gray-700 py-2">Home</a>
+                            <div class="block">
+                                <button class="flex items-center w-full text-base font-medium text-gray-700 py-2 focus:outline-none" id="mobile-products-toggle">
+                                    Products
+                                    <svg class="w-4 h-4 ml-1 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/>
+                                    </svg>
+                                </button>
+                                <div id="mobile-products-menu" class="hidden flex-col pl-4 mt-1">
+                                    <a href="/products/powerbank" class="block text-sm text-gray-700 py-2">Powerbank</a>
+                                    <div class="pl-2">
+                                        <button class="flex items-center w-full text-sm text-gray-700 py-1 focus:outline-none" id="mobile-powerbank-toggle">
+                                            Powerbank Models
+                                            <svg class="w-3 h-3 ml-1 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/>
+                                            </svg>
+                                        </button>
+                                        <div id="mobile-powerbank-menu" class="hidden flex-col pl-4 mt-1">
+                                            <a href="/products/powerbank/powerpro" class="block text-xs text-gray-700 py-1">Power Pro</a>
+                                            <a href="/products/powerbank/powerpd" class="block text-xs text-gray-700 py-1">Power PD</a>
+                                        </div>
+                                    </div>
+                                    <a href="/products/loopenergy" class="block text-sm text-gray-700 py-2">Loopenergy</a>
+                                    <a href="/products/gan-charger" class="block text-sm text-gray-700 py-2">GaN Charger</a>
+                                    <a href="/products/flash-disk" class="block text-sm text-gray-700 py-2">Flash Disk</a>
+                                </div>
+                            </div>
+                            <a href="/contact" class="block text-base font-medium text-gray-700 py-2">Contact Us</a>
+                        </nav>
+                        <div class="px-6 pb-6">
+                            <select
+                                class="bg-transparent border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400 w-full"
+                                style="min-width: 112px;">
+                                <option value="en">English</option>
+                                <option value="de">Deutsch</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+        <!-- Overlay for mobile nav -->
+        <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/20 z-[55] hidden md:hidden"></div>
+        </header>
+        <script>
+            // Mobile nav drawer logic
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuBtn = document.getElementById('mobile-menu-button');
+                const drawer = document.getElementById('mobile-nav-drawer');
+                const overlay = document.getElementById('mobile-nav-overlay');
+                const closeBtn = document.getElementById('mobile-nav-close');
+                const productsToggle = document.getElementById('mobile-products-toggle');
+                const productsMenu = document.getElementById('mobile-products-menu');
+                const powerbankToggle = document.getElementById('mobile-powerbank-toggle');
+                const powerbankMenu = document.getElementById('mobile-powerbank-menu');
+
+                // Debug: Log screen width and element visibility
+                console.log('Screen width:', window.innerWidth);
+                console.log('Menu button visible:', menuBtn && !menuBtn.classList.contains('hidden'));
+                console.log('Drawer element:', drawer);
+
+                function openDrawer() {
+                    console.log('Opening drawer...');
+                    console.log('Drawer before:', drawer.className);
+                    drawer.classList.remove('-translate-x-full');
+                    overlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                    console.log('Drawer after:', drawer.className);
+                }
+
+                function closeDrawer() {
+                    drawer.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+
+                if (menuBtn) {
+                    menuBtn.addEventListener('click', openDrawer);
+                }
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', closeDrawer);
+                }
+                if (overlay) {
+                    overlay.addEventListener('click', closeDrawer);
+                }
+
+                // Mobile menu toggles
+                if (productsToggle && productsMenu) {
+                    productsToggle.addEventListener('click', () => {
+                        productsMenu.classList.toggle('hidden');
+                        const icon = productsToggle.querySelector('svg');
+                        icon.style.transform = productsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    });
+                }
+
+                if (powerbankToggle && powerbankMenu) {
+                    powerbankToggle.addEventListener('click', () => {
+                        powerbankMenu.classList.toggle('hidden');
+                        const icon = powerbankToggle.querySelector('svg');
+                        icon.style.transform = powerbankMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                    });
+                }
+            });
+        </script>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Product Hero Section -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
+                    <!-- Product Image Carousel - 左半邊 -->
+                    <div class="w-full h-full flex items-center justify-center">
+                        <div class="w-full max-w-lg aspect-square relative">
+                            <!-- 主圖片 -->
+                            <img id="main-carousel-image"
+                                 src="assets/images/product/Gan_140W/mojo-140w-gan-1.png"
+                                 alt="MOJO 140W GaN Charger - Front View"
+                                 class="w-full h-full object-cover cursor-zoom-in"
+                                 data-index="0"
+                                 onerror="this.src='https://placehold.co/600x600?text=Image+Not+Found'; this.classList.add('opacity-60');">
+                            
+                            <!-- Carousel Thumbnails -->
+                            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                                <button class="carousel-thumb border-2 border-gray-400 rounded-lg overflow-hidden w-14 h-14 bg-white p-0.5 transition"
+                                        data-index="0">
+                                    <img src="assets/images/product/Gan_140W/mojo-140w-gan-1.png" alt="Front View Thumbnail" class="w-full h-full object-cover rounded-md"
+                                         onerror="this.src='https://placehold.co/80x80?text=No+Img'; this.classList.add('opacity-60');">
+                                </button>
+                                <button class="carousel-thumb border-2 border-transparent rounded-lg overflow-hidden w-14 h-14 bg-white p-0.5 transition"
+                                        data-index="1">
+                                    <img src="assets/images/product/Gan_140W/mojo-140w-gan-2.png" alt="Side View Thumbnail" class="w-full h-full object-cover rounded-md"
+                                         onerror="this.src='https://placehold.co/80x80?text=No+Img'; this.classList.add('opacity-60');">
+                                </button>
+                                <button class="carousel-thumb border-2 border-transparent rounded-lg overflow-hidden w-14 h-14 bg-white p-0.5 transition"
+                                        data-index="2">
+                                    <img src="assets/images/product/Gan_140W/mojo-140w-gan-3.png" alt="Back View Thumbnail" class="w-full h-full object-cover rounded-md"
+                                         onerror="this.src='https://placehold.co/80x80?text=No+Img'; this.classList.add('opacity-60');">
+                                </button>
+                                <button class="carousel-thumb border-2 border-transparent rounded-lg overflow-hidden w-14 h-14 bg-white p-0.5 transition"
+                                        data-index="3">
+                                    <img src="assets/images/product/Gan_140W/mojo-140w-gan-4.png" alt="Ports Detail Thumbnail" class="w-full h-full object-cover rounded-md"
+                                         onerror="this.src='https://placehold.co/80x80?text=No+Img'; this.classList.add('opacity-60');">
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal for image zoom -->
+                        <div id="image-modal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999] hidden">
+                            <div class="relative max-w-4xl w-full mx-4">
+                                <button id="close-modal-btn" class="absolute -top-12 right-0 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition z-[10000]">
+                                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                                <img id="modal-image" src="" alt="Zoomed Product Image" class="w-full h-auto rounded-xl shadow-lg bg-white object-contain max-h-[80vh]"
+                                     onerror="this.src='https://placehold.co/800x600?text=Image+Not+Found';">
+                            </div>
+                        </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // 圖片路徑陣列
+                                const images = [
+                                    "assets/images/product/Gan_140W/mojo-140w-gan-1.png",
+                                    "assets/images/product/Gan_140W/mojo-140w-gan-2.png",
+                                    "assets/images/product/Gan_140W/mojo-140w-gan-3.png",
+                                    "assets/images/product/Gan_140W/mojo-140w-gan-4.png"
+                                ];
+                                const mainImg = document.getElementById('main-carousel-image');
+                                const thumbs = document.querySelectorAll('.carousel-thumb');
+                                let currentIndex = 0;
+
+                                // 檢查圖片是否載入失敗，若失敗則顯示預設圖
+                                function checkImage(img, fallback) {
+                                    img.onerror = function() {
+                                        img.src = fallback;
+                                        img.classList.add('opacity-60');
+                                    };
+                                }
+                                checkImage(mainImg, 'https://placehold.co/600x600?text=Image+Not+Found');
+                                thumbs.forEach(btn => {
+                                    const thumbImg = btn.querySelector('img');
+                                    checkImage(thumbImg, 'https://placehold.co/80x80?text=No+Img');
+                                });
+
+                                // 預設顯示第一張圖
+                                function showImage(idx) {
+                                    currentIndex = idx;
+                                    mainImg.src = images[idx];
+                                    mainImg.setAttribute('data-index', idx);
+                                    thumbs.forEach(t => t.classList.remove('border-gray-400'));
+                                    thumbs[idx].classList.add('border-gray-400');
+                                }
+
+                                // 初始化顯示第一張圖
+                                showImage(0);
+
+                                // 縮圖點擊切換主圖
+                                thumbs.forEach((btn, idx) => {
+                                    btn.addEventListener('click', function () {
+                                        showImage(idx);
+                                    });
+                                });
+
+                                // 主圖點擊開啟modal
+                                const modal = document.getElementById('image-modal');
+                                const modalImg = document.getElementById('modal-image');
+                                mainImg.addEventListener('click', function () {
+                                    modalImg.src = images[currentIndex];
+                                    modalImg.classList.remove('opacity-60'); // 確保移除半透明效果
+                                    modal.classList.remove('hidden');
+                                });
+
+                                // 關閉modal
+                                document.getElementById('close-modal-btn').addEventListener('click', function () {
+                                    modal.classList.add('hidden');
+                                    modalImg.src = '';
+                                });
+
+                                // 點modal背景也可關閉
+                                modal.addEventListener('click', function (e) {
+                                    if (e.target === modal) {
+                                        modal.classList.add('hidden');
+                                        modalImg.src = '';
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                    
+                    <!-- Product Info - 右半邊 -->
+                    <div class="w-full h-full flex items-center justify-center">
+                        <div class="text-center lg:text-left max-w-lg bg-white rounded-2xl border border-gray-200 shadow-lg p-8">
+                            <div class="mb-6">
+                                <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                                    Premium Series
+                                </span>
+                            </div>
+                            <h1 class="text-6xl font-bold text-gray-800 mb-6 leading-tight">MOJO 140W GaN Charger</h1>
+                            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                                Experience ultra-fast charging with our advanced GaN technology. This compact charger delivers maximum power with minimal heat generation.
+                            </p>
+
+                            <div class="flex gap-4 justify-center lg:justify-start">
+                                <button class="border border-gray-300 text-gray-700 px-10 py-4 rounded-lg font-medium hover:bg-gray-50 transition text-lg">
+                                    Contact Sales
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Features Introduction -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Advanced Features</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Discover the cutting-edge technology and innovative features that make the MOJO 140W GaN Charger the ultimate charging solution
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- GaN Technology Feature -->
+                    <div class="feature-card bg-white rounded-xl border border-gray-200 p-8">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-purple-100 rounded-full p-4 flex-shrink-0">
+                                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">GaN Technology</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Our advanced Gallium Nitride (GaN) technology enables ultra-efficient power delivery with minimal heat generation. This revolutionary semiconductor material allows for smaller, more powerful chargers that outperform traditional silicon-based solutions.
+                                </p>
+                                <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Key Benefits:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 50% smaller than traditional chargers</li>
+                                        <li>• 30% more efficient power conversion</li>
+                                        <li>• Reduced heat generation</li>
+                                        <li>• Longer lifespan and reliability</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-4">
+                                    <img src="assets/images/product/features/gan-technology-comparison.jpg" alt="GaN vs Traditional Charger Size Comparison" 
+                                         class="w-full h-48 object-cover rounded-lg shadow-md">
+                                    <p class="text-xs text-gray-500 mt-2 text-center">Size comparison: GaN charger vs traditional charger</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Multi-Device Charging Feature -->
+                    <div class="feature-card bg-white rounded-xl border border-gray-200 p-8">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-blue-100 rounded-full p-4 flex-shrink-0">
+                                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Smart Multi-Device Charging</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Charge up to 3 devices simultaneously with intelligent power distribution. The charger automatically detects device requirements and optimizes power delivery for maximum efficiency and safety.
+                                </p>
+                                <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Port Configuration:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• USB-C 1: Up to 140W (20V/7A)</li>
+                                        <li>• USB-C 2: Up to 100W (20V/5A)</li>
+                                        <li>• USB-A: Up to 22.5W (5V/4.5A)</li>
+                                        <li>• Total: 140W maximum output</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-4">
+                                    <img src="assets/images/product/features/multi-device-charging.jpg" alt="Multiple devices charging simultaneously" 
+                                         class="w-full h-48 object-cover rounded-lg shadow-md">
+                                    <p class="text-xs text-gray-500 mt-2 text-center">Charging laptop, phone, and tablet simultaneously</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Fast Charging Support Feature -->
+                    <div class="feature-card bg-white rounded-xl border border-gray-200 p-8">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-green-100 rounded-full p-4 flex-shrink-0">
+                                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Universal Fast Charging</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Compatible with all major fast charging protocols including USB-C Power Delivery, Quick Charge, and proprietary fast charging technologies from leading device manufacturers.
+                                </p>
+                                <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Supported Protocols:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• USB-C Power Delivery 3.0</li>
+                                        <li>• Quick Charge 4.0+</li>
+                                        <li>• Apple Fast Charging</li>
+                                        <li>• Samsung Adaptive Fast Charging</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-4">
+                                    <img src="assets/images/product/features/fast-charging-protocols.jpg" alt="Fast charging protocols compatibility" 
+                                         class="w-full h-48 object-cover rounded-lg shadow-md">
+                                    <p class="text-xs text-gray-500 mt-2 text-center">Compatible with all major fast charging protocols</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Safety Protection Feature -->
+                    <div class="feature-card bg-white rounded-xl border border-gray-200 p-8">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-red-100 rounded-full p-4 flex-shrink-0">
+                                <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Advanced Safety Protection</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Comprehensive protection systems ensure safe operation under all conditions. Multiple layers of protection prevent damage to both the charger and your valuable devices.
+                                </p>
+                                <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Protection Features:</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Over-voltage protection (OVP)</li>
+                                        <li>• Over-current protection (OCP)</li>
+                                        <li>• Over-temperature protection (OTP)</li>
+                                        <li>• Short-circuit protection (SCP)</li>
+                                    </ul>
+                                </div>
+                                <div class="mt-4">
+                                    <img src="assets/images/product/features/safety-protection-diagram.jpg" alt="Safety protection system diagram" 
+                                         class="w-full h-48 object-cover rounded-lg shadow-md">
+                                    <p class="text-xs text-gray-500 mt-2 text-center">Multi-layer safety protection system</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Specifications -->
+        <section class="py-16 bg-white">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Product Specifications</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Detailed technical specifications and features of the MOJO 140W GaN Charger
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Technical Specifications -->
+                    <div class="spec-card bg-white rounded-xl border border-gray-200 p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Technical Specifications</h3>
+                        <table class="spec-table w-full">
+                            <tr>
+                                <td>Output Power</td>
+                                <td>140W Maximum</td>
+                            </tr>
+                            <tr>
+                                <td>Input Voltage</td>
+                                <td>100-240V AC, 50/60Hz</td>
+                            </tr>
+                            <tr>
+                                <td>Output Ports</td>
+                                <td>2x USB-C, 1x USB-A</td>
+                            </tr>
+                            <tr>
+                                <td>USB-C Output 1</td>
+                                <td>140W (20V/7A)</td>
+                            </tr>
+                            <tr>
+                                <td>USB-C Output 2</td>
+                                <td>100W (20V/5A)</td>
+                            </tr>
+                            <tr>
+                                <td>USB-A Output</td>
+                                <td>22.5W (5V/4.5A)</td>
+                            </tr>
+                            <tr>
+                                <td>Dimensions</td>
+                                <td>75 x 75 x 28mm</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>180g</td>
+                            </tr>
+                            <tr>
+                                <td>Operating Temperature</td>
+                                <td>0°C to 40°C</td>
+                            </tr>
+                            <tr>
+                                <td>Certifications</td>
+                                <td>CE, FCC, RoHS, UL</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="spec-card bg-white rounded-xl border border-gray-200 p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Key Features</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="bg-green-100 rounded-full p-2 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">GaN Technology</h4>
+                                    <p class="text-sm text-gray-600">Advanced Gallium Nitride technology for efficient power delivery</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="bg-green-100 rounded-full p-2 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Multi-Device Charging</h4>
+                                    <p class="text-sm text-gray-600">Charge up to 3 devices simultaneously with intelligent power distribution</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="bg-green-100 rounded-full p-2 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Fast Charging Support</h4>
+                                    <p class="text-sm text-gray-600">Compatible with USB-C Power Delivery, Quick Charge, and other fast charging protocols</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="bg-green-100 rounded-full p-2 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Compact Design</h4>
+                                    <p class="text-sm text-gray-600">Ultra-compact form factor, 50% smaller than traditional chargers</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-3">
+                                <div class="bg-green-100 rounded-full p-2 mt-1">
+                                    <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Safety Protection</h4>
+                                    <p class="text-sm text-gray-600">Over-voltage, over-current, over-temperature, and short-circuit protection</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compatibility Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Device Compatibility</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Compatible with a wide range of devices and charging protocols
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Smartphones</h3>
+                        <p class="text-sm text-gray-600">iPhone, Samsung, Google Pixel</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Laptops</h3>
+                        <p class="text-sm text-gray-600">MacBook, Dell, HP, Lenovo</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h4a1 1 0 011 1v2m-6 0h6m-6 0a2 2 0 00-2 2v14a2 2 0 002 2h6a2 2 0 002-2V6a2 2 0 00-2-2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Tablets</h3>
+                        <p class="text-sm text-gray-600">iPad, Samsung Galaxy Tab</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Gaming</h3>
+                        <p class="text-sm text-gray-600">Nintendo Switch, Steam Deck</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Package Contents -->
+        <section class="py-16 bg-white">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Package Contents</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Everything you need to start charging your devices immediately
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                            <svg class="w-12 h-12 text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">MOJO 140W GaN Charger</h3>
+                        <p class="text-sm text-gray-600">Main charging unit with advanced GaN technology</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                            <svg class="w-12 h-12 text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">USB-C Cable</h3>
+                        <p class="text-sm text-gray-600">High-quality 100W USB-C to USB-C cable included</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-gray-100 rounded-lg p-6 mb-4">
+                            <svg class="w-12 h-12 text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">User Manual</h3>
+                        <p class="text-sm text-gray-600">Comprehensive user guide and safety instructions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm">&copy; 2025 Verico. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html> 
