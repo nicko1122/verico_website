@@ -1,19 +1,25 @@
 {
-  "name": "verico",
+  "name": "verico-11ty",
   "version": "1.0.0",
-  "description": "Verico - 專業電池與記憶體解決方案",
+  "description": "Verico corporate website converted to 11ty headless CMS with multilingual support",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "static": "cd static && python3 -m http.server 3000",
-    "static:dev": "cd static && python3 -m http.server 3000 --bind 0.0.0.0"
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "static": "cd static && python3 -m http.server 3000"
   },
-  "keywords": ["static-site", "battery", "memory"],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@fastify/static": "^8.2.0",
-    "fastify": "^5.4.0",
-    "serve": "^14.2.4"
-  }
-}
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "static-site",
+    "multilingual",
+    "tailwindcss"
+  ],
+  "author": "Verico Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {}
+} 

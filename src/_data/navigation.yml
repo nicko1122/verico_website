@@ -1,0 +1,43 @@
+# 多語言導航選單
+main:
+  - title:
+      en: "Home"
+      de: "Startseite"
+    url: "/"
+    
+  - title:
+      en: "Products"
+      de: "Produkte"
+    url: "/products/"
+    submenu:
+      - title:
+          en: "Powerbank"
+          de: "Powerbank"
+        url: "/products/powerbank"
+        submenu:
+          - title:
+              en: "Power Pro"
+              de: "Power Pro"
+            url: "/products/powerbank/powerpro"
+          - title:
+              en: "Power PD"
+              de: "Power PD"
+            url: "/products/powerbank/powerpd"
+      - title:
+          en: "GaN Chargers"
+          de: "GaN Ladegeräte"
+        url: "/products/gan-chargers"
+        submenu:
+          - title:
+              en: "MOJO 140W"
+              de: "MOJO 140W"
+            url: "/products/gan-chargers/mojo-140w"
+          - title:
+              en: "MOJO 65W"
+              de: "MOJO 65W"
+            url: "/products/gan-chargers/mojo-65w"
+            
+  - title:
+      en: "Contact"
+      de: "Kontakt"
+    url: "/contact/" 

@@ -1,0 +1,24 @@
+# 網站基本資訊
+title: "Verico"
+tagline: "We care & We share"
+description: "Professional power solutions for modern devices"
+
+# 品牌資訊
+brand:
+  logo: "/assets/images/logo.png"
+  logo_alt: "Verico Logo"
+
+# 聯絡資訊
+contact:
+  phone: "+886 2 2345 6789"
+  email: "info@verico.com"
+  address: "No. 123, Tech Street, Taipei"
+
+# 社交媒體
+social:
+  facebook: "https://facebook.com/verico"
+  twitter: "https://twitter.com/verico"
+  linkedin: "https://linkedin.com/company/verico"
+
+# 版權資訊
+copyright: "© 2024 Verico. All rights reserved." 

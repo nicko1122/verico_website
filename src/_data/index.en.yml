@@ -1,0 +1,55 @@
+# 英文版首頁資料
+hero:
+  image: "/assets/images/banner/hero/Carousel/GaNCharger-banner.jpg"
+  title: "Charge Ahead.<br>Store Smart."
+  subtitle: "Professional power solutions for modern devices"
+  cta_text: "Explore Products"
+  cta_url: "/products/"
+
+categories:
+  - name: "Power Pro Series"
+    image: "/assets/images/banner/tab/product-tab/powerbank-tab.png"
+    text: "High Capacity. Fast Charge."
+    url: "/products/powerbank/"
+    
+  - name: "GaN Charger Series"
+    image: "/assets/images/banner/tab/product-tab/gan-tab.png"
+    text: "Ultra-fast charging with GaN technology"
+    url: "/products/gan-chargers/"
+    
+  - name: "Loopenergy Series"
+    image: "/assets/images/banner/tab/product-tab/loopenergy-tab.png"
+    text: "Eco-friendly compact solutions"
+    url: "/products/loopenergy/"
+
+trending_products:
+  - name: "MOJO 140W GaN Charger"
+    image: "/assets/images/product/Gan_140W/product-1.jpg"
+    desc1: "Ultra-fast charging with GaN."
+    desc2: "Perfect for laptops."
+    url: "/products/gan-chargers/mojo-140w/"
+    
+  - name: "Power Pro 10000mAh"
+    image: "/assets/images/product/Gan_65W/product-1.jpg"
+    desc1: "High-capacity fast charger."
+    desc2: "Reliable power for your devices."
+    url: "/products/powerbank/powerpro/"
+    
+  - name: "Loopenergy 10000mAh"
+    image: "/assets/images/product/Loop_AA/product-1.jpg"
+    desc1: "Eco-friendly compact charger."
+    desc2: "Made for sustainable performance."
+    url: "/products/loopenergy/"
+
+features:
+  - title: "Fast Charging"
+    description: "Advanced charging technology for all your devices"
+    icon: "⚡"
+    
+  - title: "Portable Design"
+    description: "Compact and lightweight for everyday use"
+    icon: "📱"
+    
+  - title: "Safety First"
+    description: "Built-in protection for your devices"
+    icon: "🛡️" 
