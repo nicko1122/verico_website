@@ -1,0 +1,30 @@
+{
+  "name": "verico-11ty",
+  "version": "1.0.0",
+  "description": "Verico website converted to 11ty static site generator with multi-language support",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "static": "cd static && python3 -m http.server 3000"
+  },
+  "keywords": [
+    "11ty",
+    "static-site",
+    "tailwind",
+    "multi-language"
+  ],
+  "author": "Verico Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "nunjucks": "^3.2.4"
+  }
+}

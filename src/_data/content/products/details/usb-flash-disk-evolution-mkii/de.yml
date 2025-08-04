@@ -1,0 +1,103 @@
+title: USB Flash Disk Evolution MKII 3.1
+slug: usb-flash-disk-evolution-mkii
+series: Memory Serie
+hero:
+  title: USB Flash Disk Evolution MKII 3.1
+  subtitle: Die große tödliche Waffe
+  badge: Memory Serie
+  image: assets/images/product/flash-disk/evolution-mkii-1.png
+  gallery:
+    - assets/images/product/flash-disk/evolution-mkii-1.png
+    - assets/images/product/flash-disk/evolution-mkii-2.png
+    - assets/images/product/flash-disk/evolution-mkii-3.png
+    - assets/images/product/flash-disk/evolution-mkii-4.png
+
+features:
+  section_title: Erweiterte Funktionen
+  section_intro: VERICO Evolution MKII ist Ihre erste Wahl für Lethalität mit seinem schnellen USB 3.0 und militärischem Waffen-Look.
+  items:
+    - title: Tödliche Geschwindigkeit & Robust
+      icon: speed.svg
+      description: Schneller USB 3.0 mit robustem Design
+      bullets:
+        - USB 3.0/2.0 Schnittstelle
+        - Rückwärtskompatibel mit USB 1.1
+        - Robust aussehend mit gebürsteter Metalloberfläche
+        - Militärischer Waffen-Ästhetik
+      image: assets/images/product/features/lethal-speed.jpg
+    - title: Verlieren Sie nie Ihren Mündungsschutz
+      icon: design.svg
+      description: Intelligentes Design verhindert Verlust
+      bullets:
+        - USB-Deckel klammert sich an den Rücken
+        - Verlieren Sie nie den Deckel
+        - Intelligentes Design-Feature
+        - Praktische Aufbewahrung
+      image: assets/images/product/features/muzzle-cover.jpg
+    - title: Breite Palette an Arsenal-Kraft
+      icon: capacity.svg
+      description: Verschiedene Farben und Kapazitäten
+      bullets:
+        - Verfügbar von 8GB bis 128GB
+        - Mehrere Farboptionen
+        - Olivgrün, Marineblau, Kardinalrot, Metallgrau
+        - Flexible Speicherlösungen
+      image: assets/images/product/features/arsenal-power.jpg
+    - title: Universelle Kompatibilität
+      icon: compatibility.svg
+      description: Funktioniert mit allen wichtigen Betriebssystemen
+      bullets:
+        - Windows XP/Vista/7/8/10
+        - Mac OS X 10.5, 10.6 empfohlen
+        - USB 2.0 Anschluss kompatibel
+        - Plug and Play Funktionalität
+      image: assets/images/product/features/universal-compatibility.jpg
+
+specifications:
+  section_title: Produktspezifikationen
+  technical:
+    - label: USB Schnittstelle
+      value: USB 3.0/2.0 (rückwärtskompatibel mit USB 1.1)
+    - label: Kapazitätsoptionen
+      value: 8GB~128GB
+    - label: Abmessungen
+      value: 69mm x 19.2mm x 9mm
+    - label: Gewicht
+      value: 10.3g
+    - label: Farben
+      value: Grau, Kardinalrot, Marineblau, Olivgrün
+    - label: SKU
+      value: TM05
+
+  capacity_note: "*1GB = 1,000,000,000 Bytes. Die gesamte zugängliche Kapazität variiert je nach Betriebsumgebung (typischerweise 5–10% weniger)"
+
+  features:
+    - Tödliche Geschwindigkeit & Robust
+    - Verlieren Sie nie Ihren Mündungsschutz
+    - Breite Palette an Arsenal-Kraft
+    - Universelle Kompatibilität
+    - Militärischer Waffen-Look
+
+compatibility:
+  section_title: Systemkompatibilität
+  items:
+    - label: Betriebssysteme
+      note: Windows XP/Vista/7/8/10, Mac OS X 10.5+
+    - label: USB Anschlüsse
+      note: USB 2.0 Anschluss oder höher
+    - label: Dateisysteme
+      note: FAT32, exFAT, NTFS
+    - label: Anwendungen
+      note: Datenspeicherung, Dateiübertragung, Backup
+
+package:
+  section_title: Lieferumfang
+  items:
+    - name: VERICO "Evolution MKII" USB Flash Drive
+      description: Haupt-USB-Flash-Drive-Einheit
+    - name: Benutzerhandbuch
+      description: Einrichtung und Bedienungsanleitung
+
+product_info:
+  model_name: "VERICO Evolution MKII"
+  sku: "TM05" 

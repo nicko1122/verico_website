@@ -1,0 +1,111 @@
+# SPIRIT SSD (NVMe M.2 PCIe) - English Product Details
+
+product:
+  name: "SPIRIT SSD (NVMe M.2 PCIe)"
+  tagline: "Ultimate Performance; Awesome Value!"
+  description: "With awesome cost to performance ratio, VERICO Spirit is the best M.2 SSD ultimate upgrade choice for those who seek life in the fast lane!"
+  category: "Storage"
+  series: "Spirit Series"
+  badge: "Premium Series"
+
+hero:
+  title: "SPIRIT SSD (NVMe M.2 PCIe)"
+  subtitle: "Ultimate Performance; Awesome Value!"
+  description: "With awesome cost to performance ratio, VERICO Spirit is the best M.2 SSD ultimate upgrade choice for those who seek life in the fast lane!"
+  cta_text: "Contact Sales"
+  cta_link: "/en/contact/"
+
+# Product Images (using placeholders for now)
+images:
+  main: "assets/images/product/Spirit_SSD/spirit-ssd-main.png"
+  thumbnails:
+    - "assets/images/product/Spirit_SSD/spirit-ssd-1.png"
+    - "assets/images/product/Spirit_SSD/spirit-ssd-2.png"
+    - "assets/images/product/Spirit_SSD/spirit-ssd-3.png"
+    - "assets/images/product/Spirit_SSD/spirit-ssd-4.png"
+  fallback: "https://placehold.co/600x600?text=SPIRIT+SSD"
+
+# Product Features
+features:
+  - title: "Can You Handle the Speed?!"
+    description: "The VERICO Spirit M.2 SSD offers speed beyond belief! WARNING! You will need to work super fast to prevent your computer getting impatient!"
+    icon: "lightning"
+    
+  - title: "Discreet, Yet Powerful"
+    description: "The VERICO Spirit SSD is in compliance with PCIe Gen. 3 x4 and NVMe 1.3: discreetly hidden on your motherboard, yet offers astounding performance."
+    icon: "shield"
+    
+  - title: "Ultra High Speed"
+    description: "Read speeds up to 3470MB/s (1TB model) for improved load times"
+    icon: "speed"
+    
+  - title: "Multiple Capacity Options"
+    description: "Available in capacities from 250GB to 2TB"
+    icon: "storage"
+    
+  - title: "Enjoy Both Performance & Durability"
+    description: "Armed with cutting-edge 3D NAND Flash and top-notch controller, the VERICO Spirit SSD not only provides high durability, but also staggering performance."
+    icon: "quality"
+    
+  - title: "Hassle-Free & Peace of Mind"
+    description: "All VERICO Spirit SSDs have been through rigorous quality screening and testing procedures before shipping out, and are covered by a 5-year warranty."
+    icon: "warranty"
+
+# Technical Specifications
+specifications:
+  technical:
+    - name: "Interface"
+      value: "PCIe Gen 3.0 x4, NVMe 1.3"
+    - name: "Form Factor"
+      value: "M.2 2280"
+    - name: "Dimensions"
+      value: "80 x 22 x 2.4mm"
+    - name: "NAND Type"
+      value: "3D NAND Flash"
+    - name: "Controller"
+      value: "Advanced NVMe Controller"
+    - name: "Warranty"
+      value: "5 Years"
+
+  performance:
+    capacities:
+      - capacity: "256GB"
+        read_speed: "Up to 3100MB/s"
+        write_speed: "Up to 1040MB/s"
+      - capacity: "512GB"
+        read_speed: "Up to 3370MB/s"
+        write_speed: "Up to 2030MB/s"
+      - capacity: "1TB"
+        read_speed: "Up to 3470MB/s"
+        write_speed: "Up to 3000MB/s"
+      - capacity: "2TB"
+        read_speed: "Up to 3470MB/s"
+        write_speed: "Up to 2750MB/s"
+
+  features:
+    - "TRIM Support"
+    - "S.M.A.R.T. Support"
+    - "RAID Support"
+    - "SLC Cache"
+    - "Advanced Error Correction"
+    - "Power Management"
+
+# Device Compatibility
+compatibility:
+  title: "Device Compatibility"
+  subtitle: "Compatible with all modern systems supporting M.2 NVMe SSDs"
+  devices:
+    - category: "Desktop PCs"
+      description: "All modern motherboards with M.2 slots"
+    - category: "Laptops"
+      description: "Gaming laptops, workstations, ultrabooks"
+    - category: "Gaming Consoles"
+      description: "PS5 (with adapter), PC gaming rigs"
+    - category: "Workstations"
+      description: "Professional editing, rendering, development"
+
+# SEO and Meta
+meta:
+  title: "SPIRIT SSD (NVMe M.2 PCIe) - Verico Professional Storage Solutions"
+  description: "Ultimate performance M.2 NVMe SSD with speeds up to 3470MB/s. Available in 256GB to 2TB capacities with 5-year warranty."
+  keywords: "NVMe SSD, M.2 SSD, PCIe SSD, high-speed storage, gaming SSD, professional storage" 

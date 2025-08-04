@@ -1,0 +1,267 @@
+---
+title: "{{ content.products.details.spirit_ssd.de.meta.title }}"
+description: "{{ content.products.details.spirit_ssd.de.meta.description }}"
+keywords: "{{ content.products.details.spirit_ssd.de.meta.keywords }}"
+lang: de
+---
+
+{% set data = content.products.details.spirit_ssd.de %}
+
+<!-- Product Hero Section -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
+            <!-- Product Image Carousel - Left Side -->
+            <div class="w-full h-full flex items-center justify-center">
+                <div class="w-full max-w-lg aspect-square relative">
+                    <!-- Main Image -->
+                    <img id="main-carousel-image"
+                         src="{{ data.images.main }}"
+                         alt="{{ data.product.name }} - Front View"
+                         class="w-full h-full object-cover cursor-zoom-in"
+                         data-index="0"
+                         onerror="this.src='{{ data.images.fallback }}'; this.classList.add('opacity-60');">
+                    
+                    <!-- Carousel Thumbnails -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                        {% for thumbnail in data.images.thumbnails %}
+                        <button class="carousel-thumb border-2 {% if loop.first %}border-gray-400{% else %}border-transparent{% endif %} rounded-lg overflow-hidden w-14 h-14 bg-white p-0.5 transition"
+                                data-index="{{ loop.index0 }}">
+                            <img src="{{ thumbnail }}" alt="Product View {{ loop.index }} Thumbnail" class="w-full h-full object-cover rounded-md"
+                                 onerror="this.src='{{ data.images.fallback }}'; this.classList.add('opacity-60');">
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <!-- Modal for image zoom -->
+                <div id="image-modal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-[9999] hidden">
+                    <div class="relative max-w-4xl w-full mx-4">
+                        <button id="close-modal-btn" class="absolute -top-12 right-0 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition z-[10000]">
+                            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                        <img id="modal-image" src="" alt="Zoomed Product Image" class="w-full h-auto rounded-xl shadow-lg bg-white object-contain max-h-[80vh]"
+                             onerror="this.src='{{ data.images.fallback }}';">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Info - Right Side -->
+            <div class="w-full h-full flex items-center justify-center">
+                <div class="text-center lg:text-left max-w-lg bg-white rounded-2xl border border-gray-200 shadow-lg p-8">
+                    <div class="mb-6">
+                        <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                            {{ data.product.badge }}
+                        </span>
+                    </div>
+                    <h1 class="text-6xl font-bold text-gray-800 mb-6 leading-tight">{{ data.hero.title }}</h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        {{ data.hero.description }}
+                    </p>
+
+                    <div class="flex gap-4 justify-center lg:justify-start">
+                        <a href="{{ data.hero.cta_link }}" class="border border-gray-300 text-gray-700 px-10 py-4 rounded-lg font-medium hover:bg-gray-50 transition text-lg">
+                            {{ data.hero.cta_text }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Features Introduction -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Fortschrittliche Funktionen</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Entdecken Sie die modernste Technologie und innovativen Funktionen, die die {{ data.product.name }} zur ultimativen Speicherlösung machen
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            {% for feature in data.features %}
+            <div class="feature-card bg-white rounded-xl border border-gray-200 p-8">
+                <div class="flex items-start gap-6">
+                    <div class="bg-blue-100 rounded-full p-3">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">{{ feature.title }}</h3>
+                        <p class="text-gray-600 mb-4">
+                            {{ feature.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Product Specifications -->
+<section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Produktspezifikationen</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Detaillierte technische Spezifikationen und Funktionen der {{ data.product.name }}
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Technical Specifications -->
+            <div class="spec-card bg-white rounded-xl border border-gray-200 p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6">Technische Spezifikationen</h3>
+                <table class="spec-table w-full">
+                    {% for spec in data.specifications.technical %}
+                    <tr>
+                        <td>{{ spec.name }}</td>
+                        <td>{{ spec.value }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            <!-- Performance Specifications -->
+            <div class="spec-card bg-white rounded-xl border border-gray-200 p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6">Leistungsspezifikationen</h3>
+                <div class="space-y-4">
+                    {% for capacity in data.specifications.performance.capacities %}
+                    <div class="border-b border-gray-200 pb-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">{{ capacity.capacity }}</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="text-gray-600">Lesegeschwindigkeit:</span>
+                                <span class="font-medium">{{ capacity.read_speed }}</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600">Schreibgeschwindigkeit:</span>
+                                <span class="font-medium">{{ capacity.write_speed }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Features List -->
+        <div class="mt-8">
+            <div class="spec-card bg-white rounded-xl border border-gray-200 p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6">Hauptfunktionen</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    {% for feature in data.specifications.features %}
+                    <div class="flex items-start gap-3">
+                        <div class="bg-green-100 rounded-full p-2 mt-1">
+                            <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">{{ feature }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compatibility Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ data.compatibility.title }}</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                {{ data.compatibility.subtitle }}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {% for device in data.compatibility.devices %}
+            <div class="text-center">
+                <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-gray-800 mb-2">{{ device.category }}</h3>
+                <p class="text-sm text-gray-600">{{ device.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Image carousel functionality
+    const images = {{ data.images.thumbnails | dump }};
+    const mainImg = document.getElementById('main-carousel-image');
+    const thumbs = document.querySelectorAll('.carousel-thumb');
+    let currentIndex = 0;
+
+    // Check if image loads successfully
+    function checkImage(img, fallback) {
+        img.onerror = function() {
+            img.src = fallback;
+            img.classList.add('opacity-60');
+        };
+    }
+    
+    checkImage(mainImg, '{{ data.images.fallback }}');
+    thumbs.forEach(btn => {
+        const thumbImg = btn.querySelector('img');
+        checkImage(thumbImg, '{{ data.images.fallback }}');
+    });
+
+    // Show image function
+    function showImage(idx) {
+        currentIndex = idx;
+        mainImg.src = images[idx];
+        mainImg.setAttribute('data-index', idx);
+        thumbs.forEach(t => t.classList.remove('border-gray-400'));
+        thumbs[idx].classList.add('border-gray-400');
+    }
+
+    // Initialize with first image
+    showImage(0);
+
+    // Thumbnail click to switch main image
+    thumbs.forEach((btn, idx) => {
+        btn.addEventListener('click', function () {
+            showImage(idx);
+        });
+    });
+
+    // Main image click to open modal
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image');
+    mainImg.addEventListener('click', function () {
+        modalImg.src = images[currentIndex];
+        modalImg.classList.remove('opacity-60');
+        modal.classList.remove('hidden');
+    });
+
+    // Close modal
+    document.getElementById('close-modal-btn').addEventListener('click', function () {
+        modal.classList.add('hidden');
+        modalImg.src = '';
+    });
+
+    // Click modal background to close
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+            modalImg.src = '';
+        }
+    });
+});
+</script> 

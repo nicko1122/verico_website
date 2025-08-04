@@ -1,0 +1,111 @@
+main:
+  - title:
+      en: Home
+      de: Startseite
+    url:
+      en: /en/
+      de: /de/
+  - title:
+      en: Products
+      de: Produkte
+    url:
+      en: /en/products/
+      de: /de/products/
+    submenu:
+      - title:
+          en: Powerbank Series
+          de: Powerbank Serie
+        url:
+          en: /en/products/powerbank/
+          de: /de/products/powerbank/
+        submenu:
+          - title:
+              en: Power Pro 10000mAh
+              de: Power Pro 10000mAh
+            url:
+              en: /en/products/powerbank/power-pro-10000mah/
+              de: /de/products/powerbank/power-pro-10000mah/
+            available_in: [en, de]
+          - title:
+              en: Power Pro 20000mAh
+              de: Power Pro 20000mAh
+            url:
+              en: /en/products/powerbank/power-pro-20000mah/
+              de: /de/products/powerbank/power-pro-20000mah/
+            available_in: [en, de]
+          - title:
+              en: Power PD 10000mAh
+              de: Power PD 10000mAh
+            url:
+              en: /en/products/powerbank/power-pd-10000mah/
+              de: /de/products/powerbank/power-pd-10000mah/
+            available_in: [en, de]
+      - title:
+          en: GaN Charger Series
+          de: GaN Ladegerät Serie
+        url:
+          en: /en/products/gan-charger/
+          de: /de/products/gan-charger/
+        submenu:
+          - title:
+              en: MOJO 140W GaN Charger
+              de: MOJO 140W GaN Ladegerät
+            url:
+              en: /en/products/gan-charger/mojo-140w-gan-charger/
+              de: /de/products/gan-charger/mojo-140w-gan-charger/
+            available_in: [en, de]
+          - title:
+              en: MOJO 65W GaN Charger
+              de: MOJO 65W GaN Ladegerät
+            url:
+              en: /en/products/gan-charger/mojo-65w-gan-charger/
+              de: /de/products/gan-charger/mojo-65w-gan-charger/
+            available_in: [en, de]
+      - title:
+          en: Loopenergy Series
+          de: Loopenergy Serie
+        url:
+          en: /en/products/loopenergy/
+          de: /de/products/loopenergy/
+        submenu:
+          - title:
+              en: Loopenergy Pro AAA1125
+              de: Loopenergy Pro AAA1125
+            url:
+              en: /en/products/loopenergy/loopenergy-pro-aaa1125/
+              de: /de/products/loopenergy/loopenergy-pro-aaa1125/
+            available_in: [en, de]
+      - title:
+          en: Memory Series
+          de: Memory Serie
+        url:
+          en: /en/products/flash-disk/
+          de: /de/products/flash-disk/
+        submenu:
+          - title:
+              en: USB Flash Disk Evolution MKII 3.1
+              de: USB Flash Disk Evolution MKII 3.1
+            url:
+              en: /en/products/flash-disk/usb-flash-disk-evolution-mkii/
+              de: /de/products/flash-disk/usb-flash-disk-evolution-mkii/
+            available_in: [en, de]
+      - title:
+          en: Storage Series
+          de: Storage Serie
+        url:
+          en: /en/products/storage/
+          de: /de/products/storage/
+        submenu:
+          - title:
+              en: SPIRIT SSD (NVMe M.2 PCIe)
+              de: SPIRIT SSD (NVMe M.2 PCIe)
+            url:
+              en: /en/products/storage/nvme-m2-spirit-ssd/
+              de: /de/products/storage/nvme-m2-spirit-ssd/
+            available_in: [en, de]
+  - title:
+      en: Contact
+      de: Kontakt
+    url:
+      en: /en/contact/
+      de: /de/contact/ 

@@ -1,0 +1,98 @@
+title: Power Pro 10000mAh
+slug: power-pro-10000mah
+series: Powerbank Serie
+hero:
+  title: Power Pro 10000mAh
+  subtitle: Klein aber kraftvoll!
+  badge: Powerbank Serie
+  image: assets/images/product/powerbank/power-pro-10000mah-1.png
+  gallery:
+    - assets/images/product/powerbank/power-pro-10000mah-1.png
+    - assets/images/product/powerbank/power-pro-10000mah-2.png
+    - assets/images/product/powerbank/power-pro-10000mah-3.png
+
+features:
+  section_title: Produktmerkmale
+  section_intro: Die ultimative kompakte Powerbank mit hoher Kapazität in kompakter Größe.
+  items:
+    - title: Kompakt & Leicht
+      icon: compact.svg
+      description: Kleines aber kraftvolles Design
+      bullets:
+        - Kompakte Größe wie ein Münzbeutel
+        - Super leichtes Design
+        - Einfach zu transportieren
+        - Perfekt für den täglichen Gebrauch
+      image: assets/images/product/features/compact-design.jpg
+    - title: Hohe Kapazität
+      icon: capacity.svg
+      description: 10000mAh Batteriekapazität
+      bullets:
+        - 10000mAh Batteriekapazität
+        - Hält das Handy den ganzen Tag geladen
+        - Zuverlässige Energie unterwegs
+        - Langlebige Leistung
+      image: assets/images/product/features/high-capacity.jpg
+    - title: Dual USB Ausgänge
+      icon: dual-usb.svg
+      description: Praktische duale USB-Ladeanschlüsse
+      bullets:
+        - 2x USB Type A Anschlüsse
+        - 5V 2.4A Ausgang je Anschluss
+        - Gleichzeitiges Laden von zwei Geräten
+        - Vielseitige Ladeoptionen
+      image: assets/images/product/features/dual-usb-outputs.jpg
+    - title: Modisches Design
+      icon: design.svg
+      description: Schönes und elegantes Design
+      bullets:
+        - Professionelles Aussehen
+        - Geeignet für jeden Anlass
+        - Elegantes Design
+        - Modisches Accessoire
+      image: assets/images/product/features/fashionable-design.jpg
+
+specifications:
+  section_title: Produktspezifikationen
+  technical:
+    - label: Batteriekapazität
+      value: 10000mAh
+    - label: Eingang
+      value: 5V 2A (Micro USB)
+    - label: Ausgang
+      value: 5V 2.4A (USB Type A x 2)
+    - label: Abmessungen
+      value: 90.7 x 63.3 x 22.3 mm
+    - label: Gewicht
+      value: 180g
+    - label: Eingangsanschluss
+      value: Micro USB x 1
+    - label: Ausgangsanschlüsse
+      value: USB Type A x 2
+
+  features:
+    - Kompaktes Design
+    - Hohe Kapazität
+    - Dual USB Ausgänge
+    - Modischer Stil
+    - Leichtgewicht
+
+compatibility:
+  section_title: Gerätekompatibilität
+  items:
+    - label: Smartphones
+      note: iPhone, Samsung, Pixel, Huawei
+    - label: Tablets
+      note: iPad, Galaxy Tab, Android Tablets
+    - label: Andere Geräte
+      note: Bluetooth-Kopfhörer, Smartwatches
+
+package:
+  section_title: Lieferumfang
+  items:
+    - name: Power Pro 10000mAh Powerbank
+      description: Haupt-Powerbank-Einheit
+    - name: Micro USB Kabel
+      description: Ladekabel für die Powerbank
+    - name: Benutzerhandbuch
+      description: Einrichtung und Sicherheitsanleitung 

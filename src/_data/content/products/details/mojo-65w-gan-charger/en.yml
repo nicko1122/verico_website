@@ -1,0 +1,105 @@
+title: MOJO 65W 3 Ports PD 3.0 GaN Charger
+slug: mojo-65w-gan-charger
+series: GaN Charger Series
+hero:
+  title: MOJO 65W 3 Ports PD 3.0 GaN Charger
+  subtitle: Efficient and Safe
+  badge: GaN Charger Series
+  image: assets/images/product/Gan_65W/mojo-65w-gan-1.png
+  gallery:
+    - assets/images/product/Gan_65W/mojo-65w-gan-1.png
+    - assets/images/product/Gan_65W/mojo-65w-gan-2.png
+    - assets/images/product/Gan_65W/mojo-65w-gan-3.png
+    - assets/images/product/Gan_65W/mojo-65w-gan-4.png
+
+features:
+  section_title: Advanced Features
+  section_intro: Discover the innovative tech behind this GaN charger.
+  items:
+    - title: GaN Technology
+      icon: gan.svg
+      description: Ultra-efficient power with minimal heat
+      bullets:
+        - 50% smaller than traditional chargers
+        - 30% more efficient
+        - Reduced heat generation
+        - Longer lifespan
+      image: assets/images/product/features/gan-technology-comparison.jpg
+    - title: Multi-Device Charging
+      icon: multi-device.svg
+      description: One charger, more devices
+      bullets:
+        - 2x USB-C ports
+        - 1x USB-A port
+        - 65W total power output
+        - Charge phones, tablets, and laptops
+      image: assets/images/product/features/multi-device-charging.jpg
+    - title: Fast Charging Support
+      icon: fast-charge.svg
+      description: Latest charging protocols
+      bullets:
+        - Power Delivery 3.0
+        - Quick Charge 4.0+
+        - Apple Fast Charging
+        - Samsung AFC
+      image: assets/images/product/features/fast-charging-protocols.jpg
+    - title: Travel-Friendly
+      icon: travel.svg
+      description: Compatible worldwide
+      bullets:
+        - 110V~240V input voltage
+        - Compatible with various power sources
+        - Compact and portable
+        - Perfect for travel
+      image: assets/images/product/features/travel-friendly.jpg
+
+specifications:
+  section_title: Product Specifications
+  technical:
+    - label: Input Voltage
+      value: 110-240V~50/60Hz 1.5A
+    - label: Total Output Power
+      value: 65.0W Max
+    - label: USB-C1/C2 Output
+      value: 5.0/9.0/12.0/15.0V⎓3.0A, 20.0V⎓3.25A
+    - label: USB-A Output
+      value: 5.0/9.0V⎓3.0A, 12.0V⎓2.25A
+    - label: USB-C1+USB-C2
+      value: 45.0W + 20.0W (65.0W Max)
+    - label: USB-C1+USB-A
+      value: 45.0W + 18.0W (63.0W Max)
+    - label: USB-C2+USB-A
+      value: 24.0W Max
+    - label: Dimensions
+      value: 35mm x 40mm x 75mm (without plug)
+    - label: Weight
+      value: 130.7g
+    - label: Warranty
+      value: 2 years
+
+  features:
+    - GaN Technology
+    - Multi-device Charging
+    - Fast Charging Support
+    - Compact Design
+    - Travel-Friendly
+
+compatibility:
+  section_title: Device Compatibility
+  items:
+    - label: Laptops
+      note: MacBook Pro/Air, Dell, HP, Lenovo
+    - label: Smartphones
+      note: iPhone 14 Pro Max 13 12 11, Galaxy S22 S21 Note 20
+    - label: Tablets
+      note: iPad Pro, Android tablets
+    - label: Other Devices
+      note: USB-C compatible devices
+
+package:
+  section_title: Package Contents
+  items:
+    - name: Verico MOJO 65W PD GaN Charger
+      description: Main charging unit
+    - name: User Manual
+      description: Setup and safety guide 

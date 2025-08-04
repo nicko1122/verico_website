@@ -10,13 +10,13 @@
 ---
 
 ## 🗂 靜態頁面對應
-"/home/nicko1122/webproject/verico/static"
-| 檔名                     | 功能說明                 |
-| ---------------------- | -------------------- |
-| `index.html`           | 首頁（Hero + 分類 + 熱門產品） |
-| `product-catalog.html` | 產品分類總覽頁面             |
-| `product-spec.html`    | 單一產品詳細頁（含圖文與規格）      |
-| `contact.html`         | 聯絡頁（含表單與常見問答）        |
+
+| 檔名                     | 功能說明                 | 對應模板                                                | 對應資料檔案               |
+| ---------------------- | -------------------- | --------------------------------------------------- | -------------------- |
+| `index.html`           | 首頁（Hero + 分類 + 熱門產品） | `en/index.njk` / `de/index.njk`                     | `homepage.yml`       |
+| `product-catalog.html` | 產品分類總覽頁面             | `en/product-catalog.njk` / `de/product-catalog.njk` | `products.yml`       |
+| `product-spec.html`    | 單一產品詳細頁（含圖文與規格）      | `products/{slug}/index.njk`                         | `product-{slug}.yml` |
+| `contact.html`         | 聯絡頁（含表單與常見問答）        | `en/contact.njk` / `de/contact.njk`                 | `contact.yml`        |
 
 ---
 
@@ -34,10 +34,10 @@ src/
   ├── _data/
   │    ├── site.yml              # 靜態資訊（logo、品牌標語）
   │    ├── navigation.yml        # 多語選單（含 i18n title）
-  │    ├── index.{lang}.yml      # 首頁 Hero + 區塊
-  │    ├── products.{lang}.yml   # 產品類別與簡略資料
-  │    ├── product-[slug].{lang}.yml # 單一產品詳細資料
-  │    └── contact.{lang}.yml    # 聯繫方式、FAQ
+  │    ├── homepage.yml          # 首頁資料，包含 en/de
+  │    ├── products.yml          # 所有產品分類與列表資料，包含 en/de
+  │    ├── contact.yml           # 聯絡資料與 FAQ，包含 en/de
+  │    ├── product-{slug}.yml    # 每個產品詳細資訊，支援多語（可依需求）
   ├── _includes/
   │    ├── layout.njk            # 主框架，引用 nav/footer/head 樣板
   │    ├── nav.njk               # 導覽列（含語言切換器）
@@ -48,202 +48,157 @@ src/
   │    └── js/                   # 前端互動腳本，如語言切換、下拉選單
 ```
 
+⚠️ YAML 多語命名建議統一寫法為 `homepage.yml` → `homepage.en.title`, `homepage.de.title` 這種格式，不再使用 `index.en.yml` 等點號語言後綴方式，以避免 Eleventy 輸出解析錯誤。
+
 ---
 
 ## 🌐 二、多語言支援要點
 
-### 1. 多語言分頁
+### 1. 資料組織結構
 
-每語系對應資料夾（`en/`, `de/`）
-→ 使用 `permalink: /{{ lang }}/products/` 控制輸出路徑。
-
-### 2. YAML 命名規則
+* 使用單一 YAML 檔（如 `homepage.yml`）儲存所有語言版本：
 
 ```yaml
-# index.en.yml
-hero:
-  image: assets/images/banner/hero/Carousel/GaNCharger-banner.jpg
-  title: Charge Ahead.<br>Store Smart.
+# homepage.yml
+en:
+  hero:
+    title: "Charge Ahead.<br>Store Smart."
+    image: "assets/images/hero.jpg"
+    alt: "Hero Banner"
 
-categories:
-  - name: Power Pro Series
-    image: assets/images/banner/tab/product-tab/powerbank-tab.png
-    text: High Capacity. Fast Charge.
+de:
+  hero:
+    title: "Laden Sie voraus.<br>Speichern Sie intelligent."
+    image: "assets/images/hero.jpg"
+    alt: "Hero Banner"
 ```
 
----
+* `products.yml`, `contact.yml` 同理。
 
-## 📂 三、導航選單 (多語言)
+### 2. 模板使用 `lang` 動態語言切換
 
-```yaml
-# navigation.yml
-main:
-  - title:
-      en: Home
-      de: Startseite
-    url: /
-  - title:
-      en: Products
-      de: Produkte
-    url: /products/
-    submenu:
-      - title:
-          en: Powerbank
-          de: Powerbank
-        url: /products/powerbank
-        submenu:
-          - title:
-              en: Power Pro
-              de: Power Pro
-            url: /products/powerbank/powerpro
-          - title:
-              en: Power PD
-              de: Power PD
-            url: /products/powerbank/powerpd
-```
-
-在 `nav.njk` 中，根據 `page.lang` 選擇語系：
+在 `.njk` 模板內應這樣引用：
 
 ```njk
-{% set t = nav.title[lang] or nav.title['en'] %}
+{% set data = homepage[lang] %}
+<h1>{{ data.hero.title }}</h1>
 ```
 
-> 語言切換器建議搭配 dropdown + `lang` 資料夾路徑自動切換（如 `/en/...` ↔ `/de/...`）。
+`lang` 通常從 front matter 中指定，例如：
+
+```njk
+---
+layout: layout.njk
+title: Home
+lang: en
+permalink: /en/
+---
+```
+
+### 3. 導覽選單與 footer 多語支援
+
+`navigation.yml` 結構建議如下：
+
+```yaml
+en:
+  main:
+    - title: Home
+      url: /en/
+    - title: Products
+      url: /en/product-catalog
+    - title: Contact
+      url: /en/contact
+de:
+  main:
+    - title: Startseite
+      url: /de/
+    - title: Produkte
+      url: /de/product-catalog
+    - title: Kontakt
+      url: /de/contact
+```
+
+在 `nav.njk` 中可引用：
+
+```njk
+{% for item in navigation[lang].main %}
+  <a href="{{ item.url }}">{{ item.title }}</a>
+{% endfor %}
+```
+
+### 4. 多語切換器元件（建議做法）
+
+```njk
+<div class="language-switcher">
+  <a href="/en/{{ page.fileSlug }}/">EN</a> |
+  <a href="/de/{{ page.fileSlug }}/">DE</a>
+</div>
+```
+
+（可加入 JS 自動判斷瀏覽器語系做 redirect）
 
 ---
 
-## 🧩 四、頁面資料（多語）
+## 🐛 YAML 數據讀取問題說明
 
-### ✅ `index.{lang}.yml`
+### 問題概述
 
-```yaml
-hero:
-  image: assets/images/banner/hero/Carousel/GaNCharger-banner.jpg
-  title: Charge Ahead.<br>Store Smart.
+早期資料命名如 `index.en.yml`、`products.en.yml` 導致 11ty 在讀取資料時產生命名衝突，結果導致：
 
-categories:
-  - name: Power Pro Series
-    image: assets/images/banner/tab/product-tab/powerbank-tab.png
-    text: High Capacity. Fast Charge.
+* `{% set data = index.en %}` 會找不到 `en`
+* `{{ index.en.hero.title }}` 無法讀取正確資料
 
-trending_products:
-  - name: MOJO 140W GaN Charger
-    image: assets/images/product/Gan_140W/product-1.jpg
-    desc1: Ultra-fast charging with GaN.
-    desc2: Perfect for laptops.
-```
+### 原因解析
 
-### ✅ `products.{lang}.yml`
+11ty 將 `index.en.yml` 認定為變數 `index`，但 `index` 不是物件，語法錯誤。
 
 ```yaml
-categories:
-  - id: powerbank
-    label: Powerbank Series
-    products:
-      - name: Power Pro 10000mAh
-        image: assets/images/product/Gan_65W/product-1.jpg
-        short: High-capacity fast charger
-        long: Reliable power for your devices
-  - id: loopenergy
-    label: Loopenergy Series
-    products:
-      - name: Loopenergy 10000mAh
-        image: assets/images/product/Loop_AA/product-1.jpg
-        short: Eco-friendly compact charger
-        long: Made for sustainable performance
+# 錯誤命名
+src/_data/index.en.yml → index: {...}（11ty 認定為 index）
 ```
 
-### ✅ `product-[slug].{lang}.yml`
+### 正確做法
+
+使用單一檔案包含多語系內容：
 
 ```yaml
-title: MOJO 140W GaN Charger
-series: Premium Series
-description: Experience ultra-fast charging...
-images:
-  - assets/images/product/Gan_140W/mojo-140w-gan-1.png
-  - assets/images/product/Gan_140W/mojo-140w-gan-2.png
-features:
-  - title: GaN Technology
-    description: Efficient power conversion
-    bullets:
-      - 50% smaller
-      - 30% more efficient
-      - Less heat
-    image: assets/images/product/features/gan-technology-comparison.jpg
-specs:
-  - key: Output Power
-    value: 140W Max
-  - key: USB-C Ports
-    value: 2x USB-C
-compatibility:
-  - title: Smartphones
-    note: iPhone, Samsung...
-package:
-  - name: Charger
-    desc: GaN Charger body
-  - name: USB-C Cable
-    desc: 100W PD charging cable
+# 正確命名：homepage.yml
+en:
+  hero:
+    title: "..."
+    image: "..."
+de:
+  hero:
+    title: "..."
+    image: "..."
 ```
 
-### ✅ `contact.{lang}.yml`
+### 模板內正確使用方式
 
-```yaml
-hero_title: Contact Us
-hero_desc: Reach out for professional solutions.
-
-contact:
-  phone: +886 2 2345 6789
-  email: info@verico.com
-  address: No. 123, Tech Street, Taipei
-
-faq:
-  - q: Do you ship internationally?
-    a: Yes, worldwide shipping is available.
-  - q: What payment methods are supported?
-    a: Credit card, PayPal, and wire transfer.
+```njk
+{% set data = homepage[lang] %}
+<h1>{{ data.hero.title }}</h1>
 ```
 
+### 建議結構調整步驟：
+
+1. 移除所有 `index.en.yml`, `products.en.yml` 等錯誤命名格式
+2. 將所有語系資料統一寫入：`homepage.yml`, `products.yml`, `contact.yml`
+3. 使用 `{% set data = homepage[lang] %}` 為資料起始點
+4. 若需除錯，加上：`{{ homepage | dump }}`
+
+### 建議測試頁（debug page）
+
+```njk
 ---
-
-## ⚙️ 五、模組化資源（CSS、JS、模板）
-
-### ✅ CSS
-
-* 主要以 CDN tailwind 為主，也可使用 `assets/css/main.css` 自定義（需設定 PostCSS 或 Tailwind CLI）。
-* 建議 Tailwind 的 `config` 設定獨立 `tailwind.config.js`
-
-### ✅ JS
-
-* 模組化放入 `assets/js/*.js`
-* 常見功能：語言切換器、產品分類切換、下拉選單、圖片輪播等
-* 在 `layout.njk` 統一引入：
-
-```html
-<script src="/assets/js/lang-toggle.js"></script>
+layout: layout.njk
+title: Debug Page
+lang: en
+permalink: /debug/
+---
+<pre>{{ homepage | dump }}</pre>
+<pre>{{ products | dump }}</pre>
+<pre>{{ contact | dump }}</pre>
 ```
 
-### ✅ 模板共用區塊（Nunjucks）
-
-| 模板檔案               | 功能                      |
-| ------------------ | ----------------------- |
-| `layout.njk`       | 包含頁框、head、nav、footer    |
-| `nav.njk`          | 主導覽列，含 submenu 支援       |
-| `footer.njk`       | 公司資訊與版權                 |
-| `head.njk`         | 共用 <head>，meta/font/css |
-| `product-card.njk` | 可選：商品卡元件片段              |
-
----
-
-## ✅ 小結
-
-| 元件           | 多語 YAML | Nunjucks 調整        |
-| ------------ | ------- | ------------------ |
-| nav/footer   | ✅       | 用 `lang` 指定 key    |
-| 首頁 hero      | ✅       | 動態圖片與標語            |
-| Product grid | ✅       | 用 `loop` 自動 render |
-| FAQ / 聯絡     | ✅       | 問答與公司資訊資料分離        |
-| 模板結構         | ✅       | 模組化 partial 共用     |
-| JS / CSS     | ✅       | 模組化資源統一引入          |
-
----
-
+✅ 修正後，可成功讀取多語言內容並動態生成對應區塊。

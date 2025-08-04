@@ -1,0 +1,113 @@
+title: Loopenergy Pro AAA1125
+slug: loopenergy-pro-aaa1125
+series: Loopenergy Series
+hero:
+  title: Loopenergy Pro AAA1125
+  subtitle: Unleash Power Without Limits
+  badge: Loopenergy Series
+  image: assets/images/product/loop_AAA/loopenergy-pro-1.png
+  gallery:
+    - assets/images/product/loop_AAA/loopenergy-pro-1.png
+    - assets/images/product/loop_AAA/loopenergy-pro-2.png
+    - assets/images/product/loop_AAA/loopenergy-pro-3.png
+    - assets/images/product/loop_AAA/loopenergy-pro-4.png
+
+features:
+  section_title: Advanced Features
+  section_intro: Redefining Power with Enhanced Capacity! Harness the Strength of our High-Performance Rechargeable Battery.
+  items:
+    - title: High Capacity
+      icon: capacity.svg
+      description: Mighty 1125mWh capacity
+      bullets:
+        - 1125mWh capacity
+        - Extended power and endurance
+        - High-performance rechargeable battery
+        - Sustainable power solution
+      image: assets/images/product/features/high-capacity-battery.jpg
+    - title: USB Type-C Charging
+      icon: usb-c.svg
+      description: Swift 1-2 hour recharges
+      bullets:
+        - USB Type-C charging port
+        - Fast charging technology
+        - Convenient recharging
+        - Universal compatibility
+      image: assets/images/product/features/usb-c-charging.jpg
+    - title: LED Charge Indicator
+      icon: led.svg
+      description: Intelligent power indicator function
+      bullets:
+        - LED charge indicator
+        - Smart power monitoring
+        - Visual charging status
+        - User-friendly interface
+      image: assets/images/product/features/led-indicator.jpg
+    - title: Multiple Protection
+      icon: protection.svg
+      description: Comprehensive safety features
+      bullets:
+        - Over-charge protection
+        - Over-discharge protection
+        - Over-heat protection
+        - Short circuit protection
+      image: assets/images/product/features/multiple-protection.jpg
+    - title: Sustainability
+      icon: eco.svg
+      description: Saving thousands of alkaline batteries
+      bullets:
+        - Rechargeable design
+        - Minimizing landfill waste
+        - Eco-friendly solution
+        - Cost-effective alternative
+      image: assets/images/product/features/sustainability.jpg
+
+specifications:
+  section_title: Product Specifications
+  technical:
+    - label: Battery Type
+      value: Li-ion
+    - label: Voltage
+      value: 1.5V
+    - label: Capacity
+      value: 1125mWh / 750mAh
+    - label: Charging Port
+      value: USB Type-C
+    - label: Charging Time
+      value: 1-2 hours
+    - label: Package
+      value: 4 Pack
+
+  features:
+    - High Capacity
+    - USB Type-C Charging
+    - LED Charge Indicator
+    - Multiple Protection
+    - Sustainability
+
+compatibility:
+  section_title: Device Compatibility
+  items:
+    - label: AAA Devices
+      note: Remote controls, toys, flashlights
+    - label: Electronics
+      note: Small electronic devices
+    - label: Household Items
+      note: Clocks, calculators, sensors
+    - label: Other Applications
+      note: Any device requiring AAA batteries
+
+package:
+  section_title: Package Contents
+  items:
+    - name: Loopenergy Pro AAA1125 4 Pack
+      description: 4x AAA1125 rechargeable batteries
+    - name: USB Type A to 4 Type C Charging Cable
+      description: 1x charging cable for all 4 batteries
+    - name: User Manual
+      description: Setup and safety guide
+
+product_info:
+  model_name: "Loopenergy Pro AAA1125 4 Pack"
+  sku: "1UDBT-A7WEAC-NN"
+  ean: "4713095609299" 

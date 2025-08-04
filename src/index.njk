@@ -1,0 +1,92 @@
+---
+title: Redirecting...
+permalink: /
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: white;
+            color: #333;
+        }
+        .loader {
+            text-align: center;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .loading-text {
+            font-size: 16px;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <img src="/assets/images/verico-logo.svg" alt="Verico Logo" class="logo" />
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <script>
+        // 檢查是否已有語言偏好 cookie
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        // 獲取用戶的語言偏好
+        function getUserLanguage() {
+            // 首先檢查 cookie
+            const savedLang = getCookie('preferred_language');
+            if (savedLang) {
+                return savedLang;
+            }
+
+            // 檢查瀏覽器語言
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // 德國、奧地利、瑞士等德語國家
+            const germanCountries = ['de', 'at', 'ch', 'li', 'lu'];
+            const countryCode = browserLang.split('-')[1]?.toLowerCase();
+            
+            if (germanCountries.includes(countryCode) || browserLang.startsWith('de')) {
+                return 'de';
+            }
+            
+            // 默認使用英文
+            return 'en';
+        }
+
+        // 設置 cookie 並跳轉
+        function redirectToLanguage() {
+            const lang = getUserLanguage();
+            
+            // 設置 cookie (30天過期)
+            const expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 30);
+            document.cookie = `preferred_language=${lang}; expires=${expiryDate.toUTCString()}; path=/`;
+            
+            // 跳轉到相應語言版本
+            window.location.href = `/${lang}/`;
+        }
+
+        // 延遲一點時間讓用戶看到載入動畫
+        setTimeout(redirectToLanguage, 1500);
+    </script>
+</body>
+</html> 
