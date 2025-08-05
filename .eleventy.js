@@ -99,13 +99,9 @@ module.exports = function(eleventyConfig) {
     if (!contentData.products) contentData.products = {};
     if (!contentData.products.details) contentData.products.details = {};
     
-    // 載入所有產品詳情
+    // 產品詳情頁面配置
     const productDetails = [
-      'spirit-ssd',
-      'power-pro-10000mah',
-      'mojo-65w-gan-charger',
-      'loopenergy-pro-aaa1125',
-      'usb-flash-disk-evolution-mkii'
+      // 所有產品將由自動化系統動態添加
     ];
     
     productDetails.forEach(productSlug => {

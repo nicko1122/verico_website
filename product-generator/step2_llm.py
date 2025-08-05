@@ -24,8 +24,19 @@ def load_step1_data(product_name):
     print(f"✅ 載入第一階段數據: {data_file}")
     return data
 
-def create_yaml_template(spec_content, image_files, product_name):
+def create_yaml_template(spec_content, image_files, product_name, image_config=None):
     """創建 YAML 模板"""
+    
+    # 構建圖片信息
+    image_info = ""
+    if image_config and 'feature_paragraphs' in image_config:
+        image_info = "\n圖片與文字關聯：\n"
+        for feature in image_config['feature_paragraphs']:
+            if feature.get('image'):
+                image_info += f"- {feature['image']}: {feature['title']} - {feature['description']}\n"
+            else:
+                image_info += f"- 無圖片: {feature['title']} - {feature['description']}\n"
+    
     template = f"""
 請將以下產品文本轉換為結構化的 YAML 格式。
 
@@ -34,12 +45,13 @@ def create_yaml_template(spec_content, image_files, product_name):
 
 圖片文件：
 {', '.join(image_files)}
+{image_info}
 
 請生成完整的 YAML 結構，包含以下部分：
 1. product: 基本信息（name, badge, model_name, sku, ean）
 2. hero: 英雄區塊（title, subtitle, description, cta_text, cta_link）
 3. images: 圖片路徑（使用 /assets/images/product/{product_name}/ 格式）
-4. features: 產品特色（title, description, icon）
+4. features: 產品特色（title, description, icon）- 有圖片的特點請使用對應圖片，沒有圖片的特點請使用適當的圖標
 5. specifications: 技術規格（technical, performance, features）
 6. compatibility: 相容性（title, subtitle, devices）
 7. package: 包裝內容（section_title, items）
@@ -48,6 +60,8 @@ def create_yaml_template(spec_content, image_files, product_name):
 
 注意：
 - 圖片路徑應該使用 /assets/images/product/{product_name}/[filename] 格式
+- 有圖片關聯的特點請在 features 中使用對應的圖片
+- 沒有圖片關聯的特點請使用適當的圖標（如 lightning, shield, check 等）
 - 保持數據準確性和結構完整性
 - 適合多語言網站使用
 
@@ -171,7 +185,8 @@ def main():
             template = create_yaml_template(
                 data['spec_content'], 
                 data['image_files'], 
-                product_name
+                product_name,
+                data.get('image_config') # 傳遞 image_config 到模板
             )
             
             # 生成英文 YAML

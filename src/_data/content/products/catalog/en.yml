@@ -17,61 +17,15 @@ categories:
 - id: flash-disk
   name: Memory Series
   description: High-speed USB storage solutions
+- id: storage
+  name: Storage Series
+  description: High-performance storage solutions
 products:
-  powerbank:
-  - name: Power Pro 10000mAh
-    description: High-capacity portable charger with fast charging.
-    details: Reliable power on the go for your daily devices.
-    image: assets/images/product/powerbank/power-pro-10000mah-1.png
-    alt: Power Pro 10000mAh
-    link: /en/products/powerbank/power-pro-10000mah/
-    slug: power-pro-10000mah
-  - name: Power Pro 20000mAh
-    description: Ultra-high capacity with dual USB outputs.
-    details: Perfect for extended trips and multiple devices.
-    image: assets/images/product/Gan_140W/product-1.jpg
-    alt: Power Pro 20000mAh
-    link: /en/products/powerbank/power-pro-20000mah/
-    slug: power-pro-20000mah
-  - name: Power PD 10000mAh
-    description: USB-C Power Delivery compatible fast charger.
-    details: Fast charging for modern devices with USB-C.
-    image: assets/images/product/loop_AAA/product-1.jpg
-    alt: Power PD 10000mAh
-    link: /en/products/powerbank/power-pd-10000mah/
-    slug: power-pd-10000mah
-  loopenergy:
-  - name: Loopenergy Pro AAA1125
-    description: Eco-friendly rechargeable AAA batteries.
-    details: Sustainable power solution with USB-C charging.
-    image: assets/images/product/loop_AAA/loopenergy-pro-1.png
-    alt: Loopenergy Pro AAA1125
-    link: /en/products/loopenergy/loopenergy-pro-aaa1125/
-    slug: loopenergy-pro-aaa1125
-  gan-charger:
-  - name: MOJO 140W GaN Charger
-    description: Ultra-fast charging with GaN technology.
-    details: Perfect for laptops, tablets, and smartphones.
-    image: assets/images/product/Gan_140W/product-1.jpg
-    alt: MOJO 140W GaN Charger
-    link: /en/products/gan-charger/mojo-140w-gan-charger/
-    slug: mojo-140w-gan-charger
-  - name: MOJO 65W GaN Charger
-    description: Compact and efficient GaN charger.
-    details: Ideal for travel and fast charging multiple devices.
-    image: assets/images/product/Gan_65W/product-1.jpg
-    alt: MOJO 65W GaN Charger
-    link: /en/products/gan-charger/mojo-65w-gan-charger/
-    slug: mojo-65w-gan-charger
-
-  flash-disk:
-  - name: USB Flash Disk Evolution MKII 3.1
-    description: High-speed USB 3.0 flash drive with military design.
-    details: Rugged and reliable storage with multiple capacity options.
-    image: assets/images/product/flash-disk/evolution-mkii-1.png
-    alt: USB Flash Disk Evolution MKII 3.1
-    link: /en/products/flash-disk/usb-flash-disk-evolution-mkii/
-    slug: usb-flash-disk-evolution-mkii
+  powerbank: []
+  loopenergy: []
+  gan-charger: []
+  flash-disk: []
+  storage: []
 features:
   title: Why Choose Verico Products?
   subtitle: Our products are designed with quality, innovation, and user experience
