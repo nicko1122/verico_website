@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Uploader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .drop-zone {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            color: #aaa;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .drop-zone--over {
+            border-style: solid;
+            background-color: #f0f0f0;
+        }
+        .drop-zone__input {
+            display: none;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-700">Upload Product Package</h1>
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+            <div class="mb-6">
+                <div id="drop-zone" class="drop-zone">
+                    <span id="drop-zone-prompt">Drag & drop your .zip file here or click to select</span>
+                    <input type="file" name="file" id="file-input" class="drop-zone__input" accept=".zip">
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" id="submit-button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition disabled:opacity-50" disabled>
+                    Upload and Process
+                </button>
+            </div>
+        </form>
+        <div id="result-container" class="mt-6 text-center hidden">
+            <div id="loader" class="loader mx-auto hidden"></div>
+            <p id="status-message" class="text-lg"></p>
+            <a id="result-url" href="#" target="_blank" class="text-blue-600 hover:underline hidden"></a>
+        </div>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const submitButton = document.getElementById('submit-button');
+        const dropZonePrompt = document.getElementById('drop-zone-prompt');
+        const form = document.getElementById('upload-form');
+        const resultContainer = document.getElementById('result-container');
+        const loader = document.getElementById('loader');
+        const statusMessage = document.getElementById('status-message');
+        const resultUrl = document.getElementById('result-url');
+
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('drop-zone--over');
+        });
+
+        ['dragleave', 'dragend'].forEach(type => {
+            dropZone.addEventListener(type, () => {
+                dropZone.classList.remove('drop-zone--over');
+            });
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                updatePrompt();
+            }
+            dropZone.classList.remove('drop-zone--over');
+        });
+
+        fileInput.addEventListener('change', updatePrompt);
+
+        function updatePrompt() {
+            if (fileInput.files.length > 0) {
+                dropZonePrompt.textContent = fileInput.files[0].name;
+                submitButton.disabled = false;
+                dropZone.style.borderColor = '#3498db';
+                dropZone.style.color = '#333';
+            } else {
+                dropZonePrompt.textContent = 'Drag & drop your .zip file here or click to select';
+                submitButton.disabled = true;
+                dropZone.style.borderColor = '#ccc';
+                dropZone.style.color = '#aaa';
+            }
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            submitButton.disabled = true;
+            submitButton.textContent = 'Processing...';
+            resultContainer.classList.remove('hidden');
+            loader.classList.remove('hidden');
+            statusMessage.textContent = 'Uploading and processing, please wait...';
+            resultUrl.classList.add('hidden');
+
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const result = await response.json();
+                
+                loader.classList.add('hidden');
+                statusMessage.textContent = result.message;
+
+                if (response.ok) {
+                    statusMessage.style.color = 'green';
+                    if (result.product_url) {
+                        resultUrl.href = result.product_url;
+                        resultUrl.textContent = `View Product Page: ${result.product_url}`;
+                        resultUrl.classList.remove('hidden');
+                    }
+                } else {
+                    statusMessage.style.color = 'red';
+                }
+
+            } catch (error) {
+                loader.classList.add('hidden');
+                statusMessage.textContent = 'An unexpected error occurred.';
+                statusMessage.style.color = 'red';
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Upload and Process';
+                fileInput.value = ''; // Reset file input
+                updatePrompt();
+            }
+        });
+    </script>
+</body>
+</html>
+
