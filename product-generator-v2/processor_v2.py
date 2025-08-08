@@ -69,7 +69,14 @@ def _llm_parse_prompt(markdown: str, product_slug: str) -> str:
                 "title": "string",
                 "subtitle": "string",
                 "items": [{"name": "string", "details": "string"}]
-            }
+            },
+            "variants": [{
+                "title": "string",
+                "package_image": "filename only",
+                "model_name": "string",
+                "sku": "string",
+                "ean": "string"
+            }]
         }
     }
     instructions = f"""
@@ -82,6 +89,7 @@ CRITICAL RULES:
 4) The output MUST include the English block at root key "en". Do not add other languages.
 5) If you can infer a product category, map it to one of: powerbank | loopenergy | gan_charger | flash_disk. If unclear, pick the closest.
 6) The root object MUST also include a top-level field "slug" with value: {product_slug}
+7) If a section "## Also Available In" exists, parse its subsections (e.g., "### 2 Pack") as array "variants" of objects with keys: title, package_image, model_name, sku, ean. The package image can be provided via an inline directive like: <!-- package_image: filename.jpg -->. Omit any keys not present.
 
 JSON Schema example (values are types not examples):
 {json.dumps(schema, indent=2)}
@@ -165,6 +173,18 @@ def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) 
         # package contents
         if block.get('package_contents'):
             mapped['package_contents'] = block['package_contents']
+        # variants (Also Available In)
+        variants = []
+        for v in block.get('variants', []) or []:
+            variants.append({
+                'title': v.get('title'),
+                'package_image': f"assets/images/product/{slug}/{v.get('package_image')}" if v.get('package_image') else None,
+                'model_name': v.get('model_name'),
+                'sku': v.get('sku'),
+                'ean': v.get('ean'),
+            })
+        if variants:
+            mapped['variants'] = variants
         return mapped
 
     return {

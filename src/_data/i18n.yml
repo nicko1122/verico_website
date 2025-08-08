@@ -6,6 +6,8 @@ en:
     technical_specs_title: "Technical Specifications"
     key_features_title: "Key Features"
     key_benefits_title: "Key Benefits:"
+    also_available_in_title: "Also Available In"
+    also_available_in_subtitle: "Choose the packaging or capacity that fits your needs."
   catalog:
     why_title: "Why Choose Verico Products?"
     why_text: "Our products are designed with quality, innovation, and user experience in mind."
@@ -18,6 +20,8 @@ de:
     technical_specs_title: "Technische Spezifikationen"
     key_features_title: "Wichtige Funktionen"
     key_benefits_title: "Wesentliche Vorteile:"
+    also_available_in_title: "Auch erhältlich in"
+    also_available_in_subtitle: "Wählen Sie die Verpackung oder Kapazität, die Ihren Bedürfnissen entspricht."
   catalog:
     why_title: "Warum Verico Produkte?"
     why_text: "Unsere Produkte sind auf Qualität, Innovation und Benutzerfreundlichkeit ausgelegt."
