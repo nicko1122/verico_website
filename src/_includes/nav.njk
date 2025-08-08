@@ -16,6 +16,7 @@
               <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/></svg>
             </summary>
           </details>
+          {% if products[lang].categories.tabs %}
           <ul class="nav-dd hidden min-w-[240px] bg-white/90 border border-gray-200 rounded-xl shadow-lg z-40 p-1" style="backdrop-filter: blur(12px);">
             {% for tab in products[lang].categories.tabs %}
               {% set groupKey = tab.id | replace('-', '_') %}
@@ -43,6 +44,7 @@
               </li>
             {% endfor %}
           </ul>
+          {% endif %}
         </li>
         {% else %}
         <li>
@@ -81,27 +83,29 @@
                   <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/></svg>
                 </summary>
                 <div class="px-2 pb-2">
-                  {% for tab in products[lang].categories.tabs %}
-                    {% set groupKey = tab.id | replace('-', '_') %}
-                    {% set group = products[lang].categories[groupKey] %}
-                    <details class="mt-1">
-                      <summary class="list-none cursor-pointer text-sm text-gray-700 flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-50">
-                        <a href="{{ item.url }}#{{ tab.id }}" class="flex-1 text-left">{{ tab.title }}</a>
-                        <svg class="w-3 h-3 ml-2 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/></svg>
-                      </summary>
-                      {% if group and group.products and group.products.length %}
-                      <ul class="pl-4 pb-2">
-                        {% for p in group.products %}
-                          {% if p.url and p.url != '#' %}
-                          <li>
-                            <a href="{{ p.url }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">{{ p.name }}</a>
-                          </li>
-                          {% endif %}
-                        {% endfor %}
-                      </ul>
-                      {% endif %}
-                    </details>
-                  {% endfor %}
+                  {% if products[lang].categories.tabs %}
+                    {% for tab in products[lang].categories.tabs %}
+                      {% set groupKey = tab.id | replace('-', '_') %}
+                      {% set group = products[lang].categories[groupKey] %}
+                      <details class="mt-1">
+                        <summary class="list-none cursor-pointer text-sm text-gray-700 flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-50">
+                          <a href="{{ item.url }}#{{ tab.id }}" class="flex-1 text-left">{{ tab.title }}</a>
+                          <svg class="w-3 h-3 ml-2 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20"><path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/></svg>
+                        </summary>
+                        {% if group and group.products and group.products.length %}
+                        <ul class="pl-4 pb-2">
+                          {% for p in group.products %}
+                            {% if p.url and p.url != '#' %}
+                            <li>
+                              <a href="{{ p.url }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">{{ p.name }}</a>
+                            </li>
+                            {% endif %}
+                          {% endfor %}
+                        </ul>
+                        {% endif %}
+                      </details>
+                    {% endfor %}
+                  {% endif %}
                 </div>
               </details>
             </li>

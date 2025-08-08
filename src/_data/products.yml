@@ -14,58 +14,13 @@ en:
       - id: flash-disk
         title: "Memory Series"
     powerbank:
-      products:
-        - name: "Power Pro 10000mAh"
-          description: "High-capacity portable charger with fast charging."
-          details: "Reliable power on the go for your daily devices."
-          image: assets/images/product/Gan_65W/product-1.jpg
-          url: "#"
-        - name: "Power Pro 20000mAh"
-          description: "Ultra-high capacity with dual USB outputs."
-          details: "Perfect for extended trips and multiple devices."
-          image: assets/images/product/Gan_140W/product-1.jpg
-          url: "#"
-        - name: "Power PD 10000mAh"
-          description: "USB-C Power Delivery compatible fast charger."
-          details: "Fast charging for modern devices with USB-C."
-          image: assets/images/product/loop_AAA/product-1.jpg
-          url: "#"
+      products: []
     loopenergy:
-      products:
-        - name: "Loopenergy 5000mAh"
-          description: "Compact eco-friendly power solution."
-          details: "Sustainable and portable for everyday use."
-          image: assets/images/product/loop_AAA/product-1.jpg
-          url: "#"
-        - name: "Loopenergy 10000mAh"
-          description: "Sustainable high-capacity power bank."
-          details: "Eco-friendly design with long-lasting performance."
-          image: assets/images/product/Loop_AA/product-1.jpg
-          url: "#"
+      products: []
     gan_charger:
-      products:
-        - name: "MOJO 140W GaN Charger"
-          description: "Ultra-fast charging with GaN technology."
-          details: "Perfect for laptops, tablets, and smartphones."
-          image: assets/images/product/Gan_140W/product-1.jpg
-          url: "/en/products/mojo-140w-gan-charger/"
-        - name: "MOJO 65W GaN Charger"
-          description: "Compact and efficient GaN charger."
-          details: "Ideal for travel and fast charging multiple devices."
-          image: assets/images/product/Gan_65W/product-1.jpg
-          url: "#"
+      products: []
     flash_disk:
-      products:
-        - name: "USB 3.0 64GB"
-          description: "High-speed USB 3.0 flash drive."
-          details: "Portable and reliable storage for your important files."
-          image: assets/images/product/Loop_C/product-1.jpg
-          url: "#"
-        - name: "USB 3.0 128GB"
-          description: "Large capacity USB 3.0 flash drive."
-          details: "Store more photos, videos, and documents with ease."
-          image: assets/images/product/Loop_PP3/product-1.jpg
-          url: "#"
+      products: []
 
 de:
   hero:
@@ -83,55 +38,10 @@ de:
       - id: flash-disk
         title: "Speicher Serie"
     powerbank:
-      products:
-        - name: "Power Pro 10000mAh"
-          description: "Tragbares Ladegerät mit hoher Kapazität und Schnellladung."
-          details: "Zuverlässige Energie für Ihre täglichen Geräte unterwegs."
-          image: assets/images/product/Gan_65W/product-1.jpg
-          url: "#"
-        - name: "Power Pro 20000mAh"
-          description: "Sehr hohe Kapazität mit doppelten USB-Ausgängen."
-          details: "Perfekt für längere Reisen und mehrere Geräte."
-          image: assets/images/product/Gan_140W/product-1.jpg
-          url: "#"
-        - name: "Power PD 10000mAh"
-          description: "USB-C Power Delivery kompatibles Schnellladegerät."
-          details: "Schnelles Laden für moderne Geräte mit USB-C."
-          image: assets/images/product/loop_AAA/product-1.jpg
-          url: "#"
+      products: []
     loopenergy:
-      products:
-        - name: "Loopenergy 5000mAh"
-          description: "Kompakte, umweltfreundliche Stromlösung."
-          details: "Nachhaltig und tragbar für den täglichen Gebrauch."
-          image: assets/images/product/loop_AAA/product-1.jpg
-          url: "#"
-        - name: "Loopenergy 10000mAh"
-          description: "Nachhaltige Powerbank mit hoher Kapazität."
-          details: "Umweltfreundliches Design mit langer Lebensdauer."
-          image: assets/images/product/Loop_AA/product-1.jpg
-          url: "#"
+      products: []
     gan_charger:
-      products:
-        - name: "MOJO 140W GaN Ladegerät"
-          description: "Ultraschnelles Laden mit GaN-Technologie."
-          details: "Perfekt für Laptops, Tablets und Smartphones."
-          image: assets/images/product/Gan_140W/product-1.jpg
-          url: "/de/products/mojo-140w-gan-charger/"
-        - name: "MOJO 65W GaN Ladegerät"
-          description: "Kompaktes und effizientes GaN-Ladegerät."
-          details: "Ideal für Reisen und schnelles Laden mehrerer Geräte."
-          image: assets/images/product/Gan_65W/product-1.jpg
-          url: "#"
+      products: []
     flash_disk:
-      products:
-        - name: "USB 3.0 64GB"
-          description: "High-Speed USB-3.0-Flash-Laufwerk."
-          details: "Tragbarer und zuverlässiger Speicher für wichtige Dateien."
-          image: assets/images/product/Loop_C/product-1.jpg
-          url: "#"
-        - name: "USB 3.0 128GB"
-          description: "USB-3.0-Flash-Laufwerk mit großer Kapazität."
-          details: "Speichern Sie Fotos, Videos und Dokumente mit Leichtigkeit."
-          image: assets/images/product/Loop_PP3/product-1.jpg
-          url: "#"
+      products: []
