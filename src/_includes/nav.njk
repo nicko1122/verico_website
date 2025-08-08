@@ -56,10 +56,22 @@
 
     <!-- Lang Switch (Desktop + Mobile) -->
     <div class="hidden md:flex items-center gap-4 ml-4">
-      {% set slug = '' if page.fileSlug == 'en' or page.fileSlug == 'de' else page.fileSlug %}
+      {% set enSlug = '' %}
+      {% set deSlug = '' %}
+      {% if product and product.en and product.de %}
+        {% set enSlug = (product.en.name | slug) %}
+        {% set deSlug = (product.de.name | slug) %}
+      {% else %}
+        {% if page.fileSlug != 'en' and page.fileSlug != 'de' %}
+          {% set enSlug = page.fileSlug %}
+        {% else %}
+          {% set enSlug = '' %}
+        {% endif %}
+        {% set deSlug = enSlug %}
+      {% endif %}
       <select onchange="location = this.value;" class="bg-transparent border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400 w-28" style="min-width: 112px;">
-        <option value="/en/{% if slug %}{{ slug }}/{% endif %}" {% if lang == 'en' %}selected{% endif %}>English</option>
-        <option value="/de/{% if slug %}{{ slug }}/{% endif %}" {% if lang == 'de' %}selected{% endif %}>Deutsch</option>
+        <option value="/en/{% if enSlug %}{{ enSlug }}/{% endif %}" {% if lang == 'en' %}selected{% endif %}>English</option>
+        <option value="/de/{% if deSlug %}{{ deSlug }}/{% endif %}" {% if lang == 'de' %}selected{% endif %}>Deutsch</option>
       </select>
     </div>
 
@@ -116,10 +128,22 @@
             {% endif %}
           {% endfor %}
           <li class="pt-2">
-            {% set slug = '' if page.fileSlug == 'en' or page.fileSlug == 'de' else page.fileSlug %}
+            {% set enSlug = '' %}
+            {% set deSlug = '' %}
+            {% if product and product.en and product.de %}
+              {% set enSlug = (product.en.name | slug) %}
+              {% set deSlug = (product.de.name | slug) %}
+            {% else %}
+              {% if page.fileSlug != 'en' and page.fileSlug != 'de' %}
+                {% set enSlug = page.fileSlug %}
+              {% else %}
+                {% set enSlug = '' %}
+              {% endif %}
+              {% set deSlug = enSlug %}
+            {% endif %}
             <select onchange="location = this.value;" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400">
-              <option value="/en/{% if slug %}{{ slug }}/{% endif %}" {% if lang == 'en' %}selected{% endif %}>English</option>
-              <option value="/de/{% if slug %}{{ slug }}/{% endif %}" {% if lang == 'de' %}selected{% endif %}>Deutsch</option>
+              <option value="/en/{% if enSlug %}{{ enSlug }}/{% endif %}" {% if lang == 'en' %}selected{% endif %}>English</option>
+              <option value="/de/{% if deSlug %}{{ deSlug }}/{% endif %}" {% if lang == 'de' %}selected{% endif %}>Deutsch</option>
             </select>
           </li>
         </ul>

@@ -1,18 +1,18 @@
 en:
   hero:
-    title: "Our Products.<br>Your Power."
+    title: Our Products.<br>Your Power.
     image: assets/images/banner/ourproduct-image1.png
-    alt: "Verico Products Hero Banner"
+    alt: Verico Products Hero Banner
   categories:
     tabs:
-      - id: powerbank
-        title: "Powerbank Series"
-      - id: loopenergy
-        title: "Loopenergy Series"
-      - id: gan-charger
-        title: "GaN Charger Series"
-      - id: flash-disk
-        title: "Memory Series"
+    - id: powerbank
+      title: Powerbank Series
+    - id: loopenergy
+      title: Loopenergy Series
+    - id: gan-charger
+      title: GaN Charger Series
+    - id: flash-disk
+      title: Memory Series
     powerbank:
       products: []
     loopenergy:
@@ -21,22 +21,30 @@ en:
       products: []
     flash_disk:
       products: []
-
+  tabs:
+  - id: powerbank
+    title: Powerbank Series
+  - id: loopenergy
+    title: Loopenergy Series
+  - id: gan-charger
+    title: GaN Charger Series
+  - id: flash-disk
+    title: Memory Series
 de:
   hero:
-    title: "Unsere Produkte.<br>Ihre Power."
+    title: Unsere Produkte.<br>Ihre Power.
     image: assets/images/banner/ourproduct-image1.png
-    alt: "Verico Produkte Hero Banner"
+    alt: Verico Produkte Hero Banner
   categories:
     tabs:
-      - id: powerbank
-        title: "Powerbank Serie"
-      - id: loopenergy
-        title: "Loopenergy Serie"
-      - id: gan-charger
-        title: "GaN Ladegerät Serie"
-      - id: flash-disk
-        title: "Speicher Serie"
+    - id: powerbank
+      title: Powerbank Serie
+    - id: loopenergy
+      title: Loopenergy Serie
+    - id: gan-charger
+      title: GaN Ladegerät Serie
+    - id: flash-disk
+      title: Speicher Serie
     powerbank:
       products: []
     loopenergy:
@@ -45,3 +53,12 @@ de:
       products: []
     flash_disk:
       products: []
+  tabs:
+  - id: powerbank
+    title: Powerbank Serie
+  - id: loopenergy
+    title: Loopenergy Serie
+  - id: gan-charger
+    title: GaN Ladegerät Serie
+  - id: flash-disk
+    title: Speicher Serie

@@ -14,7 +14,7 @@ eleventyComputed:
 
 <main class="pt-16">
     <!-- Product Hero Section -->
-    <section class="py-16">
+    <section class="py-0 -mt-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
                 <!-- Product Image Carousel -->
@@ -44,7 +44,7 @@ eleventyComputed:
                         <div class="mb-6">
                             <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">{{ p.category }}</span>
                         </div>
-                        <h1 class="text-6xl font-bold text-gray-800 mb-6 leading-tight">{{ p.name }}</h1>
+                        <h1 class="text-4xl font-bold text-gray-800 mb-6 leading-tight">{{ p.name }}</h1>
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed">{{ p.description }}</p>
                         <div class="flex gap-4 justify-center lg:justify-start">
                             <button class="border border-gray-300 text-gray-700 px-10 py-4 rounded-lg font-medium hover:bg-gray-50 transition text-lg">{{ i18n[product.lang].buttons.contact_sales }}</button>
@@ -59,17 +59,17 @@ eleventyComputed:
     <section class="py-16 bg-gray-50">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ p.detailed_features.title }}</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ p.detailed_features.title }}</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">{{ p.detailed_features.subtitle }}</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
                 {% for feature in p.detailed_features.items %}
-                <div class="feature-card bg-white rounded-xl border border-gray-200 p-8">
-                    <div class="flex items-start gap-6">
+                <div class="feature-card bg-white rounded-xl border border-gray-200 p-8 h-full flex flex-col">
+                    <div class="flex items-start gap-6 flex-1">
                         <div class="bg-purple-100 rounded-full p-4 flex-shrink-0">
-                           <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                           <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
-                        <div class="flex-1">
+                        <div class="flex-1 flex flex-col">
                             <h3 class="text-xl font-semibold text-gray-800 mb-3">{{ feature.title }}</h3>
                             <p class="text-gray-600 mb-4">{{ feature.description }}</p>
                             {% if feature.benefits %}
@@ -82,13 +82,13 @@ eleventyComputed:
                                 </ul>
                             </div>
                             {% endif %}
-                            {% if feature.image %}
-                            <div class="mt-4">
-                                <img src="{{ ('/' + feature.image) | url }}" alt="{{ feature.image_alt }}" class="w-full h-48 object-cover rounded-lg shadow-md">
-                            </div>
-                            {% endif %}
                         </div>
                     </div>
+                    {% if feature.image %}
+                    <div class="aspect-square w-full rounded-lg shadow-md overflow-hidden bg-white mt-auto">
+                        <img src="{{ ('/' + feature.image) | url }}" alt="{{ feature.image_alt }}" class="w-full h-full object-cover">
+                    </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
@@ -99,7 +99,7 @@ eleventyComputed:
     <section class="py-16 bg-white">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ i18n[product.lang].product.specifications_title }}</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ i18n[product.lang].product.specifications_title }}</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">{{ p.specs_intro or '' }}</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
@@ -138,14 +138,18 @@ eleventyComputed:
     <section class="py-16 bg-gray-50">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ p.compatibility.title }}</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ p.compatibility.title }}</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">{{ p.compatibility.subtitle }}</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {% for cat in p.compatibility.categories %}
-                <div class="text-center">
-                    <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        {# Icon would go here #}
+                 <div class="text-center">
+                    <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                      {% if cat.icon %}
+                        <img src="{{ ('/' + cat.icon) | url }}" alt="{{ cat.name }}" class="w-10 h-10 object-contain" />
+                      {% else %}
+                        <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                      {% endif %}
                     </div>
                     <h3 class="font-semibold text-gray-800 mb-2">{{ cat.name }}</h3>
                     <p class="text-sm text-gray-600">{{ cat.details }}</p>
@@ -161,14 +165,18 @@ eleventyComputed:
     <section class="py-16 bg-white">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ p.package_contents.title }}</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ p.package_contents.title }}</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">{{ p.package_contents.subtitle }}</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 {% for item in p.package_contents.items %}
                 <div class="text-center">
-                    <div class="bg-gray-100 rounded-lg p-6 mb-4">
-                        {# Icon would go here #}
+                    <div class="aspect-[4/3] w-full overflow-hidden rounded-lg mb-4 bg-gray-50 flex items-center justify-center">
+                      {% if item.icon %}
+                        <img src="{{ ('/' + item.icon) | url }}" alt="{{ item.name }}" class="w-full h-full object-contain" />
+                      {% else %}
+                        <svg class="w-10 h-10 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9 4 9-4m-18 0l9-4 9 4m-18 0v10l9 4 9-4V7"/></svg>
+                      {% endif %}
                     </div>
                     <h3 class="font-semibold text-gray-800 mb-2">{{ item.name }}</h3>
                     <p class="text-sm text-gray-600">{{ item.details }}</p>
@@ -184,7 +192,7 @@ eleventyComputed:
     <section class="py-16 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ i18n[product.lang].product.also_available_in_title }}</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">{{ i18n[product.lang].product.also_available_in_title }}</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">{{ i18n[product.lang].product.also_available_in_subtitle }}</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

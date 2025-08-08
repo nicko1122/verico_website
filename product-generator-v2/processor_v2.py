@@ -8,11 +8,11 @@ from typing import Dict, Any, List
 
 import yaml
 from dotenv import load_dotenv
-import openai
+from openai import OpenAI
 
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI()
 
 SCRIPT_DIR = os.path.dirname(__file__)
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
@@ -34,6 +34,8 @@ def slugify(text: str) -> str:
     if not text:
         return ''
     text = text.strip().lower()
+    # remove dots between alphanumerics (e.g., m.2 -> m2)
+    text = re.sub(r'(?<=[a-z0-9])\.(?=[a-z0-9])', '', text)
     # replace non-alphanumeric with hyphen
     text = re.sub(r"[^a-z0-9]+", '-', text)
     text = re.sub(r"-+", '-', text)
@@ -46,6 +48,7 @@ def _llm_parse_prompt(markdown: str, product_slug: str) -> str:
             "name": "string",
             "category": "one of: powerbank | loopenergy | gan_charger | flash_disk",
             "description": "string",
+            "catalog_image": "filename only for product catalog card image (optional)",
             "images": ["filenames only, e.g. photo-1.jpg"],
             "features": ["string"],
             "specs": [{"name": "string", "value": "string"}],
@@ -63,12 +66,12 @@ def _llm_parse_prompt(markdown: str, product_slug: str) -> str:
             "compatibility": {
                 "title": "string",
                 "subtitle": "string",
-                "categories": [{"name": "string", "details": "string"}]
+                "categories": [{"name": "string", "details": "string", "icon": "filename only (optional)"}]
             },
             "package_contents": {
                 "title": "string",
                 "subtitle": "string",
-                "items": [{"name": "string", "details": "string"}]
+                "items": [{"name": "string", "details": "string", "icon": "filename only (optional)"}]
             },
             "variants": [{
                 "title": "string",
@@ -90,6 +93,7 @@ CRITICAL RULES:
 5) If you can infer a product category, map it to one of: powerbank | loopenergy | gan_charger | flash_disk. If unclear, pick the closest.
 6) The root object MUST also include a top-level field "slug" with value: {product_slug}
 7) If a section "## Also Available In" exists, parse its subsections (e.g., "### 2 Pack") as array "variants" of objects with keys: title, package_image, model_name, sku, ean. The package image can be provided via an inline directive like: <!-- package_image: filename.jpg -->. Omit any keys not present.
+8) If a line like "Catalog Image: filename.ext" exists near the top, include it as key "catalog_image" under the "en" object.
 
 JSON Schema example (values are types not examples):
 {json.dumps(schema, indent=2)}
@@ -111,13 +115,13 @@ def _llm_translate_prompt(en_json: Dict[str, Any]) -> str:
 
 
 def call_llm_json(prompt: str, model: str = "gpt-4.1-mini") -> Dict[str, Any]:
-    response = openai.chat.completions.create(
+    resp = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.1,
         response_format={"type": "json_object"}
     )
-    return json.loads(response.choices[0].message.content)
+    return json.loads(resp.choices[0].message.content)
 
 
 def ensure_dirs():
@@ -143,6 +147,9 @@ def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) 
         mapped['name'] = block.get('name')
         mapped['category'] = block.get('category')
         mapped['description'] = block.get('description')
+        # catalog image (optional)
+        if block.get('catalog_image'):
+            mapped['catalog_image'] = f"assets/images/product/{slug}/{block.get('catalog_image')}"
         # images
         mapped['images'] = _prefix_images(slug, block.get('images', []))
         # simple features/specs
@@ -169,10 +176,34 @@ def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) 
             mapped['detailed_features'] = mapped_df
         # compatibility
         if block.get('compatibility'):
-            mapped['compatibility'] = block['compatibility']
+            comp = block['compatibility']
+            mapped_comp = {
+                'title': comp.get('title'),
+                'subtitle': comp.get('subtitle'),
+                'categories': []
+            }
+            for c in comp.get('categories', []) or []:
+                mapped_comp['categories'].append({
+                    'name': c.get('name'),
+                    'details': c.get('details'),
+                    'icon': f"assets/images/product/{slug}/{c.get('icon')}" if c.get('icon') else None
+                })
+            mapped['compatibility'] = mapped_comp
         # package contents
         if block.get('package_contents'):
-            mapped['package_contents'] = block['package_contents']
+            pc = block['package_contents']
+            mapped_pc = {
+                'title': pc.get('title'),
+                'subtitle': pc.get('subtitle'),
+                'items': []
+            }
+            for it in pc.get('items', []) or []:
+                mapped_pc['items'].append({
+                    'name': it.get('name'),
+                    'details': it.get('details'),
+                    'icon': f"assets/images/product/{slug}/{it.get('icon')}" if it.get('icon') else None
+                })
+            mapped['package_contents'] = mapped_pc
         # variants (Also Available In)
         variants = []
         for v in block.get('variants', []) or []:
@@ -244,7 +275,9 @@ def _append_to_catalog(slug: str, en_name: str, de_name: str, category: str, ima
     def append_item(lang_key: str, name: str):
         group_key = key
         products_list = catalog[lang_key]['categories'][group_key]['products']
-        url = f"/{lang_key}/products/{slug}/"
+        # permalink slug must match Eleventy computed slug from product[lang].name
+        friendly_slug = slugify(name or '') or slug
+        url = f"/{lang_key}/products/{friendly_slug}/"
         # de-dup by url
         products_list[:] = [p for p in products_list if p.get('url') != url]
         products_list.append({
@@ -278,11 +311,11 @@ def process_zip_v2(zip_path: str) -> str:
             md = f.read()
 
         # 2) LLM parse (en)
-        en_json = call_llm_json(_llm_parse_prompt(md, slug))
+        en_json = call_llm_json(_llm_parse_prompt(md, slug), model="gpt-4.1-mini")
         en_json['slug'] = slug
 
         # 3) LLM translate (de)
-        de_json_wrapped = call_llm_json(_llm_translate_prompt({'en': en_json.get('en', {})}))
+        de_json_wrapped = call_llm_json(_llm_translate_prompt({'en': en_json.get('en', {})}), model="gpt-4.1-mini")
         de_json = {'de': de_json_wrapped.get('de', {})}
 
         # 4) map to our YAML
@@ -308,7 +341,11 @@ def process_zip_v2(zip_path: str) -> str:
         _save_yaml(product_yaml_path, yaml_data)
 
         # 7) update products catalog yaml
-        first_image = (yaml_data['en'].get('images') or [None])[0] or f"assets/images/product/{slug}/product-1.jpg"
+        first_image = (
+            yaml_data['en'].get('catalog_image')
+            or (yaml_data['en'].get('images') or [None])[0]
+            or f"assets/images/product/{slug}/product-1.svg"
+        )
         _append_to_catalog(slug, en_name, de_name, category, first_image)
 
         # 8) return URL for EN
