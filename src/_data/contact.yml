@@ -1,0 +1,166 @@
+en:
+  hero:
+    title: "Contact Us"
+    subtitle: "Get in touch with our team for professional battery and memory solutions. We're here to help you find the perfect power and storage solutions for your needs."
+  
+  contact_methods:
+    - title: "Phone"
+      description: "Speak directly with our sales team"
+      details: "+886 2 2345 6789"
+      meta: "Mon-Fri: 9:00 AM - 6:00 PM"
+      icon: "phone" # for mapping to an SVG or class
+    - title: "Email"
+      description: "Send us a message anytime"
+      details: "info@verico.com"
+      meta: "We reply within 24 hours"
+      icon: "email"
+    - title: "Office"
+      description: "Visit our headquarters"
+      details: "Taipei, Taiwan"
+      meta: "No. 123, Tech Street"
+      icon: "office"
+
+  form:
+    title: "Send us a Message"
+    fields:
+      full_name:
+        label: "Full Name *"
+        type: "text"
+        required: true
+      email:
+        label: "Email Address *"
+        type: "email"
+        required: true
+      company:
+        label: "Company"
+        type: "text"
+        required: false
+      subject:
+        label: "Subject *"
+        type: "select"
+        required: true
+        options:
+          - value: ""
+            text: "Select a subject"
+          - value: "sales"
+            text: "Sales Inquiry"
+          - value: "support"
+            text: "Technical Support"
+          - value: "partnership"
+            text: "Partnership"
+          - value: "general"
+            text: "General Inquiry"
+      message:
+        label: "Message *"
+        type: "textarea"
+        required: true
+    submit_button: "Send Message"
+
+  map:
+    image: "assets/images/contact/office-map.jpg"
+    alt: "Office Location Map"
+    overlay:
+      title: "Verico Headquarters"
+      address: "No. 123, Tech Street<br>Taipei, Taiwan 100"
+  
+  company_info:
+    title: "Company Information"
+    items:
+      - title: "Business Hours"
+        details: "Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM"
+        icon: "business_hours"
+      - title: "Response Time"
+        details: "Email: Within 24 hours<br>Phone: Immediate during business hours"
+        icon: "response_time"
+      - title: "Certifications"
+        details: "ISO 9001, CE, FCC, RoHS<br>UL Listed Products"
+        icon: "certifications"
+
+  faq:
+    title: "Frequently Asked Questions"
+    subtitle: "Find answers to common questions about our products and services"
+    items:
+      - question: "What payment methods do you accept?"
+        answer: "We accept major credit cards, bank transfers, and PayPal. For large orders, we also offer net 30 payment terms for qualified businesses."
+      - question: "Do you offer international shipping?"
+        answer: "Yes, we ship worldwide. Shipping times and costs vary by location. Contact us for specific shipping quotes for your region."
+      - question: "What is your warranty policy?"
+        answer: "All our products come with a minimum 1-year warranty. Premium products include extended warranty options. Contact us for warranty details."
+      - question: "Can you provide custom solutions?"
+        answer: "Yes, we offer custom battery and memory solutions for OEM clients. Our engineering team can work with you to develop tailored solutions."
+
+de:
+  hero:
+    title: "Kontaktieren Sie uns"
+    subtitle: "Kontaktieren Sie unser Team für professionelle Akku- und Speicherlösungen. Wir sind hier, um Ihnen zu helfen, die perfekten Strom- und Speicherlösungen für Ihre Bedürfnisse zu finden."
+  
+  contact_methods:
+    - title: "Telefon"
+      description: "Sprechen Sie direkt mit unserem Vertriebsteam"
+      details: "+886 2 2345 6789"
+      meta: "Mo-Fr: 9:00 - 18:00 Uhr"
+    - title: "E-Mail"
+      description: "Senden Sie uns jederzeit eine Nachricht"
+      details: "info@verico.com"
+      meta: "Wir antworten innerhalb von 24 Stunden"
+    - title: "Büro"
+      description: "Besuchen Sie unseren Hauptsitz"
+      details: "Taipei, Taiwan"
+      meta: "Nr. 123, Tech Street"
+
+  form:
+    title: "Senden Sie uns eine Nachricht"
+    fields:
+      full_name:
+        label: "Vollständiger Name *"
+      email:
+        label: "E-Mail-Adresse *"
+      company:
+        label: "Firma"
+      subject:
+        label: "Betreff *"
+        options:
+          - value: ""
+            text: "Wählen Sie einen Betreff"
+          - value: "sales"
+            text: "Verkaufsanfrage"
+          - value: "support"
+            text: "Technischer Support"
+          - value: "partnership"
+            text: "Partnerschaft"
+          - value: "general"
+            text: "Allgemeine Anfrage"
+      message:
+        label: "Nachricht *"
+    submit_button: "Nachricht senden"
+
+  map:
+    image: "assets/images/contact/office-map.jpg"
+    alt: "Standortkarte des Büros"
+    overlay:
+      title: "Verico Hauptsitz"
+      address: "Nr. 123, Tech Street<br>Taipeh, Taiwan 100"
+  
+  company_info:
+    title: "Firmeninformation"
+    items:
+      - title: "Geschäftszeiten"
+        details: "Montag - Freitag: 9:00 - 18:00 Uhr<br>Samstag: 10:00 - 16:00 Uhr"
+      - title: "Reaktionszeit"
+        details: "E-Mail: Innerhalb von 24 Stunden<br>Telefon: Sofort während der Geschäftszeiten"
+      - title: "Zertifizierungen"
+        details: "ISO 9001, CE, FCC, RoHS<br>UL-gelistete Produkte"
+
+  faq:
+    title: "Häufig gestellte Fragen"
+    subtitle: "Finden Sie Antworten auf häufig gestellte Fragen zu unseren Produkten und Dienstleistungen"
+    items:
+      - question: "Welche Zahlungsmethoden akzeptieren Sie?"
+        answer: "Wir akzeptieren gängige Kreditkarten, Banküberweisungen und PayPal. Für Großaufträge bieten wir qualifizierten Unternehmen auch Zahlungsbedingungen von 30 Tagen netto an."
+      - question: "Bieten Sie internationalen Versand an?"
+        answer: "Ja, wir versenden weltweit. Versandzeiten und -kosten variieren je nach Standort. Kontaktieren Sie uns für spezifische Versandangebote für Ihre Region."
+      - question: "Was ist Ihre Garantiebestimmung?"
+        answer: "Alle unsere Produkte haben eine Mindestgarantie von 1 Jahr. Premium-Produkte beinhalten erweiterte Garantieoptionen. Kontaktieren Sie uns für Garantiedetails."
+      - question: "Können Sie maßgeschneiderte Lösungen anbieten?"
+        answer: "Ja, wir bieten maßgeschneiderte Akku- und Speicherlösungen für OEM-Kunden an. Unser Ingenieurteam kann mit Ihnen zusammenarbeiten, um maßgeschneiderte Lösungen zu entwickeln."
+

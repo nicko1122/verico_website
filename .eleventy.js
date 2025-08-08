@@ -1,173 +1,74 @@
 const yaml = require("js-yaml");
 const fs = require("fs");
 const path = require("path");
+const slugify = require("slugify");
 
 module.exports = function(eleventyConfig) {
-  // 複製靜態資源
-  eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("static/assets");
+    // Pass through assets
+    eleventyConfig.addPassthroughCopy("src/assets");
 
-  // 設定模板引擎
-  eleventyConfig.setTemplateFormats([
-    "html",
-    "njk",
-    "md"
-  ]);
+    // Add YAML support for data files
+    eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
 
-  // 設定預設 layout
-  eleventyConfig.addGlobalData("layout", "layout.njk");
-
-  // 設定語言
-  const languages = ["en", "de"];
-
-  // 為每個語言建立頁面
-  languages.forEach(lang => {
-    eleventyConfig.addGlobalData("lang", lang);
-  });
-
-  // 添加 absoluteUrl filter
-  eleventyConfig.addFilter("absoluteUrl", function(url) {
-    if (!url) return "";
-    if (url.startsWith("http")) return url;
-    return url;
-  });
-
-  // 添加 dump filter 用於調試
-  eleventyConfig.addFilter("dump", function(obj) {
-    return JSON.stringify(obj, null, 2);
-  });
-
-  // 明確配置 YAML 支援
-  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
-  eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
-
-  // 設定輸出目錄
-  eleventyConfig.addPassthroughCopy("src/assets");
-
-  // 設定監視檔案
-  eleventyConfig.addWatchTarget("src/assets/");
-
-  // 數據處理邏輯
-  eleventyConfig.addGlobalData("site", () => {
-    const siteConfigPath = "src/_data/site/config.yml";
-    if (fs.existsSync(siteConfigPath)) {
-      return yaml.load(fs.readFileSync(siteConfigPath, "utf8"));
-    }
-    return {};
-  });
-
-  eleventyConfig.addGlobalData("navigation", () => {
-    const navConfigPath = "src/_data/site/navigation.yml";
-    if (fs.existsSync(navConfigPath)) {
-      return yaml.load(fs.readFileSync(navConfigPath, "utf8"));
-    }
-    return {};
-  });
-
-  // 處理內容數據
-  eleventyConfig.addGlobalData("content", () => {
-    const contentData = {};
-    
-    // 處理首頁數據
-    languages.forEach(lang => {
-      const homepagePath = `src/_data/content/homepage/${lang}.yml`;
-      if (fs.existsSync(homepagePath)) {
-        if (!contentData.homepage) contentData.homepage = {};
-        contentData.homepage[lang] = yaml.load(fs.readFileSync(homepagePath, "utf8"));
-      }
-    });
-
-    // 處理聯繫頁面數據
-    languages.forEach(lang => {
-      const contactPath = `src/_data/content/contact/${lang}.yml`;
-      if (fs.existsSync(contactPath)) {
-        if (!contentData.contact) contentData.contact = {};
-        contentData.contact[lang] = yaml.load(fs.readFileSync(contactPath, "utf8"));
-      }
-    });
-
-    // 處理產品目錄數據
-    languages.forEach(lang => {
-      const productsPath = `src/_data/content/products/catalog/${lang}.yml`;
-      if (fs.existsSync(productsPath)) {
-        if (!contentData.products) contentData.products = {};
-        contentData.products[lang] = yaml.load(fs.readFileSync(productsPath, "utf8"));
-      }
-    });
-
-    // 處理產品詳情數據
-    if (!contentData.products) contentData.products = {};
-    if (!contentData.products.details) contentData.products.details = {};
-    
-    // 產品詳情頁面配置
-    const productDetails = [
-      // 所有產品將由自動化系統動態添加
-    ];
-    
-    productDetails.forEach(productSlug => {
-      languages.forEach(lang => {
-        const productPath = `src/_data/content/products/details/${productSlug}/${lang}.yml`;
-        if (fs.existsSync(productPath)) {
-          if (!contentData.products.details[productSlug.replace(/-/g, '_')]) {
-            contentData.products.details[productSlug.replace(/-/g, '_')] = {};
-          }
-          contentData.products.details[productSlug.replace(/-/g, '_')][lang] = yaml.load(fs.readFileSync(productPath, "utf8"));
+    // Create a custom collection for products
+    eleventyConfig.addCollection("allProducts", function(collectionApi) {
+        const productDataPath = path.join(__dirname, "src/_data/products");
+        if (!fs.existsSync(productDataPath)) {
+            console.warn("[Eleventy] Products data directory not found at:", productDataPath);
+            return [];
         }
-      });
+        const productFiles = fs.readdirSync(productDataPath).filter(file => file.endsWith(".yml"));
+        
+        const products = [];
+        for (const file of productFiles) {
+            const filePath = path.join(productDataPath, file);
+            const content = fs.readFileSync(filePath, "utf8");
+
+            // Skip empty files
+            if (!content.trim()) {
+                console.warn(`[Eleventy] Skipping empty product file: ${file}`);
+                continue;
+            }
+
+            const data = yaml.load(content);
+
+            // Skip if data is not a valid object or doesn't contain language keys
+            if (!data || typeof data !== 'object' || !data.en || !data.de) {
+                console.warn(`[Eleventy] Skipping invalid or incomplete product data in file: ${file}`);
+                continue;
+            }
+            
+            // Add both language versions to the collection
+            products.push({ lang: 'en', ...data });
+            products.push({ lang: 'de', ...data });
+        }
+        return products;
     });
 
-    return contentData;
-  });
-
-  // 為了向後兼容，保留舊的數據引用
-  eleventyConfig.addGlobalData("homepageen", () => {
-    const path = "src/_data/content/homepage/en.yml";
-    if (fs.existsSync(path)) {
-      return yaml.load(fs.readFileSync(path, "utf8"));
-    }
-    return {};
-  });
-
-  eleventyConfig.addGlobalData("homepagede", () => {
-    const path = "src/_data/content/homepage/de.yml";
-    if (fs.existsSync(path)) {
-      return yaml.load(fs.readFileSync(path, "utf8"));
-    }
-    return {};
-  });
-
-  eleventyConfig.addGlobalData("contact", () => {
-    const contactData = {};
-    languages.forEach(lang => {
-      const path = `src/_data/content/contact/${lang}.yml`;
-      if (fs.existsSync(path)) {
-        contactData[lang] = yaml.load(fs.readFileSync(path, "utf8"));
-      }
+    // Register the slugify filter
+    eleventyConfig.addFilter("slug", (input) => {
+        if (typeof input !== 'string') {
+            console.error(`[Slugify Error] Expected a string but got a ${typeof input}. Value:`, input);
+            return 'invalid-slug';
+        }
+        const options = {
+            replacement: '-',
+            remove: /[&,+()$~%.'":*?<>{}]/g,
+            lower: true
+        };
+        return slugify(input, options);
     });
-    return contactData;
-  });
 
-  eleventyConfig.addGlobalData("products", () => {
-    const productsData = {};
-    languages.forEach(lang => {
-      const path = `src/_data/content/products/catalog/${lang}.yml`;
-      if (fs.existsSync(path)) {
-        productsData[lang] = yaml.load(fs.readFileSync(path, "utf8"));
-      }
-    });
-    return productsData;
-  });
-
-  return {
-    dir: {
-      input: "src",
-      output: "_site",
-      includes: "_includes",
-      data: "_data"
-    },
-    templateFormats: ["html", "njk", "md"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
-  };
-}; 
+    return {
+        dir: {
+            input: "src",
+            includes: "_includes",
+            data: "_data",
+            output: "_site"
+        },
+        templateFormats: ["md", "njk", "html"],
+        markdownTemplateEngine: "njk",
+        htmlTemplateEngine: "njk",
+        dataTemplateEngine: "njk",
+    };
+};

@@ -1,64 +1,15 @@
 ---
-title: "Welcome"
 permalink: /index.html
-layout: false
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Verico</title>
-  <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #f8f9fa;
-    }
-    .loader-container {
-      text-align: center;
-    }
-    .logo {
-      width: 150px;
-      height: auto;
-      animation: pulse 1.5s infinite ease-in-out;
-    }
-    @keyframes pulse {
-      0% {
-        transform: scale(0.95);
-        opacity: 0.7;
-      }
-      50% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(0.95);
-        opacity: 0.7;
-      }
-    }
-  </style>
-  <script>
-    (function() {
-      // Determine the user's preferred language.
-      const userLang = navigator.language || navigator.userLanguage;
-      
-      // Redirect to the German site if the browser's language is German.
-      if (userLang.startsWith('de')) {
-        window.location.replace('/de/');
-      } else {
-        // Otherwise, redirect to the English site.
-        window.location.replace('/en/');
-      }
-    })();
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=/en/">
+    <title>Redirecting...</title>
 </head>
 <body>
-  <div class="loader-container">
-    <img src="/assets/images/verico-logo.svg" alt="Verico Logo" class="logo">
-  </div>
+    <p>If you are not redirected automatically, follow this <a href="/en/">link to the English version</a>.</p>
 </body>
 </html>
+

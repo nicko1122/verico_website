@@ -1,0 +1,45 @@
+en:
+  main:
+    - title: Home
+      url: /en/
+    - title: Products
+      url: /en/product-catalog
+      submenu:
+        - title: Powerbank
+          url: /en/products/powerbank/
+          submenu:
+            - title: Power Pro
+              url: /en/products/powerbank/powerpro/
+            - title: Power PD
+              url: /en/products/powerbank/powerpd/
+        - title: Loopenergy
+          url: /en/products/loopenergy/
+        - title: GaN Charger
+          url: /en/products/gan-charger/
+        - title: Flash Disk
+          url: /en/products/flash-disk/
+    - title: Contact Us
+      url: /en/contact/
+de:
+  main:
+    - title: Startseite
+      url: /de/
+    - title: Produkte
+      url: /de/product-catalog
+      submenu:
+        - title: Powerbank
+          url: /de/products/powerbank/
+          submenu:
+            - title: Power Pro
+              url: /de/products/powerbank/powerpro/
+            - title: Power PD
+              url: /de/products/powerbank/powerpd/
+        - title: Loopenergy
+          url: /de/products/loopenergy/
+        - title: GaN Ladegerät
+          url: /de/products/gan-charger/
+        - title: Flash-Disk
+          url: /de/products/flash-disk/
+    - title: Kontakt
+      url: /de/contact/
+

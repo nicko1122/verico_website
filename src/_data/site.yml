@@ -1,0 +1,9 @@
+en:
+  logo: "assets/images/verico-logo.svg"
+  logo_white: "assets/images/verico-logo-white.svg"
+  footer_text: "&copy; 2025 Verico. All rights reserved."
+de:
+  logo: "assets/images/verico-logo.svg"
+  logo_white: "assets/images/verico-logo-white.svg"
+  footer_text: "&copy; 2025 Verico. Alle Rechte vorbehalten." # Placeholder
+

@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}">
+
 <head>
-  {% include "head.njk" %}
+    {% include "head.njk" %}
 </head>
-<body class="bg-white text-gray-900">
-  <!-- Navigation -->
-  {% include "nav.njk" %}
-  
-  <!-- Main Content -->
-  <main class="{% if permalink != '/en/' and permalink != '/de/' %}pt-32 md:pt-40{% endif %}">
-    {{ content | safe }}
-  </main>
-  
-  <!-- Footer -->
-  {% include "footer.njk" %}
-  
-  <!-- JavaScript -->
-  <script src="/assets/js/lang-toggle.js"></script>
-  <script src="/assets/js/navigation.js"></script>
-  <script src="/assets/js/carousel.js"></script>
-  <script src="/assets/js/form-validation.js"></script>
-  <script src="/assets/js/smooth-scroll.js"></script>
-  <script src="/assets/js/product-filter.js"></script>
+
+<body class="font-sans antialiased bg-slate-100">
+    
+    {% include "nav.njk" %}
+
+    <main class="pt-24">
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+
 </body>
-</html> 
+
+</html>
+

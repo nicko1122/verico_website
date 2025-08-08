@@ -84,5 +84,5 @@ if __name__ == '__main__':
         logging.error("FATAL: OPENAI_API_KEY environment variable not set.")
         sys.exit(1)
     # Use host='0.0.0.0' to make it accessible from the network
-    app.run(host='0.0.0.0', port=5001, debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=False)
 

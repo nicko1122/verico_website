@@ -17,10 +17,9 @@ PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
 
 WATCH_PATH = os.path.join(SCRIPT_DIR, 'inbox')
 FAILED_PATH = os.path.join(SCRIPT_DIR, 'failed')
-DETAILS_PATH = os.path.join(PROJECT_ROOT, 'src', '_data', 'content', 'products', 'details')
-CATALOG_PATH = os.path.join(PROJECT_ROOT, 'src', '_data', 'content', 'products', 'catalog')
+DETAILS_PATH = os.path.join(PROJECT_ROOT, 'src', '_data', 'site_content', 'products', 'details')
+CATALOG_PATH = os.path.join(PROJECT_ROOT, 'src', '_data', 'site_content', 'products', 'catalog')
 IMAGE_PATH = os.path.join(PROJECT_ROOT, 'static', 'assets', 'images', 'product')
-PAGES_PATH = os.path.join(PROJECT_ROOT, 'src')
 
 class NoAliasDumper(yaml.Dumper):
     def ignore_aliases(self, data):
@@ -32,6 +31,7 @@ def get_llm_prompt(markdown_content, product_slug):
     {
       "product": {"name":"string", "badge":"string", "model_name":"string", "sku":"string", "ean":"string"},
       "category": "string",
+      "slug": "string",
       "hero": {"title":"string", "subtitle":"string", "image":"string", "gallery":["string"]},
       "features": {
         "section_title": "string", "section_intro": "string",
@@ -54,20 +54,22 @@ You are an expert data extraction system. Your task is to parse the provided Mar
 1.  **Strictly Adhere to Schema**: The output MUST be a valid JSON object.
 2.  **Omit Missing Fields**: If a section, field, or table is NOT present in the Markdown, you MUST omit its key completely from the JSON output. DO NOT use `null`, empty strings, or invented data. This is the most important rule.
 3.  **Parse Accurately**: Use the `[Tag]` prefixes and section headers (`##`, `###`) to identify data.
+4.  **Add Slug**: Add a `slug` field at the root of the JSON object. Its value should be `{product_slug}`.
 
 **Parsing Steps:**
 - **`product`**:
     - `name`: From `# [Product Name] ...`
     - `model_name`, `sku`, `ean`, `badge`: From the top `<!-- ... -->` block.
 - **`category`**: From `product_category` in the top `<!-- ... -->` block. This is mandatory.
+- **`slug`**: This should be `{product_slug}`.
 - **`hero`**:
     - `title`, `subtitle`: From `[Hero Title]` and `[Hero Subtitle]` tags.
-    - `image`: From `<!-- IMAGES: main.jpg -->`. Construct the full path: `/assets/images/product/{product_slug}/main.jpg`.
-    - `gallery`: From `<!-- GALLERY: ... -->`. Create a list of full paths for each image.
+    - `image`: From `<!-- IMAGES: main.jpg -->`. Construct the full path: `/static/assets/images/product/{product_slug}/main.jpg`.
+    - `gallery`: From `<!-- GALLERY: ... -->`. Create a list of full paths for each image, e.g., `/static/assets/images/product/{product_slug}/gallery-1.jpg`.
 - **`features`**:
     - `section_title`: From the `## Features` header.
     - `section_intro`: From the `<!-- section_intro: ... -->` comment under `## Features`.
-    - `items`: Each `### [Feature Title]` starts a new item. Parse `[Feature Description]` and `[Bullet]` points. The feature image path comes from `<!-- feature_image: ... -->` and should be a full path.
+    - `items`: Each `### [Feature Title]` starts a new item. Parse `[Feature Description]` and `[Bullet]` points. The feature image path comes from `<!-- feature_image: ... -->` and should be a full path like `/static/assets/images/product/{product_slug}/feature-1.jpg`.
 - **`specifications`**:
     - `technical`: Parse from `[Spec]` tags under `### Technical`.
     - **`performance`**: If a Markdown table exists under `### Performance`, parse it. The table headers are the keys for each object in the `capacities` list.
@@ -98,7 +100,7 @@ You are a professional translator for a German tech accessory brand. Your tone i
 
 Translate the values in the following JSON object from English to German.
 Return a valid JSON object with the exact same structure and keys, but with all string values translated.
-Preserve technical specifications and model numbers as they are. Do not translate `product.model_name`, `sku`, `ean`. Image paths must remain identical.
+Preserve technical specifications and model numbers as they are. Do not translate `product.model_name`, `sku`, `ean`. Image paths and the `slug` must remain identical.
 
 **JSON object to translate:**
 ```json
@@ -109,7 +111,7 @@ Preserve technical specifications and model numbers as they are. Do not translat
 Return ONLY the valid translated JSON object. Do not include any other text or explanations.
 """
 
-def call_openai_api(prompt, model="gpt-4-turbo"):
+def call_openai_api(prompt, model="gpt-4.1-mini"):
     try:
         response = openai.chat.completions.create(
             model=model,
@@ -143,13 +145,13 @@ def process_zip(zip_path):
         # 3. Call LLM to parse (EN)
         logging.info("Calling LLM to parse English content...")
         en_prompt = get_llm_prompt(md_content, product_slug)
-        en_data = call_openai_api(en_prompt)
+        en_data = call_openai_api(en_prompt, model="gpt-4.1-mini")
         logging.info("Successfully parsed English data.")
 
         # 4. Call LLM to translate (DE)
         logging.info("Calling LLM to translate to German...")
         de_prompt = get_translation_prompt(en_data)
-        de_data = call_openai_api(de_prompt)
+        de_data = call_openai_api(de_prompt, model="gpt-4.1-mini")
         logging.info("Successfully translated to German.")
         
         category = en_data.get("category")
@@ -177,44 +179,35 @@ def process_zip(zip_path):
         # 7. Update catalog files
         for lang, data in [('en', en_data), ('de', de_data)]:
             catalog_file = os.path.join(CATALOG_PATH, f'{lang}.yml')
-            with open(catalog_file, 'r', encoding='utf-8') as f:
-                catalog_data = yaml.safe_load(f)
+            # Safely read the catalog file, create if it doesn't exist
+            if os.path.exists(catalog_file):
+                with open(catalog_file, 'r', encoding='utf-8') as f:
+                    catalog_data = yaml.safe_load(f) or {}
+            else:
+                catalog_data = {}
+
+            # Ensure the structure is correct
+            if 'products' not in catalog_data:
+                catalog_data['products'] = {}
+            if category not in catalog_data['products']:
+                catalog_data['products'][category] = []
             
             # Remove existing entry if it exists to prevent duplicates
-            if category in catalog_data['products']:
-                catalog_data['products'][category] = [p for p in catalog_data['products'][category] if p.get('link') != f"/{lang}/products/{category}/{product_slug}/"]
+            catalog_data['products'][category] = [p for p in catalog_data['products'][category] if p.get('link') != f"/{lang}/products/{category}/{product_slug}/"]
 
             new_entry = {
-                'name': data['product']['name'],
-                'description': data['hero']['subtitle'],
+                'name': data.get('product', {}).get('name', ''),
+                'description': data.get('hero', {}).get('subtitle', ''),
                 'details': "",
-                'image': data['hero']['image'],
-                'alt': data['product']['name'],
+                'image': data.get('hero', {}).get('image', ''),
+                'alt': data.get('product', {}).get('name', ''),
                 'link': f"/{lang}/products/{category}/{product_slug}/"
             }
-            if category not in catalog_data['products']:
-                 catalog_data['products'][category] = []
             catalog_data['products'][category].append(new_entry)
             
             with open(catalog_file, 'w', encoding='utf-8') as f:
                 yaml.dump(catalog_data, f, Dumper=NoAliasDumper, allow_unicode=True, sort_keys=False)
             logging.info(f"Updated catalog file: {catalog_file}")
-
-        # 8. Create NJK page files
-        for lang, data in [('en', en_data), ('de', de_data)]:
-            page_dir = os.path.join(PAGES_PATH, lang, 'products', category, product_slug)
-            os.makedirs(page_dir, exist_ok=True)
-            njk_content = f"""---
-title: "{data['product']['name']}"
-lang: {lang}
-permalink: /{lang}/products/{category}/{product_slug}/
----
-{{% set product = content.products.details.{product_slug.replace('-', '_')}.{lang} %}}
-{{% include "product-detail.njk" %}}
-"""
-            with open(os.path.join(page_dir, 'index.njk'), 'w', encoding='utf-8') as f:
-                f.write(njk_content)
-            logging.info(f"Created NJK file in {page_dir}")
 
         logging.info(f"Successfully processed product: {product_slug}")
         # Return the URL of the new product page
@@ -240,5 +233,3 @@ permalink: /{lang}/products/{category}/{product_slug}/
         # Remove the original zip from inbox if processing was successful
         if os.path.exists(zip_path) and not os.path.exists(os.path.join(FAILED_PATH, os.path.basename(zip_path))):
              os.remove(zip_path)
-
-

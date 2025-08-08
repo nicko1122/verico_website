@@ -1,0 +1,153 @@
+en:
+  name: "MOJO 140W GaN Charger"
+  category: "GaN Power Charger"
+  tagline: "Ultra-fast charging with advanced GaN technology."
+  description: "Perfect for laptops, tablets, and smartphones needing high power delivery. The MOJO 140W is the ultimate power solution for all your devices, delivering top-tier performance in a compact and travel-friendly design."
+  features:
+    - "140W Power Delivery"
+    - "Advanced GaN Technology"
+    - "Multiple Charging Ports (2x USB-C, 1x USB-A)"
+    - "Compact & Portable Design"
+    - "Universal Compatibility"
+  specs:
+    - name: "Model"
+      value: "V-GAN140-MOJO"
+    - name: "Input"
+      value: "AC 100-240V, 50/60Hz, 2.5A Max"
+    - name: "USB-C1/C2 Output"
+      value: "5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/5A, 28V/5A (140W Max)"
+    - name: "USB-A Output"
+      value: "5V/3A, 9V/2A, 12V/1.5A (18W Max)"
+    - name: "Total Output"
+      value: "140W Max"
+    - name: "Dimensions"
+      value: "73 x 73 x 32 mm"
+  images:
+    - "assets/images/product/Gan_140W/mojo-140w-gan-1.png"
+    - "assets/images/product/Gan_140W/mojo-140w-gan-2.png"
+    - "assets/images/product/Gan_140W/mojo-140w-gan-3.png"
+    - "assets/images/product/Gan_140W/mojo-140w-gan-4.png"
+
+  detailed_features:
+    title: "Advanced Features"
+    subtitle: "Discover the cutting-edge technology and innovative features that make the MOJO 140W GaN Charger the ultimate charging solution"
+    items:
+      - title: "GaN Technology"
+        description: "Our advanced Gallium Nitride (GaN) technology enables ultra-efficient power delivery with minimal heat generation. This revolutionary semiconductor material allows for smaller, more powerful chargers that outperform traditional silicon-based solutions."
+        benefits:
+          - "50% smaller than traditional chargers"
+          - "30% more efficient power conversion"
+          - "Reduced heat generation"
+          - "Longer lifespan and reliability"
+        image: "assets/images/product/features/gan-technology-comparison.jpg"
+        image_alt: "GaN vs Traditional Charger Size Comparison"
+      - title: "Smart Multi-Device Charging"
+        description: "Charge up to 3 devices simultaneously with intelligent power distribution. The charger automatically detects device requirements and optimizes power delivery for maximum efficiency and safety."
+        benefits:
+          - "USB-C 1: Up to 140W (20V/7A)"
+          - "USB-C 2: Up to 100W (20V/5A)"
+          - "USB-A: Up to 22.5W (5V/4.5A)"
+          - "Total: 140W maximum output"
+        image: "assets/images/product/features/multi-device-charging.jpg"
+        image_alt: "Multiple devices charging simultaneously"
+
+  compatibility:
+    title: "Device Compatibility"
+    subtitle: "Compatible with a wide range of devices and charging protocols"
+    categories:
+      - name: "Smartphones"
+        details: "iPhone, Samsung, Google Pixel"
+      - name: "Laptops"
+        details: "MacBook, Dell, HP, Lenovo"
+      - name: "Tablets"
+        details: "iPad, Samsung Galaxy Tab"
+      - name: "Gaming"
+        details: "Nintendo Switch, Steam Deck"
+
+  package_contents:
+    title: "Package Contents"
+    subtitle: "Everything you need to start charging your devices immediately"
+    items:
+      - name: "MOJO 140W GaN Charger"
+        details: "Main charging unit with advanced GaN technology"
+      - name: "USB-C Cable"
+        details: "High-quality 100W USB-C to USB-C cable included"
+      - name: "User Manual"
+        details: "Comprehensive user guide and safety instructions"
+
+de:
+  name: "MOJO 140W GaN Ladegerät"
+  category: "GaN-Netzladegerät"
+  tagline: "Ultraschnelles Laden mit fortschrittlicher GaN-Technologie."
+  description: "Perfekt für Laptops, Tablets und Smartphones, die eine hohe Leistungsabgabe benötigen. Das MOJO 140W ist die ultimative Stromversorgungslösung für all Ihre Geräte und bietet erstklassige Leistung in einem kompakten und reisefreundlichen Design."
+  features:
+    - "140W Leistung"
+    - "Fortschrittliche GaN-Technologie"
+    - "Mehrere Ladeanschlüsse (2x USB-C, 1x USB-A)"
+    - "Kompaktes & tragbares Design"
+    - "Universelle Kompatibilität"
+  specs:
+    - name: "Modell"
+      value: "V-GAN140-MOJO"
+    - name: "Eingang"
+      value: "AC 100-240V, 50/60Hz, 2.5A Max"
+    - name: "USB-C1/C2 Ausgang"
+      value: "5V/3A, 9V/3A, 12V/3A, 15V/3A, 20V/5A, 28V/5A (140W Max)"
+    - name: "USB-A Ausgang"
+      value: "5V/3A, 9V/2A, 12V/1.5A (18W Max)"
+    - name: "Gesamtleistung"
+      value: "140W Max"
+    - name: "Abmessungen"
+      value: "73 x 73 x 32 mm"
+  images:
+    - "assets/images/product/Gan_140W/mojo-140w-gan-1.png"
+    - "assets/images/product/Gan_140W/mojo-140w-gan-2.png"
+    - "assets/images/product/Gan_140W/mojo-140w-gan-3.png"
+    - "assets/images/product/Gan_140W/mojo-140w-gan-4.png"
+  
+  detailed_features:
+    title: "Erweiterte Funktionen"
+    subtitle: "Entdecken Sie die Spitzentechnologie und die innovativen Funktionen, die das MOJO 140W GaN-Ladegerät zur ultimativen Ladelösung machen"
+    items:
+      - title: "GaN-Technologie"
+        description: "Unsere fortschrittliche Galliumnitrid (GaN)-Technologie ermöglicht eine ultra-effiziente Stromversorgung bei minimaler Wärmeentwicklung. Dieses revolutionäre Halbleitermaterial ermöglicht kleinere, leistungsfähigere Ladegeräte, die herkömmliche Lösungen auf Siliziumbasis übertreffen."
+        benefits:
+          - "50% kleiner als herkömmliche Ladegeräte"
+          - "30% effizientere Leistungsumwandlung"
+          - "Reduzierte Wärmeentwicklung"
+          - "Längere Lebensdauer und Zuverlässigkeit"
+        image: "assets/images/product/features/gan-technology-comparison.jpg"
+        image_alt: "Größenvergleich: GaN-Ladegerät vs. herkömmliches Ladegerät"
+      - title: "Intelligentes Laden für mehrere Geräte"
+        description: "Laden Sie bis zu 3 Geräte gleichzeitig mit intelligenter Stromverteilung. Das Ladegerät erkennt automatisch die Geräteanforderungen und optimiert die Stromversorgung für maximale Effizienz und Sicherheit."
+        benefits:
+          - "USB-C 1: Bis zu 140W (20V/7A)"
+          - "USB-C 2: Bis zu 100W (20V/5A)"
+          - "USB-A: Bis zu 22.5W (5V/4.5A)"
+          - "Gesamt: 140W maximale Leistung"
+        image: "assets/images/product/features/multi-device-charging.jpg"
+        image_alt: "Mehrere Geräte gleichzeitig laden"
+
+  compatibility:
+    title: "Gerätekompatibilität"
+    subtitle: "Kompatibel mit einer Vielzahl von Geräten und Ladeprotokollen"
+    categories:
+      - name: "Smartphones"
+        details: "iPhone, Samsung, Google Pixel"
+      - name: "Laptops"
+        details: "MacBook, Dell, HP, Lenovo"
+      - name: "Tablets"
+        details: "iPad, Samsung Galaxy Tab"
+      - name: "Gaming"
+        details: "Nintendo Switch, Steam Deck"
+
+  package_contents:
+    title: "Paketinhalt"
+    subtitle: "Alles, was Sie brauchen, um Ihre Geräte sofort aufzuladen"
+    items:
+      - name: "MOJO 140W GaN Ladegerät"
+        details: "Hauptladegerät mit fortschrittlicher GaN-Technologie"
+      - name: "USB-C Kabel"
+        details: "Hochwertiges 100W USB-C zu USB-C Kabel enthalten"
+      - name: "Benutzerhandbuch"
+        details: "Umfassende Bedienungsanleitung und Sicherheitshinweise"

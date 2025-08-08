@@ -1,0 +1,152 @@
+en:
+  hero:
+    title: Charge Ahead.<br>Store Smart.
+    image: assets/images/banner/hero/Carousel/GaNCharger-banner.jpg
+    alt: Verico Hero Banner
+  categories:
+    title: Products by Category
+    buttons:
+    - text: About Our Product
+      url: '#'
+    - text: ECO not EGO
+      url: '#'
+    - text: Memory Experience
+      url: '#'
+    items:
+    - title: Power Pro Series
+      description: High Capacity. Fast Charge. Endless Energy.
+      image: assets/images/banner/tab/product-tab/powerbank-tab.png
+      url: '#'
+    - title: Loopenergy Series
+      description: Smart Power. Eco Friendly. Built to Last.
+      image: assets/images/banner/tab/product-tab/loopenergy-tab.png
+      url: '#'
+    - title: GaN MOJO Series
+      description: Ultra Fast. Ultra Safe. Ultra Storage.
+      image: assets/images/banner/tab/product-tab/gancharger-tab.png
+      url: '#'
+    - title: Memory Series
+      description: Ultra Fast. Ultra Safe. Ultra Storage.
+      image: assets/images/banner/tab/product-tab/usb-tab.png
+      url: '#'
+  trending:
+    title: Currently Trending Products
+    products:
+    - name: MOJO 140W GaN Charger
+      description: Ultra-fast charging with advanced GaN technology.
+      details: Perfect for laptops, tablets, and smartphones needing high power delivery.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: Power Pro 10000mAh
+      description: High-capacity portable charger with fast charging.
+      details: Reliable power on the go for your daily devices.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: Loopenergy 10000mAh
+      description: Eco-friendly, sustainable high-capacity power bank.
+      details: Designed for long-lasting performance and environmental responsibility.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: MOJO 65W GaN Charger
+      description: Compact and efficient GaN charger for daily use.
+      details: Ideal for travel and fast charging multiple devices.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: USB 3.0 64GB
+      description: High-speed USB 3.0 flash drive for quick data transfer.
+      details: Portable and reliable storage for your important files.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: USB 3.0 128GB
+      description: Large capacity USB 3.0 flash drive for all your needs.
+      details: Store more photos, videos, and documents with ease.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+  tagline: Charging shouldn't feel like waiting. It should simply move with you.
+  about:
+    title: About Verico International Co., Ltd
+    content1: We are a professional manufacturer specializing in battery and memory-related
+      products, dedicated to providing our customers with high-quality, reliable power
+      and storage solutions.
+    content2: From high-capacity power banks to high-speed memory devices, our product
+      range meets the diverse needs of modern digital lifestyles. We prioritize product
+      quality and user experience to ensure every item brings convenience to your
+      everyday life.
+    image: assets/images/verico-logo-white.svg
+de:
+  hero:
+    title: Laden Sie voraus.<br>Speichern Sie intelligent.
+    image: assets/images/banner/hero/Carousel/GaNCharger-banner.jpg
+    alt: Verico Hero Banner
+  categories:
+    title: Produkte nach Kategorie
+    buttons:
+    - text: Über unsere Produkte
+      url: '#'
+    - text: ÖKO nicht EGO
+      url: '#'
+    - text: Speichererlebnis
+      url: '#'
+    items:
+    - title: Power Pro Serie
+      description: Hohe Kapazität. Schnelles Laden. Endlose Energie.
+      image: assets/images/banner/tab/product-tab/powerbank-tab.png
+      url: '#'
+    - title: Loopenergy Serie
+      description: Intelligente Leistung. Umweltfreundlich. Langlebig gebaut.
+      image: assets/images/banner/tab/product-tab/loopenergy-tab.png
+      url: '#'
+    - title: GaN MOJO Serie
+      description: Ultraschnell. Ultrasicher. Ultraspeicher.
+      image: assets/images/banner/tab/product-tab/gancharger-tab.png
+      url: '#'
+    - title: Speicherserie
+      description: Ultraschnell. Ultrasicher. Ultraspeicher.
+      image: assets/images/banner/tab/product-tab/usb-tab.png
+      url: '#'
+  trending:
+    title: Aktuell angesagte Produkte
+    products:
+    - name: MOJO 140W GaN Ladegerät
+      description: Ultraschnelles Laden mit fortschrittlicher GaN-Technologie.
+      details: Perfekt für Laptops, Tablets und Smartphones, die eine hohe Leistungsabgabe
+        benötigen.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: Power Pro 10000mAh
+      description: Tragbares Ladegerät mit hoher Kapazität und Schnellladung.
+      details: Zuverlässige Energie für Ihre täglichen Geräte unterwegs.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: Loopenergy 10000mAh
+      description: Umweltfreundliche, nachhaltige Powerbank mit hoher Kapazität.
+      details: Entwickelt für langlebige Leistung und Umweltverantwortung.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: MOJO 65W GaN Ladegerät
+      description: Kompaktes und effizientes GaN-Ladegerät für den täglichen Gebrauch.
+      details: Ideal für Reisen und schnelles Aufladen mehrerer Geräte.
+      image: assets/images/product/placeholder.g"
+      url: '#'
+    - name: USB 3.0 64GB
+      description: High-Speed-USB-3.0-Flash-Laufwerk für schnelle Datenübertragung.
+      details: Tragbarer und zuverlässiger Speicher für Ihre wichtigen Dateien.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+    - name: USB 3.0 128GB
+      description: USB-3.0-Flash-Laufwerk mit großer Kapazität für all Ihre Bedürfnisse.
+      details: Speichern Sie mehr Fotos, Videos und Dokumente mit Leichtigkeit.
+      image: assets/images/product/placeholder.svg
+      url: '#'
+  tagline: Laden sollte sich nicht wie Warten anfühlen. Es sollte sich einfach mit
+    Ihnen bewegen.
+  about:
+    title: Über Verico International Co., Ltd
+    content1: Wir sind ein professioneller Hersteller, der sich auf batterie- und speicherbezogene
+      Produkte spezialisiert hat und unseren Kunden hochwertige, zuverlässige Energie-
+      und Speicherlösungen bietet.
+    content2: Von Hochleistungs-Powerbanks bis hin zu High-Speed-Speichergeräten erfüllt
+      unsere Produktpalette die vielfältigen Anforderungen des modernen digitalen
+      Lebensstils. Wir legen Wert auf Produktqualität und Benutzererfahrung, um sicherzustellen,
+      dass jeder Artikel Komfort in Ihren Alltag bringt.
+    image: assets/images/verico-logo-white.svg
