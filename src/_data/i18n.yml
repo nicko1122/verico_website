@@ -1,0 +1,25 @@
+en:
+  buttons:
+    contact_sales: "Contact Sales"
+  product:
+    specifications_title: "Product Specifications"
+    technical_specs_title: "Technical Specifications"
+    key_features_title: "Key Features"
+    key_benefits_title: "Key Benefits:"
+  catalog:
+    why_title: "Why Choose Verico Products?"
+    why_text: "Our products are designed with quality, innovation, and user experience in mind."
+
+de:
+  buttons:
+    contact_sales: "Kontakt Vertrieb"
+  product:
+    specifications_title: "Produktspezifikationen"
+    technical_specs_title: "Technische Spezifikationen"
+    key_features_title: "Wichtige Funktionen"
+    key_benefits_title: "Wesentliche Vorteile:"
+  catalog:
+    why_title: "Warum Verico Produkte?"
+    why_text: "Unsere Produkte sind auf Qualität, Innovation und Benutzerfreundlichkeit ausgelegt."
+
+

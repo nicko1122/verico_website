@@ -47,7 +47,7 @@ eleventyComputed:
                         <h1 class="text-6xl font-bold text-gray-800 mb-6 leading-tight">{{ p.name }}</h1>
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed">{{ p.description }}</p>
                         <div class="flex gap-4 justify-center lg:justify-start">
-                            <button class="border border-gray-300 text-gray-700 px-10 py-4 rounded-lg font-medium hover:bg-gray-50 transition text-lg">Contact Sales</button>
+                            <button class="border border-gray-300 text-gray-700 px-10 py-4 rounded-lg font-medium hover:bg-gray-50 transition text-lg">{{ i18n[product.lang].buttons.contact_sales }}</button>
                         </div>
                     </div>
                 </div>
@@ -95,12 +95,12 @@ eleventyComputed:
     <section class="py-16 bg-white">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Product Specifications</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Detailed technical specifications and features of the {{ p.name }}</p>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ i18n[product.lang].product.specifications_title }}</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">{{ p.specs_intro or '' }}</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="spec-card bg-white rounded-xl border border-gray-200 p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Technical Specifications</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">{{ i18n[product.lang].product.technical_specs_title }}</h3>
                     <table class="spec-table w-full">
                         {% for spec in p.specs %}
                         <tr>
@@ -111,7 +111,7 @@ eleventyComputed:
                     </table>
                 </div>
                 <div class="spec-card bg-white rounded-xl border border-gray-200 p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Key Features</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">{{ i18n[product.lang].product.key_features_title }}</h3>
                     <div class="space-y-4">
                         {% for feature in p.features %}
                         <div class="flex items-start gap-3">
