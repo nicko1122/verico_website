@@ -1,4 +1,6 @@
 <header class="fixed top-0 left-0 right-0 z-50">
+    <!-- CSS-only toggles (mobile) -->
+    <input id="nav-toggle" type="checkbox" class="peer hidden" />
     <!-- Desktop Navigation -->
     <div class="hidden md:flex justify-center w-full">
         <nav class="mt-8 mx-auto w-[92%] max-w-5xl rounded-2xl bg-white/60 backdrop-blur-xl shadow-lg border border-gray-200 flex items-center px-6 py-2 relative">
@@ -18,12 +20,12 @@
                                 </svg>
                             </a>
                             <div class="relative">
-                                <div class="dropdown-menu absolute left-0 top-full mt-2 min-w-[240px] bg-white/80 border border-gray-200 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity z-40" style="backdrop-filter: blur(12px);">
+                                <div class="dropdown-menu absolute left-0 top-full mt-2 min-w-[240px] bg-white/80 border border-gray-200 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity z-40 group-hover:opacity-100 group-hover:pointer-events-auto focus-within:opacity-100 focus-within:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto" style="backdrop-filter: blur(12px);">
                                     <ul class="py-2">
                                         {% for tab in products[lang].categories.tabs %}
                                         {% set groupKey = tab.id | replace('-', '_') %}
                                         {% set group = products[lang].categories[groupKey] %}
-                                        <li class="relative submenu-item">
+                                        <li class="relative submenu-item group">
                                             <a href="{{ item.url }}#{{ tab.id }}" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center justify-between">
                                                 {{ tab.title }}
                                                 {% if group and group.products and group.products.length %}
@@ -33,7 +35,7 @@
                                                 {% endif %}
                                             </a>
                                             {% if group and group.products and group.products.length %}
-                                            <ul class="submenu absolute left-full top-0 mt-0 min-w-[220px] bg-white/80 border border-gray-200 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity z-50" style="backdrop-filter: blur(12px);">
+                                            <ul class="submenu absolute left-full top-0 mt-0 min-w-[220px] bg-white/80 border border-gray-200 rounded-xl shadow-lg opacity-0 pointer-events-none transition-opacity z-50 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto" style="backdrop-filter: blur(12px);">
                                                 {% for p in group.products %}
                                                 {% if p.url and p.url != '#' %}
                                                 <li>
@@ -69,11 +71,11 @@
     <!-- Mobile Navigation -->
     <div class="md:hidden flex justify-center w-full">
          <nav class="mt-4 mx-auto w-[92%] max-w-5xl rounded-2xl bg-white/60 backdrop-blur-xl shadow-lg border border-gray-200 flex items-center px-6 py-2 relative">
-            <button id="mobile-menu-button" class="flex items-center justify-center mr-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300 bg-white/40 backdrop-blur-xl border border-gray-200" aria-label="Open main menu">
+            <label for="nav-toggle" class="flex items-center justify-center mr-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300 bg-white/40 backdrop-blur-xl border border-gray-200" aria-label="Open main menu">
                 <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"/>
                 </svg>
-            </button>
+            </label>
             <a href="/{{ lang }}/" class="flex items-center">
                 <img src="{{ ('/' + site[lang].logo) | url }}" alt="Verico Logo" style="height: 44px;" class="block" />
             </a>
@@ -81,30 +83,31 @@
     </div>
     
     <!-- Mobile Nav Drawer -->
-    <div id="mobile-nav-drawer" class="fixed top-0 left-0 h-full w-full bg-white/30 backdrop-blur-xl border-none shadow-lg z-[60] transform -translate-x-full transition-transform duration-200 ease-in-out md:hidden">
+    <div id="mobile-nav-drawer" class="fixed top-0 left-0 h-full w-full bg-white/30 backdrop-blur-xl border-none shadow-lg z-[60] transform -translate-x-full transition-transform duration-200 ease-in-out md:hidden peer-checked:translate-x-0">
         <div class="flex flex-col h-full w-64 bg-white/30 backdrop-blur-xl border-r border-gray-200 shadow-lg">
             <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
                 <a href="/{{ lang }}/" class="flex items-center">
                     <img src="{{ ('/' + site[lang].logo) | url }}" alt="Verico Logo" style="height: 36px;" class="block" />
                 </a>
-                <button id="mobile-nav-close" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300" aria-label="Close menu">
+                <label for="nav-toggle" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300" aria-label="Close menu">
                     <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
-                </button>
+                </label>
             </div>
             <nav class="flex-1 flex flex-col gap-2 px-6 py-6">
                 {% for item in navigation[lang].main %}
                     {% set isProducts = (item.title == 'Products' or item.title == 'Produkte') %}
                     {% if isProducts %}
                     <div class="block">
-                        <button class="flex items-center w-full text-base font-medium text-gray-700 py-2 focus:outline-none mobile-menu-toggle">
+                        <input id="mob-products-toggle" type="checkbox" class="hidden peer" />
+                        <label for="mob-products-toggle" class="flex items-center w-full text-base font-medium text-gray-700 py-2">
                             {{ item.title }}
                             <svg class="w-4 h-4 ml-1 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 8l4 4 4-4"/>
                             </svg>
-                        </button>
-                        <div class="mobile-submenu hidden flex-col pl-4 mt-1">
+                        </label>
+                        <div class="mobile-submenu hidden peer-checked:flex flex-col pl-4 mt-1">
                             {% for tab in products[lang].categories.tabs %}
                                 <a href="{{ item.url }}#{{ tab.id }}" class="block text-sm text-gray-700 py-2">{{ tab.title }}</a>
                                 {% set groupKey = tab.id | replace('-', '_') %}
@@ -136,83 +139,7 @@
         </div>
     </div>
     <!-- Overlay for mobile nav -->
-    <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/20 z-[55] hidden md:hidden"></div>
+    <label for="nav-toggle" id="mobile-nav-overlay" class="fixed inset-0 bg-black/20 z-[55] hidden md:hidden peer-checked:block"></label>
 </header>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Desktop dropdown
-    function isDesktop() {
-        return window.innerWidth >= 768;
-    }
-    const dropdown = document.getElementById('products-dropdown');
-    if (dropdown) {
-        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-        const submenuItems = dropdown.querySelectorAll('.submenu-item');
-        let hideTimeout;
-
-        function showDropdown() {
-            if (!isDesktop()) return;
-            clearTimeout(hideTimeout);
-            dropdownMenu.classList.add('opacity-100', 'pointer-events-auto');
-        }
-        function hideDropdown() {
-            if (!isDesktop()) return;
-            hideTimeout = setTimeout(() => {
-                dropdownMenu.classList.remove('opacity-100', 'pointer-events-auto');
-                submenuItems.forEach(item => {
-                    const submenu = item.querySelector('.submenu');
-                    if (submenu) submenu.classList.remove('opacity-100', 'pointer-events-auto');
-                });
-            }, 100);
-        }
-        dropdown.addEventListener('mouseenter', showDropdown);
-        dropdown.addEventListener('mouseleave', hideDropdown);
-        submenuItems.forEach(item => {
-            const submenu = item.querySelector('.submenu');
-            if(submenu){
-                item.addEventListener('mouseenter', () => {
-                    if (!isDesktop()) return;
-                    clearTimeout(hideTimeout);
-                    submenu.classList.add('opacity-100', 'pointer-events-auto');
-                });
-                item.addEventListener('mouseleave', () => {
-                    if (!isDesktop()) return;
-                    submenu.classList.remove('opacity-100', 'pointer-events-auto');
-                });
-            }
-        });
-    }
-
-    // Mobile nav drawer
-    const menuBtn = document.getElementById('mobile-menu-button');
-    const drawer = document.getElementById('mobile-nav-drawer');
-    const overlay = document.getElementById('mobile-nav-overlay');
-    const closeBtn = document.getElementById('mobile-nav-close');
-    
-    function openDrawer() {
-        if(drawer) drawer.classList.remove('-translate-x-full');
-        if(overlay) overlay.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden');
-    }
-    function closeDrawer() {
-        if(drawer) drawer.classList.add('-translate-x-full');
-        if(overlay) overlay.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-    }
-    if(menuBtn) menuBtn.addEventListener('click', openDrawer);
-    if(closeBtn) closeBtn.addEventListener('click', closeDrawer);
-    if(overlay) overlay.addEventListener('click', closeDrawer);
-
-    // Mobile submenu toggles
-    const mobileMenuToggles = document.querySelectorAll('.mobile-menu-toggle');
-    mobileMenuToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            const submenu = this.nextElementSibling;
-            if (submenu && submenu.classList.contains('mobile-submenu')) {
-                submenu.classList.toggle('hidden');
-            }
-        });
-    });
-});
-</script>
+<!-- No JS, pure CSS interactions via :hover, :focus-within, and checkbox toggles -->
 
