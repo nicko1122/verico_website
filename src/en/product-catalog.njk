@@ -1,0 +1,162 @@
+---
+layout: layout.njk
+title: Products
+lang: en
+permalink: /en/product-catalog/index.html
+---
+{% set data = products.en %}
+
+<section class="relative w-[99%] h-[300px]">
+  <div class="hero-wrapper rounded-2xl border border-gray-200 mx-2 my-3 md:mx-4 md:my-4 overflow-hidden h-full" style="box-sizing:border-box;">
+    <div class="hero-container relative w-full h-full mx-auto">
+      <img src="{{ ('/' + data.hero.image) | url }}" alt="{{ data.hero.alt }}" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-y-10 right-0 flex items-center pr-10">
+        <h1 class="text-5xl font-bold text-gray-500 break-words text-left px-6 py-4">{{ data.hero.title | safe }}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex justify-center gap-4 mb-12">
+      {% for tab in data.categories.tabs %}
+      <button class="category-tab {% if loop.first %}active{% endif %} px-6 py-3 rounded-lg font-medium text-sm border border-gray-200" data-category="{{ tab.id }}">
+        {{ tab.title }}
+      </button>
+      {% endfor %}
+    </div>
+
+    <div id="powerbank-products" class="product-grid {% if not data.categories.tabs[0] or data.categories.tabs[0].id != 'powerbank' %}hidden{% endif %}">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {% for p in data.categories.powerbank.products %}
+        <a href="{{ p.url }}" class="flex flex-col items-center">
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-md flex flex-col items-center w-full max-w-xs mx-auto pb-6">
+            <div class="w-full rounded-t-2xl overflow-hidden bg-gray-50 pt-6 px-6">
+              <img src="{{ ('/' + p.image) | url }}" alt="{{ p.name }}" class="object-contain w-full mx-auto" />
+            </div>
+            <div class="w-full mt-6 px-4 text-left">
+              <h3 class="font-bold text-gray-800 mb-1 text-2xl">{{ p.name }}</h3>
+              <p class="text-gray-600 text-sm mb-1">{{ p.description }}</p>
+              <p class="text-gray-500 text-xs">{{ p.details }}</p>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div id="loopenergy-products" class="product-grid hidden">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {% for p in data.categories.loopenergy.products %}
+        <a href="{{ p.url }}" class="flex flex-col items-center">
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-md flex flex-col items-center w-full max-w-xs mx-auto pb-6">
+            <div class="w-full rounded-t-2xl overflow-hidden bg-gray-50 pt-6 px-6">
+              <img src="{{ ('/' + p.image) | url }}" alt="{{ p.name }}" class="object-contain w-full mx-auto" />
+            </div>
+            <div class="w-full mt-6 px-4 text-left">
+              <h3 class="font-bold text-gray-800 mb-1 text-2xl">{{ p.name }}</h3>
+              <p class="text-gray-600 text-sm mb-1">{{ p.description }}</p>
+              <p class="text-gray-500 text-xs">{{ p.details }}</p>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div id="gan-charger-products" class="product-grid hidden">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {% for p in data.categories.gan_charger.products %}
+        <a href="{{ p.url }}" class="flex flex-col items-center">
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-md flex flex-col items-center w-full max-w-xs mx-auto pb-6">
+            <div class="w-full rounded-t-2xl overflow-hidden bg-gray-50 pt-6 px-6">
+              <img src="{{ ('/' + p.image) | url }}" alt="{{ p.name }}" class="object-contain w-full mx-auto" />
+            </div>
+            <div class="w-full mt-6 px-4 text-left">
+              <h3 class="font-bold text-gray-800 mb-1 text-2xl">{{ p.name }}</h3>
+              <p class="text-gray-600 text-sm mb-1">{{ p.description }}</p>
+              <p class="text-gray-500 text-xs">{{ p.details }}</p>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div id="flash-disk-products" class="product-grid hidden">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {% for p in data.categories.flash_disk.products %}
+        <a href="{{ p.url }}" class="flex flex-col items-center">
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-md flex flex-col items-center w-full max-w-xs mx-auto pb-6">
+            <div class="w-full rounded-t-2xl overflow-hidden bg-gray-50 pt-6 px-6">
+              <img src="{{ ('/' + p.image) | url }}" alt="{{ p.name }}" class="object-contain w-full mx-auto" />
+            </div>
+            <div class="w-full mt-6 px-4 text-left">
+              <h3 class="font-bold text-gray-800 mb-1 text-2xl">{{ p.name }}</h3>
+              <p class="text-gray-600 text-sm mb-1">{{ p.description }}</p>
+              <p class="text-gray-500 text-xs">{{ p.details }}</p>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose Verico Products?</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Our products are designed with quality, innovation, and user experience in mind.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Quality Assured</h3>
+        <p class="text-gray-600 text-sm">All products undergo rigorous testing to ensure reliability and performance.</p>
+      </div>
+      <div class="text-center">
+        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Fast & Efficient</h3>
+        <p class="text-gray-600 text-sm">Advanced technology ensures maximum speed and efficiency in all our products.</p>
+      </div>
+      <div class="text-center">
+        <div class="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">User-Friendly</h3>
+        <p class="text-gray-600 text-sm">Designed with simplicity and convenience for everyday use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.category-tab');
+  const grids = document.querySelectorAll('.product-grid');
+  function showCategory(category) {
+    grids.forEach(g => g.classList.add('hidden'));
+    tabs.forEach(t => t.classList.remove('active'));
+    const grid = document.getElementById(category + '-products');
+    if (grid) grid.classList.remove('hidden');
+    const activeTab = document.querySelector(`[data-category="${category}"]`);
+    if (activeTab) activeTab.classList.add('active');
+    history.replaceState(null, '', `#${category}`);
+  }
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      const cat = this.getAttribute('data-category');
+      showCategory(cat);
+    });
+  });
+  const initial = location.hash ? location.hash.substring(1) : 'powerbank';
+  showCategory(initial);
+});
+</script>
