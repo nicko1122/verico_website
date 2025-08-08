@@ -66,12 +66,15 @@
     summary { outline: none; }
     /* Prevent details content from stretching parent nav height */
     .menu-item>details[open]+.nav-dd { display:block; }
-    .menu-item:hover>.nav-dd { display:block; }
-    .nav-dd { position: absolute; left: 0; top: 100%; margin-top: 0.5rem; }
+    .menu-item:hover>.nav-dd, .nav-dd:hover { display:block; }
+    .nav-dd { position: absolute; left: 0; top: calc(100% - 1px); margin-top: 0; }
     .submenu-item { position: relative; }
     .submenu-item>details[open]+.submenu-dd { display:block; }
-    .submenu-item:hover>.submenu-dd { display:block; }
-    .submenu-dd { position: absolute; left: 100%; top: 0; margin-left: 0.25rem; }
+    .submenu-item:hover>.submenu-dd, .submenu-dd:hover { display:block; }
+    .submenu-dd { position: absolute; left: calc(100% - 1px); top: 0; margin-left: 0; }
+    /* Hover bridges to eliminate tiny gaps */
+    .menu-item:hover::after { content:""; position:absolute; left:0; top:100%; width:300px; height:10px; }
+    .submenu-item:hover::after { content:""; position:absolute; left:100%; top:0; width:10px; height:100%; }
     /* Ensure clicks don't shift layout */
     header nav { align-items: center; }
   </style>
