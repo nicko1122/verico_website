@@ -59,6 +59,25 @@ module.exports = function(eleventyConfig) {
         return slugify(input, options);
     });
 
+    // Cache-busting version filter for asset URLs
+    const BUILD_VERSION = String(Math.floor(Date.now() / 1000));
+    eleventyConfig.addFilter("v", (inputUrl) => {
+        try {
+            if (!inputUrl || typeof inputUrl !== 'string') return inputUrl;
+            const urlPath = inputUrl;
+            let rel = urlPath.startsWith('/') ? urlPath.slice(1) : urlPath;
+            const srcPath = path.join(__dirname, 'src', rel);
+            let v = BUILD_VERSION;
+            if (fs.existsSync(srcPath)) {
+                const stat = fs.statSync(srcPath);
+                v = String(Math.floor(stat.mtimeMs));
+            }
+            return urlPath + (urlPath.includes('?') ? '&' : '?') + 'v=' + v;
+        } catch (e) {
+            return inputUrl;
+        }
+    });
+
     return {
         dir: {
             input: "src",
