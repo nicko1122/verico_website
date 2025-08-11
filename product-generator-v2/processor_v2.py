@@ -333,8 +333,12 @@ def process_zip_v2(zip_path: str) -> str:
         de_json_wrapped = call_llm_json(_llm_translate_prompt({'en': en_json.get('en', {})}), model="gpt-4.1-mini")
         de_json = {'de': de_json_wrapped.get('de', {})}
 
-        # 4) map to our YAML
-        yaml_data = _map_to_yaml(en_json.get('en', {}), de_json.get('de', {}), slug)
+        # Determine asset slug based on English product name to keep URL and assets consistent
+        en_name_raw = (en_json.get('en', {}) or {}).get('name') or ''
+        asset_slug = slugify(en_name_raw) or slug
+
+        # 4) map to our YAML (use asset_slug for all asset paths)
+        yaml_data = _map_to_yaml(en_json.get('en', {}), de_json.get('de', {}), asset_slug)
 
         # ensure minimal required fields
         en_name = yaml_data['en'].get('name') or slug.replace('-', ' ').title()
@@ -343,7 +347,7 @@ def process_zip_v2(zip_path: str) -> str:
 
         # 5) copy images (robust): prefer a folder named images (case-insensitive),
         # otherwise copy all image files found anywhere under tmp_dir to destination.
-        dst_images_dir = os.path.join(ASSETS_PRODUCT_DIR, slug)
+        dst_images_dir = os.path.join(ASSETS_PRODUCT_DIR, asset_slug)
         if os.path.exists(dst_images_dir):
             shutil.rmtree(dst_images_dir)
         os.makedirs(dst_images_dir, exist_ok=True)
@@ -393,12 +397,12 @@ def process_zip_v2(zip_path: str) -> str:
         first_image = (
             yaml_data['en'].get('catalog_image')
             or (yaml_data['en'].get('images') or [None])[0]
-            or f"assets/images/product/{slug}/product-1.svg"
+            or f"assets/images/product/{asset_slug}/product-1.svg"
         )
-        _append_to_catalog(slug, en_name, de_name, category, first_image)
+        _append_to_catalog(asset_slug, en_name, de_name, category, first_image)
 
         # 8) return URL for EN
-        return f"/en/products/{slug}/"
+        return f"/en/products/{asset_slug}/"
 
     except Exception as e:
         logging.exception(f"V2 processing failed for {zip_path}: {e}")
