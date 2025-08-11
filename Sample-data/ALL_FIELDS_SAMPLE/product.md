@@ -54,23 +54,23 @@ Benefits:
 Title: Charging Compatibility
 Subtitle: Works with most USB‑powered devices.
 - Laptops
-  Icon: images/compat-laptop.svg
+  Icon: icons/compat-laptop.svg
 - Tablets
-  Icon: images/compat-tablet.svg
+  Icon: icons/compat-tablet.svg
 - Smartphones
-  Icon: images/compat-phone.svg
+  Icon: icons/compat-phone.svg
 - Accessories
-  Icon: images/compat-accessory.svg
+  Icon: icons/compat-accessory.svg
 
 ## Package Contents
 Title: Package Contents
 Subtitle: What’s in the box
 - 1 × GaN Charger
-  Icon: images/pkg-charger.jpg
+  Icon: icons/charger.svg
 - 1 × USB‑C to USB‑C Cable
-  Icon: images/pkg-cable.jpg
+  Icon: icons/cable.svg
 - 1 × Quick Start Guide
-  Icon: images/pkg-guide.jpg
+  Icon: icons/guide.svg
 
 ## Also Available In
 ### Travel Bundle
