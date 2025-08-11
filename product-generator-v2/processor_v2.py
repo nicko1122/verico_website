@@ -23,6 +23,7 @@ FAILED_DIR = os.path.join(SCRIPT_DIR, 'failed')
 PRODUCT_YAML_DIR = os.path.join(PROJECT_ROOT, 'src', '_data', 'products')
 PRODUCTS_CATALOG_FILE = os.path.join(PROJECT_ROOT, 'src', '_data', 'products.yml')
 ASSETS_PRODUCT_DIR = os.path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'product')
+ASSETS_ICONS_DIR = os.path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'icons')
 
 
 class NoAliasDumper(yaml.Dumper):
@@ -66,12 +67,12 @@ def _llm_parse_prompt(markdown: str, product_slug: str) -> str:
             "compatibility": {
                 "title": "string",
                 "subtitle": "string",
-                "categories": [{"name": "string", "details": "string", "icon": "filename only (optional)"}]
+                "categories": [{"name": "string", "details": "string", "icon": "filename or 'icons/<file>' (optional)"}]
             },
             "package_contents": {
                 "title": "string",
                 "subtitle": "string",
-                "items": [{"name": "string", "details": "string", "icon": "filename only (optional)"}]
+                "items": [{"name": "string", "details": "string", "icon": "filename or 'icons/<file>' (optional)"}]
             },
             "variants": [{
                 "title": "string",
@@ -89,6 +90,7 @@ CRITICAL RULES:
 1) Return a SINGLE valid JSON object. No prose.
 2) Only include keys that are present in the Markdown. Omit missing keys entirely (no null/empty strings).
 3) For all image fields, return FILENAMES only (e.g., "main.jpg"). Do NOT include any folder paths or URLs. We'll prefix paths in code.
+3a) EXCEPTION for icon fields only: you MAY return "icons/<file>.svg" to reference a global shared icon directory; otherwise return just the filename.
 4) The output MUST include the English block at root key "en". Do not add other languages.
 5) If you can infer a product category, map it to one of: powerbank | loopenergy | gan_charger | flash_disk. If unclear, pick the closest.
 6) The root object MUST also include a top-level field "slug" with value: {product_slug}
@@ -129,6 +131,7 @@ def ensure_dirs():
     os.makedirs(FAILED_DIR, exist_ok=True)
     os.makedirs(PRODUCT_YAML_DIR, exist_ok=True)
     os.makedirs(ASSETS_PRODUCT_DIR, exist_ok=True)
+    os.makedirs(ASSETS_ICONS_DIR, exist_ok=True)
 
 
 def _prefix_images(slug: str, filenames: List[str]) -> List[str]:
@@ -140,6 +143,18 @@ def _prefix_images(slug: str, filenames: List[str]) -> List[str]:
 
 
 def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) -> Dict[str, Any]:
+    def resolve_icon_path(slug_local: str, icon_value: Any) -> Any:
+        if not icon_value or not isinstance(icon_value, str):
+            return None
+        raw = icon_value.strip().lstrip('/')
+        # global shared icons: icons/<file>
+        if raw.startswith('icons/'):
+            # normalize to assets/images/icons/<file>
+            return f"assets/images/icons/{raw.split('/', 1)[1]}"
+        # backward compatibility: if contains a path like images/foo.svg, take the basename
+        filename = raw.split('/')[-1]
+        return f"assets/images/product/{slug_local}/{filename}"
+
     def map_one(block: Dict[str, Any]) -> Dict[str, Any]:
         if not block:
             return {}
@@ -186,7 +201,7 @@ def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) 
                 mapped_comp['categories'].append({
                     'name': c.get('name'),
                     'details': c.get('details'),
-                    'icon': f"assets/images/product/{slug}/{c.get('icon')}" if c.get('icon') else None
+                    'icon': resolve_icon_path(slug, c.get('icon'))
                 })
             mapped['compatibility'] = mapped_comp
         # package contents
@@ -201,7 +216,7 @@ def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) 
                 mapped_pc['items'].append({
                     'name': it.get('name'),
                     'details': it.get('details'),
-                    'icon': f"assets/images/product/{slug}/{it.get('icon')}" if it.get('icon') else None
+                    'icon': resolve_icon_path(slug, it.get('icon'))
                 })
             mapped['package_contents'] = mapped_pc
         # variants (Also Available In)

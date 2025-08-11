@@ -103,6 +103,11 @@ npm run build
 - 使用 ZIP（根目錄 `product.md` + `images/`）上傳
 - 自動解析英文結構、翻譯德文、產生 YAML、複製圖片、更新 `products.yml`
 
+Icons（全站共用）
+- 共用資料夾：`src/assets/images/icons/`
+- 在 `product.md` 以 `Icon: icons/<file>.svg` 使用（不要加開頭斜線）
+- 若使用僅檔名（如 `Icon: cable.svg`），會視為產品專屬圖示，路徑為 `assets/images/product/{slug}/cable.svg`
+
 
 ### 常見問題（節錄）
 

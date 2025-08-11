@@ -185,8 +185,10 @@ EAN: 1234567890124
 
 ### 圖示（icon）規則
 
-- Compatibility 與 Package Contents 內的 `Icon:` 接受「檔名」；產生器會寫成：
-  `assets/images/product/{slug}/{檔名}`
+- 推薦統一放置於全域目錄：`assets/images/icons/`
+- 在 product.md 內，`Icon:` 可填：
+  - `icons/<file>.svg`（推薦，全站共用）
+  - 或僅檔名（如 `charger.svg`，會被視為產品專屬圖示並放到 `assets/images/product/{slug}/`）
 - 若未提供 icon，頁面會使用內建預設 SVG
 - 聯絡頁（contact）另有內嵌鍵值對映（`phone|email|office`），與產品頁無關
 
