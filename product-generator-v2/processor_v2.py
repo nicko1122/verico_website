@@ -341,15 +341,49 @@ def process_zip_v2(zip_path: str) -> str:
         de_name = yaml_data['de'].get('name') or en_name
         category = yaml_data['en'].get('category', 'gan_charger')
 
-        # 5) copy images
-        src_images_dir = os.path.join(tmp_dir, 'images')
+        # 5) copy images (robust): prefer a folder named images (case-insensitive),
+        # otherwise copy all image files found anywhere under tmp_dir to destination.
         dst_images_dir = os.path.join(ASSETS_PRODUCT_DIR, slug)
         if os.path.exists(dst_images_dir):
             shutil.rmtree(dst_images_dir)
-        if os.path.exists(src_images_dir):
-            shutil.copytree(src_images_dir, dst_images_dir)
+        os.makedirs(dst_images_dir, exist_ok=True)
+
+        # find case-insensitive 'images' dir
+        images_dir_ci = None
+        try:
+            for entry in os.listdir(tmp_dir):
+                p = os.path.join(tmp_dir, entry)
+                if os.path.isdir(p) and entry.lower() == 'images':
+                    images_dir_ci = p
+                    break
+        except FileNotFoundError:
+            images_dir_ci = None
+
+        exts = {'.png', '.jpg', '.jpeg', '.svg', '.webp', '.gif'}
+        copied_any = False
+        def copy_all_images_from(source_root: str):
+            nonlocal copied_any
+            for root, _dirs, files in os.walk(source_root):
+                # skip macOS metadata
+                if os.path.basename(root).startswith('__MACOSX'):
+                    continue
+                for fn in files:
+                    ext = os.path.splitext(fn)[1].lower()
+                    if ext in exts:
+                        src_f = os.path.join(root, fn)
+                        dst_f = os.path.join(dst_images_dir, fn)
+                        try:
+                            shutil.copy2(src_f, dst_f)
+                            copied_any = True
+                        except Exception:
+                            logging.warning(f"Failed to copy image: {src_f}")
+
+        if images_dir_ci and os.path.exists(images_dir_ci):
+            # copy images directory recursively
+            copy_all_images_from(images_dir_ci)
         else:
-            os.makedirs(dst_images_dir, exist_ok=True)
+            # fallback: copy any image files under tmp_dir
+            copy_all_images_from(tmp_dir)
 
         # 6) save product yaml
         product_yaml_path = os.path.join(PRODUCT_YAML_DIR, f"{slug}.yml")

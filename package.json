@@ -4,7 +4,9 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "clean": "rimraf _site",
+    "rebuild": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "rimraf": "^5.0.5",
     "js-yaml": "^4.1.0",
     "slugify": "^1.6.6"
   }
