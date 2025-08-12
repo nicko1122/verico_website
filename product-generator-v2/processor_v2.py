@@ -93,6 +93,7 @@ CRITICAL RULES:
 2) Only include keys that are present in the Markdown. Omit missing keys entirely (no null/empty strings).
 3) For all image fields, return FILENAMES only (e.g., "main.jpg"). Do NOT include any folder paths or URLs. We'll prefix paths in code.
 3a) EXCEPTIONS for special fields:\n    - icon fields: you MAY return "icons/<file>.svg" to reference a global shared icon directory\n    - hero_background: you MAY return "global/<file>" to reference a global shared image
+9) If a line like "Hero Background: filename.ext" exists near the top, include it as key "hero_background" under the "en" object.
 4) The output MUST include the English block at root key "en". Do not add other languages.
 5) If you can infer a product category, map it to one of: powerbank | loopenergy | gan_charger | flash_disk. If unclear, pick the closest.
 6) The root object MUST also include a top-level field "slug" with value: {product_slug}
