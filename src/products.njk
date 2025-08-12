@@ -20,11 +20,11 @@ eleventyComputed:
                 <!-- Product Image Carousel -->
                 <div class="w-full h-full flex items-center justify-center">
                     <div class="w-full max-w-lg aspect-square relative">
-                        <img id="main-carousel-image" src="{{ ('/' + p.images[0]) | url }}" alt="{{ p.name }} - Main View" class="w-full h-full object-cover cursor-zoom-in" data-index="0">
+                        <img id="main-carousel-image" src="{{ (( '/' + p.images[0]) | url) | v }}" alt="{{ p.name }} - Main View" class="w-full h-full object-cover cursor-zoom-in" data-index="0">
                         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
                             {% for image in p.images %}
                             <button class="carousel-thumb border-2 {% if loop.first %}border-gray-400{% else %}border-transparent{% endif %} rounded-lg overflow-hidden w-14 h-14 bg-white p-0.5 transition" data-index="{{ loop.index0 }}">
-                                <img src="{{ ('/' + image) | url }}" alt="{{ p.name }} - Thumbnail {{ loop.index }}" class="w-full h-full object-cover rounded-md">
+                                <img src="{{ (( '/' + image) | url) | v }}" alt="{{ p.name }} - Thumbnail {{ loop.index }}" class="w-full h-full object-cover rounded-md">
                             </button>
                             {% endfor %}
                         </div>
@@ -86,7 +86,7 @@ eleventyComputed:
                     </div>
                     {% if feature.image %}
                     <div class="aspect-square w-full rounded-lg shadow-md overflow-hidden bg-white mt-auto">
-                        <img src="{{ ('/' + feature.image) | url }}" alt="{{ feature.image_alt }}" class="w-full h-full object-cover">
+                        <img src="{{ (( '/' + feature.image) | url) | v }}" alt="{{ feature.image_alt }}" class="w-full h-full object-cover">
                     </div>
                     {% endif %}
                 </div>
@@ -145,8 +145,8 @@ eleventyComputed:
                 {% for cat in p.compatibility.categories %}
                  <div class="text-center">
                     <div class="bg-white rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                      {% if cat.icon %}
-                        <img src="{{ ('/' + cat.icon) | url }}" alt="{{ cat.name }}" class="w-20 h-20 object-contain" />
+                       {% if cat.icon %}
+                        <img src="{{ (( '/' + cat.icon) | url) | v }}" alt="{{ cat.name }}" class="w-20 h-20 object-contain" />
                       {% else %}
                         <svg class="w-20 h-20 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                       {% endif %}
@@ -172,8 +172,8 @@ eleventyComputed:
                 {% for item in p.package_contents.items %}
                 <div class="text-center">
                     <div class="aspect-[4/3] w-full overflow-hidden rounded-lg mb-4 bg-gray-50 flex items-center justify-center">
-                      {% if item.icon %}
-                        <img src="{{ ('/' + item.icon) | url }}" alt="{{ item.name }}" class="w-full h-full object-contain" />
+                       {% if item.icon %}
+                        <img src="{{ (( '/' + item.icon) | url) | v }}" alt="{{ item.name }}" class="w-full h-full object-contain" />
                       {% else %}
                         <svg class="w-10 h-10 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9 4 9-4m-18 0l9-4 9 4m-18 0v10l9 4 9-4V7"/></svg>
                       {% endif %}
@@ -200,7 +200,7 @@ eleventyComputed:
                 <div class="bg-white border border-gray-200 rounded-xl p-6">
                     {% if v.package_image %}
                     <div class="aspect-[4/3] w-full overflow-hidden rounded-lg mb-4 bg-gray-50">
-                        <img src="{{ ('/' + v.package_image) | url }}" alt="{{ v.title }}" class="w-full h-full object-cover">
+                        <img src="{{ (( '/' + v.package_image) | url) | v }}" alt="{{ v.title }}" class="w-full h-full object-cover">
                     </div>
                     {% endif %}
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ v.title }}</h3>
@@ -219,7 +219,7 @@ eleventyComputed:
 document.addEventListener('DOMContentLoaded', function () {
     const images = [
         {% for image in p.images %}
-            "{{ ('/' + image) | url }}"{% if not loop.last %},{% endif %}
+            "{{ (( '/' + image) | url) | v }}"{% if not loop.last %},{% endif %}
         {% endfor %}
     ];
     const mainImg = document.getElementById('main-carousel-image');
