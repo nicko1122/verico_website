@@ -364,6 +364,13 @@ def process_zip_v2(zip_path: str) -> str:
 
         # 4) map to our YAML (use asset_slug for all asset paths)
         yaml_data = _map_to_yaml(en_json.get('en', {}), de_json.get('de', {}), asset_slug)
+        # ensure DE inherits hero_background from EN when missing
+        try:
+            hb_en = (yaml_data.get('en') or {}).get('hero_background')
+            if hb_en and not (yaml_data.get('de') or {}).get('hero_background'):
+                yaml_data['de']['hero_background'] = hb_en
+        except Exception:
+            pass
 
         # ensure minimal required fields
         en_name = yaml_data['en'].get('name') or slug.replace('-', ' ').title()
