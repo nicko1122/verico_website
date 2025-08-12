@@ -24,6 +24,7 @@ PRODUCT_YAML_DIR = os.path.join(PROJECT_ROOT, 'src', '_data', 'products')
 PRODUCTS_CATALOG_FILE = os.path.join(PROJECT_ROOT, 'src', '_data', 'products.yml')
 ASSETS_PRODUCT_DIR = os.path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'product')
 ASSETS_ICONS_DIR = os.path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'icons')
+ASSETS_GLOBAL_DIR = os.path.join(PROJECT_ROOT, 'src', 'assets', 'images', 'global')
 
 
 class NoAliasDumper(yaml.Dumper):
@@ -64,6 +65,7 @@ def _llm_parse_prompt(markdown: str, product_slug: str) -> str:
                     "image_alt": "string"
                 }]
             },
+            "hero_background": "filename or 'global/<file>' (optional)",
             "compatibility": {
                 "title": "string",
                 "subtitle": "string",
@@ -90,7 +92,7 @@ CRITICAL RULES:
 1) Return a SINGLE valid JSON object. No prose.
 2) Only include keys that are present in the Markdown. Omit missing keys entirely (no null/empty strings).
 3) For all image fields, return FILENAMES only (e.g., "main.jpg"). Do NOT include any folder paths or URLs. We'll prefix paths in code.
-3a) EXCEPTION for icon fields only: you MAY return "icons/<file>.svg" to reference a global shared icon directory; otherwise return just the filename.
+3a) EXCEPTIONS for special fields:\n    - icon fields: you MAY return "icons/<file>.svg" to reference a global shared icon directory\n    - hero_background: you MAY return "global/<file>" to reference a global shared image
 4) The output MUST include the English block at root key "en". Do not add other languages.
 5) If you can infer a product category, map it to one of: powerbank | loopenergy | gan_charger | flash_disk. If unclear, pick the closest.
 6) The root object MUST also include a top-level field "slug" with value: {product_slug}
@@ -132,6 +134,7 @@ def ensure_dirs():
     os.makedirs(PRODUCT_YAML_DIR, exist_ok=True)
     os.makedirs(ASSETS_PRODUCT_DIR, exist_ok=True)
     os.makedirs(ASSETS_ICONS_DIR, exist_ok=True)
+    os.makedirs(ASSETS_GLOBAL_DIR, exist_ok=True)
 
 
 def _prefix_images(slug: str, filenames: List[str]) -> List[str]:
@@ -155,6 +158,15 @@ def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) 
         filename = raw.split('/')[-1]
         return f"assets/images/product/{slug_local}/{filename}"
 
+    def resolve_global_or_product(slug_local: str, value: Any) -> Any:
+        if not value or not isinstance(value, str):
+            return None
+        raw = value.strip().lstrip('/')
+        if raw.startswith('global/'):
+            return f"assets/images/global/{raw.split('/',1)[1]}"
+        filename = raw.split('/')[-1]
+        return f"assets/images/product/{slug_local}/{filename}"
+
     def map_one(block: Dict[str, Any]) -> Dict[str, Any]:
         if not block:
             return {}
@@ -165,6 +177,9 @@ def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) 
         # catalog image (optional)
         if block.get('catalog_image'):
             mapped['catalog_image'] = f"assets/images/product/{slug}/{block.get('catalog_image')}"
+        # hero background (optional, allow global/ or product-scoped)
+        if block.get('hero_background'):
+            mapped['hero_background'] = resolve_global_or_product(slug, block.get('hero_background'))
         # images
         mapped['images'] = _prefix_images(slug, block.get('images', []))
         # simple features/specs

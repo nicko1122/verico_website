@@ -13,13 +13,16 @@ eleventyComputed:
 {% set p = product[product.lang] %}
 
 <main class="pt-16">
-    <!-- Product Hero Section -->
-    <section class="py-0 -mt-24">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- Product Hero Section with Parallax Background -->
+    <section class="py-0 -mt-24 relative">
+        {% if p.hero_background %}
+        <div class="absolute inset-0 -z-10 bg-fixed bg-center bg-cover" style="background-image: url('{{ (( '/' + p.hero_background) | url) | v }}'); filter: blur(0px);"></div>
+        {% endif %}
+        <div class="max-w-7xl mx-auto px-6 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
                 <!-- Product Image Carousel -->
                 <div class="w-full h-full flex items-center justify-center">
-                    <div class="w-full max-w-lg aspect-square relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-lg">
+                    <div class="w-full max-w-lg aspect-square relative rounded-2xl overflow-hidden border border-gray-200 bg-white/70 backdrop-blur-xl shadow-lg">
                         <img id="main-carousel-image" src="{{ (( '/' + p.images[0]) | url) | v }}" alt="{{ p.name }} - Main View" class="w-full h-full object-cover cursor-zoom-in" data-index="0">
                         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
                             {% for image in p.images %}
@@ -40,7 +43,7 @@ eleventyComputed:
                 </div>
                 <!-- Product Info -->
                 <div class="w-full h-full flex items-center justify-center">
-                    <div class="text-center lg:text-left max-w-lg bg-white rounded-2xl border border-gray-200 shadow-lg p-8">
+                    <div class="text-center lg:text-left max-w-lg bg-white/70 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-lg p-8">
                         <div class="mb-6">
                             <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">{{ p.category }}</span>
                         </div>

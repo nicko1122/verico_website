@@ -94,6 +94,12 @@ Catalog Image: main.jpg            # 可選，用於產品卡
 - images/product-2.png
 ```
 
+- Hero 視差背景（可選）
+
+```markdown
+Hero Background: global/hero-loopenergy.jpg   # 或檔名，未加前綴預設視為產品私有
+```
+
 - 特色與規格
 
 ```markdown
