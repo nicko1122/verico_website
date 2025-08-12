@@ -345,6 +345,15 @@ def process_zip_v2(zip_path: str) -> str:
         en_json = call_llm_json(_llm_parse_prompt(md, slug), model="gpt-4.1-mini")
         en_json['slug'] = slug
 
+        # 2a) Deterministic parse for Hero Background (override/add regardless of LLM)
+        try:
+            m_hb = re.search(r"(?im)^\s*Hero\s*Background\s*:\s*(.+)$", md)
+            if m_hb:
+                hero_bg_val = m_hb.group(1).strip()
+                en_json.setdefault('en', {})['hero_background'] = hero_bg_val
+        except Exception:
+            pass
+
         # 3) LLM translate (de)
         de_json_wrapped = call_llm_json(_llm_translate_prompt({'en': en_json.get('en', {})}), model="gpt-4.1-mini")
         de_json = {'de': de_json_wrapped.get('de', {})}
