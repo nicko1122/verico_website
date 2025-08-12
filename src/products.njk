@@ -200,7 +200,7 @@ eleventyComputed:
                 <div class="bg-white border border-gray-200 rounded-xl p-6">
                     {% if v.package_image %}
                     <div class="aspect-[4/3] w-full overflow-hidden rounded-lg mb-4 bg-gray-50">
-                        <img src="{{ (( '/' + v.package_image) | url) | v }}" alt="{{ v.title }}" class="w-full h-full object-cover">
+                        <img src="{{ (( '/' + v.package_image) | url) | v }}" alt="{{ v.title }}" class="w-full h-full object-cover cursor-zoom-in variant-zoom">
                     </div>
                     {% endif %}
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ v.title }}</h3>
@@ -259,6 +259,14 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.classList.add('hidden');
             modalImg.src = '';
         }
+    });
+
+    // Enable zoom for variant package images
+    document.querySelectorAll('.variant-zoom').forEach(function(img){
+        img.addEventListener('click', function(){
+            modalImg.src = img.src;
+            modal.classList.remove('hidden');
+        });
     });
 });
 </script>
