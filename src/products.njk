@@ -85,8 +85,8 @@ eleventyComputed:
                         </div>
                     </div>
                     {% if feature.image %}
-                    <div class="aspect-square w-full rounded-lg shadow-md overflow-hidden bg-white mt-auto">
-                        <img src="{{ (( '/' + feature.image) | url) | v }}" alt="{{ feature.image_alt }}" class="w-full h-full object-cover">
+                    <div class="w-full rounded-lg shadow-md overflow-hidden bg-white mt-auto">
+                        <img src="{{ (( '/' + feature.image) | url) | v }}" alt="{{ feature.image_alt }}" class="w-full h-auto object-contain">
                     </div>
                     {% endif %}
                 </div>
