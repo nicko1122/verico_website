@@ -103,6 +103,10 @@ npm run build
 - 使用 ZIP（根目錄 `product.md` + `images/`）上傳
 - 自動解析英文結構、翻譯德文、產生 YAML、複製圖片、更新 `products.yml`
 
+產品管理（上傳、列表、刪除）
+- 請見 `docs/Product-Manager.md`
+- 啟動：`cd product-manager && ./start_server.sh`（預設埠 5012）
+
 Icons（全站共用）
 - 共用資料夾：`src/assets/images/icons/`
 - 在 `product.md` 以 `Icon: icons/<file>.svg` 使用（不要加開頭斜線）
