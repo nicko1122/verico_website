@@ -19,7 +19,7 @@ eleventyComputed:
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
                 <!-- Product Image Carousel -->
                 <div class="w-full h-full flex items-center justify-center">
-                    <div class="w-full max-w-lg aspect-square relative">
+                    <div class="w-full max-w-lg aspect-square relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-lg">
                         <img id="main-carousel-image" src="{{ (( '/' + p.images[0]) | url) | v }}" alt="{{ p.name }} - Main View" class="w-full h-full object-cover cursor-zoom-in" data-index="0">
                         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-10">
                             {% for image in p.images %}
