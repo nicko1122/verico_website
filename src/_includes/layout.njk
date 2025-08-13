@@ -9,7 +9,7 @@
     
     {% include "nav.njk" %}
 
-    <main class="pt-24">
+    <main class="{% if noTopPadding %}pt-0{% else %}pt-24{% endif %}">
         {{ content | safe }}
     </main>
 
