@@ -83,6 +83,9 @@ def _llm_parse_prompt(markdown: str, product_slug: str) -> str:
                 "sku": "string",
                 "ean": "string"
             }]
+            ,
+            "badge": "one of: trending | hot | premium | catalog (optional)",
+            "featured_rank": "integer (optional, lower = higher priority)"
         }
     }
     instructions = f"""
@@ -188,6 +191,14 @@ def _map_to_yaml(en_block: Dict[str, Any], de_block: Dict[str, Any], slug: str) 
             mapped['features'] = block['features']
         if block.get('specs'):
             mapped['specs'] = block['specs']
+        # badge / featured rank (optional)
+        if block.get('badge'):
+            mapped['badge'] = block.get('badge')
+        if block.get('featured_rank') is not None:
+            try:
+                mapped['featured_rank'] = int(block.get('featured_rank'))
+            except Exception:
+                mapped['featured_rank'] = None
         # detailed features
         if block.get('detailed_features'):
             df = block['detailed_features']
@@ -369,6 +380,20 @@ def process_zip_v2(zip_path: str) -> str:
             hb_en = (yaml_data.get('en') or {}).get('hero_background')
             if hb_en and not (yaml_data.get('de') or {}).get('hero_background'):
                 yaml_data['de']['hero_background'] = hb_en
+        except Exception:
+            pass
+
+        # ensure DE inherits badge/featured_rank from EN when missing (do not translate badge)
+        try:
+            badge_en = (yaml_data.get('en') or {}).get('badge')
+            if badge_en and not (yaml_data.get('de') or {}).get('badge'):
+                yaml_data['de']['badge'] = badge_en
+        except Exception:
+            pass
+        try:
+            rank_en = (yaml_data.get('en') or {}).get('featured_rank')
+            if rank_en is not None and not (yaml_data.get('de') or {}).get('featured_rank'):
+                yaml_data['de']['featured_rank'] = rank_en
         except Exception:
             pass
 

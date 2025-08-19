@@ -63,7 +63,8 @@ eleventyComputed:
                 <div class="w-full h-full flex items-top justify-center">
                     <div class="text-center lg:text-left max-w-lg bg-white/50 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-lg p-8">
                         <div class="mb-6">
-                            <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">{{ p.category }}</span>
+                            {% set badge_text = p.badge if p.badge else p.category %}
+                            <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">{{ badge_text }}</span>
                         </div>
                         <h1 class="text-4xl font-bold text-gray-800 mb-6 leading-tight">{{ p.name }}</h1>
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed">{{ p.description }}</p>
