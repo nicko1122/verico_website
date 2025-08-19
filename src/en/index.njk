@@ -121,10 +121,6 @@ permalink: /en/index.html
               {% set valid_trending = [] %}
               {# Render up to 6 valid trending items without constructing a secondary array (avoid Nunjucks concat issues) #}
               {% set shown = 0 %}
-              <p class="text-center text-sm text-gray-500">Debug: trending_items={{ trending_items | length }}</p>
-              <pre class="text-xs text-left text-gray-400 mt-2">Trending items ({{ trending_items | length }}):
-{% for ti in trending_items %}- {{ loop.index0 }}: name={{ ti.name or 'NULL' }}; image={{ ti.image or 'NULL' }}; url={{ ti.url or 'NULL' }}
-{% endfor %}</pre>
 
               {% for product in trending_items %}
                 {% if product.name and product.image and product.image not in ['undefined','null',''] and shown < 6 %}
