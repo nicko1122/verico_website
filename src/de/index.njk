@@ -117,12 +117,16 @@ permalink: /de/index.html
               {% set en_block = prod['en'] or {} %}
               {# Check current lang badge OR fallback to English canonical badge #}
               {% if block.badge == 'trending' or en_block.badge == 'trending' %}
-                {% set image = (block.catalog_image or (block.images and block.images[0]) or en_block.catalog_image or (en_block.images and en_block.images[0]) or '') %}
+                {% set image = (block.catalog_image or (block.images and block.images[0]) or en_block.catalog_image or (en_block.images and en_block.images[0]) ) %}
                 {% set name = block.name or en_block.name %}
                 {% set desc = block.description or en_block.description %}
                 {% set det = block.details or en_block.details %}
-                {% set url = '/' + lang + '/products/' + ((block.name or en_block.name) | slug) + '/' %}
-                {% set trending_items = trending_items + [ { 'name': name, 'description': desc, 'details': det, 'image': image, 'url': url } ] %}
+                {% set slug_name = (block.name or en_block.name) | slug %}
+                {% set url = '/' + lang + '/products/' + (slug_name) + '/' %}
+                {# Only include items that have a name (mandatory) and at least one image/catalog image #}
+                {% if name and image %}
+                  {% set trending_items = trending_items + [ { 'name': name, 'description': desc, 'details': det, 'image': image, 'url': url } ] %}
+                {% endif %}
               {% endif %}
             {% endfor %}
 
