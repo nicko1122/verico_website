@@ -2,6 +2,8 @@
 Hero Background: global/your-image.jpg
 Category: gan_charger
 Catalog Image: images/main.jpg
+Badge: trending
+Featured Rank: 1
 
 Short Description: A concise one-line summary of the product.
 
