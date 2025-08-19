@@ -45,6 +45,32 @@ module.exports = function(eleventyConfig) {
         return products;
     });
 
+    // Create trendingProducts collection (unique, based on en block badge)
+    eleventyConfig.addCollection("trendingProducts", function(collectionApi) {
+        const productDataPath = path.join(__dirname, "src/_data/products");
+        if (!fs.existsSync(productDataPath)) return [];
+        const productFiles = fs.readdirSync(productDataPath).filter(file => file.endsWith('.yml'));
+        const trending = [];
+        const seen = new Set();
+        for (const file of productFiles) {
+            const filePath = path.join(productDataPath, file);
+            const content = fs.readFileSync(filePath, 'utf8');
+            if (!content.trim()) continue;
+            const data = yaml.load(content) || {};
+            const en = data.en || {};
+            if (en.badge !== 'trending') continue;
+            const name = en.name || '';
+            if (!name) continue;
+            const slugName = slugify(name || '');
+            if (!slugName || seen.has(slugName)) continue;
+            const image = en.catalog_image || (en.images && en.images.length ? en.images[0] : null);
+            if (!image) continue;
+            seen.add(slugName);
+            trending.push({ name, description: en.description || '', details: en.details || '', image, url: `/${'en'}/products/${slugName}/` });
+        }
+        return trending;
+    });
+
     // Register the slugify filter
     eleventyConfig.addFilter("slug", (input) => {
         if (typeof input !== 'string') {
