@@ -111,12 +111,7 @@ permalink: /de/index.html
             <h1 class="text-5xl font-bold tracking-tight text-gray-800 text-center mb-2">
                 {{ data.trending.title }}
             </h1>
-            <p class="text-center text-sm text-gray-500">Debug: trending_items={{ trending_items | length }} — valid_trending={{ (valid_trending or []) | length }}</p>
-            <pre class="text-xs text-left text-gray-400 mt-2">Debug: total products={{ collections.allProducts | length }}
-{% for prod in collections.allProducts %}
-  {% if loop.index0 < 20 %}- {{ loop.index0 }}: en.name={{ (prod.en and prod.en.name) or 'NULL' }}; en.badge={{ (prod.en and prod.en.badge) or 'NULL' }}; de.name={{ (prod.de and prod.de.name) or 'NULL' }}; de.badge={{ (prod.de and prod.de.badge) or 'NULL' }}
-  {% endif %}
-{% endfor %}</pre>
+            
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {# Build trending list from products where badge == 'trending' (per language) #}
