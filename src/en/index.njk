@@ -116,12 +116,6 @@ permalink: /en/index.html
             <h1 class="text-5xl font-bold tracking-tight text-gray-800 text-center mb-2">
                 {{ data.trending.title }}
             </h1>
-            <p class="text-center text-sm text-gray-500">Debug: trending_items={{ trending_items | length if (trending_items is defined) else 'undef' }} — valid_trending={{ (valid_trending or []) | length }}</p>
-            <pre class="text-xs text-left text-gray-400 mt-2">Debug: total products={{ collections.allProducts | length }}
-{% for prod in collections.allProducts %}
-  {% if loop.index0 < 20 %}- {{ loop.index0 }}: en.name={{ (prod.en and prod.en.name) or 'NULL' }}; en.badge={{ (prod.en and prod.en.badge) or 'NULL' }}; de.name={{ (prod.de and prod.de.name) or 'NULL' }}; de.badge={{ (prod.de and prod.de.badge) or 'NULL' }}
-  {% endif %}
-{% endfor %}</pre>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {# trending_items already built above from English product entries #}
@@ -134,6 +128,13 @@ permalink: /en/index.html
                   {% set valid_trending = valid_trending + [it] %}
                 {% endif %}
               {% endfor %}
+
+              {# Debug after filtering #}
+              <p class="text-center text-sm text-gray-500">Debug: trending_items={{ trending_items | length }} — valid_trending={{ valid_trending | length }}</p>
+              <pre class="text-xs text-left text-gray-400 mt-2">Trending items ({{ trending_items | length }}):
+{% for ti in trending_items %}- {{ loop.index0 }}: name={{ ti.name or 'NULL' }}; image={{ ti.image or 'NULL' }}; url={{ ti.url or 'NULL' }}
+{% endfor %}</pre>
+
               {% for product in valid_trending %}
                 {% if loop.index0 < 6 %}
                 <a href="{{ product.url or '#' }}" class="flex flex-col items-center group">
