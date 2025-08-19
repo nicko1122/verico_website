@@ -104,7 +104,34 @@ permalink: /en/index.html
 <!-- Trending Products Section -->
 <section class="py-8">
     <div class="max-w-6xl mx-auto px-6">
-        {# trending_items will be built below from unique english product entries #}
+        {# Build trending_items once from unique English products to avoid duplicates #}
+        {% set trending_items = [] %}
+        {% set seen_slugs = [] %}
+        {% for prod in collections.allProducts %}
+          {# only consider the canonical English block to avoid duplicates from lang entries #}
+          {% if prod.en %}
+            {% set en_block = prod.en %}
+            {% if en_block.badge == 'trending' %}
+              {% set slug_name = (en_block.name | slug) if en_block.name else '' %}
+              {% if slug_name and (slug_name not in seen_slugs) %}
+                {% set image = en_block.catalog_image or (en_block.images and en_block.images[0]) %}
+                {% set name = en_block.name %}
+                {% set desc = en_block.description %}
+                {% set det = en_block.details %}
+                {% set url = '/' + lang + '/products/' + slug_name + '/' %}
+                {% if name and image %}
+                  {% set trending_items = trending_items + [ { 'name': name, 'description': desc, 'details': det, 'image': image, 'url': url } ] %}
+                  {% set seen_slugs = seen_slugs + [slug_name] %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {# Debug output: list trending_items contents to diagnose duplicates #}
+        <pre class="text-xs text-left text-gray-400 mt-2">Trending items ({{ trending_items | length }}):
+{% for ti in trending_items %}- {{ loop.index0 }}: name={{ ti.name or 'NULL' }}; image={{ ti.image or 'NULL' }}; url={{ ti.url or 'NULL' }}
+{% endfor %}</pre>
 
         <div class="mb-8">
             <h1 class="text-5xl font-bold tracking-tight text-gray-800 text-center mb-2">
