@@ -70,8 +70,8 @@
         {% set deSlug = enSlug %}
       {% endif %}
       <select onchange="location = this.value;" class="bg-transparent border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400 w-28" style="min-width: 112px;">
-        <option value="/en/{% if product and product.en and product.de %}products/{% endif %}{% if enSlug %}{{ enSlug }}/{% endif %}" {% if lang == 'en' %}selected{% endif %}>English</option>
-        <option value="/de/{% if product and product.en and product.de %}products/{% endif %}{% if deSlug %}{{ deSlug }}/{% endif %}" {% if lang == 'de' %}selected{% endif %}>Deutsch</option>
+        <option value="/en/{% if product and product.en and product.de %}products/{% endif %}{% if enSlug %}{{ enSlug }}/{% endif %}" {% if lang == 'en' %}selected{% endif %}>{{ i18n[lang].nav.language_en }}</option>
+        <option value="/de/{% if product and product.en and product.de %}products/{% endif %}{% if deSlug %}{{ deSlug }}/{% endif %}" {% if lang == 'de' %}selected{% endif %}>{{ i18n[lang].nav.language_de }}</option>
       </select>
     </div>
 
@@ -142,8 +142,8 @@
               {% set deSlug = enSlug %}
             {% endif %}
             <select onchange="location = this.value;" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400">
-              <option value="/en/{% if product and product.en and product.de %}products/{% endif %}{% if enSlug %}{{ enSlug }}/{% endif %}" {% if lang == 'en' %}selected{% endif %}>English</option>
-              <option value="/de/{% if product and product.en and product.de %}products/{% endif %}{% if deSlug %}{{ deSlug }}/{% endif %}" {% if lang == 'de' %}selected{% endif %}>Deutsch</option>
+              <option value="/en/{% if product and product.en and product.de %}products/{% endif %}{% if enSlug %}{{ enSlug }}/{% endif %}" {% if lang == 'en' %}selected{% endif %}>{{ i18n[lang].nav.language_en }}</option>
+              <option value="/de/{% if product and product.en and product.de %}products/{% endif %}{% if deSlug %}{{ deSlug }}/{% endif %}" {% if lang == 'de' %}selected{% endif %}>{{ i18n[lang].nav.language_de }}</option>
             </select>
           </li>
         </ul>

@@ -16,9 +16,74 @@ en:
     powerbank:
       products: []
     loopenergy:
-      products: []
+      products:
+      - name: LoopEnergy AA2550
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-aa2550/AA-2250-main.png
+        url: /en/products/loopenergy-aa2550/
+      - name: LoopEnergy AAA900
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-aaa900/900-aaa-4-pack.png
+        url: /en/products/loopenergy-aaa900/
+      - name: LoopEnergy C5550
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-c5550/c5550-main.png
+        url: /en/products/loopenergy-c5550/
+      - name: LoopEnergy D11100
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-d11100/d11100-main.png
+        url: /en/products/loopenergy-d11100/
+      - name: LoopEnergy PP3 4500
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
+        url: /en/products/loopenergy-pp3-4500/
+      - name: LoopEnergy Pro AA3330
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-aa3330/AA-3330-pro-main.png
+        url: /en/products/loopenergy-pro-aa3330/
+      - name: LoopEnergy Pro AAA1125
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-aaa1125/AAA-1125-pro-main.png
+        url: /en/products/loopenergy-pro-aaa1125/
+      - name: LoopEnergy Pro C6750
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-c6750/c6750-pro-main.png
+        url: /en/products/loopenergy-pro-c6750/
+      - name: LoopEnergy Pro D13500
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-d13500/d13500-pro-main.png
+        url: /en/products/loopenergy-pro-d13500/
+      - name: LoopEnergy Pro PP35400
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
+        url: /en/products/loopenergy-pro-pp35400/
     gan_charger:
-      products: []
+      products:
+      - name: VERICO MOJO 30W 2 Ports PD 3.0 GaN Charger
+        description: ''
+        details: ''
+        image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
+        url: /en/products/verico-mojo-30w-2-ports-pd-30-gan-charger/
+      - name: VERICO MOJO 65W 3 Ports PD 3.0 GaN Charger
+        description: ''
+        details: ''
+        image: assets/images/product/verico-mojo-65w-3-ports-pd-30-gan-charger/mojo-65w-main.png
+        url: /en/products/verico-mojo-65w-3-ports-pd-30-gan-charger/
+      - name: VERICO MOJO 140W 5 Ports PD 3.0 GaN Charger
+        description: ''
+        details: ''
+        image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
+        url: /en/products/verico-mojo-140w-5-ports-pd-30-gan-charger/
     flash_disk:
       products: []
   tabs:
@@ -48,9 +113,74 @@ de:
     powerbank:
       products: []
     loopenergy:
-      products: []
+      products:
+      - name: LoopEnergy AA2550
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-aa2550/AA-2250-main.png
+        url: /de/products/loopenergy-aa2550/
+      - name: LoopEnergy AAA900
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-aaa900/900-aaa-4-pack.png
+        url: /de/products/loopenergy-aaa900/
+      - name: LoopEnergy C5550
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-c5550/c5550-main.png
+        url: /de/products/loopenergy-c5550/
+      - name: LoopEnergy D11100
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-d11100/d11100-main.png
+        url: /de/products/loopenergy-d11100/
+      - name: LoopEnergy PP3 4500
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
+        url: /de/products/loopenergy-pp3-4500/
+      - name: LoopEnergy Pro AA3330
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-aa3330/AA-3330-pro-main.png
+        url: /de/products/loopenergy-pro-aa3330/
+      - name: LoopEnergy Pro AAA1125
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-aaa1125/AAA-1125-pro-main.png
+        url: /de/products/loopenergy-pro-aaa1125/
+      - name: LoopEnergy Pro C6750
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-c6750/c6750-pro-main.png
+        url: /de/products/loopenergy-pro-c6750/
+      - name: LoopEnergy Pro D13500
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-d13500/d13500-pro-main.png
+        url: /de/products/loopenergy-pro-d13500/
+      - name: LoopEnergy Pro PP35400
+        description: ''
+        details: ''
+        image: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
+        url: /de/products/loopenergy-pro-pp35400/
     gan_charger:
-      products: []
+      products:
+      - name: VERICO MOJO 30W 2 Ports PD 3.0 GaN Ladegerät
+        description: ''
+        details: ''
+        image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
+        url: /de/products/verico-mojo-30w-2-ports-pd-30-gan-ladeger-t/
+      - name: VERICO MOJO 65W 3 Ports PD 3.0 GaN Ladegerät
+        description: ''
+        details: ''
+        image: assets/images/product/verico-mojo-65w-3-ports-pd-30-gan-charger/mojo-65w-main.png
+        url: /de/products/verico-mojo-65w-3-ports-pd-30-gan-ladeger-t/
+      - name: VERICO MOJO 140W 5 Ports PD 3.0 GaN Ladegerät
+        description: ''
+        details: ''
+        image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
+        url: /de/products/verico-mojo-140w-5-ports-pd-30-gan-ladeger-t/
     flash_disk:
       products: []
   tabs:

@@ -1,0 +1,210 @@
+en:
+  name: LoopEnergy PP3 4500
+  category: loopenergy
+  description: The LoopEnergy PP3 4500 is a 9V rechargeable Li-ion battery (500mAh
+    / 4500mWh) with USB Type-C charging. Ideal for smoke detectors, multimeters, wireless
+    microphones, and more. Eco-friendly, safe, and supports hundreds of recharge cycles.
+  catalog_image: assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
+  hero_background: assets/images/global/loopenergy-hero.jpg
+  images:
+  - assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
+  - assets/images/product/loopenergy-pp3-4500/pp3-4500-1.png
+  - assets/images/product/loopenergy-pp3-4500/pp3-4500-2.png
+  - assets/images/product/loopenergy-pp3-4500/pp3-4500-cable.png
+  features:
+  - 9V constant output for stable device performance
+  - 'Capacity: 500mAh (4500mWh)'
+  - Fast charging via USB Type-C
+  - Over 1000 recharge cycles
+  - Low self-discharge for long shelf life
+  - Built-in overheat, overcharge, overvoltage, and short circuit protection
+  specs:
+  - name: Battery Type
+    value: Li-ion
+  - name: Voltage
+    value: 9V
+  - name: Energy
+    value: 4500mWh
+  - name: Capacity
+    value: 500mAh
+  - name: Charging Port
+    value: USB Type-C
+  - name: Recharge Cycles
+    value: '>1000'
+  - name: Self-Discharge
+    value: Low
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: Constant Voltage Output
+      description: Delivers a steady 9V output for optimal device compatibility.
+      benefits:
+      - Reliable performance in all devices
+      - Prevents voltage drop during use
+      image: assets/images/product/loopenergy-pp3-4500/feature-constant.png
+      image_alt: Constant Voltage Output
+    - title: Fast & Convenient Charging
+      description: Recharge directly via USB Type-C—no special charger required.
+      benefits:
+      - Universal charging convenience
+      - Charge multiple batteries at once
+      image: assets/images/product/loopenergy-pp3-4500/feature-charging.png
+      image_alt: Fast & Convenient Charging
+    - title: Advanced Safety Protections
+      description: Multiple built-in protections for safe daily use.
+      benefits:
+      - Overheat, overcharge, overvoltage, and short circuit protection
+      - Peace of mind for you and your devices
+      image: assets/images/product/loopenergy-pp3-4500/feature-safety.png
+      image_alt: Advanced Safety Protections
+    - title: Eco-Friendly & Sustainable
+      description: One LoopEnergy battery can be recharged up to 1200 times, reducing
+        waste and supporting environmental responsibility.
+      benefits:
+      - Significantly reduces single-use battery waste
+      - Promotes a greener, more sustainable lifestyle
+      image: assets/images/product/loopenergy-pp3-4500/feature-eco.png
+      image_alt: Eco-Friendly & Sustainable
+  compatibility:
+    title: Device Compatibility
+    subtitle: Suitable for most 9V battery-powered devices.
+    categories:
+    - name: Smoke detectors
+      details: ''
+      icon: assets/images/icons/icon-smoke.svg
+    - name: Multimeters
+      details: ''
+      icon: assets/images/icons/icon-multimeter.svg
+    - name: Wireless microphones
+      details: ''
+      icon: assets/images/icons/icon-mic.svg
+    - name: Toys & instruments
+      details: ''
+      icon: assets/images/icons/icon-toy.svg
+  package_contents:
+    title: Package Contents
+    subtitle: What’s in the box
+    items:
+    - name: 2 × LoopEnergy PP3 4500 Rechargeable Battery
+      details: null
+      icon: assets/images/product/loopenergy-pp3-4500/pp3-4500-1.png
+    - name: 1 × USB Type-A to 2 × Type-C charging cable
+      details: null
+      icon: assets/images/product/loopenergy-pp3-4500/pp3-4500-cable.png
+  variants:
+  - title: LoopEnergy PP3 4500 2-Pack
+    package_image: assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
+    model_name: LoopEnergy PP3 4500 2 Pack
+    sku: 1UDBT-A3WEB2-NN
+    ean: '4713095608995'
+  - title: LoopEnergy PP3 4500 4-Pack
+    package_image: assets/images/product/loopenergy-pp3-4500/pp3-4500-4-pack.png
+    model_name: LoopEnergy PP3 4500 4 Pack
+    sku: 1UDBT-A3WEBC-NN
+    ean: '4713095609206'
+de:
+  name: LoopEnergy PP3 4500
+  category: loopenergy
+  description: Die LoopEnergy PP3 4500 ist eine 9V wiederaufladbare Li-Ionen-Batterie
+    (500mAh / 4500mWh) mit USB Type-C-Ladung. Ideal für Rauchmelder, Multimeter, kabellose
+    Mikrofone und mehr. Umweltfreundlich, sicher und unterstützt hunderte Ladezyklen.
+  catalog_image: assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
+  hero_background: assets/images/global/loopenergy-hero.jpg
+  images:
+  - assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
+  - assets/images/product/loopenergy-pp3-4500/pp3-4500-1.png
+  - assets/images/product/loopenergy-pp3-4500/pp3-4500-2.png
+  - assets/images/product/loopenergy-pp3-4500/pp3-4500-cable.png
+  features:
+  - 9V konstanter Ausgang für stabile Geräteleistung
+  - 'Kapazität: 500mAh (4500mWh)'
+  - Schnelles Laden über USB Type-C
+  - Über 1000 Ladezyklen
+  - Niedrige Selbstentladung für lange Lagerfähigkeit
+  - Eingebaute Schutzfunktionen gegen Überhitzung, Überladung, Überspannung und Kurzschluss
+  specs:
+  - name: Batterietyp
+    value: Li-ion
+  - name: Spannung
+    value: 9V
+  - name: Energie
+    value: 4500mWh
+  - name: Kapazität
+    value: 500mAh
+  - name: Ladeanschluss
+    value: USB Type-C
+  - name: Ladezyklen
+    value: '>1000'
+  - name: Selbstentladung
+    value: Niedrig
+  detailed_features:
+    title: Detaillierte Merkmale
+    subtitle: ''
+    items:
+    - title: Konstanter Spannungsausgang
+      description: Bietet eine stabile 9V-Ausgabe für optimale Gerätekompatibilität.
+      benefits:
+      - Zuverlässige Leistung in allen Geräten
+      - Verhindert Spannungsabfall während der Nutzung
+      image: assets/images/product/loopenergy-pp3-4500/feature-constant.png
+      image_alt: Konstanter Spannungsausgang
+    - title: Schnelles & bequemes Laden
+      description: Direktes Aufladen über USB Type-C – kein spezielles Ladegerät erforderlich.
+      benefits:
+      - Universelle Ladebequemlichkeit
+      - Mehrere Batterien gleichzeitig laden
+      image: assets/images/product/loopenergy-pp3-4500/feature-charging.png
+      image_alt: Schnelles & bequemes Laden
+    - title: Erweiterte Sicherheitsfunktionen
+      description: Mehrere eingebaute Schutzmechanismen für sicheren täglichen Gebrauch.
+      benefits:
+      - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
+      - Sicherheit und Ruhe für Sie und Ihre Geräte
+      image: assets/images/product/loopenergy-pp3-4500/feature-safety.png
+      image_alt: Erweiterte Sicherheitsfunktionen
+    - title: Umweltfreundlich & nachhaltig
+      description: Eine LoopEnergy-Batterie kann bis zu 1200 Mal wieder aufgeladen
+        werden, reduziert Abfall und unterstützt Umweltverantwortung.
+      benefits:
+      - Reduziert deutlich den Abfall von Einwegbatterien
+      - Fördert einen grüneren, nachhaltigeren Lebensstil
+      image: assets/images/product/loopenergy-pp3-4500/feature-eco.png
+      image_alt: Umweltfreundlich & nachhaltig
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Geeignet für die meisten 9V batteriebetriebenen Geräte.
+    categories:
+    - name: Rauchmelder
+      details: ''
+      icon: assets/images/icons/icon-smoke.svg
+    - name: Multimeter
+      details: ''
+      icon: assets/images/icons/icon-multimeter.svg
+    - name: Kabellose Mikrofone
+      details: ''
+      icon: assets/images/icons/icon-mic.svg
+    - name: Spielzeug & Instrumente
+      details: ''
+      icon: assets/images/icons/icon-toy.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: In der Verpackung enthalten
+    items:
+    - name: 2 × LoopEnergy PP3 4500 wiederaufladbare Batterie
+      details: null
+      icon: assets/images/product/loopenergy-pp3-4500/pp3-4500-1.png
+    - name: 1 × USB Type-A zu 2 × Type-C Ladekabel
+      details: null
+      icon: assets/images/product/loopenergy-pp3-4500/pp3-4500-cable.png
+  variants:
+  - title: LoopEnergy PP3 4500 2er-Pack
+    package_image: assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
+    model_name: LoopEnergy PP3 4500 2 Pack
+    sku: 1UDBT-A3WEB2-NN
+    ean: '4713095608995'
+  - title: LoopEnergy PP3 4500 4er-Pack
+    package_image: assets/images/product/loopenergy-pp3-4500/pp3-4500-4-pack.png
+    model_name: LoopEnergy PP3 4500 4 Pack
+    sku: 1UDBT-A3WEBC-NN
+    ean: '4713095609206'

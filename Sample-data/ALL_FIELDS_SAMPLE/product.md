@@ -1,5 +1,5 @@
 # Sample Product Full Fields
-
+Hero Background: global/your-image.jpg
 Category: gan_charger
 Catalog Image: images/main.jpg
 
@@ -54,23 +54,23 @@ Benefits:
 Title: Charging Compatibility
 Subtitle: Works with most USB‑powered devices.
 - Laptops
-  Icon: icons/compat-laptop.svg
+  Icon: icons/icon-laptop.svg
 - Tablets
-  Icon: icons/compat-tablet.svg
+  Icon: icons/icon-tablet.svg
 - Smartphones
-  Icon: icons/compat-phone.svg
+  Icon: icons/icon-phone.svg
 - Accessories
-  Icon: icons/compat-accessory.svg
+  Icon: icons/icon-accessory.svg
 
 ## Package Contents
 Title: Package Contents
 Subtitle: What’s in the box
 - 1 × GaN Charger
-  Icon: icons/charger.svg
+  Icon: icons/icon-charger.svg
 - 1 × USB‑C to USB‑C Cable
-  Icon: icons/cable.svg
+  Icon: icons/icon-cable.svg
 - 1 × Quick Start Guide
-  Icon: icons/guide.svg
+  Icon: icons/icon-guide.svg
 
 ## Also Available In
 ### Travel Bundle
@@ -84,4 +84,3 @@ Package Image: images/variant-family.jpg
 Model Name: Sample Charger Family Bundle
 SKU: SC-FAMILY-02
 EAN: 4710000000002
-

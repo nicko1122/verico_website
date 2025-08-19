@@ -1,0 +1,208 @@
+en:
+  name: LoopEnergy Pro C6750
+  category: loopenergy
+  description: The LoopEnergy Pro C6750 is a next-generation 1.5V high-capacity Li-ion
+    rechargeable battery (4500mAh / 6750mWh) with advanced USB Type-C charging. Engineered
+    for professionals and demanding users, it delivers exceptional power, ultra-stable
+    output, and superior safety for high-drain devices. Experience pro-level performance,
+    reliability, and sustainability in every charge.
+  catalog_image: assets/images/product/loopenergy-pro-c6750/c6750-pro-main.png
+  hero_background: assets/images/global/loopenergy-hero.jpg
+  images:
+  - assets/images/product/loopenergy-pro-c6750/c6750-pro-main.png
+  - assets/images/product/loopenergy-pro-c6750/c6750-pro-1.png
+  - assets/images/product/loopenergy-pro-c6750/c6750-pro-2.png
+  - assets/images/product/loopenergy-pro-c6750/c6750-pro-cable.png
+  features:
+  - 1.5V constant output for maximum device performance
+  - 'Ultra-high capacity: 4500mAh (6750mWh) for extended runtime'
+  - Fast and efficient USB Type-C charging
+  - Over 1000 recharge cycles for long-term value
+  - Ultra-low self-discharge for reliable storage
+  - 'Comprehensive safety: overheat, overcharge, overvoltage, and short circuit protection'
+  specs:
+  - name: Battery Type
+    value: Li-ion
+  - name: Voltage
+    value: 1.5V / 6750mWh
+  - name: Capacity
+    value: 4500mAh
+  - name: Charging Port
+    value: USB Type-C
+  - name: Recharge Cycles
+    value: '>1000'
+  - name: Self-Discharge
+    value: Low
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: Constant Voltage Output
+      description: Delivers a rock-steady 1.5V output for optimal compatibility and
+        consistent performance, even in the most demanding devices.
+      benefits:
+      - Professional-grade reliability
+      - Prevents voltage drop during heavy use
+      image: assets/images/product/loopenergy-pro-c6750/feature-constant.png
+      image_alt: Constant Voltage Output
+    - title: Fast & Convenient Charging
+      description: Recharge directly via USB Type-C—no proprietary charger needed.
+        Get back to work faster with rapid charging.
+      benefits:
+      - Universal charging convenience
+      - Charge multiple batteries simultaneously
+      image: assets/images/product/loopenergy-pro-c6750/feature-charging.png
+      image_alt: Fast & Convenient Charging
+    - title: Advanced Safety Protections
+      description: Equipped with multiple layers of protection for safe, worry-free
+        operation in any environment.
+      benefits:
+      - Overheat, overcharge, overvoltage, and short circuit protection
+      - Peace of mind for professional and everyday use
+      image: assets/images/product/loopenergy-pro-c6750/feature-safety.png
+      image_alt: Advanced Safety Protections
+    - title: Eco-Friendly & Sustainable
+      description: Each LoopEnergy Pro C6750 battery can be recharged over 1000 times,
+        dramatically reducing waste and supporting a greener future.
+      benefits:
+      - Reduces single-use battery waste
+      - Promotes sustainable, responsible energy use
+      image: assets/images/product/loopenergy-pro-c6750/feature-eco.png
+      image_alt: Eco-Friendly & Sustainable
+  compatibility:
+    title: Device Compatibility
+    subtitle: Perfect for high-drain and standard C battery-powered devices.
+    categories:
+    - name: Remote controls
+      details: ''
+      icon: assets/images/icons/icon-remote.svg
+    - name: Wireless mice & keyboards
+      details: ''
+      icon: assets/images/icons/icon-mouse.svg
+    - name: Gamepads & joysticks
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+    - name: Flashlights
+      details: ''
+      icon: assets/images/icons/icon-flashlight.svg
+  package_contents:
+    title: Package Content
+    subtitle: What’s in the box
+    items:
+    - name: 2 × LoopEnergy Pro C6750 Rechargeable Battery
+      details: null
+      icon: assets/images/product/loopenergy-pro-c6750/c6750-pro-1.png
+    - name: 1 × USB Type-A to 2 × Type-C charging cable
+      details: null
+      icon: assets/images/product/loopenergy-pro-c6750/c6750-pro-cable.png
+  variants:
+  - title: LoopEnergy Pro C6750 2 Pack
+    package_image: assets/images/product/loopenergy-pro-c6750/c6750-pro-main.png
+    model_name: LoopEnergy Pro C6750 2 Pack
+    sku: 1UDBT-A9WEB2-NN
+    ean: '4713095609312'
+de:
+  name: LoopEnergy Pro C6750
+  category: loopenergy
+  description: Der LoopEnergy Pro C6750 ist eine Li-Ionen-Akku der nächsten Generation
+    mit 1,5 V und hoher Kapazität (4500mAh / 6750mWh) mit fortschrittlicher USB Type-C-Ladetechnologie.
+    Entwickelt für Profis und anspruchsvolle Nutzer bietet er außergewöhnliche Leistung,
+    ultra-stabile Ausgangsspannung und überlegene Sicherheit für Geräte mit hohem
+    Stromverbrauch. Erleben Sie Profi-Leistung, Zuverlässigkeit und Nachhaltigkeit
+    bei jeder Ladung.
+  catalog_image: assets/images/product/loopenergy-pro-c6750/c6750-pro-main.png
+  hero_background: assets/images/global/loopenergy-hero.jpg
+  images:
+  - assets/images/product/loopenergy-pro-c6750/c6750-pro-main.png
+  - assets/images/product/loopenergy-pro-c6750/c6750-pro-1.png
+  - assets/images/product/loopenergy-pro-c6750/c6750-pro-2.png
+  - assets/images/product/loopenergy-pro-c6750/c6750-pro-cable.png
+  features:
+  - 1,5 V konstanter Ausgang für maximale Geräteleistung
+  - 'Ultra-hohe Kapazität: 4500mAh (6750mWh) für verlängerte Laufzeit'
+  - Schnelles und effizientes USB Type-C-Laden
+  - Über 1000 Ladezyklen für langfristigen Wert
+  - Ultra-niedrige Selbstentladung für zuverlässige Lagerung
+  - 'Umfassende Sicherheit: Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss'
+  specs:
+  - name: Batterietyp
+    value: Li-ion
+  - name: Spannung
+    value: 1,5V / 6750mWh
+  - name: Kapazität
+    value: 4500mAh
+  - name: Ladeanschluss
+    value: USB Type-C
+  - name: Ladezyklen
+    value: '>1000'
+  - name: Selbstentladung
+    value: Niedrig
+  detailed_features:
+    title: Detaillierte Funktionen
+    subtitle: ''
+    items:
+    - title: Konstanter Spannungsausgang
+      description: Bietet eine äußerst stabile 1,5 V Ausgangsspannung für optimale
+        Kompatibilität und gleichbleibende Leistung, selbst bei anspruchsvollsten
+        Geräten.
+      benefits:
+      - Zuverlässigkeit auf professionellem Niveau
+      - Verhindert Spannungsabfall bei hoher Belastung
+      image: assets/images/product/loopenergy-pro-c6750/feature-constant.png
+      image_alt: Konstanter Spannungsausgang
+    - title: Schnelles & bequemes Laden
+      description: Direktes Aufladen über USB Type-C – kein proprietäres Ladegerät
+        erforderlich. Schneller zurück zur Arbeit mit raschem Laden.
+      benefits:
+      - Universelle Ladebequemlichkeit
+      - Mehrere Akkus gleichzeitig laden
+      image: assets/images/product/loopenergy-pro-c6750/feature-charging.png
+      image_alt: Schnelles & bequemes Laden
+    - title: Fortschrittliche Sicherheitsfunktionen
+      description: Ausgestattet mit mehreren Schutzschichten für sicheren und sorgenfreien
+        Betrieb in jeder Umgebung.
+      benefits:
+      - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
+      - Sicherheit für professionelle und alltägliche Nutzung
+      image: assets/images/product/loopenergy-pro-c6750/feature-safety.png
+      image_alt: Fortschrittliche Sicherheitsfunktionen
+    - title: Umweltfreundlich & nachhaltig
+      description: Jeder LoopEnergy Pro C6750 Akku kann über 1000 Mal wieder aufgeladen
+        werden, was Abfall drastisch reduziert und eine grünere Zukunft unterstützt.
+      benefits:
+      - Reduziert Abfall durch Einwegbatterien
+      - Fördert nachhaltigen und verantwortungsvollen Energieeinsatz
+      image: assets/images/product/loopenergy-pro-c6750/feature-eco.png
+      image_alt: Umweltfreundlich & nachhaltig
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Perfekt für Geräte mit hohem Stromverbrauch und Standard-C-Batterien.
+    categories:
+    - name: Fernbedienungen
+      details: ''
+      icon: assets/images/icons/icon-remote.svg
+    - name: Kabellose Mäuse & Tastaturen
+      details: ''
+      icon: assets/images/icons/icon-mouse.svg
+    - name: Gamepads & Joysticks
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+    - name: Taschenlampen
+      details: ''
+      icon: assets/images/icons/icon-flashlight.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: In der Verpackung enthalten
+    items:
+    - name: 2 × LoopEnergy Pro C6750 wiederaufladbare Batterie
+      details: null
+      icon: assets/images/product/loopenergy-pro-c6750/c6750-pro-1.png
+    - name: 1 × USB Type-A zu 2 × Type-C Ladekabel
+      details: null
+      icon: assets/images/product/loopenergy-pro-c6750/c6750-pro-cable.png
+  variants:
+  - title: LoopEnergy Pro C6750 2er-Pack
+    package_image: assets/images/product/loopenergy-pro-c6750/c6750-pro-main.png
+    model_name: LoopEnergy Pro C6750 2 Pack
+    sku: 1UDBT-A9WEB2-NN
+    ean: '4713095609312'

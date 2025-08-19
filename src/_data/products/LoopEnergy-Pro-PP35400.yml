@@ -1,0 +1,196 @@
+en:
+  name: LoopEnergy Pro PP35400
+  category: loopenergy
+  description: The LoopEnergy Pro PP35400 is a next-generation 9V high-capacity Li-ion
+    rechargeable battery (600mAh / 5400mWh) with advanced USB Type-C charging. Engineered
+    for professionals and demanding users, it delivers exceptional power, ultra-stable
+    output, and superior safety for high-drain devices. Experience pro-level performance,
+    reliability, and sustainability in every charge.
+  catalog_image: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
+  hero_background: assets/images/global/loopenergy-hero.jpg
+  images:
+  - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
+  - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-1.png
+  - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-2.png
+  - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-cable.png
+  features:
+  - 9V constant output for maximum device performance
+  - 'High capacity: 600mAh (5400mWh) for extended runtime'
+  - Fast and efficient USB Type-C charging
+  - Over 1000 recharge cycles for long-term value
+  - Ultra-low self-discharge for reliable storage
+  - 'Comprehensive safety: overheat, overcharge, overvoltage, and short circuit protection'
+  specs:
+  - name: Battery Type
+    value: Li-ion
+  - name: Voltage
+    value: 9V / 5400mWh
+  - name: Capacity
+    value: 600mAh
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: Constant Voltage Output
+      description: Delivers a rock-steady 9V output for optimal compatibility and
+        consistent performance, even in the most demanding devices.
+      benefits:
+      - Professional-grade reliability
+      - Prevents voltage drop during heavy use
+      image: assets/images/product/loopenergy-pro-pp35400/feature-constant.png
+      image_alt: Constant Voltage Output
+    - title: Fast & Convenient Charging
+      description: Recharge directly via USB Type-C—no proprietary charger needed.
+        Get back to work faster with rapid charging.
+      benefits:
+      - Universal charging convenience
+      - Charge multiple batteries simultaneously
+      image: assets/images/product/loopenergy-pro-pp35400/feature-charging.png
+      image_alt: Fast & Convenient Charging
+    - title: Advanced Safety Protections
+      description: Equipped with multiple layers of protection for safe, worry-free
+        operation in any environment.
+      benefits:
+      - Overheat, overcharge, overvoltage, and short circuit protection
+      - Peace of mind for professional and everyday use
+      image: assets/images/product/loopenergy-pro-pp35400/feature-safety.png
+      image_alt: Advanced Safety Protections
+    - title: Eco-Friendly & Sustainable
+      description: Each LoopEnergy Pro PP35400 battery can be recharged over 1000
+        times, dramatically reducing waste and supporting a greener future.
+      benefits:
+      - Reduces single-use battery waste
+      - Promotes sustainable, responsible energy use
+      image: assets/images/product/loopenergy-pro-pp35400/feature-eco.png
+      image_alt: Eco-Friendly & Sustainable
+  compatibility:
+    title: Device Compatibility
+    subtitle: Perfect for high-drain and standard 9V battery-powered devices.
+    categories:
+    - name: Smoke detectors
+      details: ''
+      icon: assets/images/icons/icon-smoke.svg
+    - name: Multimeters
+      details: ''
+      icon: assets/images/icons/icon-multimeter.svg
+    - name: Wireless microphones
+      details: ''
+      icon: assets/images/icons/icon-mic.svg
+    - name: Toys & instruments
+      details: ''
+      icon: assets/images/icons/icon-toy.svg
+  package_contents:
+    title: Package Content
+    subtitle: What’s in the box
+    items:
+    - name: PP3 5400 Battery × 2
+      details: null
+      icon: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-1.png
+    - name: 1 USB Type A to 2 Type C charging cable × 1
+      details: null
+      icon: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-cable.png
+  variants:
+  - title: LoopEnergy Pro PP3 5400 2 Pack
+    package_image: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
+    model_name: LoopEnergy Pro PP3 5400 2 Pack
+    sku: 1UDBT-A8WEB2-NN
+    ean: '4713095609305'
+de:
+  name: LoopEnergy Pro PP35400
+  category: loopenergy
+  description: Der LoopEnergy Pro PP35400 ist eine Li-Ionen-Akku der nächsten Generation
+    mit 9V hoher Kapazität (600mAh / 5400mWh) und fortschrittlichem USB Type-C-Laden.
+    Entwickelt für Profis und anspruchsvolle Nutzer bietet er außergewöhnliche Leistung,
+    ultra-stabile Ausgangsspannung und überlegene Sicherheit für Geräte mit hohem
+    Stromverbrauch. Erleben Sie Profi-Leistung, Zuverlässigkeit und Nachhaltigkeit
+    bei jeder Ladung.
+  catalog_image: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
+  hero_background: assets/images/global/loopenergy-hero.jpg
+  images:
+  - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
+  - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-1.png
+  - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-2.png
+  - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-cable.png
+  features:
+  - 9V konstanter Ausgang für maximale Geräteleistung
+  - 'Hohe Kapazität: 600mAh (5400mWh) für verlängerte Laufzeit'
+  - Schnelles und effizientes USB Type-C-Laden
+  - Über 1000 Ladezyklen für langfristigen Wert
+  - Ultra niedrige Selbstentladung für zuverlässige Lagerung
+  - 'Umfassende Sicherheit: Überhitzungs-, Überlade-, Überspannungs- und Kurzschlussschutz'
+  specs:
+  - name: Batterietyp
+    value: Li-ion
+  - name: Spannung
+    value: 9V / 5400mWh
+  - name: Kapazität
+    value: 600mAh
+  detailed_features:
+    title: Detaillierte Merkmale
+    subtitle: ''
+    items:
+    - title: Konstanter Spannungsausgang
+      description: Bietet eine äußerst stabile 9V-Ausgangsspannung für optimale Kompatibilität
+        und gleichbleibende Leistung, selbst bei anspruchsvollsten Geräten.
+      benefits:
+      - Zuverlässigkeit auf Profi-Niveau
+      - Verhindert Spannungsabfall bei starker Nutzung
+      image: assets/images/product/loopenergy-pro-pp35400/feature-constant.png
+      image_alt: Konstanter Spannungsausgang
+    - title: Schnelles & Bequemes Laden
+      description: Direktes Aufladen über USB Type-C – kein proprietäres Ladegerät
+        erforderlich. Schneller zurück zur Arbeit mit raschem Laden.
+      benefits:
+      - Universelle Ladebequemlichkeit
+      - Mehrere Batterien gleichzeitig laden
+      image: assets/images/product/loopenergy-pro-pp35400/feature-charging.png
+      image_alt: Schnelles & Bequemes Laden
+    - title: Fortschrittliche Sicherheitsfunktionen
+      description: Ausgestattet mit mehreren Schutzschichten für sicheren, sorgenfreien
+        Betrieb in jeder Umgebung.
+      benefits:
+      - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
+      - Sicherheit für professionelle und alltägliche Nutzung
+      image: assets/images/product/loopenergy-pro-pp35400/feature-safety.png
+      image_alt: Fortschrittliche Sicherheitsfunktionen
+    - title: Umweltfreundlich & Nachhaltig
+      description: Jede LoopEnergy Pro PP35400 Batterie kann über 1000 Mal wieder
+        aufgeladen werden, was Abfall drastisch reduziert und eine grünere Zukunft
+        unterstützt.
+      benefits:
+      - Reduziert Einwegbatterie-Abfall
+      - Fördert nachhaltigen, verantwortungsvollen Energieeinsatz
+      image: assets/images/product/loopenergy-pro-pp35400/feature-eco.png
+      image_alt: Umweltfreundlich & Nachhaltig
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Perfekt für Geräte mit hohem Stromverbrauch und Standard-9V-Batteriebetrieb.
+    categories:
+    - name: Rauchmelder
+      details: ''
+      icon: assets/images/icons/icon-smoke.svg
+    - name: Multimeter
+      details: ''
+      icon: assets/images/icons/icon-multimeter.svg
+    - name: Kabellose Mikrofone
+      details: ''
+      icon: assets/images/icons/icon-mic.svg
+    - name: Spielzeug & Instrumente
+      details: ''
+      icon: assets/images/icons/icon-toy.svg
+  package_contents:
+    title: Packungsinhalt
+    subtitle: Inhalt der Verpackung
+    items:
+    - name: PP3 5400 Batterie × 2
+      details: null
+      icon: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-1.png
+    - name: 1 USB Type A zu 2 Type C Ladekabel × 1
+      details: null
+      icon: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-cable.png
+  variants:
+  - title: LoopEnergy Pro PP3 5400 2er Pack
+    package_image: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
+    model_name: LoopEnergy Pro PP3 5400 2 Pack
+    sku: 1UDBT-A8WEB2-NN
+    ean: '4713095609305'

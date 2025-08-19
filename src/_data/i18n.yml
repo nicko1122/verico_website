@@ -1,6 +1,16 @@
 en:
   buttons:
     contact_sales: "Contact Sales"
+    contact_sales_email: "sales@example.com"
+  nav:
+    language_en: "English"
+    language_de: "Deutsch"
+  global:
+    redirect:
+      title: "Redirecting..."
+      sr_only: "Redirecting to English site…"
+      noscript_text: "If you are not redirected automatically, follow this"
+      noscript_link: "link to the English version"
   product:
     specifications_title: "Product Specifications"
     technical_specs_title: "Technical Specifications"
@@ -8,13 +18,33 @@ en:
     key_benefits_title: "Key Benefits:"
     also_available_in_title: "Also Available In"
     also_available_in_subtitle: "Choose the packaging or capacity that fits your needs."
+    label:
+      model_name: "Model Name:"
+      sku: "SKU:"
+      ean: "EAN:"
   catalog:
     why_title: "Why Choose Verico Products?"
     why_text: "Our products are designed with quality, innovation, and user experience in mind."
+    quality_title: "Quality Assured"
+    quality_text: "All products undergo rigorous testing to ensure reliability and performance."
+    fast_title: "Fast & Efficient"
+    fast_text: "Advanced technology ensures maximum speed and efficiency in all our products."
+    user_title: "User-Friendly"
+    user_text: "Designed with simplicity and convenience for everyday use."
 
 de:
   buttons:
     contact_sales: "Kontakt Vertrieb"
+    contact_sales_email: "sales-de@example.com"
+  nav:
+    language_en: "English"
+    language_de: "Deutsch"
+  global:
+    redirect:
+      title: "Weiterleitung..."
+      sr_only: "Weiterleitung zur deutschen Seite…"
+      noscript_text: "Wenn Sie nicht automatisch weitergeleitet werden, folgen Sie diesem"
+      noscript_link: "Link zur deutschen Version"
   product:
     specifications_title: "Produktspezifikationen"
     technical_specs_title: "Technische Spezifikationen"
@@ -22,8 +52,18 @@ de:
     key_benefits_title: "Wesentliche Vorteile:"
     also_available_in_title: "Auch erhältlich in"
     also_available_in_subtitle: "Wählen Sie die Verpackung oder Kapazität, die Ihren Bedürfnissen entspricht."
+    label:
+      model_name: "Modellname:"
+      sku: "SKU:"
+      ean: "EAN:"
   catalog:
     why_title: "Warum Verico Produkte?"
     why_text: "Unsere Produkte sind auf Qualität, Innovation und Benutzerfreundlichkeit ausgelegt."
+    quality_title: "Qualitätssicherung"
+    quality_text: "Alle Produkte werden strengen Tests unterzogen, um Zuverlässigkeit und Leistung zu gewährleisten."
+    fast_title: "Schnell & Effizient"
+    fast_text: "Fortschrittliche Technologie sorgt für maximale Geschwindigkeit und Effizienz."
+    user_title: "Benutzerfreundlich"
+    user_text: "Entwickelt für Einfachheit und Komfort im Alltag."
 
 

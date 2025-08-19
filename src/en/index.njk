@@ -10,17 +10,69 @@ permalink: /en/index.html
 <section class="relative w-[99%] h-[800px] -mt-24">
     <div class="hero-wrapper rounded-2xl border border-gray-200 mx-2 my-3 md:mx-4 md:my-4 overflow-hidden h-full" style="box-sizing:border-box;">
         <div class="hero-container relative w-full h-full mx-auto">
-            <a href="#" class="block w-full h-full">
-                <img src="{{ ('/' + data.hero.image) | url }}" alt="{{ data.hero.alt }}" class="w-full h-full object-cover object-center" />
-                <div class="absolute inset-y-10 right-0 flex items-center pr-10 pointer-events-none">
-                    <h1 class="text-5xl font-bold text-gray-500 break-words text-left px-6 py-4">
-                        {{ data.hero.title | safe }}
-                    </h1>
+            <div id="hero-carousel" class="relative w-full h-full">
+                {% for slide in data.hero.slides %}
+                <div class="absolute inset-0 transition-opacity duration-700 {% if not loop.first %}opacity-0{% endif %} hero-slide">
+                    <a href="#" class="block w-full h-full">
+                        <img src="{{ ('/' + slide.image) | url }}" alt="{{ data.hero.alt }}" class="w-full h-full object-cover object-center" />
+                        {# position handling: LT, LC, LB, CT, CC, CB, RT, RC, RB #}
+                        {% set pos = (slide.position or 'RC') %}
+                        {% if pos == 'LT' %}
+                          {% set pos_classes = 'top-0 left-0 p-5' %}
+                          {% set text_align = 'text-left' %}
+                        {% elif pos == 'LC' %}
+                          {% set pos_classes = 'top-1/2 left-0 transform -translate-y-1/2 p-5' %}
+                          {% set text_align = 'text-left' %}
+                        {% elif pos == 'LB' %}
+                          {% set pos_classes = 'bottom-0 left-0 p-5' %}
+                          {% set text_align = 'text-left' %}
+                        {% elif pos == 'CT' %}
+                          {% set pos_classes = 'top-0 left-1/2 transform -translate-x-1/2 p-5' %}
+                          {% set text_align = 'text-center' %}
+                        {% elif pos == 'CC' %}
+                          {% set pos_classes = 'top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5' %}
+                          {% set text_align = 'text-center' %}
+                        {% elif pos == 'CB' %}
+                          {% set pos_classes = 'bottom-0 left-1/2 transform -translate-x-1/2 p-5' %}
+                          {% set text_align = 'text-center' %}
+                        {% elif pos == 'RT' %}
+                          {% set pos_classes = 'top-0 right-0 p-5' %}
+                          {% set text_align = 'text-right' %}
+                        {% elif pos == 'RC' %}
+                          {% set pos_classes = 'top-1/2 right-0 transform -translate-y-1/2 p-5' %}
+                          {% set text_align = 'text-right' %}
+                        {% elif pos == 'RB' %}
+                          {% set pos_classes = 'bottom-0 right-0 p-5' %}
+                          {% set text_align = 'text-right' %}
+                        {% else %}
+                          {% set pos_classes = 'top-1/2 right-0 transform -translate-y-1/2 p-5' %}
+                          {% set text_align = 'text-right' %}
+                        {% endif %}
+
+                        <div class="absolute {{ pos_classes }} pointer-events-none">
+                            <h1 class="text-5xl font-bold text-gray-500 break-words {{ text_align }} px-6 py-4">{{ slide.slogan | safe }}</h1>
+                        </div>
+                    </a>
                 </div>
-            </a>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>
+
+<script>
+(function(){
+  if (typeof document === 'undefined') return;
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides || slides.length <= 1) return;
+  let idx = 0;
+  setInterval(()=>{
+    slides[idx].classList.add('opacity-0');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.remove('opacity-0');
+  }, 4000);
+})();
+</script>
 
 <!-- Products by Category Section -->
 <section class="py-5">

@@ -1,7 +1,21 @@
 en:
   hero:
-    title: Charge Ahead.<br>Store Smart.
-    image: assets/images/banner/hero/Carousel/GaNCharger-banner.jpg
+    slides:
+      - image: assets/images/banner/hero/Carousel/GaNCharger-banner.jpg
+        slogan: "Charge Ahead.<br>Store Smart."
+        position: RC
+      - image: assets/images/banner/hero/Carousel/usb-banner.jpg
+        slogan: ""
+        position: RC
+      - image: assets/images/banner/hero/Carousel/powerpd20k-banner.jpg
+        slogan: ""
+        position: RC
+      - image: assets/images/banner/hero/Carousel/powerpd10k-banner.jpg
+        slogan: ""
+        position: RC
+      - image: assets/images/banner/hero/Carousel/powerbank-banner.jpg
+        slogan: ""
+        position: RC
     alt: Verico Hero Banner
   categories:
     title: Products by Category
@@ -75,8 +89,17 @@ en:
     image: assets/images/verico-logo-white.svg
 de:
   hero:
-    title: Laden Sie voraus.<br>Speichern Sie intelligent.
-    image: assets/images/banner/hero/Carousel/GaNCharger-banner.jpg
+    slides:
+      - image: assets/images/banner/hero/Carousel/GaNCharger-banner.jpg
+        slogan: "Laden Sie voraus.<br>Speichern Sie intelligent."
+      - image: assets/images/banner/hero/Carousel/usb-banner.jpg
+        slogan: ""
+      - image: assets/images/banner/hero/Carousel/powerpd20k-banner.jpg
+        slogan: ""
+      - image: assets/images/banner/hero/Carousel/powerpd10k-banner.jpg
+        slogan: ""
+      - image: assets/images/banner/hero/Carousel/powerbank-banner.jpg
+        slogan: ""
     alt: Verico Hero Banner
   categories:
     title: Produkte nach Kategorie

@@ -5,7 +5,7 @@ permalink: /index.html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Redirecting...</title>
+    <title>{{ i18n.en.global.redirect.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       html, body { height: 100%; margin: 0; }
@@ -29,10 +29,10 @@ permalink: /index.html
 <body>
     <a href="/en/" aria-label="Go to English homepage">
       <img src="{{ '/assets/images/verico-logo.svg' | url }}" alt="Verico" class="logo" />
-      <span class="sr-only">Redirecting to English site…</span>
+      <span class="sr-only">{{ i18n.en.global.redirect.sr_only }}</span>
     </a>
     <noscript>
-      <p>If you are not redirected automatically, follow this <a href="/en/">link to the English version</a>.</p>
+      <p>{{ i18n.en.global.redirect.noscript_text }} <a href="/en/">{{ i18n.en.global.redirect.noscript_link }}</a>.</p>
     </noscript>
 </body>
 </html>

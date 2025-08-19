@@ -1,0 +1,209 @@
+en:
+  name: VERICO MOJO 30W 2 Ports PD 3.0 GaN Charger
+  category: gan_charger
+  description: The VERICO MOJO 30W 2 Ports PD 3.0 GaN Charger delivers fast, reliable
+    charging for your devices in a compact, travel-ready design. Featuring advanced
+    GaN technology, dual-port versatility, and comprehensive safety protections, it’s
+    the perfect companion for smartphones, tablets, and more.
+  catalog_image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
+  hero_background: assets/images/global/gancharger-hero.jpg
+  images:
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-1.png
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-2.png
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-3.png
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-4.png
+  features:
+  - Advanced GaN technology for higher efficiency and compact size
+  - 'Dual-port design: 1 × USB-C + 1 × USB-A for simultaneous charging'
+  - 30W max output for fast charging of phones, tablets, and select laptops
+  - 'Built-in protection: overheat, overvoltage, and short circuit safeguards'
+  - Ultra-lightweight, pocket-sized, and travel-ready
+  specs:
+  - name: Input
+    value: 110–240V ~ 50/60Hz 1.5A
+  - name: USB-C Output
+    value: 5V⎓3A, 9V⎓3A, 12V⎓2.5A
+  - name: USB-A Output
+    value: 5V⎓3A, 9V⎓3A, 12V⎓2.5A
+  - name: USB-A + USB-C Output (simultaneous)
+    value: 5V⎓1.7A + 5V⎓1.7A
+  - name: Total Output
+    value: 30W Max
+  - name: Ports
+    value: 1 × USB-C, 1 × USB-A
+  - name: Dimensions
+    value: 35 × 40 × 45 mm (without plug)
+  - name: Weight
+    value: 67.5g
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: Advanced GaN Technology
+      description: Delivers higher efficiency and a smaller footprint, ensuring powerful
+        charging in a compact form.
+      benefits:
+      - Smaller size, same power
+      - Improved thermal performance
+      - Longer component lifespan
+      image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-1.png
+      image_alt: Advanced GaN Technology
+    - title: Comprehensive Protection
+      description: Built-in safeguards against overheat, overvoltage, and short circuit
+        for worry-free charging.
+      benefits:
+      - Safe for daily use
+      - Protects your devices
+      image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-2.png
+      image_alt: Comprehensive Protection
+    - title: Dual-Port Versatility
+      description: Charge two devices at once with 1 × USB-C and 1 × USB-A port.
+      benefits:
+      - No more waiting or juggling chargers
+      - Ideal for travel and multitasking
+      image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-3.png
+      image_alt: Dual-Port Versatility
+    - title: Ultra-Lightweight & Travel-Ready
+      description: Slim, pocket-sized design makes it the perfect travel companion.
+      benefits:
+      - Easy to pack and carry
+      - Always ready on the go
+      image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-4.png
+      image_alt: Ultra-Lightweight & Travel-Ready
+  compatibility:
+    title: Device Compatibility
+    subtitle: Works with most USB-powered devices.
+    categories:
+    - name: Apple iPhones & iPads (USB-C to Lightning cable)
+      details: ''
+      icon: assets/images/icons/icon-smartphone.svg
+    - name: Android smartphones & tablets (USB-C to USB-C or USB-A cable)
+      details: ''
+      icon: assets/images/icons/icon-pad.svg
+    - name: Headset earbuds (USB-C to USB-C or USB-A cable)
+      details: ''
+      icon: assets/images/icons/icon-headset.svg
+    - name: Other USB-C or USB-A powered devices (earbuds, power banks, e-readers,
+        etc.)
+      details: ''
+      icon: assets/images/icons/icon-USB-C-A.svg
+  package_contents:
+    title: Package Contents
+    subtitle: What’s in the box
+    items:
+    - name: 1 × VERICO MOJO 30W PD GaN Charger
+      details: null
+      icon: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-1.png
+  variants:
+  - title: Verico MOJO 30W PD GaN Charger
+    package_image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
+    model_name: Verico MOJO 30W PD GaN Charger
+    sku: 4OJ-ACEWE1-N1
+    ean: '4713095609190'
+de:
+  name: VERICO MOJO 30W 2 Ports PD 3.0 GaN Ladegerät
+  category: gan_charger
+  description: Das VERICO MOJO 30W 2 Ports PD 3.0 GaN Ladegerät bietet schnelles und
+    zuverlässiges Laden für Ihre Geräte in einem kompakten, reisefertigen Design.
+    Mit fortschrittlicher GaN-Technologie, vielseitigem Dual-Port und umfassenden
+    Sicherheitsfunktionen ist es der perfekte Begleiter für Smartphones, Tablets und
+    mehr.
+  catalog_image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
+  hero_background: assets/images/global/gancharger-hero.jpg
+  images:
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-1.png
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-2.png
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-3.png
+  - assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-4.png
+  features:
+  - Fortschrittliche GaN-Technologie für höhere Effizienz und kompakte Größe
+  - 'Dual-Port-Design: 1 × USB-C + 1 × USB-A für gleichzeitiges Laden'
+  - 30W maximale Leistung für schnelles Laden von Telefonen, Tablets und ausgewählten
+    Laptops
+  - 'Eingebaute Schutzfunktionen: Überhitzung, Überspannung und Kurzschlussschutz'
+  - Ultraleicht, taschengroß und reisefertig
+  specs:
+  - name: Eingang
+    value: 110–240V ~ 50/60Hz 1.5A
+  - name: USB-C Ausgang
+    value: 5V⎓3A, 9V⎓3A, 12V⎓2.5A
+  - name: USB-A Ausgang
+    value: 5V⎓3A, 9V⎓3A, 12V⎓2.5A
+  - name: USB-A + USB-C Ausgang (gleichzeitig)
+    value: 5V⎓1.7A + 5V⎓1.7A
+  - name: Gesamtausgang
+    value: 30W Max
+  - name: Anschlüsse
+    value: 1 × USB-C, 1 × USB-A
+  - name: Abmessungen
+    value: 35 × 40 × 45 mm (ohne Stecker)
+  - name: Gewicht
+    value: 67.5g
+  detailed_features:
+    title: Detaillierte Funktionen
+    subtitle: ''
+    items:
+    - title: Fortschrittliche GaN-Technologie
+      description: Bietet höhere Effizienz und eine kleinere Bauform, die leistungsstarkes
+        Laden in kompakter Form gewährleistet.
+      benefits:
+      - Kleinere Größe, gleiche Leistung
+      - Verbesserte thermische Leistung
+      - Längere Lebensdauer der Komponenten
+      image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-1.png
+      image_alt: Fortschrittliche GaN-Technologie
+    - title: Umfassender Schutz
+      description: Eingebaute Schutzfunktionen gegen Überhitzung, Überspannung und
+        Kurzschluss für sorgenfreies Laden.
+      benefits:
+      - Sicher für den täglichen Gebrauch
+      - Schützt Ihre Geräte
+      image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-2.png
+      image_alt: Umfassender Schutz
+    - title: Dual-Port Vielseitigkeit
+      description: Laden Sie zwei Geräte gleichzeitig mit 1 × USB-C und 1 × USB-A
+        Anschluss.
+      benefits:
+      - Kein Warten oder Wechseln der Ladegeräte mehr
+      - Ideal für Reisen und Multitasking
+      image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-3.png
+      image_alt: Dual-Port Vielseitigkeit
+    - title: Ultraleicht & Reisefertig
+      description: Schlankes, taschengroßes Design macht es zum perfekten Reisebegleiter.
+      benefits:
+      - Einfach zu verstauen und zu tragen
+      - Immer bereit für unterwegs
+      image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-4.png
+      image_alt: Ultraleicht & Reisefertig
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Funktioniert mit den meisten USB-betriebenen Geräten.
+    categories:
+    - name: Apple iPhones & iPads (USB-C-auf-Lightning-Kabel)
+      details: ''
+      icon: assets/images/icons/icon-smartphone.svg
+    - name: Android-Smartphones & Tablets (USB-C-auf-USB-C oder USB-A-Kabel)
+      details: ''
+      icon: assets/images/icons/icon-pad.svg
+    - name: Headset-Kopfhörer (USB-C-auf-USB-C oder USB-A-Kabel)
+      details: ''
+      icon: assets/images/icons/icon-headset.svg
+    - name: Andere USB-C- oder USB-A-betriebene Geräte (Kopfhörer, Powerbanks, E-Reader
+        usw.)
+      details: ''
+      icon: assets/images/icons/icon-USB-C-A.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: Was ist in der Verpackung
+    items:
+    - name: 1 × VERICO MOJO 30W PD GaN Ladegerät
+      details: null
+      icon: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-1.png
+  variants:
+  - title: Verico MOJO 30W PD GaN Ladegerät
+    package_image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
+    model_name: Verico MOJO 30W PD GaN Charger
+    sku: 4OJ-ACEWE1-N1
+    ean: '4713095609190'

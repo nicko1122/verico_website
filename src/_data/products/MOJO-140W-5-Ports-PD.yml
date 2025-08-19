@@ -1,0 +1,249 @@
+en:
+  name: VERICO MOJO 140W 5 Ports PD 3.0 GaN Charger
+  category: gan_charger
+  description: Verico's MOJO 5 Ports PD 3.0 GaN Charger delivers fast and efficient
+    charging for your devices on the go. With GaN technology, it's small and lightweight,
+    making it easy to take with you wherever you go.
+  catalog_image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
+  hero_background: assets/images/global/gancharger-hero.jpg
+  images:
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-1.png
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-2.png
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-3.png
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-4.png
+  features:
+  - '5-port design: 3 × USB-C + 2 × USB-A for maximum device compatibility and simultaneous
+    charging'
+  - 140W max output for ultra-fast charging of laptops, tablets, phones, and more
+  - 'Built-in protection: overheat, overvoltage, and short circuit safeguards'
+  - Compact, lightweight, and travel-ready
+  - 2-year warranty for peace of mind
+  specs:
+  - name: Output Power
+    value: 140W Max
+  - name: Input
+    value: 100–240V ~ 50/60Hz 2.5A
+  - name: USB-C1/C2/C3 Output
+    value: 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A
+  - name: USB-A1/A2 Output
+    value: 5V⎓3A, 9V⎓3A, 12V⎓3A, 20V⎓3A
+  - name: USB-A1 + USB-A2 Output
+    value: 12W + 12W
+  - name: USB-C1/C2 + C2/C3 Output
+    value: 95W + 45W
+  - name: USB-C1/C2/C3 + A1/A2 Output
+    value: 100W + 36W
+  - name: USB-C1/C2/C3 + A1 + A2 Output
+    value: 100W + 12W + 12W
+  - name: USB-C1 + C2 + C3 Output
+    value: 65W + 45W + 30W
+  - name: USB-C1/C2 + C2/C3 + A1/A2 Output
+    value: 65W + 45W + 25W
+  - name: USB-C1/C2 + C2/C3 + A1 + A2 Output
+    value: 65W + 45W + 12W + 12W
+  - name: USB-C1 + C2 + C3 + A1/A2 Output
+    value: 65W + 30W + 20W + 25W
+  - name: USB-C1 + C2 + C3 + A1 + A2 Output
+    value: 65W + 30W + 20W + 12W + 12W
+  - name: Ports
+    value: 3 × USB-C, 2 × USB-A
+  - name: Dimensions
+    value: 85 × 35.7 × 113.8 mm (without plug)
+  - name: Weight
+    value: 286g
+  - name: Warranty
+    value: 2 years
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: 5-Port Ultra Charging Hub
+      description: Charge up to five devices at once with three USB-C and two USB-A
+        ports, making it the perfect solution for families, offices, or travel.
+      benefits:
+      - Power all your devices simultaneously
+      - No more waiting or swapping cables
+      - Ideal for laptops, tablets, phones, and accessories
+      image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/feature-1.png
+      image_alt: 5-Port Ultra Charging Hub
+    - title: Comprehensive Protection
+      description: Built-in safeguards against overheat, overvoltage, and short circuit
+        for worry-free charging.
+      benefits:
+      - Safe for daily use
+      - Protects your devices
+      image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/feature-2.png
+      image_alt: Comprehensive Protection
+    - title: Intelligent Power Distribution
+      description: Automatically detects and allocates optimal power to each connected
+        device for the fastest and safest charging experience.
+      benefits:
+      - Maximizes charging efficiency
+      - Prevents overloading and overheating
+      - Supports a wide range of device power requirements
+      image: null
+      image_alt: null
+    - title: Compact & Travel-Ready
+      description: Slim, lightweight design makes it easy to pack and carry wherever
+        you go.
+      benefits:
+      - Perfect for travel, home, or office
+      - Reduces clutter with one powerful charger
+      image: null
+      image_alt: null
+  compatibility:
+    title: Device Compatibility
+    subtitle: Works with most USB-powered devices.
+    categories:
+    - name: Apple iPhones & iPads (USB-C to Lightning cable)
+      details: ''
+      icon: assets/images/icons/icon-smartphone.svg
+    - name: Android smartphones & tablets (USB-C to USB-C or USB-A to USB-C cable)
+      details: ''
+      icon: assets/images/icons/icon-pad.svg
+    - name: Headset earbuds (USB-C to USB-C or USB-A cable)
+      details: ''
+      icon: assets/images/icons/icon-headset.svg
+    - name: Other USB-C or USB-A powered devices (earbuds, power banks, e-readers,
+        etc.)
+      details: ''
+      icon: assets/images/icons/icon-USB-C-A.svg
+  package_contents:
+    title: Package Contents
+    subtitle: What’s in the box
+    items:
+    - name: 1 × VERICO MOJO 140W 5 Ports PD GaN Charger
+      details: null
+      icon: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-1.png
+  variants:
+  - title: Verico MOJO 140W PD GaN Charger
+    package_image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
+    model_name: Verico MOJO 140W PD GaN Charger
+    sku: 4OJ-ABGWE1-N1
+    ean: '4713095609169'
+de:
+  name: VERICO MOJO 140W 5 Ports PD 3.0 GaN Ladegerät
+  category: gan_charger
+  description: Vericos MOJO 5 Ports PD 3.0 GaN Ladegerät bietet schnelles und effizientes
+    Laden für Ihre Geräte unterwegs. Mit GaN-Technologie ist es klein und leicht,
+    sodass Sie es überallhin mitnehmen können.
+  catalog_image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
+  hero_background: assets/images/global/gancharger-hero.jpg
+  images:
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-1.png
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-2.png
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-3.png
+  - assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-4.png
+  features:
+  - '5-Port-Design: 3 × USB-C + 2 × USB-A für maximale Gerätekompatibilität und gleichzeitiges
+    Laden'
+  - 140W maximale Leistung für ultraschnelles Laden von Laptops, Tablets, Telefonen
+    und mehr
+  - 'Eingebaute Schutzfunktionen: Überhitzung, Überspannung und Kurzschlussschutz'
+  - Kompakt, leicht und reisefertig
+  - 2 Jahre Garantie für sorgenfreie Nutzung
+  specs:
+  - name: Ausgangsleistung
+    value: 140W Max
+  - name: Eingang
+    value: 100–240V ~ 50/60Hz 2.5A
+  - name: USB-C1/C2/C3 Ausgang
+    value: 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A
+  - name: USB-A1/A2 Ausgang
+    value: 5V⎓3A, 9V⎓3A, 12V⎓3A, 20V⎓3A
+  - name: USB-A1 + USB-A2 Ausgang
+    value: 12W + 12W
+  - name: USB-C1/C2 + C2/C3 Ausgang
+    value: 95W + 45W
+  - name: USB-C1/C2/C3 + A1/A2 Ausgang
+    value: 100W + 36W
+  - name: USB-C1/C2/C3 + A1 + A2 Ausgang
+    value: 100W + 12W + 12W
+  - name: USB-C1 + C2 + C3 Ausgang
+    value: 65W + 45W + 30W
+  - name: USB-C1/C2 + C2/C3 + A1/A2 Ausgang
+    value: 65W + 45W + 25W
+  - name: USB-C1/C2 + C2/C3 + A1 + A2 Ausgang
+    value: 65W + 45W + 12W + 12W
+  - name: USB-C1 + C2 + C3 + A1/A2 Ausgang
+    value: 65W + 30W + 20W + 25W
+  - name: USB-C1 + C2 + C3 + A1 + A2 Ausgang
+    value: 65W + 30W + 20W + 12W + 12W
+  - name: Anschlüsse
+    value: 3 × USB-C, 2 × USB-A
+  - name: Abmessungen
+    value: 85 × 35.7 × 113.8 mm (ohne Stecker)
+  - name: Gewicht
+    value: 286g
+  - name: Garantie
+    value: 2 Jahre
+  detailed_features:
+    title: Detaillierte Funktionen
+    subtitle: ''
+    items:
+    - title: 5-Port Ultra Lade-Hub
+      description: Laden Sie bis zu fünf Geräte gleichzeitig mit drei USB-C- und zwei
+        USB-A-Anschlüssen – die perfekte Lösung für Familien, Büros oder Reisen.
+      benefits:
+      - Versorgt alle Ihre Geräte gleichzeitig mit Strom
+      - Kein Warten oder Kabelwechsel mehr
+      - Ideal für Laptops, Tablets, Telefone und Zubehör
+      image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/feature-1.png
+      image_alt: 5-Port Ultra Lade-Hub
+    - title: Umfassender Schutz
+      description: Eingebaute Schutzfunktionen gegen Überhitzung, Überspannung und
+        Kurzschluss für sorgenfreies Laden.
+      benefits:
+      - Sicher für den täglichen Gebrauch
+      - Schützt Ihre Geräte
+      image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/feature-2.png
+      image_alt: Umfassender Schutz
+    - title: Intelligente Stromverteilung
+      description: Erkennt automatisch und weist jedem angeschlossenen Gerät die optimale
+        Leistung zu für das schnellste und sicherste Ladeerlebnis.
+      benefits:
+      - Maximiert die Ladeeffizienz
+      - Verhindert Überlastung und Überhitzung
+      - Unterstützt eine breite Palette von Geräteleistungsanforderungen
+      image: null
+      image_alt: null
+    - title: Kompakt & Reisebereit
+      description: Schlankes, leichtes Design, das einfach zu verstauen und überallhin
+        mitzunehmen ist.
+      benefits:
+      - Perfekt für Reisen, Zuhause oder Büro
+      - Reduziert Kabelsalat mit einem leistungsstarken Ladegerät
+      image: null
+      image_alt: null
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Funktioniert mit den meisten USB-betriebenen Geräten.
+    categories:
+    - name: Apple iPhones & iPads (USB-C-auf-Lightning-Kabel)
+      details: ''
+      icon: assets/images/icons/icon-smartphone.svg
+    - name: Android-Smartphones & Tablets (USB-C-auf-USB-C oder USB-A-auf-USB-C-Kabel)
+      details: ''
+      icon: assets/images/icons/icon-pad.svg
+    - name: Headset-Kopfhörer (USB-C-auf-USB-C oder USB-A-Kabel)
+      details: ''
+      icon: assets/images/icons/icon-headset.svg
+    - name: Andere USB-C- oder USB-A-betriebene Geräte (Kopfhörer, Powerbanks, E-Reader
+        usw.)
+      details: ''
+      icon: assets/images/icons/icon-USB-C-A.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: Was ist in der Box
+    items:
+    - name: 1 × VERICO MOJO 140W 5 Ports PD GaN Ladegerät
+      details: null
+      icon: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-1.png
+  variants:
+  - title: Verico MOJO 140W PD GaN Ladegerät
+    package_image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
+    model_name: Verico MOJO 140W PD GaN Charger
+    sku: 4OJ-ABGWE1-N1
+    ean: '4713095609169'

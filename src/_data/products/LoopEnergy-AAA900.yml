@@ -1,0 +1,232 @@
+en:
+  name: LoopEnergy AAA900
+  category: loopenergy
+  description: The LoopEnergy AAA900 is a 1.5V AAA rechargeable Li-ion battery with
+    USB Type-C charging, 600mAh (900mWh) capacity, and over 1000 recharge cycles.
+    Eco-friendly, safe, and ideal for remote controls, wireless devices, and more.
+  catalog_image: assets/images/product/loopenergy-aaa900/900-aaa-4-pack.png
+  hero_background: assets/images/global/loopenergy-hero.jpg
+  images:
+  - assets/images/product/loopenergy-aaa900/900-aaa-4-pack.png
+  - assets/images/product/loopenergy-aaa900/900-aaa-cam1.2910246.png
+  - assets/images/product/loopenergy-aaa900/900-aaa-cam2.2910247.png
+  - assets/images/product/loopenergy-aaa900/a-4c.png
+  features:
+  - 1.5V constant output for stable device performance
+  - 'Fast charging: ~1.5 hours to full'
+  - Over 1000 recharge cycles
+  - Low self-discharge for long shelf life
+  - Built-in overheat, overcharge, overvoltage, and short circuit protection
+  specs:
+  - name: Battery Type
+    value: Li-ion
+  - name: Voltage
+    value: 1.5V
+  - name: Capacity
+    value: 600mAh
+  - name: Energy
+    value: 900mWh
+  - name: Charging Port
+    value: USB Type-C
+  - name: Charging Time
+    value: ~1.5 hours
+  - name: Recharge Cycles
+    value: '>1000'
+  - name: Self-Discharge
+    value: Low
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: Constant Voltage Output
+      description: Delivers a steady 1.5V output for optimal device compatibility.
+      benefits:
+      - Reliable performance in all devices
+      - Prevents voltage drop during use
+      image: assets/images/product/loopenergy-aaa900/feature-constant.png
+      image_alt: Constant Voltage Output
+    - title: Fast & Convenient Charging
+      description: Recharge directly via USB Type-C—no special charger required.
+      benefits:
+      - Universal charging convenience
+      - Charge multiple batteries at once
+      image: assets/images/product/loopenergy-aaa900/feature-charging.png
+      image_alt: Fast & Convenient Charging
+    - title: Advanced Safety Protections
+      description: Multiple built-in protections for safe daily use.
+      benefits:
+      - Overheat, overcharge, overvoltage, and short circuit protection
+      - Peace of mind for you and your devices
+      image: assets/images/product/loopenergy-aaa900/feature-safety.png
+      image_alt: Advanced Safety Protections
+    - title: Eco-Friendly & Sustainable
+      description: One LoopEnergy battery can be recharged up to 1200 times, reducing
+        waste and supporting environmental responsibility.
+      benefits:
+      - Significantly reduces single-use battery waste
+      - Promotes a greener, more sustainable lifestyle
+      image: assets/images/product/loopenergy-aaa900/feature-eco.png
+      image_alt: Eco-Friendly & Sustainable
+  compatibility:
+    title: Device Compatibility
+    subtitle: Suitable for most AAA battery-powered devices.
+    categories:
+    - name: Remote controls
+      details: ''
+      icon: assets/images/icons/icon-remote.svg
+    - name: Wireless mice & keyboards
+      details: ''
+      icon: assets/images/icons/icon-mouse.svg
+    - name: Gamepads & joysticks
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+    - name: Flashlights
+      details: ''
+      icon: assets/images/icons/icon-flashlight.svg
+  package_contents:
+    title: Package Contents
+    subtitle: What’s in the box
+    items:
+    - name: 4 × LoopEnergy AAA900 Rechargeable Battery
+      details: null
+      icon: assets/images/product/loopenergy-aaa900/900-aaa-cam1.2910246.png
+    - name: 1 × USB Type-A to 4 × Type-C charging cable
+      details: null
+      icon: assets/images/product/loopenergy-aaa900/product-2.png
+  variants:
+  - title: LoopEnergy AAA900 2-Pack
+    package_image: assets/images/product/loopenergy-aaa900/900-Aaa-2-pack.png
+    model_name: LoopEnergy AAA900 2-Pack
+    sku: 1UDBT-A2WEB2-NN
+    ean: '4713095608933'
+  - title: LoopEnergy AAA900 4-Pack
+    package_image: assets/images/product/loopenergy-aaa900/900-Aaa-4-pack.png
+    model_name: LoopEnergy AAA900 4-Pack
+    sku: 1UDBT-A2WEBC-NN
+    ean: '4713095608919'
+  - title: LoopEnergy AAA900 8-Pack
+    package_image: assets/images/product/loopenergy-aaa900/900-Aaa-8-pack.png
+    model_name: LoopEnergy AAA900 8-Pack
+    sku: 1BTOV-A2WECD-NN
+    ean: '4713095609015'
+  - title: LoopEnergy AAA900 12-Pack
+    package_image: assets/images/product/loopenergy-aaa900/900-Aaa-12-pack.png
+    model_name: LoopEnergy AAA900 12-Pack
+    sku: 1UDBT-A2WEBE-NN
+    ean: '4713095609138'
+de:
+  name: LoopEnergy AAA900
+  category: loopenergy
+  description: Die LoopEnergy AAA900 ist eine 1,5V AAA wiederaufladbare Li-Ionen-Batterie
+    mit USB Type-C-Ladung, 600mAh (900mWh) Kapazität und über 1000 Ladezyklen. Umweltfreundlich,
+    sicher und ideal für Fernbedienungen, kabellose Geräte und mehr.
+  catalog_image: assets/images/product/loopenergy-aaa900/900-aaa-4-pack.png
+  hero_background: assets/images/global/loopenergy-hero.jpg
+  images:
+  - assets/images/product/loopenergy-aaa900/900-aaa-4-pack.png
+  - assets/images/product/loopenergy-aaa900/900-aaa-cam1.2910246.png
+  - assets/images/product/loopenergy-aaa900/900-aaa-cam2.2910247.png
+  - assets/images/product/loopenergy-aaa900/a-4c.png
+  features:
+  - 1,5V konstanter Ausgang für stabile Geräteleistung
+  - 'Schnellladung: ~1,5 Stunden bis voll'
+  - Über 1000 Ladezyklen
+  - Niedrige Selbstentladung für lange Lagerfähigkeit
+  - Eingebauter Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
+  specs:
+  - name: Batterietyp
+    value: Li-ion
+  - name: Spannung
+    value: 1.5V
+  - name: Kapazität
+    value: 600mAh
+  - name: Energie
+    value: 900mWh
+  - name: Ladeanschluss
+    value: USB Type-C
+  - name: Ladezeit
+    value: ~1,5 Stunden
+  - name: Ladezyklen
+    value: '>1000'
+  - name: Selbstentladung
+    value: Niedrig
+  detailed_features:
+    title: Detaillierte Merkmale
+    subtitle: ''
+    items:
+    - title: Konstanter Spannungsausgang
+      description: Bietet einen stabilen 1,5V-Ausgang für optimale Gerätekompatibilität.
+      benefits:
+      - Zuverlässige Leistung in allen Geräten
+      - Verhindert Spannungsabfall während der Nutzung
+      image: assets/images/product/loopenergy-aaa900/feature-constant.png
+      image_alt: Konstanter Spannungsausgang
+    - title: Schnelles & bequemes Laden
+      description: Direktes Aufladen über USB Type-C – kein spezielles Ladegerät erforderlich.
+      benefits:
+      - Universelle Ladebequemlichkeit
+      - Mehrere Batterien gleichzeitig laden
+      image: assets/images/product/loopenergy-aaa900/feature-charging.png
+      image_alt: Schnelles & bequemes Laden
+    - title: Fortschrittliche Sicherheitsfunktionen
+      description: Mehrere integrierte Schutzmechanismen für sicheren täglichen Gebrauch.
+      benefits:
+      - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
+      - Sicherheit für Sie und Ihre Geräte
+      image: assets/images/product/loopenergy-aaa900/feature-safety.png
+      image_alt: Fortschrittliche Sicherheitsfunktionen
+    - title: Umweltfreundlich & nachhaltig
+      description: Eine LoopEnergy-Batterie kann bis zu 1200 Mal wieder aufgeladen
+        werden, reduziert Abfall und unterstützt Umweltverantwortung.
+      benefits:
+      - Reduziert deutlich den Abfall von Einwegbatterien
+      - Fördert einen grüneren, nachhaltigeren Lebensstil
+      image: assets/images/product/loopenergy-aaa900/feature-eco.png
+      image_alt: Umweltfreundlich & nachhaltig
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Geeignet für die meisten AAA-betriebenen Geräte.
+    categories:
+    - name: Fernbedienungen
+      details: ''
+      icon: assets/images/icons/icon-remote.svg
+    - name: Kabellose Mäuse & Tastaturen
+      details: ''
+      icon: assets/images/icons/icon-mouse.svg
+    - name: Gamepads & Joysticks
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+    - name: Taschenlampen
+      details: ''
+      icon: assets/images/icons/icon-flashlight.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: Was ist in der Verpackung
+    items:
+    - name: 4 × LoopEnergy AAA900 wiederaufladbare Batterie
+      details: null
+      icon: assets/images/product/loopenergy-aaa900/900-aaa-cam1.2910246.png
+    - name: 1 × USB Type-A zu 4 × Type-C Ladekabel
+      details: null
+      icon: assets/images/product/loopenergy-aaa900/product-2.png
+  variants:
+  - title: LoopEnergy AAA900 2er-Pack
+    package_image: assets/images/product/loopenergy-aaa900/900-Aaa-2-pack.png
+    model_name: LoopEnergy AAA900 2-Pack
+    sku: 1UDBT-A2WEB2-NN
+    ean: '4713095608933'
+  - title: LoopEnergy AAA900 4er-Pack
+    package_image: assets/images/product/loopenergy-aaa900/900-Aaa-4-pack.png
+    model_name: LoopEnergy AAA900 4-Pack
+    sku: 1UDBT-A2WEBC-NN
+    ean: '4713095608919'
+  - title: LoopEnergy AAA900 8er-Pack
+    package_image: assets/images/product/loopenergy-aaa900/900-Aaa-8-pack.png
+    model_name: LoopEnergy AAA900 8-Pack
+    sku: 1BTOV-A2WECD-NN
+    ean: '4713095609015'
+  - title: LoopEnergy AAA900 12er-Pack
+    package_image: assets/images/product/loopenergy-aaa900/900-Aaa-12-pack.png
+    model_name: LoopEnergy AAA900 12-Pack
+    sku: 1UDBT-A2WEBE-NN
+    ean: '4713095609138'

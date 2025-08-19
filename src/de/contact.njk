@@ -118,6 +118,35 @@ permalink: /de/contact/index.html
     </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const to = "{{ i18n[lang].buttons.contact_sales_email }}";
+        const pageTitle = "{{ data.form.title | escape }}";
+        const name = document.getElementById('name')?.value || '';
+        const email = document.getElementById('email')?.value || '';
+        const company = document.getElementById('company')?.value || '';
+        const subjectEl = document.getElementById('subject');
+        const subjectText = subjectEl ? subjectEl.options[subjectEl.selectedIndex].text : '';
+        const message = document.getElementById('message')?.value || '';
+
+        const mailSubject = encodeURIComponent(pageTitle + (subjectText ? ' - ' + subjectText : ''));
+        let body = '';
+        body += 'Name: ' + name + '\r\n';
+        body += 'Email: ' + email + '\r\n';
+        body += 'Company: ' + company + '\r\n';
+        body += 'Subject: ' + subjectText + '\r\n\r\n';
+        body += message;
+
+        const mailto = 'mailto:' + to + '?subject=' + mailSubject + '&body=' + encodeURIComponent(body);
+        window.location.href = mailto;
+    });
+});
+</script>
+
 <!-- FAQ Section -->
 <section class="py-16 bg-gray-50">
     <div class="max-w-5xl mx-auto px-6">
