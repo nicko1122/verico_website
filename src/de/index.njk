@@ -114,25 +114,8 @@ permalink: /de/index.html
             
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {# Build trending list from products where badge == 'trending' (per language) #}
-            {% set trending_items = [] %}
-            {% for prod in collections.allProducts %}
-              {% set block = prod[lang] or {} %}
-              {% set en_block = prod['en'] or {} %}
-              {# Check current lang badge OR fallback to English canonical badge #}
-              {% if block.badge == 'trending' or en_block.badge == 'trending' %}
-                {% set image = (block.catalog_image or (block.images and block.images[0]) or en_block.catalog_image or (en_block.images and en_block.images[0]) ) %}
-                {% set name = block.name or en_block.name %}
-                {% set desc = block.description or en_block.description %}
-                {% set det = block.details or en_block.details %}
-                {% set slug_name = (block.name or en_block.name) | slug %}
-                {% set url = '/' + lang + '/products/' + (slug_name) + '/' %}
-                {# Only include items that have a name (mandatory) and at least one image/catalog image #}
-                {% if name and image %}
-                  {% set trending_items = trending_items + [ { 'name': name, 'description': desc, 'details': det, 'image': image, 'url': url } ] %}
-                {% endif %}
-              {% endif %}
-            {% endfor %}
+            {# Use curated collection 'trendingProducts' built in .eleventy.js to avoid duplicates and nulls #}
+            {% set trending_items = collections.trendingProducts or [] %}
 
             {% if trending_items | length > 0 %}
               {# filter out invalid entries (missing name or image) and limit to first 6 #}
