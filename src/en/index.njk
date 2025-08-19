@@ -114,10 +114,15 @@ permalink: /en/index.html
             {% set trending_items = [] %}
             {% for prod in collections.allProducts %}
               {% set block = prod[lang] or {} %}
-              {% if block.badge == 'trending' %}
-                {% set image = block.catalog_image or (block.images and block.images[0]) or '' %}
-                {% set url = '/' + lang + '/products/' + (block.name | slug) + '/' %}
-                {% set trending_items = trending_items + [ { 'name': block.name, 'description': block.description, 'details': block.details, 'image': image, 'url': url } ] %}
+              {% set en_block = prod['en'] or {} %}
+              {# Check current lang badge OR fallback to English canonical badge #}
+              {% if block.badge == 'trending' or en_block.badge == 'trending' %}
+                {% set image = (block.catalog_image or (block.images and block.images[0]) or en_block.catalog_image or (en_block.images and en_block.images[0]) or '') %}
+                {% set name = block.name or en_block.name %}
+                {% set desc = block.description or en_block.description %}
+                {% set det = block.details or en_block.details %}
+                {% set url = '/' + lang + '/products/' + ((block.name or en_block.name) | slug) + '/' %}
+                {% set trending_items = trending_items + [ { 'name': name, 'description': desc, 'details': det, 'image': image, 'url': url } ] %}
               {% endif %}
             {% endfor %}
 
