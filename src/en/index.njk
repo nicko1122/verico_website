@@ -104,29 +104,13 @@ permalink: /en/index.html
 <!-- Trending Products Section -->
 <section class="py-8">
     <div class="max-w-6xl mx-auto px-6">
-        {% set trending_items = [] %}
-        {% for prod in collections.allProducts %}
-          {% if prod.lang == 'en' %}
-            {% set en_block = prod['en'] or {} %}
-            {% if en_block.badge == 'trending' %}
-              {% set image = (en_block.catalog_image or (en_block.images and en_block.images[0])) %}
-              {% set name = en_block.name %}
-              {% set desc = en_block.description %}
-              {% set det = en_block.details %}
-              {% set slug_name = (en_block.name) | slug %}
-              {% set url = '/' + lang + '/products/' + (slug_name) + '/' %}
-              {% if name and image %}
-                {% set trending_items = trending_items + [ { 'name': name, 'description': desc, 'details': det, 'image': image, 'url': url } ] %}
-              {% endif %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
+        {# trending_items will be built below from unique english product entries #}
 
         <div class="mb-8">
             <h1 class="text-5xl font-bold tracking-tight text-gray-800 text-center mb-2">
                 {{ data.trending.title }}
             </h1>
-            <p class="text-center text-sm text-gray-500">Debug: trending_items={{ trending_items | length }} — valid_trending={{ (valid_trending or []) | length }}</p>
+            <p class="text-center text-sm text-gray-500">Debug: trending_items={{ trending_items | length if (trending_items is defined) else 'undef' }} — valid_trending={{ (valid_trending or []) | length }}</p>
             <pre class="text-xs text-left text-gray-400 mt-2">Debug: total products={{ collections.allProducts | length }}
 {% for prod in collections.allProducts %}
   {% if loop.index0 < 20 %}- {{ loop.index0 }}: en.name={{ (prod.en and prod.en.name) or 'NULL' }}; en.badge={{ (prod.en and prod.en.badge) or 'NULL' }}; de.name={{ (prod.de and prod.de.name) or 'NULL' }}; de.badge={{ (prod.de and prod.de.badge) or 'NULL' }}
@@ -134,25 +118,7 @@ permalink: /en/index.html
 {% endfor %}</pre>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {# Build trending list from products where badge == 'trending' (per language) #}
-            {% set trending_items = [] %}
-            {% for prod in collections.allProducts %}
-              {% set block = prod[lang] or {} %}
-              {% set en_block = prod['en'] or {} %}
-              {# Check current lang badge OR fallback to English canonical badge #}
-              {% if block.badge == 'trending' or en_block.badge == 'trending' %}
-                {% set image = (block.catalog_image or (block.images and block.images[0]) or en_block.catalog_image or (en_block.images and en_block.images[0]) ) %}
-                {% set name = block.name or en_block.name %}
-                {% set desc = block.description or en_block.description %}
-                {% set det = block.details or en_block.details %}
-                {% set slug_name = (block.name or en_block.name) | slug %}
-                {% set url = '/' + lang + '/products/' + (slug_name) + '/' %}
-                {# Only include items that have a name (mandatory) and at least one image/catalog image #}
-                {% if name and image %}
-                  {% set trending_items = trending_items + [ { 'name': name, 'description': desc, 'details': det, 'image': image, 'url': url } ] %}
-                {% endif %}
-              {% endif %}
-            {% endfor %}
+            {# trending_items already built above from English product entries #}
 
             {% if trending_items | length > 0 %}
               {# filter out invalid entries (missing name or image) and limit to first 6 #}
