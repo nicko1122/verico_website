@@ -66,8 +66,30 @@ module.exports = function(eleventyConfig) {
             const image = en.catalog_image || (en.images && en.images.length ? en.images[0] : null);
             if (!image) continue;
             seen.add(slugName);
-            trending.push({ name, description: en.description || '', details: en.details || '', image, url: `/${'en'}/products/${slugName}/` });
+            // include both en and de names/urls and also provide common fields for templates
+            const deName = (data.de && data.de.name) || name;
+            const urlEn = `/${'en'}/products/${slugName}/`;
+            const urlDe = `/${'de'}/products/${slugName}/`;
+            trending.push({
+                name: name,
+                name_en: name,
+                name_de: deName,
+                description: en.description || '',
+                details: en.details || '',
+                image,
+                url: urlEn,
+                url_en: urlEn,
+                url_de: urlDe,
+                featured_rank: (typeof en.featured_rank === 'number') ? en.featured_rank : Infinity
+            });
         }
+        // sort by featured_rank (ascending), then by name_en
+        trending.sort((a, b) => {
+            if ((a.featured_rank || Infinity) !== (b.featured_rank || Infinity)) {
+                return (a.featured_rank || Infinity) - (b.featured_rank || Infinity);
+            }
+            return (a.name_en || a.name || '').localeCompare(b.name_en || b.name || '');
+        });
         return trending;
     });
 
