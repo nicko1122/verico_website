@@ -114,9 +114,6 @@ permalink: /de/index.html
             
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {# Use curated collection 'trendingProducts' built in .eleventy.js to avoid duplicates and nulls #}
-            {% set trending_items = collections.trendingProducts or [] %}
-
             {% if trending_items | length > 0 %}
               {# filter out invalid entries (missing name or image) and limit to first 6 #}
               {% set valid_trending = [] %}
