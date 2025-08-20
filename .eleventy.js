@@ -52,6 +52,11 @@ module.exports = function(eleventyConfig) {
         const productFiles = fs.readdirSync(productDataPath).filter(file => file.endsWith('.yml'));
         const trending = [];
         const seen = new Set();
+        const slugOptions = {
+            replacement: '-',
+            remove: /[&,+()$~%.'":*?<>{}]/g,
+            lower: true
+        };
         for (const file of productFiles) {
             const filePath = path.join(productDataPath, file);
             const content = fs.readFileSync(filePath, 'utf8');
@@ -61,21 +66,31 @@ module.exports = function(eleventyConfig) {
             if (en.badge !== 'trending') continue;
             const name = en.name || '';
             if (!name) continue;
-            const slugName = slugify(name || '');
-            if (!slugName || seen.has(slugName)) continue;
+            const de = data.de || {};
+            const slugEn = slugify((en.name || '') || '', slugOptions);
+            const slugDe = slugify((de.name || en.name || '') || '', slugOptions);
+            // skip if no slug or already seen
+            if ((!slugEn && !slugDe) || seen.has(slugEn) || seen.has(slugDe)) continue;
             const image = en.catalog_image || (en.images && en.images.length ? en.images[0] : null);
             if (!image) continue;
-            seen.add(slugName);
+            if (slugEn) seen.add(slugEn);
+            if (slugDe) seen.add(slugDe);
             // include both en and de names/urls and also provide common fields for templates
-            const deName = (data.de && data.de.name) || name;
-            const urlEn = `/${'en'}/products/${slugName}/`;
-            const urlDe = `/${'de'}/products/${slugName}/`;
+            const deName = (de && de.name) || name;
+            const descEn = en.description || '';
+            const descDe = (de && de.description) || descEn;
+            const detailsEn = en.details || '';
+            const detailsDe = (de && de.details) || detailsEn;
+            const urlEn = `/${'en'}/products/${slugEn}/`;
+            const urlDe = `/${'de'}/products/${slugDe}/`;
             trending.push({
                 name: name,
                 name_en: name,
                 name_de: deName,
-                description: en.description || '',
-                details: en.details || '',
+                description_en: descEn,
+                description_de: descDe,
+                details_en: detailsEn,
+                details_de: detailsDe,
                 image,
                 url: urlEn,
                 url_en: urlEn,
