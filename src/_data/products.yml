@@ -142,11 +142,7 @@ de:
         details: ''
         image: assets/images/product/verico-power-pro-pd-v2-20000mah-power-bank/powerpro-pd-v2-main.png
         url: /de/products/verico-power-pro-pd-v2-20000mah-powerbank/
-      - name: Verico Power Pro PD V2 30000mAh Power Bank
-        description: ''
-        details: ''
-        image: assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-main.png
-        url: /de/products/verico-power-pro-pd-v2-30000mah-power-bank/
+      # duplicate English-styled entry removed to avoid duplicate menu items
     loopenergy:
       products:
       - name: LoopEnergy AA2550
@@ -205,17 +201,17 @@ de:
         description: ''
         details: ''
         image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/mojo-30w-main.png
-        url: /de/products/verico-mojo-30w-2-ports-pd-30-gan-ladegeraet/
+        url: /de/products/verico-mojo-30w-2-ports-pd-30-gan-ladegerat/
       - name: VERICO MOJO 65W 3 Ports PD 3.0 GaN Ladegerät
         description: ''
         details: ''
         image: assets/images/product/verico-mojo-65w-3-ports-pd-30-gan-charger/mojo-65w-main.png
-        url: /de/products/verico-mojo-65w-3-ports-pd-3-0-gan-ladegeraet/
+        url: /de/products/verico-mojo-65w-3-ports-pd-30-gan-ladegerat/
       - name: VERICO MOJO 140W 5 Ports PD 3.0 GaN Ladegerät
         description: ''
         details: ''
         image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
-        url: /de/products/verico-mojo-140w-5-ports-pd-3-0-gan-ladegeraet/
+        url: /de/products/verico-mojo-140w-5-ports-pd-30-gan-ladegerat/
     flash_disk:
       products: []
   tabs:
