@@ -6,19 +6,19 @@ en:
   contact_methods:
     - title: "Phone"
       description: "Speak directly with our sales team"
-      details: "+886 2 2345 6789"
+      details: "+886-2-2221-0022"
       meta: "Mon-Fri: 9:00 AM - 6:00 PM"
-      icon: "phone" # for mapping to an SVG or class
+      icon: assets/images/icons/icon-smartphone.svg
     - title: "Email"
       description: "Send us a message anytime"
-      details: "info@verico.com"
+      details: "dev@verico.com.tw"
       meta: "We reply within 24 hours"
-      icon: "email"
+      icon: assets/images/icons/icon-headset.svg
     - title: "Office"
       description: "Visit our headquarters"
-      details: "Taipei, Taiwan"
-      meta: "No. 123, Tech Street"
-      icon: "office"
+      details: "12F-6., No.872, Zhongzheng Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.)"
+      meta: "Verico International Co., Ltd."
+      icon: assets/images/icons/icon-remote.svg
 
   form:
     title: "Send us a Message"
@@ -60,34 +60,34 @@ en:
     image: "assets/images/contact/office-map.jpg"
     alt: "Office Location Map"
     overlay:
-      title: "Verico Headquarters"
-      address: "No. 123, Tech Street<br>Taipei, Taiwan 100"
+      title: "Verico International Co., Ltd."
+      address: "12F-6., No.872, Zhongzheng Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.)<br>Tel:+886-2-2221-0022<br>Fax:+886-2-2221-0033<br>Email:dev@verico.com.tw"
   
   company_info:
     title: "Company Information"
     items:
       - title: "Business Hours"
         details: "Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM"
-        icon: "business_hours"
+        icon: assets/images/icons/icon-laptop.svg
       - title: "Response Time"
         details: "Email: Within 24 hours<br>Phone: Immediate during business hours"
-        icon: "response_time"
+        icon: assets/images/icons/icon-smartphone.svg
       - title: "Certifications"
         details: "ISO 9001, CE, FCC, RoHS<br>UL Listed Products"
-        icon: "certifications"
+        icon: assets/images/icons/icon-eco-not-ego.svg
 
   faq:
-    title: "Frequently Asked Questions"
-    subtitle: "Find answers to common questions about our products and services"
+    title: "About Verico"
+    subtitle: "We are a professional manufacturer of battery and memory products, committed to delivering high-quality, reliable power and storage solutions for modern digital lifestyles."
     items:
-      - question: "What payment methods do you accept?"
-        answer: "We accept major credit cards, bank transfers, and PayPal. For large orders, we also offer net 30 payment terms for qualified businesses."
-      - question: "Do you offer international shipping?"
-        answer: "Yes, we ship worldwide. Shipping times and costs vary by location. Contact us for specific shipping quotes for your region."
-      - question: "What is your warranty policy?"
-        answer: "All our products come with a minimum 1-year warranty. Premium products include extended warranty options. Contact us for warranty details."
-      - question: "Can you provide custom solutions?"
-        answer: "Yes, we offer custom battery and memory solutions for OEM clients. Our engineering team can work with you to develop tailored solutions."
+      - question: "Total Solution Provider"
+        answer: "Verico International Co., Ltd. is more than just your memory and battery provider. We are a team of professional product marketers and consultants, offering not only high-quality power and storage devices but also comprehensive training and up-to-date market insights. Our sales and marketing team ensures our battery and memory solutions, pricing, and brand image remain at the forefront of the industry."
+      - question: "Together We Build"
+        answer: "With extensive experience in the memory, battery, and gaming industries, Verico collaborates closely with global partners. We share first-hand market trends and work together to develop innovative battery and memory solutions, driving joint business growth and success."
+      - question: "Memory & Battery Expert"
+        answer: "As a world-renowned expert in storage and battery technology, Verico is recognized for its innovation and design capabilities. We set ambitious goals beyond industry standards, continuously pushing the boundaries in both memory and energy solutions to earn the trust of our customers worldwide."
+      - question: "Design & Innovation"
+        answer: "Verico delivers cutting-edge memory and battery solutions tailored to current business needs while preparing clients for future technological advancements. Our commitment to performance and innovation spans USB flash drives, DRAM modules, SD cards, portable hard drives, SSDs, and advanced battery products."
 
 de:
   hero:
@@ -97,16 +97,16 @@ de:
   contact_methods:
     - title: "Telefon"
       description: "Sprechen Sie direkt mit unserem Vertriebsteam"
-      details: "+886 2 2345 6789"
-      meta: "Mo-Fr: 9:00 - 18:00 Uhr"
+      details: ""
+      meta: "Perks Distribution GmbH"
     - title: "E-Mail"
       description: "Senden Sie uns jederzeit eine Nachricht"
-      details: "info@verico.com"
-      meta: "Wir antworten innerhalb von 24 Stunden"
+      details: ""
+      meta: "Frauendorfer Str.6, 03058 Neuhausen, Germany"
     - title: "Büro"
       description: "Besuchen Sie unseren Hauptsitz"
-      details: "Taipei, Taiwan"
-      meta: "Nr. 123, Tech Street"
+      details: ""
+      meta: "CEO: Alexander Laske"
 
   form:
     title: "Senden Sie uns eine Nachricht"
@@ -138,8 +138,8 @@ de:
     image: "assets/images/contact/office-map.jpg"
     alt: "Standortkarte des Büros"
     overlay:
-      title: "Verico Hauptsitz"
-      address: "Nr. 123, Tech Street<br>Taipeh, Taiwan 100"
+      title: "Perks Distribution GmbH"
+      address: "Frauendorfer Str.6, 03058 Neuhausen, Germany<br>CEO: Alexander Laske<br>Registergericht Cottbus; HRB 14018 CB<br>USt.ID: DE 815 810 334<br>Steuernummer 056/116/03462<br>Bank Accounts: Commerzbank: €:IBAN: DE78 1804 0000 0150 9660 00; $US:IBAN: DE51 1804 0000 0150 9660 ; BIC: COBADEFFXXX"
   
   company_info:
     title: "Firmeninformation"
@@ -152,15 +152,14 @@ de:
         details: "ISO 9001, CE, FCC, RoHS<br>UL-gelistete Produkte"
 
   faq:
-    title: "Häufig gestellte Fragen"
-    subtitle: "Finden Sie Antworten auf häufig gestellte Fragen zu unseren Produkten und Dienstleistungen"
+    title: "Über Peaks"
+    subtitle: "Wir sind ein professioneller Hersteller von Batterie- und Speicherprodukten und engagieren uns für die Bereitstellung hochwertiger, zuverlässiger Energie- und Speicherlösungen für moderne digitale Lebensstile."
     items:
-      - question: "Welche Zahlungsmethoden akzeptieren Sie?"
-        answer: "Wir akzeptieren gängige Kreditkarten, Banküberweisungen und PayPal. Für Großaufträge bieten wir qualifizierten Unternehmen auch Zahlungsbedingungen von 30 Tagen netto an."
-      - question: "Bieten Sie internationalen Versand an?"
-        answer: "Ja, wir versenden weltweit. Versandzeiten und -kosten variieren je nach Standort. Kontaktieren Sie uns für spezifische Versandangebote für Ihre Region."
-      - question: "Was ist Ihre Garantiebestimmung?"
-        answer: "Alle unsere Produkte haben eine Mindestgarantie von 1 Jahr. Premium-Produkte beinhalten erweiterte Garantieoptionen. Kontaktieren Sie uns für Garantiedetails."
-      - question: "Können Sie maßgeschneiderte Lösungen anbieten?"
-        answer: "Ja, wir bieten maßgeschneiderte Akku- und Speicherlösungen für OEM-Kunden an. Unser Ingenieurteam kann mit Ihnen zusammenarbeiten, um maßgeschneiderte Lösungen zu entwickeln."
-
+      - question: "Komplettlösungsanbieter"
+        answer: "Peaks International Co., Ltd. ist mehr als nur Ihr Anbieter für Speicher- und Batterielösungen. Wir sind ein Team aus professionellen Produktvermarktern und Beratern und bieten nicht nur hochwertige Energie- und Speichergeräte, sondern auch umfassende Schulungen und aktuelle Markteinblicke. Unser Vertriebs- und Marketingteam sorgt dafür, dass unsere Batterie- und Speicherlösungen, Preisgestaltung und Markenimage stets an der Spitze der Branche stehen."
+      - question: "Gemeinsam zum Erfolg"
+        answer: "Mit umfassender Erfahrung in den Bereichen Speicher, Batterien und Gaming arbeitet Peaks eng mit globalen Partnern zusammen. Wir teilen aktuelle Markttrends aus erster Hand und entwickeln gemeinsam innovative Batterie- und Speicherlösungen, um das gemeinsame Geschäftswachstum und den Erfolg voranzutreiben."
+      - question: "Experte für Speicher & Batterien"
+        answer: "Als weltweit anerkannter Experte für Speicher- und Batterietechnologie ist Peaks für seine Innovations- und Designkompetenz bekannt. Wir setzen uns ehrgeizige Ziele, die über Branchenstandards hinausgehen, und treiben kontinuierlich die Grenzen sowohl im Speicher- als auch im Energiebereich voran, um das Vertrauen unserer Kunden weltweit zu gewinnen."
+      - question: "Design & Innovation"
+        answer: "Peaks liefert fortschrittliche Speicher- und Batterielösungen, die auf aktuelle Geschäftsanforderungen zugeschnitten sind und Kunden gleichzeitig auf zukünftige technologische Entwicklungen vorbereiten. Unser Engagement für Leistung und Innovation umfasst USB-Flash-Laufwerke, DRAM-Module, SD-Karten, tragbare Festplatten, SSDs und fortschrittliche Batterieprodukte."
