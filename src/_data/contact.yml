@@ -57,11 +57,16 @@ en:
     submit_button: "Send Message"
 
   map:
-    image: "assets/images/contact/office-map.jpg"
-    alt: "Office Location Map"
     overlay:
       title: "Verico International Co., Ltd."
-      address: "12F-6., No.872, Zhongzheng Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.)<br>Tel:+886-2-2221-0022<br>Fax:+886-2-2221-0033<br>Email:dev@verico.com.tw"
+      address:
+        street: "12F-6., No.872, Zhongzheng Rd."
+        district: "Zhonghe Dist."
+        city_postal: "New Taipei City 235"
+        country: "Taiwan (R.O.C.)"
+        tel: "+886-2-2221-0022"
+        fax: "+886-2-2221-0033"
+        email: "dev@verico.com.tw"
   
   company_info:
     title: "Company Information"
@@ -138,11 +143,16 @@ de:
     submit_button: "Nachricht senden"
 
   map:
-    image: "assets/images/contact/office-map.jpg"
-    alt: "Standortkarte des Büros"
     overlay:
       title: "Perks Distribution GmbH"
-      address: "Frauendorfer Str.6, 03058 Neuhausen, Germany<br>CEO: Alexander Laske<br>Registergericht Cottbus; HRB 14018 CB<br>USt.ID: DE 815 810 334<br>Steuernummer 056/116/03462<br>Bank Accounts: Commerzbank: €:IBAN: DE78 1804 0000 0150 9660 00; $US:IBAN: DE51 1804 0000 0150 9660 ; BIC: COBADEFFXXX"
+      address:
+        street: "Frauendorfer Str.6"
+        city_postal: "03058 Neuhausen"
+        country: "Germany"
+        contact_note: "CEO: Alexander Laske"
+        registry: "Registergericht Cottbus; HRB 14018 CB"
+        tax_id: "USt.ID: DE 815 810 334"
+        bank: "Commerzbank: IBAN DE78 1804 0000 0150 9660 00; BIC: COBADEFFXXX"
   
   company_info:
     title: "Firmeninformation"

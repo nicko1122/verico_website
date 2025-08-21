@@ -80,7 +80,16 @@ permalink: /en/contact/index.html
                 <!-- Address (map image removed) -->
                 <div class="bg-white rounded-xl border border-gray-200 p-6">
                     <h3 class="font-semibold text-gray-800 mb-2">{{ data.map.overlay.title }}</h3>
-                    <p class="text-sm text-gray-600 mb-4">{{ data.map.overlay.address | safe }}</p>
+                    <div class="text-sm text-gray-600 mb-4">
+                        {% set a = data.map.overlay.address %}
+                        {% if a.street %}{{ a.street }}<br/>{% endif %}
+                        {% if a.district %}{{ a.district }}<br/>{% endif %}
+                        {% if a.city_postal %}{{ a.city_postal }}<br/>{% endif %}
+                        {% if a.country %}{{ a.country }}<br/>{% endif %}
+                        {% if a.tel %}Tel: {{ a.tel }}<br/>{% endif %}
+                        {% if a.fax %}Fax: {{ a.fax }}<br/>{% endif %}
+                        {% if a.email %}<a href="mailto:{{ a.email }}" class="text-blue-600">{{ a.email }}</a>{% endif %}
+                    </div>
                 </div>
                 <div class="bg-white rounded-xl border border-gray-200 p-8">
                     <h3 class="text-xl font-semibold text-gray-800 mb-6">{{ data.company_info.title }}</h3>
