@@ -87,9 +87,13 @@ permalink: /en/contact/index.html
                     <div class="space-y-4">
                         {% for info in data.company_info.items %}
                         <div class="flex items-start gap-3">
+                            {% if info.icon %}
+                            <img src="{{ ('/' + info.icon) | url }}" alt="{{ info.title }}" class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0 object-contain" />
+                            {% else %}
                             <svg class="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                {# Map icon to SVG path #}
+                                {# fallback icon placeholder #}
                             </svg>
+                            {% endif %}
                             <div>
                                 <h4 class="font-medium text-gray-800">{{ info.title }}</h4>
                                 <p class="text-sm text-gray-600">{{ info.details | safe }}</p>
