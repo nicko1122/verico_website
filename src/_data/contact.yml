@@ -8,17 +8,17 @@ en:
       description: "Speak directly with our sales team"
       details: "+886-2-2221-0022"
       meta: "Mon-Fri: 9:00 AM - 6:00 PM"
-      icon: assets/images/icons/icon-smartphone.svg
+      icon: assets/images/icons/icon-telephone.svg
     - title: "Email"
       description: "Send us a message anytime"
       details: "dev@verico.com.tw"
       meta: "We reply within 24 hours"
-      icon: assets/images/icons/icon-headset.svg
+      icon: assets/images/icons/icon-email.svg
     - title: "Office"
       description: "Visit our headquarters"
       details: "12F-6., No.872, Zhongzheng Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.)"
       meta: "Verico International Co., Ltd."
-      icon: assets/images/icons/icon-remote.svg
+      icon: assets/images/icons/icon-location.svg
 
   form:
     title: "Send us a Message"
@@ -68,10 +68,10 @@ en:
     items:
       - title: "Business Hours"
         details: "Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM"
-        icon: assets/images/icons/icon-laptop.svg
+        icon: assets/images/icons/icon-clock.svg
       - title: "Response Time"
         details: "Email: Within 24 hours<br>Phone: Immediate during business hours"
-        icon: assets/images/icons/icon-smartphone.svg
+        icon: assets/images/icons/icon-Response.svg
       - title: "Certifications"
         details: "ISO 9001, CE, FCC, RoHS<br>UL Listed Products"
         icon: assets/images/icons/icon-eco-not-ego.svg
@@ -99,14 +99,17 @@ de:
       description: "Sprechen Sie direkt mit unserem Vertriebsteam"
       details: ""
       meta: "Perks Distribution GmbH"
+      icon: assets/images/icons/icon-telephone.svg
     - title: "E-Mail"
       description: "Senden Sie uns jederzeit eine Nachricht"
       details: ""
       meta: "Frauendorfer Str.6, 03058 Neuhausen, Germany"
+      icon: assets/images/icons/icon-email.svg
     - title: "Büro"
       description: "Besuchen Sie unseren Hauptsitz"
       details: ""
       meta: "CEO: Alexander Laske"
+      icon: assets/images/icons/icon-location.svg
 
   form:
     title: "Senden Sie uns eine Nachricht"
@@ -146,10 +149,13 @@ de:
     items:
       - title: "Geschäftszeiten"
         details: "Montag - Freitag: 9:00 - 18:00 Uhr<br>Samstag: 10:00 - 16:00 Uhr"
+        icon: assets/images/icons/icon-clock.svg
       - title: "Reaktionszeit"
         details: "E-Mail: Innerhalb von 24 Stunden<br>Telefon: Sofort während der Geschäftszeiten"
+        icon: assets/images/icons/icon-Response.svg
       - title: "Zertifizierungen"
         details: "ISO 9001, CE, FCC, RoHS<br>UL-gelistete Produkte"
+        icon: assets/images/icons/icon-eco-not-ego.svg
 
   faq:
     title: "Über Peaks"
