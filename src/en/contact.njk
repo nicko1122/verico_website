@@ -7,15 +7,15 @@ permalink: /en/contact/index.html
 {% set data = contact.en %}
 
 <!-- Hero Section -->
-<section class="py-16 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-800 mb-4">
-            {{ data.hero.title }}
-        </h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            {{ data.hero.subtitle }}
-        </p>
+<section class="relative w-[99%] h-[300px] mx-auto mb-8">
+  <div class="hero-wrapper rounded-2xl border border-gray-200 overflow-hidden h-full" style="box-sizing:border-box;">
+    <div class="hero-container relative w-full h-full mx-auto">
+      <img src="{{ ('/' + data.hero.image) | url }}" alt="{{ data.hero.title }}" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-y-10 right-0 flex items-center pr-10">
+        <h1 class="text-5xl font-bold text-gray-500 break-words text-left px-6 py-4">{{ data.hero.title | safe }}</h1>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Contact Information -->

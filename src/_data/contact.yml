@@ -2,6 +2,7 @@ en:
   hero:
     title: "Contact Us"
     subtitle: "Get in touch with our team for professional battery and memory solutions. We're here to help you find the perfect power and storage solutions for your needs."
+    image: "assets/images/banner/contact-us.jpg"
   
   contact_methods:
     - title: "Phone"
@@ -98,6 +99,7 @@ de:
   hero:
     title: "Kontaktieren Sie uns"
     subtitle: "Kontaktieren Sie unser Team für professionelle Akku- und Speicherlösungen. Wir sind hier, um Ihnen zu helfen, die perfekten Strom- und Speicherlösungen für Ihre Bedürfnisse zu finden."
+    image: "assets/images/banner/contact-us.jpg"
   
   contact_methods:
     - title: "Telefon"
@@ -108,12 +110,12 @@ de:
     - title: "E-Mail"
       description: "Senden Sie uns jederzeit eine Nachricht"
       details: ""
-      meta: "Frauendorfer Str.6, 03058 Neuhausen, Germany"
+      meta: "support@perks-distribution.de"
       icon: assets/images/icons/icon-email.svg
     - title: "Büro"
       description: "Besuchen Sie unseren Hauptsitz"
       details: ""
-      meta: "CEO: Alexander Laske"
+      meta: "Frauendorfer Str.6, 03058 Neuhausen, GermanyCEO: Alexander Laske"
       icon: assets/images/icons/icon-location.svg
 
   form:
