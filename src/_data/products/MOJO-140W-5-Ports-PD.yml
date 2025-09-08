@@ -54,6 +54,8 @@ en:
     value: 286g
   - name: Warranty
     value: 2 years
+  badge: trending
+  featured_rank: 3
   detailed_features:
     title: Detailed Features
     subtitle: ''
@@ -126,8 +128,8 @@ de:
   name: VERICO MOJO 140W 5 Ports PD 3.0 GaN Ladegerät
   category: gan_charger
   description: Vericos MOJO 5 Ports PD 3.0 GaN Ladegerät bietet schnelles und effizientes
-    Laden für Ihre Geräte unterwegs. Mit GaN-Technologie ist es klein und leicht,
-    sodass Sie es überallhin mitnehmen können.
+    Laden Ihrer Geräte unterwegs. Mit GaN-Technologie ist es klein und leicht, sodass
+    Sie es überallhin mitnehmen können.
   catalog_image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
   hero_background: assets/images/global/gancharger-hero.jpg
   images:
@@ -139,8 +141,8 @@ de:
   features:
   - '5-Port-Design: 3 × USB-C + 2 × USB-A für maximale Gerätekompatibilität und gleichzeitiges
     Laden'
-  - 140W maximale Leistung für ultraschnelles Laden von Laptops, Tablets, Telefonen
-    und mehr
+  - 140W maximale Leistung für ultraschnelles Laden von Laptops, Tablets, Handys und
+    mehr
   - 'Eingebaute Schutzfunktionen: Überhitzung, Überspannung und Kurzschlussschutz'
   - Kompakt, leicht und reisefertig
   - 2 Jahre Garantie für sorgenfreie Nutzung
@@ -179,6 +181,8 @@ de:
     value: 286g
   - name: Garantie
     value: 2 Jahre
+  badge: trending
+  featured_rank: 3
   detailed_features:
     title: Detaillierte Funktionen
     subtitle: ''
@@ -189,11 +193,11 @@ de:
       benefits:
       - Versorgt alle Ihre Geräte gleichzeitig mit Strom
       - Kein Warten oder Kabelwechsel mehr
-      - Ideal für Laptops, Tablets, Telefone und Zubehör
+      - Ideal für Laptops, Tablets, Handys und Zubehör
       image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/feature-1.png
       image_alt: 5-Port Ultra Lade-Hub
     - title: Umfassender Schutz
-      description: Eingebaute Schutzfunktionen gegen Überhitzung, Überspannung und
+      description: Eingebaute Schutzmechanismen gegen Überhitzung, Überspannung und
         Kurzschluss für sorgenfreies Laden.
       benefits:
       - Sicher für den täglichen Gebrauch
@@ -209,7 +213,7 @@ de:
       - Unterstützt eine breite Palette von Geräteleistungsanforderungen
       image: null
       image_alt: null
-    - title: Kompakt & Reisebereit
+    - title: Kompakt & reisefertig
       description: Schlankes, leichtes Design, das einfach zu verstauen und überallhin
         mitzunehmen ist.
       benefits:

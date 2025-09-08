@@ -36,6 +36,8 @@ en:
     value: 35 × 40 × 45 mm (without plug)
   - name: Weight
     value: 67.5g
+  badge: trending
+  featured_rank: 1
   detailed_features:
     title: Detailed Features
     subtitle: ''
@@ -120,7 +122,7 @@ de:
   features:
   - Fortschrittliche GaN-Technologie für höhere Effizienz und kompakte Größe
   - 'Dual-Port-Design: 1 × USB-C + 1 × USB-A für gleichzeitiges Laden'
-  - 30W maximale Leistung für schnelles Laden von Telefonen, Tablets und ausgewählten
+  - Maximal 30W Ausgang für schnelles Laden von Telefonen, Tablets und ausgewählten
     Laptops
   - 'Eingebaute Schutzfunktionen: Überhitzung, Überspannung und Kurzschlussschutz'
   - Ultraleicht, taschengroß und reisefertig
@@ -141,6 +143,8 @@ de:
     value: 35 × 40 × 45 mm (ohne Stecker)
   - name: Gewicht
     value: 67.5g
+  badge: trending
+  featured_rank: 1
   detailed_features:
     title: Detaillierte Funktionen
     subtitle: ''
@@ -150,7 +154,7 @@ de:
         Laden in kompakter Form gewährleistet.
       benefits:
       - Kleinere Größe, gleiche Leistung
-      - Verbesserte thermische Leistung
+      - Verbesserte Wärmeleistung
       - Längere Lebensdauer der Komponenten
       image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-1.png
       image_alt: Fortschrittliche GaN-Technologie
@@ -166,14 +170,14 @@ de:
       description: Laden Sie zwei Geräte gleichzeitig mit 1 × USB-C und 1 × USB-A
         Anschluss.
       benefits:
-      - Kein Warten oder Wechseln der Ladegeräte mehr
+      - Kein Warten oder Jonglieren mit Ladegeräten mehr
       - Ideal für Reisen und Multitasking
       image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-3.png
       image_alt: Dual-Port Vielseitigkeit
     - title: Ultraleicht & Reisefertig
       description: Schlankes, taschengroßes Design macht es zum perfekten Reisebegleiter.
       benefits:
-      - Einfach zu verstauen und zu tragen
+      - Einfach zu packen und zu tragen
       - Immer bereit für unterwegs
       image: assets/images/product/verico-mojo-30w-2-ports-pd-30-gan-charger/feature-4.png
       image_alt: Ultraleicht & Reisefertig

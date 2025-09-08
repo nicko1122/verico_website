@@ -1,0 +1,251 @@
+en:
+  name: Verico PowerPlus Air V2 10000mAh Wireless Power Bank
+  category: powerbank
+  description: Verico PowerPlus Air V2 10,000mAh — Wireless Fast Charging, Ultra-Slim
+    & Portable. The PowerPlus Air V2 combines high performance with minimalist design,
+    featuring a 10,000mAh lithium polymer battery, 15W wireless charging, and multiple
+    fast charging protocols for ultimate convenience and freedom.
+  catalog_image: assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-main.png
+  hero_background: assets/images/global/powerbank-hero.jpg
+  images:
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-main.png
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-1.png
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-2.png
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-3.png
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-4.png
+  features:
+  - '15W Wireless Charging: Qi standard support for cable-free, instant charging—just
+    place your phone and go.'
+  - 'Multi-Port Fast Charging: Dual USB-A and one Type-C output, supporting up to
+    12V/1.67A for rapid charging of multiple devices.'
+  - 'Dual Input Design: Recharge via Micro-USB or Type-C for flexible convenience.'
+  - 'Ultra-Slim & Lightweight: Only 15mm thick and 220g, perfect for travel or daily
+    commutes.'
+  - 'Smart Current Distribution: Automatically detects device needs for stable and
+    safe power delivery.'
+  specs:
+  - name: Battery Capacity
+    value: 10,000mAh
+  - name: Battery Type
+    value: Lithium Polymer
+  - name: Color
+    value: Black
+  - name: Wireless Output
+    value: 15W
+  - name: Max Input by Port
+    value: 'Micro-USB: 5V/2A, 9V/2A; Type-C: 5V/3A, 9V/2A'
+  - name: Max Output by Port
+    value: 'USB 1 & 2: 5V/3A, 9V/2A, 12V/1.5A; Type-C: 5V/3A, 9V/2.2A, 12V/1.67A'
+  - name: Output Ports
+    value: USB Type-A x2, Type-C x1
+  - name: Input Ports
+    value: Type-C, Micro-USB
+  - name: Dimensions
+    value: 145 × 68 × 15 mm
+  - name: Weight
+    value: 220g
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: 15W Wireless Fast Charging
+      description: Enjoy true wireless freedom with Qi-certified 15W fast charging.
+        Simply place your compatible device on the power bank for instant, cable-free
+        charging.
+      benefits:
+      - No more tangled cables
+      - Fast and convenient charging for Qi-enabled devices
+      image: null
+      image_alt: null
+    - title: Multi-Device Fast Charging
+      description: Charge up to three devices at once with dual USB-A and one Type-C
+        output, supporting multiple fast charging protocols.
+      benefits:
+      - Power up your phone, tablet, and accessories simultaneously
+      - Fast charging for a variety of devices
+      image: null
+      image_alt: null
+    - title: Dual Input Flexibility
+      description: Recharge the power bank via either Micro-USB or Type-C input, offering
+        flexibility and convenience.
+      benefits:
+      - Use your preferred charging cable
+      - Never worry about compatibility
+      image: null
+      image_alt: null
+    - title: Ultra-Slim & Portable
+      description: At just 15mm thick and 220g, the PowerPlus Air V2 is designed for
+        easy carrying—perfect for travel, work, or daily use.
+      benefits:
+      - Fits easily in your bag or pocket
+      - Lightweight for effortless portability
+      image: null
+      image_alt: null
+    - title: Smart & Safe Charging
+      description: Intelligent current distribution automatically detects and delivers
+        the optimal power for each connected device, ensuring safe and efficient charging.
+      benefits:
+      - Protects your devices from overcurrent and overheating
+      - Stable and reliable power output
+      image: null
+      image_alt: null
+  compatibility:
+    title: Device Compatibility
+    subtitle: Works with most USB and Qi wireless charging devices.
+    categories:
+    - name: Apple iPhones & iPads (USB-A to Lightning or Type-C to Lightning cable)
+      details: ''
+      icon: assets/images/icons/icon-smartphone.svg
+    - name: Android smartphones & tablets (USB-A/Type-C cables, Qi wireless)
+      details: ''
+      icon: assets/images/icons/icon-pad.svg
+    - name: Wireless earbuds, smartwatches (USB-A/Type-C or Qi wireless)
+      details: ''
+      icon: assets/images/icons/icon-headset.svg
+    - name: Other USB-powered devices (e-readers, cameras, etc.)
+      details: ''
+      icon: assets/images/icons/icon-USB-C-A.svg
+  package_contents:
+    title: Package Contents
+    subtitle: What’s in the box
+    items:
+    - name: 1 × Verico PowerPlus Air V2 10,000mAh Power Bank
+      details: null
+      icon: assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-1.png
+    - name: 1 × USB to Micro-USB Charging Cable
+      details: null
+      icon: null
+  variants:
+  - title: Verico PowerPlus Air V2 10000mAh Black
+    package_image: assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-main.png
+    model_name: PowerPlus AIR V2 10000mAh Black
+    sku: 4PW-P3EBK1-NN
+    ean: '4713095608896'
+de:
+  name: Verico PowerPlus Air V2 10000mAh Wireless Power Bank
+  category: powerbank
+  description: Verico PowerPlus Air V2 10.000mAh — Kabelloses Schnellladen, ultradünn
+    & tragbar. Der PowerPlus Air V2 verbindet hohe Leistung mit minimalistischem Design
+    und verfügt über einen 10.000mAh Lithium-Polymer-Akku, 15W kabelloses Laden und
+    mehrere Schnellladeprotokolle für ultimativen Komfort und Freiheit.
+  catalog_image: assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-main.png
+  hero_background: assets/images/global/powerbank-hero.jpg
+  images:
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-main.png
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-1.png
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-2.png
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-3.png
+  - assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-4.png
+  features:
+  - '15W Kabelloses Laden: Qi-Standard-Unterstützung für kabelloses, sofortiges Laden
+    – einfach das Telefon auflegen und loslegen.'
+  - 'Multi-Port Schnellladen: Dual USB-A und ein Type-C Ausgang, unterstützt bis zu
+    12V/1,67A für schnelles Laden mehrerer Geräte.'
+  - 'Dual Input Design: Aufladen über Micro-USB oder Type-C für flexible Bequemlichkeit.'
+  - 'Ultradünn & Leicht: Nur 15 mm dick und 220 g, perfekt für Reisen oder den täglichen
+    Pendelverkehr.'
+  - 'Intelligente Stromverteilung: Erkennt automatisch den Bedarf des Geräts für stabile
+    und sichere Stromversorgung.'
+  specs:
+  - name: Batteriekapazität
+    value: 10,000mAh
+  - name: Batterietyp
+    value: Lithium Polymer
+  - name: Farbe
+    value: Schwarz
+  - name: Kabelloser Ausgang
+    value: 15W
+  - name: Max. Eingang pro Anschluss
+    value: 'Micro-USB: 5V/2A, 9V/2A; Type-C: 5V/3A, 9V/2A'
+  - name: Max. Ausgang pro Anschluss
+    value: 'USB 1 & 2: 5V/3A, 9V/2A, 12V/1,5A; Type-C: 5V/3A, 9V/2,2A, 12V/1,67A'
+  - name: Ausgangsanschlüsse
+    value: USB Type-A x2, Type-C x1
+  - name: Eingangsanschlüsse
+    value: Type-C, Micro-USB
+  - name: Abmessungen
+    value: 145 × 68 × 15 mm
+  - name: Gewicht
+    value: 220g
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Detaillierte Funktionen
+    subtitle: ''
+    items:
+    - title: 15W Kabelloses Schnellladen
+      description: Genießen Sie echte kabellose Freiheit mit Qi-zertifiziertem 15W
+        Schnellladen. Legen Sie einfach Ihr kompatibles Gerät auf die Powerbank für
+        sofortiges, kabelloses Laden.
+      benefits:
+      - Keine verknoteten Kabel mehr
+      - Schnelles und bequemes Laden für Qi-fähige Geräte
+      image: null
+      image_alt: null
+    - title: Schnellladen für mehrere Geräte
+      description: Laden Sie bis zu drei Geräte gleichzeitig mit dualem USB-A und
+        einem Type-C Ausgang, die mehrere Schnellladeprotokolle unterstützen.
+      benefits:
+      - Laden Sie Ihr Telefon, Tablet und Zubehör gleichzeitig auf
+      - Schnelles Laden für eine Vielzahl von Geräten
+      image: null
+      image_alt: null
+    - title: Dual Input Flexibilität
+      description: Laden Sie die Powerbank entweder über Micro-USB oder Type-C Eingang
+        auf, was Flexibilität und Komfort bietet.
+      benefits:
+      - Verwenden Sie Ihr bevorzugtes Ladekabel
+      - Keine Sorgen mehr wegen Kompatibilität
+      image: null
+      image_alt: null
+    - title: Ultradünn & Tragbar
+      description: Mit nur 15 mm Dicke und 220 g ist der PowerPlus Air V2 für einfaches
+        Tragen konzipiert – perfekt für Reisen, Arbeit oder den täglichen Gebrauch.
+      benefits:
+      - Passt leicht in Ihre Tasche oder Ihren Beutel
+      - Leicht für mühelose Tragbarkeit
+      image: null
+      image_alt: null
+    - title: Intelligentes & Sicheres Laden
+      description: Die intelligente Stromverteilung erkennt automatisch und liefert
+        die optimale Leistung für jedes angeschlossene Gerät und sorgt so für sicheres
+        und effizientes Laden.
+      benefits:
+      - Schützt Ihre Geräte vor Überstrom und Überhitzung
+      - Stabile und zuverlässige Stromversorgung
+      image: null
+      image_alt: null
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Funktioniert mit den meisten USB- und Qi-kompatiblen kabellosen Ladegeräten.
+    categories:
+    - name: Apple iPhones & iPads (USB-A zu Lightning oder Type-C zu Lightning Kabel)
+      details: ''
+      icon: assets/images/icons/icon-smartphone.svg
+    - name: Android Smartphones & Tablets (USB-A/Type-C Kabel, Qi kabellos)
+      details: ''
+      icon: assets/images/icons/icon-pad.svg
+    - name: Kabellose Ohrhörer, Smartwatches (USB-A/Type-C oder Qi kabellos)
+      details: ''
+      icon: assets/images/icons/icon-headset.svg
+    - name: Andere USB-betriebene Geräte (E-Reader, Kameras, etc.)
+      details: ''
+      icon: assets/images/icons/icon-USB-C-A.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: Was ist in der Box
+    items:
+    - name: 1 × Verico PowerPlus Air V2 10.000mAh Power Bank
+      details: null
+      icon: assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-1.png
+    - name: 1 × USB-zu-Micro-USB Ladekabel
+      details: null
+      icon: null
+  variants:
+  - title: Verico PowerPlus Air V2 10000mAh Schwarz
+    package_image: assets/images/product/verico-powerplus-air-v2-10000mah-wireless-power-bank/powerplusairv2-main.png
+    model_name: PowerPlus AIR V2 10000mAh Black
+    sku: 4PW-P3EBK1-NN
+    ean: '4713095608896'

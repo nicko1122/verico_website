@@ -30,15 +30,15 @@ en:
     - title: Power Pro Series
       description: High Capacity. Fast Charge. Endless Energy.
       image: assets/images/banner/tab/product-tab/powerbank-tab.png
-      url: '#'
+      url: 'product-catalog/#powerbank'
     - title: Loopenergy Series
       description: Smart Power. Eco Friendly. Built to Last.
       image: assets/images/banner/tab/product-tab/loopenergy-tab.png
-      url: '#'
+      url: 'product-catalog/#loopenergy'
     - title: GaN MOJO Series
       description: Ultra Fast. Ultra Safe. Ultra Storage.
       image: assets/images/banner/tab/product-tab/gancharger-tab.png
-      url: '#'
+      url: 'product-catalog/#gan-charger'
     - title: Memory Series
       description: Ultra Fast. Ultra Safe. Ultra Storage.
       image: assets/images/banner/tab/product-tab/usb-tab.png
@@ -114,15 +114,15 @@ de:
     - title: Power Pro Serie
       description: Hohe Kapazität. Schnelles Laden. Endlose Energie.
       image: assets/images/banner/tab/product-tab/powerbank-tab.png
-      url: '#'
+      url: 'product-catalog/#powerbank'
     - title: Loopenergy Serie
       description: Intelligente Leistung. Umweltfreundlich. Langlebig gebaut.
       image: assets/images/banner/tab/product-tab/loopenergy-tab.png
-      url: '#'
+      url: 'product-catalog/#loopenergy'
     - title: GaN MOJO Serie
       description: Ultraschnell. Ultrasicher. Ultraspeicher.
       image: assets/images/banner/tab/product-tab/gancharger-tab.png
-      url: '#'
+      url: 'product-catalog/#gan-charger'
     - title: Speicherserie
       description: Ultraschnell. Ultrasicher. Ultraspeicher.
       image: assets/images/banner/tab/product-tab/usb-tab.png

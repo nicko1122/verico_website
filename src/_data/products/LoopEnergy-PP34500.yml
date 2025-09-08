@@ -33,6 +33,8 @@ en:
     value: '>1000'
   - name: Self-Discharge
     value: Low
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detailed Features
     subtitle: ''
@@ -87,10 +89,10 @@ en:
     subtitle: What’s in the box
     items:
     - name: 2 × LoopEnergy PP3 4500 Rechargeable Battery
-      details: null
+      details: ''
       icon: assets/images/product/loopenergy-pp3-4500/pp3-4500-1.png
     - name: 1 × USB Type-A to 2 × Type-C charging cable
-      details: null
+      details: ''
       icon: assets/images/product/loopenergy-pp3-4500/pp3-4500-cable.png
   variants:
   - title: LoopEnergy PP3 4500 2-Pack
@@ -107,7 +109,7 @@ de:
   name: LoopEnergy PP3 4500
   category: loopenergy
   description: Die LoopEnergy PP3 4500 ist eine 9V wiederaufladbare Li-Ionen-Batterie
-    (500mAh / 4500mWh) mit USB Type-C-Ladung. Ideal für Rauchmelder, Multimeter, kabellose
+    (500mAh / 4500mWh) mit USB Type-C-Ladung. Ideal für Rauchmelder, Multimeter, drahtlose
     Mikrofone und mehr. Umweltfreundlich, sicher und unterstützt hunderte Ladezyklen.
   catalog_image: assets/images/product/loopenergy-pp3-4500/pp3-4500-main.png
   hero_background: assets/images/global/loopenergy-hero.jpg
@@ -122,7 +124,7 @@ de:
   - Schnelles Laden über USB Type-C
   - Über 1000 Ladezyklen
   - Niedrige Selbstentladung für lange Lagerfähigkeit
-  - Eingebaute Schutzfunktionen gegen Überhitzung, Überladung, Überspannung und Kurzschluss
+  - Eingebauter Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
   specs:
   - name: Batterietyp
     value: Li-ion
@@ -138,12 +140,14 @@ de:
     value: '>1000'
   - name: Selbstentladung
     value: Niedrig
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detaillierte Merkmale
     subtitle: ''
     items:
     - title: Konstanter Spannungsausgang
-      description: Bietet eine stabile 9V-Ausgabe für optimale Gerätekompatibilität.
+      description: Lieferung eines stabilen 9V-Ausgangs für optimale Gerätekompatibilität.
       benefits:
       - Zuverlässige Leistung in allen Geräten
       - Verhindert Spannungsabfall während der Nutzung
@@ -160,7 +164,7 @@ de:
       description: Mehrere eingebaute Schutzmechanismen für sicheren täglichen Gebrauch.
       benefits:
       - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
-      - Sicherheit und Ruhe für Sie und Ihre Geräte
+      - Sicherheit für Sie und Ihre Geräte
       image: assets/images/product/loopenergy-pp3-4500/feature-safety.png
       image_alt: Erweiterte Sicherheitsfunktionen
     - title: Umweltfreundlich & nachhaltig
@@ -181,7 +185,7 @@ de:
     - name: Multimeter
       details: ''
       icon: assets/images/icons/icon-multimeter.svg
-    - name: Kabellose Mikrofone
+    - name: Drahtlose Mikrofone
       details: ''
       icon: assets/images/icons/icon-mic.svg
     - name: Spielzeug & Instrumente
@@ -192,10 +196,10 @@ de:
     subtitle: In der Verpackung enthalten
     items:
     - name: 2 × LoopEnergy PP3 4500 wiederaufladbare Batterie
-      details: null
+      details: ''
       icon: assets/images/product/loopenergy-pp3-4500/pp3-4500-1.png
     - name: 1 × USB Type-A zu 2 × Type-C Ladekabel
-      details: null
+      details: ''
       icon: assets/images/product/loopenergy-pp3-4500/pp3-4500-cable.png
   variants:
   - title: LoopEnergy PP3 4500 2er-Pack

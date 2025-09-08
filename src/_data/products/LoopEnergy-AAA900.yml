@@ -34,6 +34,8 @@ en:
     value: '>1000'
   - name: Self-Discharge
     value: Low
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detailed Features
     subtitle: ''
@@ -88,10 +90,10 @@ en:
     subtitle: What’s in the box
     items:
     - name: 4 × LoopEnergy AAA900 Rechargeable Battery
-      details: null
+      details: ''
       icon: assets/images/product/loopenergy-aaa900/900-aaa-cam1.2910246.png
     - name: 1 × USB Type-A to 4 × Type-C charging cable
-      details: null
+      details: ''
       icon: assets/images/product/loopenergy-aaa900/product-2.png
   variants:
   - title: LoopEnergy AAA900 2-Pack
@@ -129,7 +131,7 @@ de:
   - assets/images/product/loopenergy-aaa900/a-4c.png
   features:
   - 1,5V konstanter Ausgang für stabile Geräteleistung
-  - 'Schnellladung: ~1,5 Stunden bis voll'
+  - 'Schnellladung: ca. 1,5 Stunden bis voll'
   - Über 1000 Ladezyklen
   - Niedrige Selbstentladung für lange Lagerfähigkeit
   - Eingebauter Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
@@ -150,8 +152,10 @@ de:
     value: '>1000'
   - name: Selbstentladung
     value: Niedrig
+  badge: premium
+  featured_rank: 1
   detailed_features:
-    title: Detaillierte Merkmale
+    title: Detaillierte Funktionen
     subtitle: ''
     items:
     - title: Konstanter Spannungsausgang
@@ -168,18 +172,18 @@ de:
       - Mehrere Batterien gleichzeitig laden
       image: assets/images/product/loopenergy-aaa900/feature-charging.png
       image_alt: Schnelles & bequemes Laden
-    - title: Fortschrittliche Sicherheitsfunktionen
+    - title: Erweiterte Sicherheitsfunktionen
       description: Mehrere integrierte Schutzmechanismen für sicheren täglichen Gebrauch.
       benefits:
       - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
       - Sicherheit für Sie und Ihre Geräte
       image: assets/images/product/loopenergy-aaa900/feature-safety.png
-      image_alt: Fortschrittliche Sicherheitsfunktionen
+      image_alt: Erweiterte Sicherheitsfunktionen
     - title: Umweltfreundlich & nachhaltig
       description: Eine LoopEnergy-Batterie kann bis zu 1200 Mal wieder aufgeladen
         werden, reduziert Abfall und unterstützt Umweltverantwortung.
       benefits:
-      - Reduziert deutlich den Abfall von Einwegbatterien
+      - Reduziert deutlich den Abfall durch Einwegbatterien
       - Fördert einen grüneren, nachhaltigeren Lebensstil
       image: assets/images/product/loopenergy-aaa900/feature-eco.png
       image_alt: Umweltfreundlich & nachhaltig
@@ -201,13 +205,13 @@ de:
       icon: assets/images/icons/icon-flashlight.svg
   package_contents:
     title: Lieferumfang
-    subtitle: Was ist in der Verpackung
+    subtitle: Inhalt der Verpackung
     items:
     - name: 4 × LoopEnergy AAA900 wiederaufladbare Batterie
-      details: null
+      details: ''
       icon: assets/images/product/loopenergy-aaa900/900-aaa-cam1.2910246.png
     - name: 1 × USB Type-A zu 4 × Type-C Ladekabel
-      details: null
+      details: ''
       icon: assets/images/product/loopenergy-aaa900/product-2.png
   variants:
   - title: LoopEnergy AAA900 2er-Pack

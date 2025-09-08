@@ -27,6 +27,8 @@ en:
     value: 9V / 5400mWh
   - name: Capacity
     value: 600mAh
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detailed Features
     subtitle: ''
@@ -99,7 +101,7 @@ de:
   name: LoopEnergy Pro PP35400
   category: loopenergy
   description: Der LoopEnergy Pro PP35400 ist eine Li-Ionen-Akku der nächsten Generation
-    mit 9V hoher Kapazität (600mAh / 5400mWh) und fortschrittlichem USB Type-C-Laden.
+    mit 9V und hoher Kapazität (600mAh / 5400mWh) mit fortschrittlichem USB Type-C-Laden.
     Entwickelt für Profis und anspruchsvolle Nutzer bietet er außergewöhnliche Leistung,
     ultra-stabile Ausgangsspannung und überlegene Sicherheit für Geräte mit hohem
     Stromverbrauch. Erleben Sie Profi-Leistung, Zuverlässigkeit und Nachhaltigkeit
@@ -112,12 +114,12 @@ de:
   - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-2.png
   - assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-cable.png
   features:
-  - 9V konstanter Ausgang für maximale Geräteleistung
+  - 9V Konstantspannung für maximale Geräteleistung
   - 'Hohe Kapazität: 600mAh (5400mWh) für verlängerte Laufzeit'
   - Schnelles und effizientes USB Type-C-Laden
   - Über 1000 Ladezyklen für langfristigen Wert
   - Ultra niedrige Selbstentladung für zuverlässige Lagerung
-  - 'Umfassende Sicherheit: Überhitzungs-, Überlade-, Überspannungs- und Kurzschlussschutz'
+  - 'Umfassende Sicherheit: Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss'
   specs:
   - name: Batterietyp
     value: Li-ion
@@ -125,43 +127,45 @@ de:
     value: 9V / 5400mWh
   - name: Kapazität
     value: 600mAh
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detaillierte Merkmale
     subtitle: ''
     items:
-    - title: Konstanter Spannungsausgang
+    - title: Konstante Spannungsausgabe
       description: Bietet eine äußerst stabile 9V-Ausgangsspannung für optimale Kompatibilität
         und gleichbleibende Leistung, selbst bei anspruchsvollsten Geräten.
       benefits:
-      - Zuverlässigkeit auf Profi-Niveau
-      - Verhindert Spannungsabfall bei starker Nutzung
+      - Zuverlässigkeit auf professionellem Niveau
+      - Verhindert Spannungsabfall bei hoher Belastung
       image: assets/images/product/loopenergy-pro-pp35400/feature-constant.png
-      image_alt: Konstanter Spannungsausgang
-    - title: Schnelles & Bequemes Laden
+      image_alt: Konstante Spannungsausgabe
+    - title: Schnelles & bequemes Laden
       description: Direktes Aufladen über USB Type-C – kein proprietäres Ladegerät
         erforderlich. Schneller zurück zur Arbeit mit raschem Laden.
       benefits:
       - Universelle Ladebequemlichkeit
-      - Mehrere Batterien gleichzeitig laden
+      - Gleichzeitiges Laden mehrerer Batterien
       image: assets/images/product/loopenergy-pro-pp35400/feature-charging.png
-      image_alt: Schnelles & Bequemes Laden
+      image_alt: Schnelles & bequemes Laden
     - title: Fortschrittliche Sicherheitsfunktionen
-      description: Ausgestattet mit mehreren Schutzschichten für sicheren, sorgenfreien
+      description: Ausgestattet mit mehreren Schutzschichten für sicheren und sorgenfreien
         Betrieb in jeder Umgebung.
       benefits:
       - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
-      - Sicherheit für professionelle und alltägliche Nutzung
+      - Sicherheit für professionelle und den täglichen Gebrauch
       image: assets/images/product/loopenergy-pro-pp35400/feature-safety.png
       image_alt: Fortschrittliche Sicherheitsfunktionen
-    - title: Umweltfreundlich & Nachhaltig
+    - title: Umweltfreundlich & nachhaltig
       description: Jede LoopEnergy Pro PP35400 Batterie kann über 1000 Mal wieder
         aufgeladen werden, was Abfall drastisch reduziert und eine grünere Zukunft
         unterstützt.
       benefits:
-      - Reduziert Einwegbatterie-Abfall
-      - Fördert nachhaltigen, verantwortungsvollen Energieeinsatz
+      - Reduziert Abfall durch Einwegbatterien
+      - Fördert nachhaltigen und verantwortungsvollen Energieeinsatz
       image: assets/images/product/loopenergy-pro-pp35400/feature-eco.png
-      image_alt: Umweltfreundlich & Nachhaltig
+      image_alt: Umweltfreundlich & nachhaltig
   compatibility:
     title: Gerätekompatibilität
     subtitle: Perfekt für Geräte mit hohem Stromverbrauch und Standard-9V-Batteriebetrieb.
@@ -179,7 +183,7 @@ de:
       details: ''
       icon: assets/images/icons/icon-toy.svg
   package_contents:
-    title: Packungsinhalt
+    title: Lieferumfang
     subtitle: Inhalt der Verpackung
     items:
     - name: PP3 5400 Batterie × 2
@@ -191,6 +195,6 @@ de:
   variants:
   - title: LoopEnergy Pro PP3 5400 2er Pack
     package_image: assets/images/product/loopenergy-pro-pp35400/pp3-5400-pro-main.png
-    model_name: LoopEnergy Pro PP3 5400 2 Pack
+    model_name: LoopEnergy Pro PP3 5400 2er Pack
     sku: 1UDBT-A8WEB2-NN
     ean: '4713095609305'

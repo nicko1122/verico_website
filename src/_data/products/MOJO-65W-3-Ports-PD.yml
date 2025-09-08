@@ -126,8 +126,8 @@ de:
   features:
   - Fortschrittliche GaN-Technologie für höhere Effizienz und kompakte Größe
   - 'Dreifachanschluss-Design: 2 × USB-C + 1 × USB-A für gleichzeitiges Laden'
-  - 65W maximale Leistung für schnelles Laden von Telefonen, Tablets, Laptops und
-    mehr
+  - Maximale Leistung von 65W für schnelles Laden von Telefonen, Tablets, Laptops
+    und mehr
   - 'Eingebaute Schutzfunktionen: Überhitzung, Überspannung und Kurzschlussschutz'
   - Kompakt, reisefertig und robust gebaut
   - 2 Jahre Garantie für sorgenfreie Nutzung
@@ -161,7 +161,7 @@ de:
         Laden in kompakter Form gewährleistet.
       benefits:
       - Kleinere Größe, mehr Leistung
-      - Verbesserte thermische Leistung
+      - Verbesserte Wärmeleistung
       - Längere Lebensdauer der Komponenten
       image: assets/images/product/verico-mojo-65w-3-ports-pd-30-gan-charger/feature-1.png
       image_alt: Fortschrittliche GaN-Technologie
@@ -173,21 +173,21 @@ de:
       - Schützt Ihre Geräte
       image: assets/images/product/verico-mojo-65w-3-ports-pd-30-gan-charger/feature-2.png
       image_alt: Umfassender Schutz
-    - title: Dreifachanschluss-Vielseitigkeit
+    - title: Vielseitigkeit mit drei Anschlüssen
       description: Laden Sie bis zu drei Geräte gleichzeitig mit 2 × USB-C und 1 ×
         USB-A Anschluss.
       benefits:
-      - Kein Warten oder Jonglieren mit Ladegeräten mehr
+      - Kein Warten oder Wechseln der Ladegeräte mehr
       - Ideal für Reisen, Arbeit und Multitasking
       image: assets/images/product/verico-mojo-65w-3-ports-pd-30-gan-charger/feature-3.png
-      image_alt: Dreifachanschluss-Vielseitigkeit
-    - title: Kompakt & Reisefertig
+      image_alt: Vielseitigkeit mit drei Anschlüssen
+    - title: Kompakt & reisefertig
       description: Schlankes, robustes Design macht es zum perfekten Reisebegleiter.
       benefits:
-      - Einfach zu packen und zu tragen
+      - Einfach zu verstauen und zu transportieren
       - Immer bereit für unterwegs
       image: assets/images/product/verico-mojo-65w-3-ports-pd-30-gan-charger/feature-4.png
-      image_alt: Kompakt & Reisefertig
+      image_alt: Kompakt & reisefertig
   compatibility:
     title: Gerätekompatibilität
     subtitle: Funktioniert mit den meisten USB-betriebenen Geräten.

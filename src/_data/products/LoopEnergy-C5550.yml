@@ -33,6 +33,8 @@ en:
     value: '>1000'
   - name: Self-Discharge
     value: Low
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detailed Features
     subtitle: ''
@@ -102,8 +104,8 @@ de:
   name: LoopEnergy C5550
   category: loopenergy
   description: Die LoopEnergy C5550 ist eine 1,5V Hochkapazitäts-Li-Ionen-Akku (3700mAh
-    / 5550mWh) mit USB Type-C Ladefunktion. Ideal für Geräte mit hohem Stromverbrauch,
-    umweltfreundlich und unterstützt hunderte Ladezyklen.
+    / 5550mWh) mit USB Type-C-Ladung. Ideal für Geräte mit hohem Stromverbrauch, umweltfreundlich
+    und unterstützt hunderte Ladezyklen.
   catalog_image: assets/images/product/loopenergy-c5550/c5550-main.png
   hero_background: assets/images/global/loopenergy-hero.jpg
   images:
@@ -133,15 +135,17 @@ de:
     value: '>1000'
   - name: Selbstentladung
     value: Niedrig
+  badge: premium
+  featured_rank: 1
   detailed_features:
-    title: Detaillierte Funktionen
+    title: Detaillierte Merkmale
     subtitle: ''
     items:
     - title: Konstanter Spannungsausgang
-      description: Bietet einen stabilen 1,5V Ausgang für optimale Gerätekompatibilität.
+      description: Bietet einen stabilen 1,5V-Ausgang für optimale Gerätekompatibilität.
       benefits:
       - Zuverlässige Leistung in allen Geräten
-      - Verhindert Spannungseinbrüche während der Nutzung
+      - Verhindert Spannungsabfall während der Nutzung
       image: assets/images/product/loopenergy-c5550/feature-constant.png
       image_alt: Konstanter Spannungsausgang
     - title: Schnelles & Bequemes Laden
@@ -159,7 +163,7 @@ de:
       image: assets/images/product/loopenergy-c5550/feature-safety.png
       image_alt: Erweiterte Sicherheitsfunktionen
     - title: Umweltfreundlich & Nachhaltig
-      description: Eine LoopEnergy Batterie kann bis zu 1200 Mal wieder aufgeladen
+      description: Eine LoopEnergy-Batterie kann bis zu 1200 Mal wieder aufgeladen
         werden, reduziert Abfall und unterstützt Umweltverantwortung.
       benefits:
       - Reduziert deutlich den Abfall durch Einwegbatterien

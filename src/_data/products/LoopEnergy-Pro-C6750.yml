@@ -33,6 +33,8 @@ en:
     value: '>1000'
   - name: Self-Discharge
     value: Low
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detailed Features
     subtitle: ''
@@ -118,7 +120,7 @@ de:
   - assets/images/product/loopenergy-pro-c6750/c6750-pro-2.png
   - assets/images/product/loopenergy-pro-c6750/c6750-pro-cable.png
   features:
-  - 1,5 V konstanter Ausgang für maximale Geräteleistung
+  - 1,5 V konstante Ausgangsspannung für maximale Geräteleistung
   - 'Ultra-hohe Kapazität: 4500mAh (6750mWh) für verlängerte Laufzeit'
   - Schnelles und effizientes USB Type-C-Laden
   - Über 1000 Ladezyklen für langfristigen Wert
@@ -128,7 +130,7 @@ de:
   - name: Batterietyp
     value: Li-ion
   - name: Spannung
-    value: 1,5V / 6750mWh
+    value: 1.5V / 6750mWh
   - name: Kapazität
     value: 4500mAh
   - name: Ladeanschluss
@@ -137,25 +139,27 @@ de:
     value: '>1000'
   - name: Selbstentladung
     value: Niedrig
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detaillierte Funktionen
     subtitle: ''
     items:
-    - title: Konstanter Spannungsausgang
+    - title: Konstante Spannungsausgabe
       description: Bietet eine äußerst stabile 1,5 V Ausgangsspannung für optimale
         Kompatibilität und gleichbleibende Leistung, selbst bei anspruchsvollsten
         Geräten.
       benefits:
-      - Zuverlässigkeit auf professionellem Niveau
+      - Zuverlässigkeit auf Profi-Niveau
       - Verhindert Spannungsabfall bei hoher Belastung
       image: assets/images/product/loopenergy-pro-c6750/feature-constant.png
-      image_alt: Konstanter Spannungsausgang
+      image_alt: Konstante Spannungsausgabe
     - title: Schnelles & bequemes Laden
       description: Direktes Aufladen über USB Type-C – kein proprietäres Ladegerät
-        erforderlich. Schneller zurück zur Arbeit mit raschem Laden.
+        erforderlich. Schneller zurück zur Arbeit dank Schnellladung.
       benefits:
       - Universelle Ladebequemlichkeit
-      - Mehrere Akkus gleichzeitig laden
+      - Gleichzeitiges Laden mehrerer Akkus
       image: assets/images/product/loopenergy-pro-c6750/feature-charging.png
       image_alt: Schnelles & bequemes Laden
     - title: Fortschrittliche Sicherheitsfunktionen
@@ -163,14 +167,14 @@ de:
         Betrieb in jeder Umgebung.
       benefits:
       - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
-      - Sicherheit für professionelle und alltägliche Nutzung
+      - Sicherheit für professionelle und den täglichen Gebrauch
       image: assets/images/product/loopenergy-pro-c6750/feature-safety.png
       image_alt: Fortschrittliche Sicherheitsfunktionen
     - title: Umweltfreundlich & nachhaltig
       description: Jeder LoopEnergy Pro C6750 Akku kann über 1000 Mal wieder aufgeladen
         werden, was Abfall drastisch reduziert und eine grünere Zukunft unterstützt.
       benefits:
-      - Reduziert Abfall durch Einwegbatterien
+      - Reduziert Einweg-Batterieabfall
       - Fördert nachhaltigen und verantwortungsvollen Energieeinsatz
       image: assets/images/product/loopenergy-pro-c6750/feature-eco.png
       image_alt: Umweltfreundlich & nachhaltig
@@ -192,7 +196,7 @@ de:
       icon: assets/images/icons/icon-flashlight.svg
   package_contents:
     title: Lieferumfang
-    subtitle: In der Verpackung enthalten
+    subtitle: Was ist in der Verpackung
     items:
     - name: 2 × LoopEnergy Pro C6750 wiederaufladbare Batterie
       details: null

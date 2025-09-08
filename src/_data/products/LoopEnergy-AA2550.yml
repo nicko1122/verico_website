@@ -34,6 +34,8 @@ en:
     value: '>1000'
   - name: Self-Discharge
     value: Low
+  badge: premium
+  featured_rank: 1
   detailed_features:
     title: Detailed Features
     subtitle: ''
@@ -88,10 +90,10 @@ en:
     subtitle: What’s in the box
     items:
     - name: 4 × LoopEnergy AA2550 Rechargeable Battery
-      details: ''
+      details: null
       icon: assets/images/product/loopenergy-aa2550/AA-2250-1.png
     - name: 1 × USB Type-A to 4 × Type-C charging cable
-      details: ''
+      details: null
       icon: assets/images/product/loopenergy-aa2550/usbcable.png
   variants:
   - title: LoopEnergy AA2550 2-Pack
@@ -132,7 +134,7 @@ de:
   - 'Schnellladung: ~1,5 Stunden bis voll'
   - Über 1000 Ladezyklen
   - Niedrige Selbstentladung für lange Lagerfähigkeit
-  - Eingebauter Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
+  - Eingebaute Schutzfunktionen gegen Überhitzung, Überladung, Überspannung und Kurzschluss
   specs:
   - name: Batterietyp
     value: Li-ion
@@ -150,12 +152,14 @@ de:
     value: '>1000'
   - name: Selbstentladung
     value: Niedrig
+  badge: premium
+  featured_rank: 1
   detailed_features:
-    title: Detaillierte Merkmale
+    title: Detaillierte Funktionen
     subtitle: ''
     items:
     - title: Konstanter Spannungsausgang
-      description: Bietet eine stabile 1,5V Ausgangsspannung für optimale Gerätekompatibilität.
+      description: Lieferung eines stabilen 1,5V-Ausgangs für optimale Gerätekompatibilität.
       benefits:
       - Zuverlässige Leistung in allen Geräten
       - Verhindert Spannungsabfall während der Nutzung
@@ -169,7 +173,7 @@ de:
       image: assets/images/product/loopenergy-aa2550/feature-charging.png
       image_alt: Schnelles & bequemes Laden
     - title: Erweiterte Sicherheitsfunktionen
-      description: Mehrere integrierte Schutzmechanismen für sicheren täglichen Gebrauch.
+      description: Mehrere eingebaute Schutzmechanismen für sicheren täglichen Gebrauch.
       benefits:
       - Schutz vor Überhitzung, Überladung, Überspannung und Kurzschluss
       - Sicherheit für Sie und Ihre Geräte
@@ -185,7 +189,7 @@ de:
       image_alt: Umweltfreundlich & nachhaltig
   compatibility:
     title: Gerätekompatibilität
-    subtitle: Geeignet für die meisten AA-betriebenen Geräte.
+    subtitle: Geeignet für die meisten AA-batteriebetriebenen Geräte.
     categories:
     - name: Fernbedienungen
       details: ''
@@ -204,10 +208,10 @@ de:
     subtitle: Inhalt der Verpackung
     items:
     - name: 4 × LoopEnergy AA2550 wiederaufladbare Batterie
-      details: ''
+      details: null
       icon: assets/images/product/loopenergy-aa2550/AA-2250-1.png
     - name: 1 × USB Type-A zu 4 × Type-C Ladekabel
-      details: ''
+      details: null
       icon: assets/images/product/loopenergy-aa2550/usbcable.png
   variants:
   - title: LoopEnergy AA2550 2er-Pack

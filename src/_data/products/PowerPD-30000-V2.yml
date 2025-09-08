@@ -1,0 +1,276 @@
+en:
+  name: Verico Power Pro PD V2 30000mAh Power Bank
+  category: powerbank
+  description: Verico Power Pro PD V2 30,000mAh — Ultra-Fast Charging, Even for Laptops.
+    The Power Pro PD V2 30000 is a high-capacity power bank designed for high-performance
+    and multi-device users, featuring a massive 30,000mAh/111Wh polymer cell, PD fast
+    charging, and multiple fast charging protocols. It can quickly charge smartphones,
+    tablets, and even provide stable power for USB Type-C PD laptops, truly keeping
+    you powered on the go.
+  catalog_image: assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-main.png
+  hero_background: assets/images/global/powerbank-hero.jpg
+  images:
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-main.png
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-1.png
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-2.png
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-3.png
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-4.png
+  features:
+  - 'PD Fast Charging: Type-C output up to 12V/1.6A, supports fast charging for laptops
+    and other PD-enabled devices.'
+  - 'High-Power USB-A Output: Supports up to 4.5V/5A, compatible with multiple fast
+    charging protocols for enhanced efficiency.'
+  - 'Dual Input Design: Recharge via Micro-USB or Type-C for flexible convenience.'
+  - 'Triple Output: Charge up to three devices simultaneously (USB-A x2 + Type-C x1).'
+  - 'Smart Current Distribution: Automatically detects device needs for stable and
+    safe power delivery.'
+  - 'Sleek Black Design: Minimalist and professional look, suitable for business and
+    everyday use.'
+  - 'Ultra-High Capacity: 30,000mAh can charge a smartphone about 6–8 times, and keep
+    your laptop powered all day.'
+  specs:
+  - name: Battery Capacity
+    value: 30,000mAh / 111Wh
+  - name: Battery Type
+    value: Polymer cell
+  - name: Color
+    value: Black
+  - name: Max Input by Port
+    value: 'Micro-USB: 5V/2A, 9V/2A, 12V/1.5A; Type-C: 5V/3A, 9V/2A, 12V/1.5A'
+  - name: Max Output by Port
+    value: 'USB-A: 4.5V/5A, 5V/4.5A, 9V/2A, 12V/1.5A; Type-C: 5V/3A, 9V/2.2A, 12V/1.6A'
+  - name: Output Ports
+    value: USB Type-A x2, Type-C x1
+  - name: Input Ports
+    value: Type-C, Micro-USB
+  - name: Dimensions
+    value: 68 x 34 x 145 mm
+  - name: Weight
+    value: 640g
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: PD Fast Charging for Laptops & More
+      description: Charge your PD-enabled laptop, tablet, or smartphone at top speed
+        with up to 12V/1.6A output via Type-C Power Delivery.
+      benefits:
+      - Rapid charging for laptops, tablets, and phones
+      - Less downtime, more productivity
+      image: null
+      image_alt: null
+    - title: Triple Device Charging
+      description: Simultaneously charge up to three devices with dual USB-A and one
+        Type-C output.
+      benefits:
+      - Power up your phone, tablet, and accessories at once
+      - Share power with friends or colleagues
+      image: null
+      image_alt: null
+    - title: Dual Input Flexibility
+      description: Recharge the power bank via either Micro-USB or Type-C input for
+        maximum convenience.
+      benefits:
+      - Use your preferred charging cable
+      - Never worry about compatibility
+      image: null
+      image_alt: null
+    - title: Smart & Safe Charging
+      description: Intelligent current distribution automatically detects and delivers
+        the optimal power for each connected device, ensuring safe and efficient charging.
+      benefits:
+      - Protects your devices from overcurrent and overheating
+      - Stable and reliable power output
+      image: null
+      image_alt: null
+    - title: Sleek & Professional Design
+      description: Minimalist black finish fits both business and daily style.
+      benefits:
+      - Looks great in any setting
+      - Durable and easy to carry
+      image: null
+      image_alt: null
+    - title: Ultra-High Capacity
+      description: With 30,000mAh, charge your smartphone 6–8 times or keep your laptop
+        powered all day.
+      benefits:
+      - No more battery anxiety on long trips
+      - Perfect for power users and business travel
+      image: null
+      image_alt: null
+  compatibility:
+    title: Device Compatibility
+    subtitle: Works with most USB and USB-C PD charging devices.
+    categories:
+    - name: Laptops (USB-C PD)
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Apple iPhones & iPads (USB-A to Lightning or Type-C to Lightning cable)
+      details: ''
+      icon: assets/images/icons/icon-smartphone.svg
+    - name: Android smartphones & tablets (USB-A/Type-C cables)
+      details: ''
+      icon: assets/images/icons/icon-pad.svg
+    - name: Wireless earbuds, smartwatches (USB-A/Type-C)
+      details: ''
+      icon: assets/images/icons/icon-headset.svg
+    - name: Other USB-powered devices (e-readers, cameras, etc.)
+      details: ''
+      icon: assets/images/icons/icon-USB-C-A.svg
+  package_contents:
+    title: Package Contents
+    subtitle: What’s in the box
+    items:
+    - name: 1 × Verico Power Pro PD V2 30,000mAh Power Bank
+      details: null
+      icon: assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-1.png
+    - name: 1 × USB-A to USB Type-C Charging Cable
+      details: null
+      icon: null
+  variants:
+  - title: Verico Power Pro PD V2 30000mAh Black
+    package_image: assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-main.png
+    model_name: PowerPRO PD V2 30000mAh Black
+    sku: 4PW-PDDBK1-NN
+    ean: '4713095608209'
+de:
+  name: Verico Power Pro PD V2 30000mAh Power Bank
+  category: powerbank
+  description: Verico Power Pro PD V2 30.000mAh — Ultra-schnelles Laden, sogar für
+    Laptops. Die Power Pro PD V2 30000 ist eine Powerbank mit hoher Kapazität, die
+    für leistungsstarke und Multi-Geräte-Nutzer entwickelt wurde. Sie verfügt über
+    eine massive 30.000mAh/111Wh Polymerzelle, PD-Schnellladung und mehrere Schnellladeprotokolle.
+    Sie kann Smartphones, Tablets schnell aufladen und sogar stabile Energie für USB
+    Type-C PD Laptops liefern, sodass Sie unterwegs stets mit Energie versorgt sind.
+  catalog_image: assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-main.png
+  hero_background: assets/images/global/powerbank-hero.jpg
+  images:
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-main.png
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-1.png
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-2.png
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-3.png
+  - assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-4.png
+  features:
+  - 'PD Schnellladung: Type-C Ausgang bis zu 12V/1,6A, unterstützt Schnellladung für
+    Laptops und andere PD-fähige Geräte.'
+  - 'Leistungsstarker USB-A Ausgang: Unterstützt bis zu 4,5V/5A, kompatibel mit mehreren
+    Schnellladeprotokollen für höhere Effizienz.'
+  - 'Duales Eingangsdesign: Aufladen über Micro-USB oder Type-C für flexible Nutzung.'
+  - 'Dreifach-Ausgang: Laden Sie bis zu drei Geräte gleichzeitig (USB-A x2 + Type-C
+    x1).'
+  - 'Intelligente Stromverteilung: Erkennt automatisch den Bedarf der Geräte für stabile
+    und sichere Stromversorgung.'
+  - 'Elegantes schwarzes Design: Minimalistisches und professionelles Aussehen, geeignet
+    für Business und Alltag.'
+  - 'Ultra-hohe Kapazität: 30.000mAh können ein Smartphone etwa 6–8 Mal aufladen und
+    Ihren Laptop den ganzen Tag mit Strom versorgen.'
+  specs:
+  - name: Batteriekapazität
+    value: 30.000mAh / 111Wh
+  - name: Batterietyp
+    value: Polymerzelle
+  - name: Farbe
+    value: Schwarz
+  - name: Max. Eingang pro Anschluss
+    value: 'Micro-USB: 5V/2A, 9V/2A, 12V/1,5A; Type-C: 5V/3A, 9V/2A, 12V/1,5A'
+  - name: Max. Ausgang pro Anschluss
+    value: 'USB-A: 4,5V/5A, 5V/4,5A, 9V/2A, 12V/1,5A; Type-C: 5V/3A, 9V/2,2A, 12V/1,6A'
+  - name: Ausgangsanschlüsse
+    value: USB Type-A x2, Type-C x1
+  - name: Eingangsanschlüsse
+    value: Type-C, Micro-USB
+  - name: Abmessungen
+    value: 68 x 34 x 145 mm
+  - name: Gewicht
+    value: 640g
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Detaillierte Funktionen
+    subtitle: ''
+    items:
+    - title: PD Schnellladung für Laptops & mehr
+      description: Laden Sie Ihren PD-fähigen Laptop, Tablet oder Smartphone mit bis
+        zu 12V/1,6A Ausgang über Type-C Power Delivery mit Höchstgeschwindigkeit.
+      benefits:
+      - Schnelles Laden für Laptops, Tablets und Telefone
+      - Weniger Ausfallzeiten, mehr Produktivität
+      image: null
+      image_alt: null
+    - title: Dreifach-Geräteladung
+      description: Laden Sie gleichzeitig bis zu drei Geräte mit zwei USB-A und einem
+        Type-C Ausgang.
+      benefits:
+      - Versorgen Sie Telefon, Tablet und Zubehör gleichzeitig mit Strom
+      - Teilen Sie Energie mit Freunden oder Kollegen
+      image: null
+      image_alt: null
+    - title: Duale Eingangsflexibilität
+      description: Laden Sie die Powerbank über Micro-USB oder Type-C Eingang für
+        maximale Bequemlichkeit auf.
+      benefits:
+      - Verwenden Sie Ihr bevorzugtes Ladekabel
+      - Keine Kompatibilitätsprobleme
+      image: null
+      image_alt: null
+    - title: Intelligentes & sicheres Laden
+      description: Die intelligente Stromverteilung erkennt automatisch und liefert
+        die optimale Leistung für jedes angeschlossene Gerät und sorgt für sicheres
+        und effizientes Laden.
+      benefits:
+      - Schützt Ihre Geräte vor Überstrom und Überhitzung
+      - Stabile und zuverlässige Stromversorgung
+      image: null
+      image_alt: null
+    - title: Elegantes & professionelles Design
+      description: Minimalistisches schwarzes Finish passt zu Business- und Alltagsstil.
+      benefits:
+      - Sieht in jeder Umgebung gut aus
+      - Robust und leicht zu transportieren
+      image: null
+      image_alt: null
+    - title: Ultra-hohe Kapazität
+      description: Mit 30.000mAh laden Sie Ihr Smartphone 6–8 Mal oder versorgen Ihren
+        Laptop den ganzen Tag mit Strom.
+      benefits:
+      - Keine Angst mehr vor leerem Akku auf langen Reisen
+      - Perfekt für Power-User und Geschäftsreisen
+      image: null
+      image_alt: null
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Funktioniert mit den meisten USB- und USB-C PD-Ladegeräten.
+    categories:
+    - name: Laptops (USB-C PD)
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Apple iPhones & iPads (USB-A zu Lightning oder Type-C zu Lightning Kabel)
+      details: ''
+      icon: assets/images/icons/icon-smartphone.svg
+    - name: Android Smartphones & Tablets (USB-A/Type-C Kabel)
+      details: ''
+      icon: assets/images/icons/icon-pad.svg
+    - name: Kabellose Ohrhörer, Smartwatches (USB-A/Type-C)
+      details: ''
+      icon: assets/images/icons/icon-headset.svg
+    - name: Andere USB-betriebene Geräte (E-Reader, Kameras, etc.)
+      details: ''
+      icon: assets/images/icons/icon-USB-C-A.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: In der Verpackung enthalten
+    items:
+    - name: 1 × Verico Power Pro PD V2 30,000mAh Power Bank
+      details: null
+      icon: assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-1.png
+    - name: 1 × USB-A zu USB Type-C Ladekabel
+      details: null
+      icon: null
+  variants:
+  - title: Verico Power Pro PD V2 30000mAh Schwarz
+    package_image: assets/images/product/verico-power-pro-pd-v2-30000mah-power-bank/powerpro-pd-3000-main.png
+    model_name: PowerPRO PD V2 30000mAh Black
+    sku: 4PW-PDDBK1-NN
+    ean: '4713095608209'
