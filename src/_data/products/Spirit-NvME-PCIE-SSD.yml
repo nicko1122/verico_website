@@ -1,0 +1,264 @@
+en:
+  name: VERICO SPIRIT NVMe M.2 Solid State Drive
+  category: flash_disk
+  description: Ultimate Performance; Awesome Value! The VERICO SPIRIT NVMe M.2 SSD
+    offers speed beyond belief with up to 3470MB/s read and 3000MB/s write speeds.
+    With awesome cost to performance ratio, it's the best M.2 SSD ultimate upgrade
+    choice for those who seek life in the fast lane!
+  catalog_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-main.png
+  hero_background: assets/images/global/ssd-hero.jpg
+  images:
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-1.png
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-2.png
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-3.png
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-4.png
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-5.png
+  features:
+  - 'Ultimate performance: up to 3470MB/s read, 3000MB/s write speeds'
+  - PCIe 3.0 x4 with NVMe 1.3 interface for maximum speed
+  - 3D NAND TLC flash technology for reliability
+  - M.2 2280 form factor for modern devices
+  - Compact 80 x 22 x 3.8mm design
+  - Multiple capacity options from 256GB to 2TB
+  - Up to 600,000 IOPS for both read and write operations
+  - Compatible with Windows 7-10, Vista, and Linux
+  specs:
+  - name: Interface
+    value: PCIe 3.0 x4 with NVMe 1.3
+  - name: Form Factor
+    value: M.2 2280
+  - name: Dimensions
+    value: 80 x 22 x 3.8 mm
+  - name: Voltage
+    value: DC 3.3V
+  - name: Capacities
+    value: 256GB, 512GB, 1TB, 2TB
+  - name: Read Speed
+    value: Up to 3470MB/s
+  - name: Write Speed
+    value: Up to 3000MB/s
+  - name: Read IOPS
+    value: Up to 600,000
+  - name: Write IOPS
+    value: Up to 600,000
+  - name: Flash Type
+    value: 3D NAND TLC
+  - name: MTBF
+    value: 2M Hours
+  - name: OS Support
+    value: Windows 7-10, Windows Vista, Linux 2.6.33 or newer
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Ultimate Performance; Awesome Value!
+    subtitle: With awesome cost to performance ratio, VERICO Spirit is the best M.2
+      SSD ultimate upgrade choice for those who seek life in the fast lane!
+    items:
+    - title: Ultimate Performance; Awesome Value!
+      description: With awesome cost to performance ratio, VERICO Spirit is the best
+        M.2 SSD ultimate upgrade choice for those who seek life in the fast lane!
+      benefits:
+      - Up to 3470MB/s read speed
+      - Up to 3000MB/s write speed
+      - Exceptional value for money
+      - Perfect for performance enthusiasts
+      image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/feature-1.png
+      image_alt: Ultimate Performance; Awesome Value!
+    - title: Can You Handle the Speed?!
+      description: The VERICO Spirit M.2 SSD offers speed beyond belief! WARNING!
+        You will need to work super fast to prevent your computer getting impatient!
+      benefits:
+      - Up to 600,000 IOPS for read operations
+      - Up to 600,000 IOPS for write operations
+      - Lightning-fast data processing
+      - Unmatched performance
+      image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/feature-2.png
+      image_alt: Can You Handle the Speed?!
+    - title: Discreet, Yet Powerful
+      description: 'The VERICO Spirit SSD is in compliance with PCIe Gen. 3 x4 and
+        NVMe 1.3: discreetly hidden on your motherboard, yet offers astounding performance.'
+      benefits:
+      - PCIe 3.0 x4 with NVMe 1.3 interface
+      - Discreet motherboard installation
+      - Astounding performance in compact form
+      - 3D NAND TLC flash technology
+      image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/feature-3.png
+      image_alt: Discreet, Yet Powerful
+  compatibility:
+    title: Device Compatibility
+    subtitle: Compatible with devices supporting M.2 NVMe SSD storage.
+    categories:
+    - name: Desktop computers
+      details: ''
+      icon: assets/images/icons/icon-desktop.svg
+    - name: Laptops & Ultrabooks
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Mini PCs & NUCs
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Gaming systems
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+  package_contents:
+    title: Package Content
+    subtitle: What's in the box
+    items:
+    - name: 1 × VERICO SPIRIT NVMe M.2 SSD
+      details: ''
+      icon: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-1.png
+  variants:
+  - title: VERICO SPIRIT 256GB
+    package_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-256.png
+    model_name: Verico SPIRIT Gen 3 x 4 256GB
+    sku: 1SSOS-SSMBK3-NN
+    ean: '4713095606311'
+  - title: VERICO SPIRIT 512GB
+    package_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-512.png
+    model_name: Verico SPIRIT Gen 3 x 4 512GB
+    sku: 1SSOS-SSMBM3-NN
+    ean: '4713095606328'
+  - title: VERICO SPIRIT 1TB
+    package_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-1TB.png
+    model_name: Verico SPIRIT Gen 3 x 4 1TB
+    sku: 1SSOS-SSMBO3-NN
+    ean: '4713095606335'
+  - title: VERICO SPIRIT 2TB
+    package_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-2TB.png
+    model_name: Verico SPIRIT Gen 3 x 4 2TB
+    sku: 1SSOS-SSMBP3-NN
+    ean: '4713095606342'
+de:
+  name: VERICO SPIRIT NVMe M.2 Solid State Drive
+  category: flash_disk
+  description: Ultimative Leistung; Tolles Preis-Leistungs-Verhältnis! Die VERICO
+    SPIRIT NVMe M.2 SSD bietet unglaubliche Geschwindigkeiten mit bis zu 3470MB/s
+    Lesegeschwindigkeit und 3000MB/s Schreibgeschwindigkeit. Mit einem hervorragenden
+    Kosten-Leistungs-Verhältnis ist sie die beste M.2 SSD Upgrade-Wahl für alle, die
+    das Leben in der Überholspur suchen!
+  catalog_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-main.png
+  hero_background: assets/images/global/ssd-hero.jpg
+  images:
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-1.png
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-2.png
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-3.png
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-4.png
+  - assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-5.png
+  features:
+  - 'Ultimative Leistung: bis zu 3470MB/s Lesen, 3000MB/s Schreiben'
+  - PCIe 3.0 x4 mit NVMe 1.3 Schnittstelle für maximale Geschwindigkeit
+  - 3D NAND TLC Flash-Technologie für Zuverlässigkeit
+  - M.2 2280 Formfaktor für moderne Geräte
+  - Kompaktes Design 80 x 22 x 3,8 mm
+  - Mehrere Kapazitätsoptionen von 256GB bis 2TB
+  - Bis zu 600.000 IOPS für Lese- und Schreibvorgänge
+  - Kompatibel mit Windows 7-10, Vista und Linux
+  specs:
+  - name: Schnittstelle
+    value: PCIe 3.0 x4 mit NVMe 1.3
+  - name: Formfaktor
+    value: M.2 2280
+  - name: Abmessungen
+    value: 80 x 22 x 3,8 mm
+  - name: Spannung
+    value: DC 3,3V
+  - name: Kapazitäten
+    value: 256GB, 512GB, 1TB, 2TB
+  - name: Lesegeschwindigkeit
+    value: Bis zu 3470MB/s
+  - name: Schreibgeschwindigkeit
+    value: Bis zu 3000MB/s
+  - name: Lese-IOPS
+    value: Bis zu 600.000
+  - name: Schreib-IOPS
+    value: Bis zu 600.000
+  - name: Flash-Typ
+    value: 3D NAND TLC
+  - name: MTBF
+    value: 2M Stunden
+  - name: Betriebssystem-Unterstützung
+    value: Windows 7-10, Windows Vista, Linux 2.6.33 oder neuer
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Ultimative Leistung; Tolles Preis-Leistungs-Verhältnis!
+    subtitle: Mit einem hervorragenden Kosten-Leistungs-Verhältnis ist VERICO Spirit
+      die beste M.2 SSD Upgrade-Wahl für alle, die das Leben in der Überholspur suchen!
+    items:
+    - title: Ultimative Leistung; Tolles Preis-Leistungs-Verhältnis!
+      description: Mit einem hervorragenden Kosten-Leistungs-Verhältnis ist VERICO
+        Spirit die beste M.2 SSD Upgrade-Wahl für alle, die das Leben in der Überholspur
+        suchen!
+      benefits:
+      - Bis zu 3470MB/s Lesegeschwindigkeit
+      - Bis zu 3000MB/s Schreibgeschwindigkeit
+      - Außergewöhnliches Preis-Leistungs-Verhältnis
+      - Perfekt für Performance-Enthusiasten
+      image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/feature-1.png
+      image_alt: Ultimative Leistung; Tolles Preis-Leistungs-Verhältnis!
+    - title: Kannst du mit der Geschwindigkeit mithalten?!
+      description: Die VERICO Spirit M.2 SSD bietet unglaubliche Geschwindigkeit!
+        WARNUNG! Du musst super schnell arbeiten, damit dein Computer nicht ungeduldig
+        wird!
+      benefits:
+      - Bis zu 600.000 IOPS für Lesevorgänge
+      - Bis zu 600.000 IOPS für Schreibvorgänge
+      - Blitzschnelle Datenverarbeitung
+      - Unvergleichliche Leistung
+      image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/feature-2.png
+      image_alt: Kannst du mit der Geschwindigkeit mithalten?!
+    - title: Diskret, aber leistungsstark
+      description: 'Die VERICO Spirit SSD entspricht PCIe Gen. 3 x4 und NVMe 1.3:
+        diskret auf deinem Motherboard versteckt, bietet sie dennoch erstaunliche
+        Leistung.'
+      benefits:
+      - PCIe 3.0 x4 mit NVMe 1.3 Schnittstelle
+      - Diskrete Installation auf dem Motherboard
+      - Erstaunliche Leistung in kompakter Form
+      - 3D NAND TLC Flash-Technologie
+      image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/feature-3.png
+      image_alt: Diskret, aber leistungsstark
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Kompatibel mit Geräten, die M.2 NVMe SSD Speicher unterstützen.
+    categories:
+    - name: Desktop-Computer
+      details: ''
+      icon: assets/images/icons/icon-desktop.svg
+    - name: Laptops & Ultrabooks
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Mini-PCs & NUCs
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Gaming-Systeme
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: In der Verpackung enthalten
+    items:
+    - name: 1 × VERICO SPIRIT NVMe M.2 SSD
+      details: ''
+      icon: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Product-1.png
+  variants:
+  - title: VERICO SPIRIT 256GB
+    package_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-256.png
+    model_name: Verico SPIRIT Gen 3 x 4 256GB
+    sku: 1SSOS-SSMBK3-NN
+    ean: '4713095606311'
+  - title: VERICO SPIRIT 512GB
+    package_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-512.png
+    model_name: Verico SPIRIT Gen 3 x 4 512GB
+    sku: 1SSOS-SSMBM3-NN
+    ean: '4713095606328'
+  - title: VERICO SPIRIT 1TB
+    package_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-1TB.png
+    model_name: Verico SPIRIT Gen 3 x 4 1TB
+    sku: 1SSOS-SSMBO3-NN
+    ean: '4713095606335'
+  - title: VERICO SPIRIT 2TB
+    package_image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-2TB.png
+    model_name: Verico SPIRIT Gen 3 x 4 2TB
+    sku: 1SSOS-SSMBP3-NN
+    ean: '4713095606342'

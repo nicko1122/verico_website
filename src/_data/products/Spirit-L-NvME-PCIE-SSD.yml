@@ -1,0 +1,265 @@
+en:
+  name: VERICO SPIRIT-L NVMe M.2 Solid State Drive
+  category: flash_disk
+  description: Blazing Performance; Friendly Price! With superb cost to performance
+    ratio, VERICO SPIRIT-L is the best upgrade choice for super fast M.2 SSD performance
+    with friendly prices. Be ready to be impressed by the amazing read/write speed
+    performance!
+  catalog_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-main.png
+  hero_background: assets/images/global/ssd-hero.jpg
+  images:
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-1.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-2.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-3.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-4.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-5.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-6.png
+  features:
+  - 'Blazing performance: up to 3200MB/s read, 2300MB/s write speeds'
+  - PCIe 3.0 x4 with NVMe 1.3 in2300ace for excellent speed
+  - M.2 2280 form factor for modern devices
+  - Compact 80 x 22 x 3.8mm design
+  - Multiple capacity options from 128GB to 2TB
+  - Up to 180,000 IOPS for both read and write operations
+  - Friendly price with superb cost to performance ratio
+  - Compatible with Windows 7-10, Vista, and Linux
+  specs:
+  - name: Interface
+    value: PCIe 3.0 x4 with NVMe 1.3
+  - name: Form Factor
+    value: M.2 2280
+  - name: Dimensions
+    value: 80 x 22 x 3.8 mm
+  - name: Voltage
+    value: DC 3.3V
+  - name: Capacities
+    value: 128GB, 256GB, 512GB, 1TB, 2TB
+  - name: Read Speed
+    value: Up to 3200MB/s
+  - name: Write Speed
+    value: Up to 2300MB/s
+  - name: Read IOPS
+    value: Up to 180,000
+  - name: Write IOPS
+    value: Up to 180,000
+  - name: OS Support
+    value: Windows 7-10, Windows Vista, Linux 2.6.33 or newer
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Blazing Performance; Friendly Price!
+    subtitle: ''
+    items:
+    - title: Blazing Performance; Friendly Price!
+      description: With superb cost to performance ratio, VERICO SPIRIT-L is the best
+        upgrade choice for super fast M.2 SSD performance with friendly prices.
+      benefits:
+      - Up to 3200MB/s read speed
+      - Up to 12300B/s write speed
+      - Excellent value for money
+      - Perfect for budget-conscious users
+      image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/feature-1.png
+      image_alt: Blazing Performance; Friendly Price!
+    - title: Be Ready for the Speed!
+      description: Be ready to be impressed by the amazing read/write speed performance
+        that VERICO SPIRIT-L M.2 SSD provides! You will never go back to traditional
+        hard drives again!
+      benefits:
+      - Up to 180,000 IOPS for read operations
+      - Up to 180,000 IOPS for write operations
+      - Impressive data processing speed
+      - Superior to traditional hard drives
+      image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/feature-2.png
+      image_alt: Be Ready for the Speed!
+    - title: Discreet, Yet Powerful
+      description: 'The VERICO SPIRIT-L is in compliance with PCIe Gen. 3 x2 and NVMe
+        1.3: discreetly hidden on your motherboard, yet offers blazing performance.'
+      benefits:
+      - PCIe 3.0 x4 with NVMe 1.3 interface
+      - Discreet motherboard installation
+      - Blazing performance in compact form
+      - Modern NVMe technology
+      image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/feature-3.png
+      image_alt: Discreet, Yet Powerful
+  compatibility:
+    title: Device Compatibility
+    subtitle: Compatible with devices supporting M.2 NVMe SSD storage.
+    categories:
+    - name: Desktop computers
+      details: ''
+      icon: assets/images/icons/icon-desktop.svg
+    - name: Laptops & Ultrabooks
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Mini PCs & NUCs
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Gaming systems
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+  package_contents:
+    title: Package Content
+    subtitle: What's in the box
+    items:
+    - name: 1 × VERICO SPIRIT-L NVMe M.2 SSD
+      details: null
+      icon: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-1.png
+  variants:
+  - title: VERICO SPIRIT-L 128GB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-128.png
+    model_name: Spirit-L Gen 3 x 4 128GB
+    sku: 1SSOK-SSMMC3-NN
+    ean: '4713095608339'
+  - title: VERICO SPIRIT-L 256GB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-256.png
+    model_name: Spirit-L Gen 3 x 4 256GB
+    sku: 1SSOK-SSMM93-NN
+    ean: '4713095608346'
+  - title: VERICO SPIRIT-L 512GB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-512.png
+    model_name: Spirit-L Gen 3 x 4 512GB
+    sku: 1SSOK-SSMMA3-NN
+    ean: '4713095608353'
+  - title: VERICO SPIRIT-L 1TB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-1TB.png
+    model_name: Spirit-L Gen 3 x 4 1TB
+    sku: 1SSOK-SSMMG3-NN
+    ean: '4713095608360'
+  - title: VERICO SPIRIT-L 2TB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-2TB.png
+    model_name: Spirit-L Gen 3 x 4 2TB
+    sku: 1SSOK-SSMMH3-NN
+    ean: '4713095608421'
+de:
+  name: VERICO SPIRIT-L NVMe M.2 Solid State Drive
+  category: flash_disk
+  description: Blitzschnelle Leistung; Freundlicher Preis! Mit einem hervorragenden
+    Preis-Leistungs-Verhältnis ist VERICO SPIRIT-L die beste Upgrade-Wahl für superschnelle
+    M.2 SSD-Leistung zu freundlichen Preisen. Seien Sie bereit, von der erstaunlichen
+    Lese-/Schreibgeschwindigkeit beeindruckt zu sein!
+  catalog_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-main.png
+  hero_background: assets/images/global/ssd-hero.jpg
+  images:
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-1.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-2.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-3.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-4.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-5.png
+  - assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-6.png
+  features:
+  - 'Blitzschnelle Leistung: bis zu 3200MB/s Lesen, 2300MB/s Schreiben'
+  - PCIe 3.0 x4 mit NVMe 1.3 in2300ace für hervorragende Geschwindigkeit
+  - M.2 2280 Formfaktor für moderne Geräte
+  - Kompaktes Design 80 x 22 x 3,8 mm
+  - Mehrere Kapazitätsoptionen von 128GB bis 2TB
+  - Bis zu 180.000 IOPS für Lese- und Schreibvorgänge
+  - Freundlicher Preis mit hervorragendem Preis-Leistungs-Verhältnis
+  - Kompatibel mit Windows 7-10, Vista und Linux
+  specs:
+  - name: Schnittstelle
+    value: PCIe 3.0 x4 mit NVMe 1.3
+  - name: Formfaktor
+    value: M.2 2280
+  - name: Abmessungen
+    value: 80 x 22 x 3,8 mm
+  - name: Spannung
+    value: DC 3,3V
+  - name: Kapazitäten
+    value: 128GB, 256GB, 512GB, 1TB, 2TB
+  - name: Lesegeschwindigkeit
+    value: Bis zu 3200MB/s
+  - name: Schreibgeschwindigkeit
+    value: Bis zu 2300MB/s
+  - name: Lese-IOPS
+    value: Bis zu 180.000
+  - name: Schreib-IOPS
+    value: Bis zu 180.000
+  - name: Betriebssystem-Unterstützung
+    value: Windows 7-10, Windows Vista, Linux 2.6.33 oder neuer
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Blitzschnelle Leistung; Freundlicher Preis!
+    subtitle: ''
+    items:
+    - title: Blitzschnelle Leistung; Freundlicher Preis!
+      description: Mit einem hervorragenden Preis-Leistungs-Verhältnis ist VERICO
+        SPIRIT-L die beste Upgrade-Wahl für superschnelle M.2 SSD-Leistung zu freundlichen
+        Preisen.
+      benefits:
+      - Bis zu 3200MB/s Lesegeschwindigkeit
+      - Bis zu 12300B/s Schreibgeschwindigkeit
+      - Ausgezeichnetes Preis-Leistungs-Verhältnis
+      - Perfekt für preisbewusste Nutzer
+      image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/feature-1.png
+      image_alt: Blitzschnelle Leistung; Freundlicher Preis!
+    - title: Seien Sie bereit für die Geschwindigkeit!
+      description: Seien Sie bereit, von der erstaunlichen Lese-/Schreibgeschwindigkeit
+        beeindruckt zu sein, die das VERICO SPIRIT-L M.2 SSD bietet! Sie werden nie
+        wieder zu herkömmlichen Festplatten zurückkehren!
+      benefits:
+      - Bis zu 180.000 IOPS für Lesevorgänge
+      - Bis zu 180.000 IOPS für Schreibvorgänge
+      - Beeindruckende Datenverarbeitungsgeschwindigkeit
+      - Überlegen gegenüber herkömmlichen Festplatten
+      image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/feature-2.png
+      image_alt: Seien Sie bereit für die Geschwindigkeit!
+    - title: Diskret, aber leistungsstark
+      description: 'Das VERICO SPIRIT-L entspricht PCIe Gen. 3 x2 und NVMe 1.3: diskret
+        auf Ihrem Motherboard versteckt, bietet es dennoch blitzschnelle Leistung.'
+      benefits:
+      - PCIe 3.0 x4 mit NVMe 1.3 Schnittstelle
+      - Diskrete Installation auf dem Motherboard
+      - Blitzschnelle Leistung in kompakter Form
+      - Moderne NVMe-Technologie
+      image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/feature-3.png
+      image_alt: Diskret, aber leistungsstark
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Kompatibel mit Geräten, die M.2 NVMe SSD-Speicher unterstützen.
+    categories:
+    - name: Desktop-Computer
+      details: ''
+      icon: assets/images/icons/icon-desktop.svg
+    - name: Laptops & Ultrabooks
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Mini-PCs & NUCs
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Gaming-Systeme
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: Inhalt der Verpackung
+    items:
+    - name: 1 × VERICO SPIRIT-L NVMe M.2 SSD
+      details: null
+      icon: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Product-1.png
+  variants:
+  - title: VERICO SPIRIT-L 128GB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-128.png
+    model_name: Spirit-L Gen 3 x 4 128GB
+    sku: 1SSOK-SSMMC3-NN
+    ean: '4713095608339'
+  - title: VERICO SPIRIT-L 256GB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-256.png
+    model_name: Spirit-L Gen 3 x 4 256GB
+    sku: 1SSOK-SSMM93-NN
+    ean: '4713095608346'
+  - title: VERICO SPIRIT-L 512GB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-512.png
+    model_name: Spirit-L Gen 3 x 4 512GB
+    sku: 1SSOK-SSMMA3-NN
+    ean: '4713095608353'
+  - title: VERICO SPIRIT-L 1TB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-1TB.png
+    model_name: Spirit-L Gen 3 x 4 1TB
+    sku: 1SSOK-SSMMG3-NN
+    ean: '4713095608360'
+  - title: VERICO SPIRIT-L 2TB
+    package_image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-2TB.png
+    model_name: Spirit-L Gen 3 x 4 2TB
+    sku: 1SSOK-SSMMH3-NN
+    ean: '4713095608421'

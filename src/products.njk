@@ -8,13 +8,7 @@ pagination:
 eleventyComputed:
   title: "{{ product[product.lang].name }}"
   lang: "{{ product.lang }}"
-  permalink: |
-    {% set pblock = product[product.lang] %}
-    {% if pblock.url %}
-      {{ pblock.url }}
-    {% else %}
-      /{{ product.lang }}/products/{{ pblock.name | slug }}/index.html
-    {% endif %}
+  permalink: "{% set pblock = product[product.lang] %}{% if pblock.url %}{{ pblock.url }}{% else %}/{{ product.lang }}/products/{{ pblock.name | slug }}/index.html{% endif %}"
 ---
 
 {% set p = product[product.lang] %}

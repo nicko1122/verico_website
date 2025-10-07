@@ -100,7 +100,27 @@ en:
         image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
         url: /en/products/verico-mojo-140w-5-ports-pd-30-gan-charger/
     flash_disk:
-      products: []
+      products:
+      - name: VERICO Phantom 3D NAND SSD
+        description: ''
+        details: ''
+        image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-main.png
+        url: /en/products/verico-phantom-3d-nand-ssd/
+      - name: VERICO Raptor M.2 SATA3 SSD
+        description: ''
+        details: ''
+        image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-main.png
+        url: /en/products/verico-raptor-m2-sata3-ssd/
+      - name: VERICO SPIRIT NVMe M.2 Solid State Drive
+        description: ''
+        details: ''
+        image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-main.png
+        url: /en/products/verico-spirit-nvme-m2-solid-state-drive/
+      - name: VERICO SPIRIT-L NVMe M.2 Solid State Drive
+        description: ''
+        details: ''
+        image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-main.png
+        url: /en/products/verico-spirit-l-nvme-m2-solid-state-drive/
   tabs:
   - id: powerbank
     title: Powerbank Series
@@ -142,7 +162,6 @@ de:
         details: ''
         image: assets/images/product/verico-power-pro-pd-v2-20000mah-power-bank/powerpro-pd-v2-main.png
         url: /de/products/verico-power-pro-pd-v2-20000mah-powerbank/
-      # duplicate English-styled entry removed to avoid duplicate menu items
     loopenergy:
       products:
       - name: LoopEnergy AA2550
@@ -213,7 +232,27 @@ de:
         image: assets/images/product/verico-mojo-140w-5-ports-pd-30-gan-charger/mojo-140w-main.png
         url: /de/products/verico-mojo-140w-5-ports-pd-30-gan-ladegerat/
     flash_disk:
-      products: []
+      products:
+      - name: VERICO Phantom 3D NAND SSD
+        description: ''
+        details: ''
+        image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-main.png
+        url: /de/products/verico-phantom-3d-nand-ssd/
+      - name: VERICO Raptor M.2 SATA3 SSD
+        description: ''
+        details: ''
+        image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-main.png
+        url: /de/products/verico-raptor-m2-sata3-ssd/
+      - name: VERICO SPIRIT NVMe M.2 Solid State Drive
+        description: ''
+        details: ''
+        image: assets/images/product/verico-spirit-nvme-m2-solid-state-drive/Spirit-main.png
+        url: /de/products/verico-spirit-nvme-m2-solid-state-drive/
+      - name: VERICO SPIRIT-L NVMe M.2 Solid State Drive
+        description: ''
+        details: ''
+        image: assets/images/product/verico-spirit-l-nvme-m2-solid-state-drive/Spirit-L-main.png
+        url: /de/products/verico-spirit-l-nvme-m2-solid-state-drive/
   tabs:
   - id: powerbank
     title: Powerbank Serie

@@ -1,0 +1,250 @@
+en:
+  name: VERICO Raptor M.2 SATA3 SSD
+  category: flash_disk
+  description: Welcome to the Fast World! The VERICO Raptor M.2 2280 SATA3 SSD delivers
+    amazing read/write speeds with SATA3 6Gb/s interface and Turbo-Boost SLC Cache
+    technology. Experience a whole different computer performance that you will never
+    want to go back from.
+  catalog_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-main.png
+  hero_background: assets/images/global/ssd-hero.jpg
+  images:
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-1.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-2.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-3.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-4.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-5.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-6.png
+  features:
+  - 'Ultra-fast performance: up to 550MB/s read, 500MB/s write speeds'
+  - Turbo-Boost SLC Cache technology for enhanced work efficiency
+  - M.2 2280 form factor for modern devices
+  - SATA III 6Gb/s interface for maximum compatibility
+  - Compact 80 x 22 x 3.8mm design
+  - Multiple capacity options from 128GB to 2TB
+  - Compatible with Windows 7-10, Vista, and Linux
+  specs:
+  - name: Interface
+    value: SATA III 6Gb/s
+  - name: Form Factor
+    value: M.2 2280
+  - name: Dimensions
+    value: 80 x 22 x 3.8 mm
+  - name: Voltage
+    value: DC 3.3V
+  - name: Capacities
+    value: 128GB, 256GB, 512GB, 1TB, 2TB
+  - name: Read Speed
+    value: Up to 550MB/s (all capacities)
+  - name: Write Speed
+    value: Up to 500MB/s (256GB/512GB/1TB/2TB), 450MB/s (128GB)
+  - name: OS Support
+    value: Windows 7-10, Windows Vista, Linux 2.6.33 or newer
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Welcome to the Fast World
+    subtitle: Experience a whole different computer performance with amazing read/write
+      speeds and SATA3 6Gb/s interface.
+    items:
+    - title: Welcome to the Fast World
+      description: Experience a whole different computer performance with amazing
+        read/write speeds and SATA3 6Gb/s interface.
+      benefits:
+      - Up to 550MB/s read speed (all capacities)
+      - Up to 500MB/s write speed (256GB/512GB/1TB/2TB), 450MB/s (128GB)
+      - High-speed SATA III 6Gb/s interface
+      image: assets/images/product/verico-raptor-m2-sata3-ssd/feature-1.png
+      image_alt: Welcome to the Fast World
+    - title: Turbo-Boost SLC Cache Technology
+      description: Integrated SLC Cache technology turbo-boosts all data input, enhancing
+        your work efficiency.
+      benefits:
+      - Accelerated data processing
+      - Enhanced work efficiency
+      - Consistent high performance
+      image: assets/images/product/verico-raptor-m2-sata3-ssd/feature-2.png
+      image_alt: Turbo-Boost SLC Cache Technology
+    - title: Modern M.2 Form Factor
+      description: Compact M.2 2280 design perfect for modern laptops, desktops, and
+        mini PCs.
+      benefits:
+      - Compact 80 x 22 x 3.8mm design
+      - Perfect for modern devices
+      - Easy installation
+      - Space-saving solution
+      image: assets/images/product/verico-raptor-m2-sata3-ssd/feature-3.png
+      image_alt: Modern M.2 Form Factor
+  compatibility:
+    title: Device Compatibility
+    subtitle: Compatible with devices supporting M.2 SATA SSD storage.
+    categories:
+    - name: Desktop computers
+      details: ''
+      icon: assets/images/icons/icon-desktop.svg
+    - name: Laptops & Ultrabooks
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Mini PCs & NUCs
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Gaming systems
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+  package_contents:
+    title: Package Content
+    subtitle: What's in the box
+    items:
+    - name: 1 × VERICO Raptor M.2 SATA3 SSD
+      details: ''
+      icon: assets/images/product/verico-raptor-m2-sata3-ssd/Product-1.png
+  variants:
+  - title: VERICO Raptor 128GB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-128.png
+    model_name: Raptor M.2 2280 SATA III 128GB
+    sku: 1SSOR-SSM2Q3-NN
+    ean: '4713095608377'
+  - title: VERICO Raptor 256GB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-256.png
+    model_name: Raptor M.2 2280 SATA III 256GB
+    sku: 1SSOR-SSM2K3-NN
+    ean: '4713095608384'
+  - title: VERICO Raptor 512GB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-512.png
+    model_name: Raptor M.2 2280 SATA III 512GB
+    sku: 1SSOR-SSM2M3-NN
+    ean: '4713095608391'
+  - title: VERICO Raptor 1TB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-1TB.png
+    model_name: Raptor M.2 2280 SATA III 1TB
+    sku: 1SSOR-SSM2O3-NN
+    ean: '4713095608407'
+  - title: VERICO Raptor 2TB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-2TB.png
+    model_name: Raptor M.2 2280 SATA III 2TB
+    sku: 1SSOR-SSM2H3-NN
+    ean: '4713095608414'
+de:
+  name: VERICO Raptor M.2 SATA3 SSD
+  category: flash_disk
+  description: Willkommen in der schnellen Welt! Die VERICO Raptor M.2 2280 SATA3
+    SSD bietet erstaunliche Lese-/Schreibgeschwindigkeiten mit SATA3 6Gb/s Schnittstelle
+    und Turbo-Boost SLC Cache-Technologie. Erleben Sie eine ganz andere Computerleistung,
+    von der Sie nie wieder zurück wollen.
+  catalog_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-main.png
+  hero_background: assets/images/global/ssd-hero.jpg
+  images:
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-1.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-2.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-3.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-4.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-5.png
+  - assets/images/product/verico-raptor-m2-sata3-ssd/Product-6.png
+  features:
+  - 'Ultraschnelle Leistung: bis zu 550MB/s Lesegeschwindigkeit, 500MB/s Schreibgeschwindigkeit'
+  - Turbo-Boost SLC Cache-Technologie für verbesserte Arbeitseffizienz
+  - M.2 2280 Formfaktor für moderne Geräte
+  - SATA III 6Gb/s Schnittstelle für maximale Kompatibilität
+  - Kompaktes Design 80 x 22 x 3,8 mm
+  - Mehrere Kapazitätsoptionen von 128GB bis 2TB
+  - Kompatibel mit Windows 7-10, Vista und Linux
+  specs:
+  - name: Schnittstelle
+    value: SATA III 6Gb/s
+  - name: Formfaktor
+    value: M.2 2280
+  - name: Abmessungen
+    value: 80 x 22 x 3,8 mm
+  - name: Spannung
+    value: DC 3,3V
+  - name: Kapazitäten
+    value: 128GB, 256GB, 512GB, 1TB, 2TB
+  - name: Lesegeschwindigkeit
+    value: Bis zu 550MB/s (alle Kapazitäten)
+  - name: Schreibgeschwindigkeit
+    value: Bis zu 500MB/s (256GB/512GB/1TB/2TB), 450MB/s (128GB)
+  - name: Betriebssystem-Unterstützung
+    value: Windows 7-10, Windows Vista, Linux 2.6.33 oder neuer
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Willkommen in der schnellen Welt
+    subtitle: Erleben Sie eine ganz andere Computerleistung mit erstaunlichen Lese-/Schreibgeschwindigkeiten
+      und SATA3 6Gb/s Schnittstelle.
+    items:
+    - title: Willkommen in der schnellen Welt
+      description: Erleben Sie eine ganz andere Computerleistung mit erstaunlichen
+        Lese-/Schreibgeschwindigkeiten und SATA3 6Gb/s Schnittstelle.
+      benefits:
+      - Bis zu 550MB/s Lesegeschwindigkeit (alle Kapazitäten)
+      - Bis zu 500MB/s Schreibgeschwindigkeit (256GB/512GB/1TB/2TB), 450MB/s (128GB)
+      - Hochgeschwindigkeits-SATA III 6Gb/s Schnittstelle
+      image: assets/images/product/verico-raptor-m2-sata3-ssd/feature-1.png
+      image_alt: Willkommen in der schnellen Welt
+    - title: Turbo-Boost SLC Cache-Technologie
+      description: Integrierte SLC Cache-Technologie beschleunigt alle Dateneingaben
+        und verbessert Ihre Arbeitseffizienz.
+      benefits:
+      - Beschleunigte Datenverarbeitung
+      - Verbesserte Arbeitseffizienz
+      - Konstant hohe Leistung
+      image: assets/images/product/verico-raptor-m2-sata3-ssd/feature-2.png
+      image_alt: Turbo-Boost SLC Cache-Technologie
+    - title: Moderner M.2 Formfaktor
+      description: Kompaktes M.2 2280 Design, perfekt für moderne Laptops, Desktops
+        und Mini-PCs.
+      benefits:
+      - Kompaktes Design 80 x 22 x 3,8 mm
+      - Perfekt für moderne Geräte
+      - Einfache Installation
+      - Platzsparende Lösung
+      image: assets/images/product/verico-raptor-m2-sata3-ssd/feature-3.png
+      image_alt: Moderner M.2 Formfaktor
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Kompatibel mit Geräten, die M.2 SATA SSD-Speicher unterstützen.
+    categories:
+    - name: Desktop-Computer
+      details: ''
+      icon: assets/images/icons/icon-desktop.svg
+    - name: Laptops & Ultrabooks
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Mini-PCs & NUCs
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Gaming-Systeme
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: Inhalt der Verpackung
+    items:
+    - name: 1 × VERICO Raptor M.2 SATA3 SSD
+      details: ''
+      icon: assets/images/product/verico-raptor-m2-sata3-ssd/Product-1.png
+  variants:
+  - title: VERICO Raptor 128GB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-128.png
+    model_name: Raptor M.2 2280 SATA III 128GB
+    sku: 1SSOR-SSM2Q3-NN
+    ean: '4713095608377'
+  - title: VERICO Raptor 256GB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-256.png
+    model_name: Raptor M.2 2280 SATA III 256GB
+    sku: 1SSOR-SSM2K3-NN
+    ean: '4713095608384'
+  - title: VERICO Raptor 512GB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-512.png
+    model_name: Raptor M.2 2280 SATA III 512GB
+    sku: 1SSOR-SSM2M3-NN
+    ean: '4713095608391'
+  - title: VERICO Raptor 1TB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-1TB.png
+    model_name: Raptor M.2 2280 SATA III 1TB
+    sku: 1SSOR-SSM2O3-NN
+    ean: '4713095608407'
+  - title: VERICO Raptor 2TB
+    package_image: assets/images/product/verico-raptor-m2-sata3-ssd/Raptor-2TB.png
+    model_name: Raptor M.2 2280 SATA III 2TB
+    sku: 1SSOR-SSM2H3-NN
+    ean: '4713095608414'

@@ -137,12 +137,16 @@ def delete_products(yaml_files: List[str]) -> Dict[str, Any]:
             for lang in ['en', 'de']:
                 if lang in catalog and 'categories' in catalog[lang]:
                     cats = catalog[lang]['categories']
+                    # Skip 'tabs' as it's a list, not a product category
                     for group_key, group in list(cats.items()):
-                        prods = group.get('products', []) or []
-                        target_slug = friendly_en if lang == 'en' else friendly_de
-                        url = f"/{lang}/products/{target_slug}/"
-                        new_list = [p for p in prods if p.get('url') != url]
-                        group['products'] = new_list
+                        if group_key == 'tabs':
+                            continue
+                        if isinstance(group, dict) and 'products' in group:
+                            prods = group.get('products', []) or []
+                            target_slug = friendly_en if lang == 'en' else friendly_de
+                            url = f"/{lang}/products/{target_slug}/"
+                            new_list = [p for p in prods if p.get('url') != url]
+                            group['products'] = new_list
 
             # remove YAML file
             if os.path.exists(path):

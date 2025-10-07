@@ -1,0 +1,274 @@
+en:
+  name: VERICO Phantom 3D NAND SSD
+  category: flash_disk
+  description: The VERICO Phantom 3D NAND SSD delivers ultra-fast performance with
+    up to 550MB/s read speeds and 500MB/s write speeds. Featuring SLC Cache technology,
+    advanced data protection, and a slim 7mm form factor for seamless upgrades across
+    desktops, laptops, and gaming consoles.
+  catalog_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-main.png
+  hero_background: assets/images/global/ssd-hero.jpg
+  images:
+  - assets/images/product/verico-phantom-3d-nand-ssd/Product-1.png
+  - assets/images/product/verico-phantom-3d-nand-ssd/Product-2.png
+  features:
+  - 'Ultra-fast performance: up to 550MB/s read, 500MB/s write speeds'
+  - Turbo-Boost SLC Cache technology for consistent high speeds
+  - '100% solid-state design: shock- and vibration-proof'
+  - Advanced data protection with TRIM, ECC, RAID capability, and S.M.A.R.T. monitoring
+  - Premium 3D NAND Flash with high-quality controller
+  - Slim 7mm ultra-thin form factor for broad compatibility
+  - 3-year warranty with rigorous quality testing
+  specs:
+  - name: Interface
+    value: SATA3 6Gb/s (backward compatible with SATA II)
+  - name: Form Factor
+    value: 2.5", 7mm ultra-thin
+  - name: Dimensions
+    value: 69 x 100.2 x 7 mm
+  - name: Weight
+    value: 77g
+  - name: Capacities
+    value: 120GB, 240GB, 480GB, 960GB, 2TB
+  - name: Read Speed
+    value: Up to 550MB/s (all capacities)
+  - name: Write Speed
+    value: Up to 500MB/s (240GB/480GB/960GB/2TB), 430MB/s (120GB)
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Detailed Features
+    subtitle: ''
+    items:
+    - title: Ultra-Fast Performance
+      description: Delivers exceptional read and write speeds for rapid data access
+        and transfer.
+      benefits:
+      - Up to 550MB/s read speed (all capacities)
+      - Up to 500MB/s write speed (240GB/480GB/960GB/2TB), 430MB/s (120GB)
+      - High-speed SATA3 6Gb/s interface
+      image: assets/images/product/verico-phantom-3d-nand-ssd/feature-1.png
+      image_alt: Ultra-Fast Performance
+    - title: Advanced Data Protection
+      description: Advanced protection features ensure data integrity and device safety.
+      benefits:
+      - '100% solid-state design: shock- and vibration-proof, no moving parts'
+      - 'Advanced data protection: TRIM command, ECC, RAID capability, and S.M.A.R.T.
+        monitoring'
+      image: assets/images/product/verico-phantom-3d-nand-ssd/feature-2.png
+      image_alt: Advanced Data Protection
+    - title: Broad Compatibility
+      description: Slim design fits most devices for easy installation and instant
+        performance boost.
+      benefits:
+      - Slim 7mm ultra-thin form factor
+      - Compatible with most desktops, laptops (including Ultrabooks)
+      - PlayStation 4/4 Pro compatible (240GB and above)
+      - Simple installation process
+      image: assets/images/product/verico-phantom-3d-nand-ssd/feature-3.png
+      image_alt: Broad Compatibility
+  compatibility:
+    title: Device Compatibility
+    subtitle: Compatible with most devices requiring 2.5" SATA SSD storage.
+    categories:
+    - name: Desktop computers
+      details: ''
+      icon: assets/images/icons/icon-desktop.svg
+    - name: Laptops & Ultrabooks
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Gaming consoles (PS4/PS4 Pro)
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+    - name: External storage enclosures
+      details: ''
+      icon: assets/images/icons/icon-storage.svg
+  package_contents:
+    title: Package Content
+    subtitle: What's in the box
+    items:
+    - name: 1 × VERICO Phantom 3D NAND SSD
+      details: ''
+      icon: assets/images/product/verico-phantom-3d-nand-ssd/Product-1.png
+  variants:
+  - title: VERICO Phantom 120GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-120.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 120GB/Black/Retail
+    sku: 1SSOP-SSBKI3-NN
+    ean: '4713095605390'
+  - title: VERICO Phantom 128GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-128.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 128GB/Black/Retail
+    sku: 1SSOP-SSBKQ3-NN
+    ean: '4713095609046'
+  - title: VERICO Phantom 240GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-240.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 240GB/Black/Retail
+    sku: 1SSOP-SSBKJ3-NN
+    ean: '4713095605406'
+  - title: VERICO Phantom 256GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-256.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 256GB/Black/Retail
+    sku: 1SSOP-SSBKK3-NN
+    ean: '4713095609053'
+  - title: VERICO Phantom 480GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-480.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 480GB/Black/Retail
+    sku: 1SSOP-SSBKL3-NN
+    ean: '4713095605413'
+  - title: VERICO Phantom 512GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-512.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 512GB/Black/Retail
+    sku: 1SSOP-SSBKM3-NN
+    ean: '4713095609060'
+  - title: VERICO Phantom 960GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-960.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 960GB/Black/Retail
+    sku: 1SSOP-SSBKN3-NN
+    ean: '4713095605437'
+  - title: VERICO Phantom 1TB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-1TB.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 1TB/Retail
+    sku: 1SSOP-SSBKO3-NN
+    ean: '4713095609268'
+  - title: VERICO Phantom 2TB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-2TB.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 2TB/Black/Retail
+    sku: 1SSOP-SSBKP3-NN
+    ean: '4713095605444'
+de:
+  name: VERICO Phantom 3D NAND SSD
+  category: flash_disk
+  description: Die VERICO Phantom 3D NAND SSD bietet ultraschnelle Leistung mit bis
+    zu 550MB/s Lesegeschwindigkeit und 500MB/s Schreibgeschwindigkeit. Ausgestattet
+    mit SLC-Cache-Technologie, fortschrittlichem Datenschutz und einem schlanken 7mm
+    Formfaktor für nahtlose Upgrades bei Desktops, Laptops und Spielkonsolen.
+  catalog_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-main.png
+  hero_background: assets/images/global/ssd-hero.jpg
+  images:
+  - assets/images/product/verico-phantom-3d-nand-ssd/Product-1.png
+  - assets/images/product/verico-phantom-3d-nand-ssd/Product-2.png
+  features:
+  - 'Ultraschnelle Leistung: bis zu 550MB/s lesen, 500MB/s schreiben'
+  - Turbo-Boost SLC-Cache-Technologie für konstant hohe Geschwindigkeiten
+  - '100% Solid-State-Design: stoß- und vibrationsfest'
+  - Fortschrittlicher Datenschutz mit TRIM, ECC, RAID-Fähigkeit und S.M.A.R.T.-Überwachung
+  - Premium 3D NAND Flash mit hochwertigem Controller
+  - Schlanker 7mm ultradünner Formfaktor für breite Kompatibilität
+  - 3 Jahre Garantie mit strengen Qualitätstests
+  specs:
+  - name: Schnittstelle
+    value: SATA3 6Gb/s (abwärtskompatibel mit SATA II)
+  - name: Formfaktor
+    value: 2,5", 7mm ultradünn
+  - name: Abmessungen
+    value: 69 x 100,2 x 7 mm
+  - name: Gewicht
+    value: 77g
+  - name: Kapazitäten
+    value: 120GB, 240GB, 480GB, 960GB, 2TB
+  - name: Lesegeschwindigkeit
+    value: Bis zu 550MB/s (alle Kapazitäten)
+  - name: Schreibgeschwindigkeit
+    value: Bis zu 500MB/s (240GB/480GB/960GB/2TB), 430MB/s (120GB)
+  badge: premium
+  featured_rank: 1
+  detailed_features:
+    title: Detaillierte Funktionen
+    subtitle: ''
+    items:
+    - title: Ultraschnelle Leistung
+      description: Bietet außergewöhnliche Lese- und Schreibgeschwindigkeiten für
+        schnellen Datenzugriff und -transfer.
+      benefits:
+      - Bis zu 550MB/s Lesegeschwindigkeit (alle Kapazitäten)
+      - Bis zu 500MB/s Schreibgeschwindigkeit (240GB/480GB/960GB/2TB), 430MB/s (120GB)
+      - Hochgeschwindigkeits-SATA3 6Gb/s Schnittstelle
+      image: assets/images/product/verico-phantom-3d-nand-ssd/feature-1.png
+      image_alt: Ultraschnelle Leistung
+    - title: Fortschrittlicher Datenschutz
+      description: Fortschrittliche Schutzfunktionen gewährleisten Datenintegrität
+        und Gerätesicherheit.
+      benefits:
+      - '100% Solid-State-Design: stoß- und vibrationsfest, keine beweglichen Teile'
+      - 'Fortschrittlicher Datenschutz: TRIM-Befehl, ECC, RAID-Fähigkeit und S.M.A.R.T.-Überwachung'
+      image: assets/images/product/verico-phantom-3d-nand-ssd/feature-2.png
+      image_alt: Fortschrittlicher Datenschutz
+    - title: Breite Kompatibilität
+      description: Schlankes Design passt in die meisten Geräte für einfache Installation
+        und sofortigen Leistungsschub.
+      benefits:
+      - Schlanker 7mm ultradünner Formfaktor
+      - Kompatibel mit den meisten Desktops, Laptops (einschließlich Ultrabooks)
+      - PlayStation 4/4 Pro kompatibel (ab 240GB)
+      - Einfacher Installationsprozess
+      image: assets/images/product/verico-phantom-3d-nand-ssd/feature-3.png
+      image_alt: Breite Kompatibilität
+  compatibility:
+    title: Gerätekompatibilität
+    subtitle: Kompatibel mit den meisten Geräten, die 2,5" SATA SSD-Speicher benötigen.
+    categories:
+    - name: Desktop-Computer
+      details: ''
+      icon: assets/images/icons/icon-desktop.svg
+    - name: Laptops & Ultrabooks
+      details: ''
+      icon: assets/images/icons/icon-laptop.svg
+    - name: Spielkonsolen (PS4/PS4 Pro)
+      details: ''
+      icon: assets/images/icons/icon-gamepads.svg
+    - name: Externe Speichergehäuse
+      details: ''
+      icon: assets/images/icons/icon-storage.svg
+  package_contents:
+    title: Lieferumfang
+    subtitle: Inhalt der Verpackung
+    items:
+    - name: 1 × VERICO Phantom 3D NAND SSD
+      details: ''
+      icon: assets/images/product/verico-phantom-3d-nand-ssd/Product-1.png
+  variants:
+  - title: VERICO Phantom 120GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-120.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 120GB/Black/Retail
+    sku: 1SSOP-SSBKI3-NN
+    ean: '4713095605390'
+  - title: VERICO Phantom 128GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-128.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 128GB/Black/Retail
+    sku: 1SSOP-SSBKQ3-NN
+    ean: '4713095609046'
+  - title: VERICO Phantom 240GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-240.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 240GB/Black/Retail
+    sku: 1SSOP-SSBKJ3-NN
+    ean: '4713095605406'
+  - title: VERICO Phantom 256GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-256.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 256GB/Black/Retail
+    sku: 1SSOP-SSBKK3-NN
+    ean: '4713095609053'
+  - title: VERICO Phantom 480GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-480.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 480GB/Black/Retail
+    sku: 1SSOP-SSBKL3-NN
+    ean: '4713095605413'
+  - title: VERICO Phantom 512GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-512.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 512GB/Black/Retail
+    sku: 1SSOP-SSBKM3-NN
+    ean: '4713095609060'
+  - title: VERICO Phantom 960GB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-960.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 960GB/Black/Retail
+    sku: 1SSOP-SSBKN3-NN
+    ean: '4713095605437'
+  - title: VERICO Phantom 1TB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-1TB.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 1TB/Retail
+    sku: 1SSOP-SSBKO3-NN
+    ean: '4713095609268'
+  - title: VERICO Phantom 2TB
+    package_image: assets/images/product/verico-phantom-3d-nand-ssd/Phantom-2TB.png
+    model_name: Solid State Drive/Verico Phantom Series/SATA III 6Gb/s 2TB/Black/Retail
+    sku: 1SSOP-SSBKP3-NN
+    ean: '4713095605444'
