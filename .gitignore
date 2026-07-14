@@ -95,3 +95,6 @@ __pycache__/
 
 # Temp
 temp/
+
+# Product manager runtime
+product-manager/inbox/
