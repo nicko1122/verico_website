@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class="text-2xl font-bold mb-1">Setup(首次設定)</h1>
+  <p class="text-sm text-gray-500 mb-4">填入的值寫進 repo 根目錄 <code>.env</code>(已被 .gitignore 排除,不進版控)。已設定的密鑰不會回顯;留空 = 保留現值。</p>
+
+  <form id="envForm" class="bg-white p-5 rounded-xl border space-y-4 max-w-2xl">
+    <div>
+      <h2 class="font-semibold mb-2">LLM(產品解析/翻譯)</h2>
+      <label class="block text-sm mb-1">OPENAI_API_KEY <span id="st-OPENAI_API_KEY" class="text-xs"></span></label>
+      <input name="OPENAI_API_KEY" type="password" autocomplete="off" placeholder="sk-…" class="w-full border rounded-lg px-3 py-2 text-sm" />
+    </div>
+    <hr/>
+    <div class="space-y-3">
+      <h2 class="font-semibold">FTP 部署</h2>
+      <div>
+        <label class="block text-sm mb-1">FTP_HOST <span id="st-FTP_HOST" class="text-xs"></span></label>
+        <input name="FTP_HOST" type="text" autocomplete="off" placeholder="ftp.example.com" class="w-full border rounded-lg px-3 py-2 text-sm" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">FTP_USER <span id="st-FTP_USER" class="text-xs"></span></label>
+        <input name="FTP_USER" type="text" autocomplete="off" placeholder="user@example.com" class="w-full border rounded-lg px-3 py-2 text-sm" />
+      </div>
+      <div>
+        <label class="block text-sm mb-1">FTP_PASS <span id="st-FTP_PASS" class="text-xs"></span></label>
+        <input name="FTP_PASS" type="password" autocomplete="off" class="w-full border rounded-lg px-3 py-2 text-sm" />
+      </div>
+      <details class="text-sm">
+        <summary class="cursor-pointer text-gray-600">進階(選填)</summary>
+        <div class="mt-3 space-y-3">
+          <div>
+            <label class="block text-sm mb-1">FTP_REMOTE_DIR(遠端根目錄,預設 /)<span id="st-FTP_REMOTE_DIR" class="text-xs"></span></label>
+            <input name="FTP_REMOTE_DIR" type="text" autocomplete="off" placeholder="/" class="w-full border rounded-lg px-3 py-2 text-sm" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1">UPLOAD_PARALLEL(增量上傳並行數,預設 8)<span id="st-UPLOAD_PARALLEL" class="text-xs"></span></label>
+            <input name="UPLOAD_PARALLEL" type="text" autocomplete="off" placeholder="8" class="w-full border rounded-lg px-3 py-2 text-sm" />
+          </div>
+        </div>
+      </details>
+    </div>
+    <div class="flex items-center gap-3">
+      <button type="submit" class="px-4 py-2 bg-black text-white rounded-lg">儲存到 .env</button>
+      <span id="msg" class="text-sm"></span>
+    </div>
+  </form>
+{% endblock %}
+{% block scripts %}
+<script>
+async function loadEnv(){
+  const j = await (await fetch('/api/env')).json();
+  const keys = j.keys || {};
+  for(const k of Object.keys(keys)){
+    const st = document.getElementById('st-'+k);
+    if(!st) continue;
+    if(keys[k].set){
+      st.innerHTML = '<span class="text-green-600">已設定</span>';
+      const input = document.querySelector(`[name="${k}"]`);
+      if(input && keys[k].value !== undefined) input.value = keys[k].value;
+      if(input && keys[k].value === undefined) input.placeholder = '(已設定,留空保留)';
+    } else {
+      st.innerHTML = '<span class="text-red-600">未設定</span>';
+    }
+  }
+}
+document.getElementById('envForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const msg = document.getElementById('msg');
+  const body = {};
+  for(const el of e.target.querySelectorAll('input[name]')){
+    if(el.value.trim()) body[el.name] = el.value.trim();
+  }
+  if(Object.keys(body).length===0){ msg.textContent='沒有填任何欄位'; return; }
+  msg.textContent = '儲存中…';
+  const r = await fetch('/api/env', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+  const j = await r.json();
+  if(j.ok){
+    msg.innerHTML = '<span class="text-green-600">已儲存:'+j.updated.join(', ')+'</span>';
+    e.target.querySelectorAll('input[type=password]').forEach(i=>i.value='');
+    loadEnv();
+  } else {
+    msg.innerHTML = '<span class="text-red-600">錯誤:'+j.error+'</span>';
+  }
+});
+loadEnv();
+</script>
+{% endblock %}

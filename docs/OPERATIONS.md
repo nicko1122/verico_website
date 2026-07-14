@@ -41,11 +41,14 @@ cd verico
 npm install
 ```
 
-環境設定(LLM 金鑰 + FTP 部署帳密,單一 `.env` 管理):
+環境設定(LLM 金鑰 + FTP 部署帳密,單一 `.env` 管理)有兩種方式:
 
+**方式 A(推薦):後台 Setup 精靈** —— `./admin.sh` 起後台 → http://localhost:5012/setup 用表單填,自動寫入 `.env`。Dashboard 會顯示還缺哪些工具/設定。
+
+**方式 B:手動**
 ```bash
 cp .env.example .env
-# 然後編輯 .env 填入 OPENAI_API_KEY 與 FTP_HOST / FTP_USER / FTP_PASS
+# 編輯 .env 填入 OPENAI_API_KEY 與 FTP_HOST / FTP_USER / FTP_PASS
 ```
 
 `.env` 已被 `.gitignore` 排除,不會進版控。
@@ -54,17 +57,23 @@ cp .env.example .env
 
 ## 2. 日常操作速查表
 
+**只要記一條:`./admin.sh`** → http://localhost:5012/ 。後台整合了 Setup(填 .env)、產品管理、Build、Preview、Deploy(dry-run + 實傳),Dashboard 會自檢環境。
+
+CLI 對應(後台按鈕背後就是這些,終端機派也可直接用):
+
 | 想做什麼 | 指令 | 結果 |
 |----------|------|------|
+| **統一後台** | `./admin.sh` | http://localhost:5012/(Dashboard/Setup/Products/Build & Deploy) |
 | 本地預覽 | `npm start` | http://localhost:8080/ (自動 rebuild) |
 | 建置 | `npm run build` | 輸出到 `_site/` |
 | 清掉重建 | `npm run rebuild` | 清 `_site` 後重建 |
-| 產品後台(上傳/列表/下架) | `cd product-manager && ./start_server.sh` | http://localhost:5012/ |
-| 只要上傳產生器 | `cd product-generator-v2 && ./start_server.sh` | http://localhost:5011/ |
 | **增量部署**(推薦) | `./upload_checksum_manifest.sh` | 比對 sha1 只傳差異;`--dry-run` 先看會傳什麼 |
 | 全量部署 | `./upload_to_ftp.sh` | lftp 整包上傳 `_site/` |
+| 只要上傳產生器 | `cd product-generator-v2 && ./start_server.sh` | http://localhost:5011/(通常用不到,後台已含) |
 
-**建議完整流程**:上傳產品 ZIP → `npm start` 本地確認 → `git add/commit/push` → `npm run build` → `./upload_checksum_manifest.sh`
+在遠端機器(如 core)跑後台時:本機 `ssh -L 5012:localhost:5012 core` 再開瀏覽器(後台預設只綁 127.0.0.1;內網直連可用 `ADMIN_HOST=0.0.0.0 ./admin.sh`,自行留意風險)。
+
+**建議完整流程**:上傳產品 ZIP → Preview 確認 → `git add/commit/push`(Dashboard 會提醒未提交)→ Build → Deploy dry-run → Deploy
 
 > ⚠️ 產生器/後台會**直接改動 `src/`**(YAML+圖片),做完記得 commit + push,不然只存在那台機器上。
 
@@ -79,9 +88,9 @@ cp .env.example .env
    ├─ product.md      ← 英文產品資料(格式見 docs/Product-Generator-V2.md)
    └─ images/         ← 圖片(png/jpg/svg 皆可)
    ```
-2. 起後台:`cd product-manager && ./start_server.sh` → 開 http://localhost:5012/
+2. 起後台:`./admin.sh` → 開 http://localhost:5012/products
 3. 上傳 ZIP → 自動解析、翻譯德文、產 YAML、複製圖片、更新目錄
-4. 本地預覽確認 → commit → build → 部署
+4. Preview 確認 → commit → Build → Deploy(都在後台 Build & Deploy 頁)
 
 ### 3.2 更新產品
 **同名 ZIP 再上傳一次即覆寫**(以 ZIP 檔名對應 YAML 檔名)。

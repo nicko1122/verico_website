@@ -16,10 +16,10 @@ npm start        # 開發模式 → http://localhost:8080/(根頁自動跳轉 /e
 npm run build    # 建置 → _site/
 ```
 
-產品後台(上傳 ZIP 自動產生產品頁,需 `OPENAI_API_KEY` 於 `.env`):
+統一後台(Setup 精靈填 `.env`、產品管理、Build、Preview、Deploy 一站式):
 
 ```bash
-cd product-manager && ./start_server.sh   # → http://localhost:5012/
+./admin.sh   # → http://localhost:5012/
 ```
 
 ## 目錄結構(精簡)

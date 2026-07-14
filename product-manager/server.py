@@ -16,7 +16,9 @@ GEN_V2_DIR = os.path.join(BASE_DIR, 'product-generator-v2')
 if GEN_V2_DIR not in sys.path:
     sys.path.insert(0, GEN_V2_DIR)
 
-from processor_v2 import process_zip_v2  # type: ignore
+# NOTE: processor_v2 builds an OpenAI client at import time and dies without
+# OPENAI_API_KEY, so it is imported lazily inside upload() — this lets the
+# admin (and its Setup wizard) boot before any key exists.
 
 
 PROJECT_ROOT = BASE_DIR
@@ -29,6 +31,9 @@ BACKUP_DIR = os.path.join(os.path.dirname(__file__), 'backups')
 
 
 app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
+
+from ops import ops as ops_blueprint  # noqa: E402
+app.register_blueprint(ops_blueprint)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -164,7 +169,22 @@ def delete_products(yaml_files: List[str]) -> Dict[str, Any]:
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('dashboard.html', active='dashboard')
+
+
+@app.route('/setup')
+def setup_page():
+    return render_template('setup.html', active='setup')
+
+
+@app.route('/products')
+def products_page():
+    return render_template('products.html', active='products')
+
+
+@app.route('/ops')
+def ops_page():
+    return render_template('ops.html', active='ops')
 
 
 @app.route('/api/list')
@@ -210,8 +230,11 @@ def upload():
     backup_path = os.path.join(BACKUP_DIR, filename)
     shutil.copy2(zip_path, backup_path)
 
-    # process via existing V2
+    # process via existing V2 (lazy import: needs OPENAI_API_KEY, may be set
+    # via the Setup wizard after this server started — load_dotenv() inside
+    # processor_v2 picks up the fresh .env)
     try:
+        from processor_v2 import process_zip_v2  # type: ignore
         url = process_zip_v2(zip_path)
         return jsonify({ 'ok': True, 'product_url': url })
     except Exception as e:
@@ -221,6 +244,8 @@ def upload():
 
 if __name__ == '__main__':
     ensure_dirs()
-    app.run(host='0.0.0.0', port=5012, debug=False)
+    host = os.environ.get('ADMIN_HOST', '127.0.0.1')
+    port = int(os.environ.get('ADMIN_PORT', '5012'))
+    app.run(host=host, port=port, debug=False)
 
 

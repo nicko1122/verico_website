@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class="text-2xl font-bold mb-4">Build &amp; Deploy</h1>
+
+  <div class="grid md:grid-cols-3 gap-4 mb-4">
+    <section class="bg-white p-4 rounded-xl border">
+      <h2 class="font-semibold mb-2">1. 依賴</h2>
+      <p class="text-xs text-gray-500 mb-3">第一次使用或 package.json 變動後執行。</p>
+      <button data-run="install" class="runbtn px-4 py-2 bg-slate-700 text-white rounded-lg text-sm">npm install</button>
+    </section>
+    <section class="bg-white p-4 rounded-xl border">
+      <h2 class="font-semibold mb-2">2. 建置與預覽</h2>
+      <p class="text-xs text-gray-500 mb-3">build 輸出到 _site/;preview 為即時預覽(自動 rebuild)。</p>
+      <div class="flex flex-wrap gap-2">
+        <button data-run="build" class="runbtn px-4 py-2 bg-black text-white rounded-lg text-sm">Build</button>
+        <button id="pvBtn" class="px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm">Preview 啟動</button>
+        <a id="pvLink" href="#" target="_blank" class="hidden px-4 py-2 border rounded-lg text-sm text-emerald-700">開啟預覽 ↗</a>
+      </div>
+    </section>
+    <section class="bg-white p-4 rounded-xl border">
+      <h2 class="font-semibold mb-2">3. 部署(FTP)</h2>
+      <p class="text-xs text-gray-500 mb-3">先 Dry-run 看差異,確認後再實傳。需先完成 Build 與 Setup。</p>
+      <div class="flex flex-wrap gap-2">
+        <button data-run="deploy_dry" class="runbtn px-4 py-2 bg-amber-600 text-white rounded-lg text-sm">Dry-run(只列差異)</button>
+        <button id="deployBtn" class="px-4 py-2 bg-red-600 text-white rounded-lg text-sm">部署(增量)</button>
+        <button id="deployFullBtn" class="px-4 py-2 border border-red-300 text-red-700 rounded-lg text-sm">全量部署</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="bg-white rounded-xl border">
+    <div class="px-4 py-3 border-b flex items-center justify-between">
+      <h2 class="font-semibold">執行紀錄 <span id="jobName" class="text-sm text-gray-500 font-normal"></span></h2>
+      <span id="jobStatus" class="text-sm text-gray-400">idle</span>
+    </div>
+    <pre id="log" class="p-4 text-xs bg-slate-950 text-slate-200 rounded-b-xl overflow-x-auto min-h-[16rem] max-h-[32rem] overflow-y-auto whitespace-pre-wrap"></pre>
+  </section>
+{% endblock %}
+{% block scripts %}
+<script>
+let polling = null;
+const logEl = document.getElementById('log');
+const stEl = document.getElementById('jobStatus');
+const nmEl = document.getElementById('jobName');
+
+function setStatus(s){
+  stEl.textContent = s;
+  stEl.className = 'text-sm ' + (s==='running' ? 'text-amber-600' : s==='done' ? 'text-green-600' : s==='failed' ? 'text-red-600' : 'text-gray-400');
+}
+async function poll(){
+  const j = await (await fetch('/api/job')).json();
+  nmEl.textContent = j.name ? '— ' + j.name : '';
+  setStatus(j.status);
+  logEl.textContent = j.log || '';
+  logEl.scrollTop = logEl.scrollHeight;
+  if(j.status !== 'running' && polling){ clearInterval(polling); polling = null; }
+}
+async function run(action){
+  const r = await fetch('/api/run/'+action, {method:'POST'});
+  const j = await r.json();
+  if(!j.ok){ alert(j.error || '啟動失敗'); return; }
+  logEl.textContent = '';
+  if(!polling) polling = setInterval(poll, 1000);
+  poll();
+}
+document.querySelectorAll('.runbtn').forEach(b=>{
+  b.addEventListener('click', ()=>run(b.dataset.run));
+});
+document.getElementById('deployBtn').addEventListener('click', ()=>{
+  if(confirm('確定部署到正式站?建議先跑過 Dry-run 確認差異。')) run('deploy');
+});
+document.getElementById('deployFullBtn').addEventListener('click', ()=>{
+  if(confirm('全量部署會 mirror 整個 _site 並刪除遠端多餘檔案。確定?')) run('deploy_full');
+});
+
+// preview toggle
+const pvBtn = document.getElementById('pvBtn');
+const pvLink = document.getElementById('pvLink');
+function renderPreview(running, url){
+  pvBtn.textContent = running ? 'Preview 停止' : 'Preview 啟動';
+  pvBtn.className = 'px-4 py-2 rounded-lg text-sm text-white ' + (running ? 'bg-gray-500' : 'bg-emerald-600');
+  pvBtn.dataset.running = running ? '1' : '';
+  if(running){ pvLink.href = url; pvLink.classList.remove('hidden'); }
+  else pvLink.classList.add('hidden');
+}
+pvBtn.addEventListener('click', async ()=>{
+  const action = pvBtn.dataset.running ? 'stop' : 'start';
+  const j = await (await fetch('/api/preview/'+action, {method:'POST'})).json();
+  if(!j.ok){ alert(j.error || 'preview 操作失敗'); return; }
+  renderPreview(j.running, j.url);
+});
+(async ()=>{
+  const h = await (await fetch('/api/health')).json();
+  if(h.preview) renderPreview(h.preview.running, h.preview.url);
+  poll();
+})();
+</script>
+{% endblock %}

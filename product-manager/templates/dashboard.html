@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+  <div id="alert" class="hidden mb-4 p-4 rounded-xl border bg-amber-50 border-amber-300 text-amber-900 text-sm"></div>
+  <div class="grid md:grid-cols-2 gap-4">
+    <section class="bg-white p-4 rounded-xl border">
+      <h2 class="font-semibold mb-3">環境工具</h2>
+      <div id="tools" class="space-y-1 text-sm text-gray-400">檢查中…</div>
+    </section>
+    <section class="bg-white p-4 rounded-xl border">
+      <h2 class="font-semibold mb-3">設定(.env)</h2>
+      <div id="env" class="space-y-1 text-sm text-gray-400">檢查中…</div>
+      <a href="/setup" class="inline-block mt-3 text-sm text-blue-600 hover:underline">→ 前往 Setup 填寫</a>
+    </section>
+    <section class="bg-white p-4 rounded-xl border">
+      <h2 class="font-semibold mb-3">專案狀態</h2>
+      <div id="proj" class="space-y-1 text-sm text-gray-400">檢查中…</div>
+    </section>
+    <section class="bg-white p-4 rounded-xl border">
+      <h2 class="font-semibold mb-3">Git(唯讀)</h2>
+      <div id="git" class="space-y-1 text-sm text-gray-400">檢查中…</div>
+    </section>
+  </div>
+{% endblock %}
+{% block scripts %}
+<script>
+const OK = '<span class="text-green-600">✔</span>';
+const NG = '<span class="text-red-600">✘</span>';
+function row(label, ok, extra){
+  return `<div class="flex items-center gap-2">${ok?OK:NG}<span>${label}</span><span class="text-gray-400 text-xs">${extra||''}</span></div>`;
+}
+async function load(){
+  const j = await (await fetch('/api/health')).json();
+  // tools
+  const t = j.tools || {};
+  document.getElementById('tools').innerHTML =
+    ['node','npm','python3','git','lftp','curl'].map(k=>row(k, t[k]&&t[k].ok, (t[k]&&t[k].version)||'未安裝')).join('');
+  // env
+  const ek = (j.env&&j.env.keys)||{};
+  document.getElementById('env').innerHTML =
+    Object.keys(ek).map(k=>row(k, ek[k], ek[k]?'已設定':'未設定')).join('') ||
+    row('.env', false, '不存在');
+  // project
+  const projRows = [
+    row('node_modules(npm install)', j.node_modules, j.node_modules?'':'到 Build & Deploy 頁執行'),
+    row('_site 建置產物', j.site_built, j.site_built?'':'尚未 build'),
+    row('Preview', j.preview&&j.preview.running, j.preview&&j.preview.running?j.preview.url:'未啟動'),
+  ];
+  document.getElementById('proj').innerHTML = projRows.join('');
+  // git
+  const g = j.git||{};
+  const gitRows = [];
+  if(g.branch){
+    gitRows.push(row('分支 '+g.branch, true, g.last_commit||''));
+    gitRows.push(row('工作目錄', g.dirty===0, g.dirty===0?'乾淨':g.dirty+' 個未提交變更'));
+    if(g.ahead!==undefined) gitRows.push(row('與 origin/main', g.ahead===0&&g.behind===0, `領先 ${g.ahead} / 落後 ${g.behind}`));
+    if((g.dirty||0)>0) gitRows.push('<div class="text-xs text-amber-700 mt-2">⚠ 有未提交變更 — 記得在終端機 git commit + push(產生器改動只存在這台機器)</div>');
+  } else {
+    gitRows.push(row('git', false, '無法讀取'));
+  }
+  document.getElementById('git').innerHTML = gitRows.join('');
+  // alert
+  const missing = Object.keys(ek).filter(k=>!ek[k]);
+  const al = document.getElementById('alert');
+  if(missing.length || !j.node_modules){
+    const items = [];
+    if(missing.length) items.push('.env 缺:'+missing.join(', ')+'(→ Setup 頁)');
+    if(!j.node_modules) items.push('尚未 npm install(→ Build & Deploy 頁)');
+    al.innerHTML = '⚠ 初始化未完成:' + items.join(' · ');
+    al.classList.remove('hidden');
+  }
+}
+load();
+</script>
+{% endblock %}

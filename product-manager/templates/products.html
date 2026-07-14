@@ -1,22 +1,11 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Product Manager</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="font-sans bg-slate-100">
-    <div class="max-w-5xl mx-auto p-6">
+{% extends 'base.html' %}
+{% block content %}
       <h1 class="text-2xl font-bold mb-4">Product Manager</h1>
 
       <form id="uploadForm" class="mb-6 bg-white p-4 rounded-xl border">
         <label class="block text-sm mb-2 font-medium">Upload Product ZIP</label>
         <input type="file" id="file" name="file" accept=".zip" class="block mb-3" />
-        <button class="px-4 py-2 bg-black text-white rounded-lg" type="submit">Upload & Generate</button>
+        <button class="px-4 py-2 bg-black text-white rounded-lg" type="submit">Upload &amp; Generate</button>
         <span id="uploadMsg" class="ml-3 text-sm"></span>
       </form>
 
@@ -29,8 +18,8 @@
       </div>
 
       <div id="list" class="space-y-6"></div>
-    </div>
-
+{% endblock %}
+{% block scripts %}
     <script>
       async function fetchList(){
         const r = await fetch('/api/list');
@@ -41,7 +30,6 @@
 
         const groups = j.groups || {};
         const catOrder = ['powerbank','loopenergy','gan_charger','flash_disk'];
-        const rounded = {'powerbank':'rose','loopenergy':'emerald','gan_charger':'sky','flash_disk':'amber'};
         const keys = Object.keys(groups).sort((a,b)=>catOrder.indexOf(a)-catOrder.indexOf(b));
         keys.forEach(cat=>{
           const items = groups[cat] || [];
@@ -111,17 +99,4 @@
 
       fetchList();
     </script>
-  </body>
-  </html>
-
-
-
-
-
-
-
-
-
-
-
-
+{% endblock %}
