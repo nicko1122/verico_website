@@ -1,7 +1,7 @@
 en:
   buttons:
     contact_sales: "Contact Sales"
-    contact_sales_email: "sales@example.com"
+    contact_sales_email: "dev@verico.com.tw"
   nav:
     language_en: "English"
     language_de: "Deutsch"
@@ -35,7 +35,7 @@ en:
 de:
   buttons:
     contact_sales: "Kontakt Vertrieb"
-    contact_sales_email: "sales-de@example.com"
+    contact_sales_email: "support@perks-distribution.de"
   nav:
     language_en: "English"
     language_de: "Deutsch"
