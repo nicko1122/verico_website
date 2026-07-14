@@ -41,11 +41,14 @@ cd verico
 npm install
 ```
 
-Python 後台工具的金鑰(LLM 解析/翻譯用):在 repo 根目錄建 `.env`:
+環境設定(LLM 金鑰 + FTP 部署帳密,單一 `.env` 管理):
 
-```env
-OPENAI_API_KEY=sk-xxx
+```bash
+cp .env.example .env
+# 然後編輯 .env 填入 OPENAI_API_KEY 與 FTP_HOST / FTP_USER / FTP_PASS
 ```
+
+`.env` 已被 `.gitignore` 排除,不會進版控。
 
 ---
 
@@ -133,7 +136,8 @@ OPENAI_API_KEY=sk-xxx
 
 ## 6. 部署細節
 
-- 目標主機:`ftp.vericoglobal.com`(正式站 vericoglobal.com),帳密寫在兩支腳本開頭 **(TODO:參數化,抽到 .env)**
+- 目標主機與帳密:設定於 repo 根目錄 `.env`(`FTP_HOST` / `FTP_USER` / `FTP_PASS`,範本見 `.env.example`);未設定時腳本會直接報錯提示
+- 選填參數:`FTP_REMOTE_DIR`(遠端根目錄,預設 `/`)、`UPLOAD_PARALLEL`(增量上傳並行數,預設 8,CLI `--parallel N` 可覆寫)
 - 部署前**必須先 `npm run build`**(腳本只搬 `_site/`,不會幫你 build)
 - `upload_checksum_manifest.sh`:本地算 sha1 清單 → 下載遠端 `.site_manifest.json` 比對 → 只傳差異(curl 並行,`--parallel N` 可調)→ 更新遠端 manifest
 - 第一次或懷疑遠端狀態不對時,用 `./upload_to_ftp.sh` 全量傳一次

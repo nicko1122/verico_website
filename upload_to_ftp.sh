@@ -2,13 +2,20 @@
 
 # FTP上傳腳本 - 將_site資料夾內容上傳到FTP伺服器
 # 使用lftp進行批量上傳
+# 設定來源:repo 根目錄 .env(參考 .env.example)
 
-# FTP設定
-FTP_HOST="ftp.vericoglobal.com"
-FTP_USER="webupdater@vericoglobal.com"
-FTP_PASS="Pegasusy11221206"
+# --- 載入設定 ---
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -f "$SCRIPT_DIR/.env" ]; then
+  set -a
+  . "$SCRIPT_DIR/.env"
+  set +a
+fi
+: "${FTP_HOST:?未設定 FTP_HOST — 請執行 cp .env.example .env 並填入 FTP 設定}"
+: "${FTP_USER:?未設定 FTP_USER — 請執行 cp .env.example .env 並填入 FTP 設定}"
+: "${FTP_PASS:?未設定 FTP_PASS — 請執行 cp .env.example .env 並填入 FTP 設定}"
 LOCAL_DIR="_site"
-REMOTE_DIR="/"
+REMOTE_DIR="${FTP_REMOTE_DIR:-/}"
 
 # 顏色輸出
 RED='\033[0;31m'

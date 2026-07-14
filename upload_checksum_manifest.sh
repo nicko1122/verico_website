@@ -2,16 +2,24 @@
 
 # checksum-manifest 上傳腳本
 # 流程：計算本地 _site 的 sha1 清單 -> 下載遠端 .site_manifest.json -> 比對 -> 只上傳差異檔案 -> 更新遠端 manifest
+# 設定來源:repo 根目錄 .env(參考 .env.example)
 
-FTP_HOST="ftp.vericoglobal.com"
-FTP_USER="webupdater@vericoglobal.com"
-FTP_PASS="Pegasusy11221206"
+# --- 載入設定 ---
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -f "$SCRIPT_DIR/.env" ]; then
+  set -a
+  . "$SCRIPT_DIR/.env"
+  set +a
+fi
+: "${FTP_HOST:?未設定 FTP_HOST — 請執行 cp .env.example .env 並填入 FTP 設定}"
+: "${FTP_USER:?未設定 FTP_USER — 請執行 cp .env.example .env 並填入 FTP 設定}"
+: "${FTP_PASS:?未設定 FTP_PASS — 請執行 cp .env.example .env 並填入 FTP 設定}"
 LOCAL_DIR="_site"
 MANIFEST_REMOTE=".site_manifest.json"
 MANIFEST_LOCAL="/tmp/site_manifest_local.json"
 MANIFEST_REMOTE_LOCAL="/tmp/site_manifest_remote.json"
 DRY_RUN=0
-PARALLEL=8
+PARALLEL="${UPLOAD_PARALLEL:-8}"
 
 usage(){
   echo "Usage: $0 [--dry-run] [--parallel N]"
@@ -20,9 +28,9 @@ usage(){
 
 while [ "$1" != "" ]; do
   case "$1" in
-    --dry-run) DRY_RUN=1 ;; 
-    --parallel) shift; PARALLEL=$1 ;; 
-    -h|--help) usage ;; 
+    --dry-run) DRY_RUN=1 ;;
+    --parallel) shift; PARALLEL=$1 ;;
+    -h|--help) usage ;;
     *) usage ;;
   esac
   shift
@@ -105,7 +113,7 @@ if [ "$FILE_COUNT" -eq 0 ]; then
 fi
 
 if [ "$DRY_RUN" -eq 1 ]; then
-  echo "Dry run - listing files to upload:" 
+  echo "Dry run - listing files to upload:"
   python3 - <<PY
 s=open('$UPLOAD_LIST','rb').read()
 if s:
