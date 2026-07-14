@@ -1,8 +1,0 @@
-watchdog
-PyYAML
-python-frontmatter
-openai
-python-dotenv
-
-
-Flask
