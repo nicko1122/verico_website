@@ -5,6 +5,8 @@
 
 ### 啟動
 
+> 2026-07 起建議改用 repo 根目錄的 `./admin.sh`(統一後台,含本工具全部功能 + Dashboard/Setup/Compose/Build/Deploy)。以下原啟動方式仍可用。
+
 ```bash
 cd product-manager
 ./start_server.sh

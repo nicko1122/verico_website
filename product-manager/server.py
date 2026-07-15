@@ -35,6 +35,9 @@ app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 't
 from ops import ops as ops_blueprint  # noqa: E402
 app.register_blueprint(ops_blueprint)
 
+from compose import compose as compose_blueprint  # noqa: E402
+app.register_blueprint(compose_blueprint)
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -175,6 +178,11 @@ def index():
 @app.route('/setup')
 def setup_page():
     return render_template('setup.html', active='setup')
+
+
+@app.route('/compose')
+def compose_page():
+    return render_template('compose.html', active='compose')
 
 
 @app.route('/products')

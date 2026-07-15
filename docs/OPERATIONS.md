@@ -63,7 +63,7 @@ CLI 對應(後台按鈕背後就是這些,終端機派也可直接用):
 
 | 想做什麼 | 指令 | 結果 |
 |----------|------|------|
-| **統一後台** | `./admin.sh` | http://localhost:5012/(Dashboard/Setup/Products/Build & Deploy) |
+| **統一後台** | `./admin.sh` | http://localhost:5012/(Dashboard/Setup/Compose/Products/Build & Deploy) |
 | 本地預覽 | `npm start` | http://localhost:8080/ (自動 rebuild) |
 | 建置 | `npm run build` | 輸出到 `_site/` |
 | 清掉重建 | `npm run rebuild` | 清 `_site` 後重建 |
@@ -82,15 +82,24 @@ CLI 對應(後台按鈕背後就是這些,終端機派也可直接用):
 ## 3. 產品管理
 
 ### 3.1 新增產品
-1. 準備 ZIP(手工組裝,文件結構參考 `D:\Desktop\verico-web-2025\product-package-md\`;格式範例見 `ref_only/`、可測試的完整範例見 `Sample-data/loopenergy-aa2550.zip`):
+
+**方式 A(推薦):後台 Compose 頁直接寫** —— `./admin.sh` → http://localhost:5012/compose
+1. 「新草稿」命名(建議產品英文名)→「載入樣板」(預設 ALL FIELDS 全欄位樣板;ref_only 各種寫法可切換)
+2. 右側上傳圖片 → 點縮圖把 `images/xxx` 引用插進游標處;快捷插入有規格行/Detailed Feature/Compatibility/Package/Variant 骨架與共用 Icon 下拉
+3. 「格式檢查」面板會標出缺的必填區塊、引用了未上傳的圖
+4. 草稿自動儲存(server 端,重開不丟)→「送處理」直接產生產品頁,或「下載 ZIP」存回素材庫備份
+5. Preview 確認 → commit → Build → Deploy(都在後台)
+
+**方式 B:手工 ZIP 上傳**(原方式,Products 頁)
+1. 準備 ZIP(文件結構參考 `D:\Desktop\verico-web-2025\product-package-md\`;格式範例見 `ref_only/`、可測試範例 `Sample-data/loopenergy-aa2550.zip`):
    ```
    my-product.zip
    ├─ product.md      ← 英文產品資料(格式見 docs/Product-Generator-V2.md)
    └─ images/         ← 圖片(png/jpg/svg 皆可)
    ```
-2. 起後台:`./admin.sh` → 開 http://localhost:5012/products
-3. 上傳 ZIP → 自動解析、翻譯德文、產 YAML、複製圖片、更新目錄
-4. Preview 確認 → commit → Build → Deploy(都在後台 Build & Deploy 頁)
+2. http://localhost:5012/products 上傳 ZIP → 自動解析、翻譯德文、產 YAML、複製圖片、更新目錄
+
+> 處理失敗時:inbox 的 ZIP 會被移到 `product-generator-v2/failed/`,備份仍在 `product-manager/backups/`。
 
 ### 3.2 更新產品
 **同名 ZIP 再上傳一次即覆寫**(以 ZIP 檔名對應 YAML 檔名)。
