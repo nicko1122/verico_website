@@ -147,8 +147,25 @@ curl -sS --ftp-create-dirs -u "$FTP_USER:$FTP_PASS" -T "$MANIFEST_LOCAL" "ftp://
 
 if [ $? -eq 0 ]; then
   echo "Upload completed and manifest updated."
-  exit 0
 else
   echo "Upload finished but manifest update failed."
   exit 1
 fi
+
+# --- 上傳源資料快照(災難還原用:線上網站自帶 src/_data,restore_from_site.sh 可取回)---
+SNAP="/tmp/verico_source_snapshot.tar.gz"
+INFO="/tmp/SNAPSHOT_INFO.txt"
+{
+  echo "commit: $(git -C "$SCRIPT_DIR" rev-parse HEAD 2>/dev/null || echo unknown)"
+  echo "branch: $(git -C "$SCRIPT_DIR" rev-parse --abbrev-ref HEAD 2>/dev/null || echo unknown)"
+  echo "date_utc: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  echo "uncommitted_changes: $(git -C "$SCRIPT_DIR" status --porcelain 2>/dev/null | wc -l)"
+} > "$INFO"
+if tar -czf "$SNAP" -C "$SCRIPT_DIR" src/_data -C /tmp SNAPSHOT_INFO.txt; then
+  if curl -sS --ftp-create-dirs -u "$FTP_USER:$FTP_PASS" -T "$SNAP" "ftp://$FTP_HOST/.source_snapshot.tar.gz"; then
+    echo "Source snapshot uploaded (.source_snapshot.tar.gz)"
+  else
+    echo "WARN: snapshot upload failed (site deploy itself succeeded)"
+  fi
+fi
+exit 0

@@ -64,4 +64,21 @@ else
     exit 1
 fi
 
+# --- 上傳源資料快照(災難還原用:線上網站自帶 src/_data,restore_from_site.sh 可取回)---
+SNAP="/tmp/verico_source_snapshot.tar.gz"
+INFO="/tmp/SNAPSHOT_INFO.txt"
+{
+    echo "commit: $(git -C "$SCRIPT_DIR" rev-parse HEAD 2>/dev/null || echo unknown)"
+    echo "branch: $(git -C "$SCRIPT_DIR" rev-parse --abbrev-ref HEAD 2>/dev/null || echo unknown)"
+    echo "date_utc: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+    echo "uncommitted_changes: $(git -C "$SCRIPT_DIR" status --porcelain 2>/dev/null | wc -l)"
+} > "$INFO"
+if tar -czf "$SNAP" -C "$SCRIPT_DIR" src/_data -C /tmp SNAPSHOT_INFO.txt; then
+    if curl -sS --ftp-create-dirs -u "$FTP_USER:$FTP_PASS" -T "$SNAP" "ftp://$FTP_HOST/.source_snapshot.tar.gz"; then
+        echo -e "${GREEN}源資料快照已上傳(.source_snapshot.tar.gz)${NC}"
+    else
+        echo -e "${YELLOW}警告: 快照上傳失敗(網站已部署成功,但線上還原快照未更新)${NC}"
+    fi
+fi
+
 echo -e "${GREEN}所有檔案已成功上傳到FTP伺服器並覆蓋現有檔案。${NC}"

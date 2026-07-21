@@ -2,7 +2,7 @@
 {% block content %}
   <h1 class="text-2xl font-bold mb-4">Build &amp; Deploy</h1>
 
-  <div class="grid md:grid-cols-3 gap-4 mb-4">
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
     <section class="bg-white p-4 rounded-xl border">
       <h2 class="font-semibold mb-2">1. 依賴</h2>
       <p class="text-xs text-gray-500 mb-3">第一次使用或 package.json 變動後執行。</p>
@@ -24,6 +24,15 @@
         <button data-run="deploy_dry" class="runbtn px-4 py-2 bg-amber-600 text-white rounded-lg text-sm">Dry-run(只列差異)</button>
         <button id="deployBtn" class="px-4 py-2 bg-red-600 text-white rounded-lg text-sm">部署(增量)</button>
         <button id="deployFullBtn" class="px-4 py-2 border border-red-300 text-red-700 rounded-lg text-sm">全量部署</button>
+      </div>
+    </section>
+    <section class="bg-white p-4 rounded-xl border">
+      <h2 class="font-semibold mb-2">4. 資料救援</h2>
+      <p class="text-xs text-gray-500 mb-3">從線上網站取回 src/_data 快照(新機器/資料遺失時用)。</p>
+      <div class="flex flex-wrap gap-2 items-center">
+        <button data-run="restore_dry" class="runbtn px-4 py-2 bg-sky-600 text-white rounded-lg text-sm">檢視快照差異</button>
+        <button id="restoreBtn" class="px-4 py-2 border border-sky-300 text-sky-700 rounded-lg text-sm">執行還原</button>
+        <label class="text-xs text-gray-600 flex items-center gap-1"><input type="checkbox" id="restoreImgs"> 連產品圖</label>
       </div>
     </section>
   </div>
@@ -55,9 +64,21 @@ async function poll(){
   logEl.scrollTop = logEl.scrollHeight;
   if(j.status !== 'running' && polling){ clearInterval(polling); polling = null; }
 }
-async function run(action){
-  const r = await fetch('/api/run/'+action, {method:'POST'});
+async function run(action, body){
+  const r = await fetch('/api/run/'+action, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body||{})});
   const j = await r.json();
+  if(r.status === 428 && j.guard){
+    // 部署守門:有未 commit / 未 push 的變更
+    const g = j.guard;
+    const lines = [];
+    if(g.dirty) lines.push('未 commit 的變更 '+g.dirty+' 項:\n  '+(g.files||[]).join('\n  '));
+    if(g.ahead) lines.push('未 push 的 commit:'+g.ahead+' 個');
+    const msg = '⚠ 部署守門攔截\n\n'+lines.join('\n\n')+
+      '\n\n上線的內容應先 git commit + push,否則機器一丟資料就沒了。'+
+      '\n\n強烈建議:取消 → 終端機 commit/push 後再部署。\n仍要硬部署?';
+    if(confirm(msg)) return run(action, {...(body||{}), ack_git: true});
+    return;
+  }
   if(!j.ok){ alert(j.error || '啟動失敗'); return; }
   logEl.textContent = '';
   if(!polling) polling = setInterval(poll, 1000);
@@ -71,6 +92,12 @@ document.getElementById('deployBtn').addEventListener('click', ()=>{
 });
 document.getElementById('deployFullBtn').addEventListener('click', ()=>{
   if(confirm('全量部署會 mirror 整個 _site 並刪除遠端多餘檔案。確定?')) run('deploy_full');
+});
+document.getElementById('restoreBtn').addEventListener('click', ()=>{
+  const withImgs = document.getElementById('restoreImgs').checked;
+  if(confirm('用線上快照覆蓋本地 src/_data'+(withImgs?' + 取回產品圖':'')+'?\n(建議先「檢視快照差異」確認內容;本地獨有檔案會保留)')){
+    run('restore', {with_images: withImgs});
+  }
 });
 
 // preview toggle

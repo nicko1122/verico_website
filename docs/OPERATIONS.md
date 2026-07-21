@@ -156,6 +156,17 @@ CLI 對應(後台按鈕背後就是這些,終端機派也可直接用):
 
 - 目標主機與帳密:設定於 repo 根目錄 `.env`(`FTP_HOST` / `FTP_USER` / `FTP_PASS`,範本見 `.env.example`);未設定時腳本會直接報錯提示
 - 選填參數:`FTP_REMOTE_DIR`(遠端根目錄,預設 `/`)、`UPLOAD_PARALLEL`(增量上傳並行數,預設 8,CLI `--parallel N` 可覆寫)
+
+### 6.1 部署守門
+後台的部署按鈕會檢查 git:**有未 commit 或未 push 的變更就攔下**,列出清單要你確認。原則:**上線的內容必須先進版本控制** —— 這是「機器丟了資料就沒了」的唯一保險。被攔時正確做法是取消 → commit/push → 再部署(硬部署選項存在但強烈不建議)。
+
+### 6.2 資料快照與災難還原
+每次部署成功後,腳本會自動把 `src/_data/**` 打包成 **`.source_snapshot.tar.gz`**(附 git commit/日期)上傳到網站根目錄 —— **線上網站自帶自己的源資料**。
+
+新機器 / 資料遺失時取回:
+- **後台**:Build & Deploy 頁「資料救援」→「檢視快照差異」(只看不動)→「執行還原」(可勾選連產品圖一起從線上鏡像回來)
+- **CLI**:`./restore_from_site.sh --dry-run`(看差異)→ `./restore_from_site.sh`(還原 `src/_data`,互動確認)→ 加 `--with-images` 連 `src/assets/images/product/` 一起取回;`--from-file x.tar.gz` 可用本地快照檔
+- 還原後**記得 commit + push**,把資料收回版本控制
 - 部署前**必須先 `npm run build`**(腳本只搬 `_site/`,不會幫你 build)
 - `upload_checksum_manifest.sh`:本地算 sha1 清單 → 下載遠端 `.site_manifest.json` 比對 → 只傳差異(curl 並行,`--parallel N` 可調)→ 更新遠端 manifest
 - 第一次或懷疑遠端狀態不對時,用 `./upload_to_ftp.sh` 全量傳一次

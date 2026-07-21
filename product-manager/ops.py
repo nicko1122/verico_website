@@ -92,15 +92,53 @@ def api_run_deploy_dry():
     return _busy_response() if jid is None else jsonify({'ok': True, 'id': jid})
 
 
+def _git_guard():
+    """Deploy guard: whatever goes live must exist in git (committed AND pushed)."""
+    porcelain = _cmd_out(['git', 'status', '--porcelain']) or ''
+    files = [l for l in porcelain.splitlines() if l.strip()]
+    ahead = behind = 0
+    ab = _cmd_out(['git', 'rev-list', '--left-right', '--count', 'HEAD...origin/main'])
+    if ab and '\t' in ab:
+        a, b = ab.split('\t')
+        ahead, behind = int(a), int(b)
+    return {'dirty': len(files), 'files': files[:20], 'ahead': ahead, 'behind': behind}
+
+
+def _guarded_deploy(name, cmd):
+    data = request.get_json(silent=True) or {}
+    g = _git_guard()
+    if (g['dirty'] or g['ahead']) and not data.get('ack_git'):
+        return jsonify({
+            'ok': False, 'guard': g,
+            'error': '部署守門:有未 commit 或未 push 的變更 — 上線的內容應先進版本控制,否則機器一丟資料就沒了',
+        }), 428
+    jid = _start_job(name, cmd)
+    return _busy_response() if jid is None else jsonify({'ok': True, 'id': jid})
+
+
 @ops.post('/api/run/deploy')
 def api_run_deploy():
-    jid = _start_job('deploy', ['bash', 'upload_checksum_manifest.sh'])
-    return _busy_response() if jid is None else jsonify({'ok': True, 'id': jid})
+    return _guarded_deploy('deploy', ['bash', 'upload_checksum_manifest.sh'])
 
 
 @ops.post('/api/run/deploy_full')
 def api_run_deploy_full():
-    jid = _start_job('deploy (full mirror)', ['bash', 'upload_to_ftp.sh'])
+    return _guarded_deploy('deploy (full mirror)', ['bash', 'upload_to_ftp.sh'])
+
+
+@ops.post('/api/run/restore_dry')
+def api_run_restore_dry():
+    jid = _start_job('restore (檢視差異)', ['bash', 'restore_from_site.sh', '--dry-run'])
+    return _busy_response() if jid is None else jsonify({'ok': True, 'id': jid})
+
+
+@ops.post('/api/run/restore')
+def api_run_restore():
+    data = request.get_json(silent=True) or {}
+    cmd = ['bash', 'restore_from_site.sh', '--yes']
+    if data.get('with_images'):
+        cmd.append('--with-images')
+    jid = _start_job('restore (還原資料)', cmd)
     return _busy_response() if jid is None else jsonify({'ok': True, 'id': jid})
 
 
